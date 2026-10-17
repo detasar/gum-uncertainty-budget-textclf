@@ -49,3 +49,4 @@
 - [18:09] summary_tr.md rewritten with T5 findings, verdicts, spend. Next: sync + commit + push.
 - [18:11] bienc precision conditions + nli_bf16_bs1 had finished meanwhile: re-ran repeat_analysis + report_tables (+figures.py for fig07); §3.7/summary_tr updated (H5b supported for T1/T2).
 - [18:13] sync_repo.sh now ships raw/api_cache as raw/api_cache.tar.gz (21 MB vs 263 MB; largest JSONL 53 MB). Running sync + commit + push.
+- [18:15] Pushed 2fb1b1a to v2-comprehensive (6337f19..2fb1b1a). No merge/release/posts. Local jobs untouched (queue A NLI deberta bbc2025, queue B Qwen bbc2025, run_repeat_resume Qwen fp32_bs1, run_after waiting). Session end.
