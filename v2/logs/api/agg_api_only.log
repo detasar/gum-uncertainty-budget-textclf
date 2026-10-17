@@ -1,0 +1,62 @@
+{
+ "RQ1": {
+  "share_cells_sd_w_ci_excludes_0_and_holm_sig": 1.0,
+  "share_cells_ratio_in_[1/3,3]": 0.0,
+  "share_cells_ratio_lt_1/3": 0.0,
+  "share_cells_ratio_gt_3": 1.0,
+  "H1a": "supported",
+  "H1b": "refuted: sampling negligible (ratio>3 in majority)",
+  "by_type_api": {
+   "median_ratio": 6.247196181731935,
+   "median_share_w": 0.8521509138027362,
+   "share_in_range": 0.0,
+   "n": 10
+  }
+ },
+ "RQ2": {
+  "share_H2a_split_slope_in_range": 0.3,
+  "share_H2b_flat_wording_floor": 1.0,
+  "share_wording_declining": 0.0,
+  "share_wording_ci_includes_0_at_nmax": 0.0,
+  "share_H2c_W4_estimate_within_0.8_1.25": 0.6,
+  "H2a": "not supported",
+  "H2b": "supported",
+  "H2c": "not supported"
+ },
+ "RQ3": {
+  "dose_response": {
+   "api": {
+    "n_variant_model_pairs": 36,
+    "spearman_dist_tv": 0.30147416195994514,
+    "ci": [
+     -0.06563408126903396,
+     0.6220233134323045
+    ],
+    "spearman_dist_flip": 0.2889560859938533,
+    "mean_tv_valid": 0.04925313987468422,
+    "mean_tv_invalid": null,
+    "by_dataset": {
+     "agnews": 0.41194292043554975,
+     "bbc2025": 0.3236694374850748,
+     "sst2": 0.5559822084796427
+    }
+   }
+  },
+  "H3a_by_type": {
+   "api": true
+  },
+  "share_cells_surface_ge_half_valid": 0.0,
+  "share_H3c_valid_lt_all": 0.5,
+  "H3b": {
+   "api": "not supported"
+  },
+  "H3c": "not supported",
+  "definitional_reading_refuted_by_surface_control": false
+ },
+ "RQ4": {
+  "minkprob": {},
+  "H4b_acc_lower_on_bbc_share": 1.0,
+  "H4b_sdw_larger_on_bbc_share": 0.5,
+  "H4a": {}
+ }
+}

@@ -1,0 +1,100 @@
+nano__agnews__main: 55200 requests to do (0 (item,set) pairs cached), cached spend $0.0000, global $0.0012
+nano__agnews__main 1225/55200 30s this=$0.013 global=$0.113
+nano__agnews__main 2497/55200 60s this=$0.027 global=$0.277
+nano__agnews__main 3713/55200 90s this=$0.039 global=$0.300
+nano__agnews__main 4939/55200 120s this=$0.052 global=$0.322
+nano__agnews__main 6203/55200 150s this=$0.066 global=$2.108
+nano__agnews__main 7455/55200 180s this=$0.079 global=$2.749
+nano__agnews__main 8693/55200 210s this=$0.092 global=$3.271
+nano__agnews__main 9944/55200 240s this=$0.106 global=$3.789
+nano__agnews__main 11207/55200 270s this=$0.119 global=$3.944
+nano__agnews__main 12447/55200 300s this=$0.132 global=$4.498
+nano__agnews__main 13687/55200 330s this=$0.145 global=$5.039
+nano__agnews__main 14930/55200 360s this=$0.159 global=$5.629
+nano__agnews__main 16173/55200 390s this=$0.173 global=$6.301
+nano__agnews__main 17429/55200 420s this=$0.186 global=$6.796
+nano__agnews__main 18694/55200 450s this=$0.200 global=$7.330
+nano__agnews__main 19967/55200 480s this=$0.212 global=$7.772
+nano__agnews__main 21223/55200 510s this=$0.226 global=$7.820
+nano__agnews__main 22481/55200 541s this=$0.239 global=$7.855
+nano__agnews__main 23758/55200 571s this=$0.252 global=$7.898
+nano__agnews__main 25027/55200 601s this=$0.266 global=$7.952
+nano__agnews__main 26282/55200 631s this=$0.279 global=$8.007
+nano__agnews__main 27531/55200 661s this=$0.292 global=$8.063
+nano__agnews__main 28781/55200 691s this=$0.305 global=$8.118
+nano__agnews__main 30048/55200 721s this=$0.319 global=$8.165
+nano__agnews__main 31298/55200 751s this=$0.332 global=$8.218
+nano__agnews__main 32529/55200 781s this=$0.346 global=$8.273
+nano__agnews__main 33802/55200 811s this=$0.359 global=$8.328
+nano__agnews__main 35051/55200 841s this=$0.372 global=$8.382
+nano__agnews__main 36329/55200 871s this=$0.385 global=$8.436
+nano__agnews__main 37585/55200 901s this=$0.398 global=$8.491
+nano__agnews__main 38862/55200 931s this=$0.412 global=$8.546
+nano__agnews__main 40122/55200 961s this=$0.425 global=$8.601
+nano__agnews__main 41373/55200 991s this=$0.438 global=$8.657
+nano__agnews__main 42648/55200 1021s this=$0.452 global=$8.714
+nano__agnews__main 43915/55200 1051s this=$0.465 global=$8.768
+nano__agnews__main 44839/55200 1250s this=$0.475 global=$8.814
+nano__agnews__main 46067/55200 1280s this=$0.488 global=$8.869
+nano__agnews__main 47319/55200 1310s this=$0.502 global=$8.904
+nano__agnews__main 48587/55200 1340s this=$0.515 global=$8.964
+nano__agnews__main 49844/55200 1370s this=$0.529 global=$9.023
+nano__agnews__main 51111/55200 1400s this=$0.542 global=$9.082
+nano__agnews__main 52362/55200 1430s this=$0.555 global=$9.140
+ERR JSONDecodeError('Expecting property name enclosed in double quotes: line 145 column 15 (char 3407)')
+ERR JSONDecodeError('Unterminated string starting at: line 164 column 17 (char 4082)')
+nano__agnews__main 53597/55200 1460s this=$0.568 global=$9.201
+nano__agnews__main 54857/55200 1490s this=$0.581 global=$9.258
+DONE nano__agnews__main 55198 requests 1499s spend $0.5849 global $9.2965
+nano__bbc2025__main: 55200 requests to do (0 (item,set) pairs cached), cached spend $0.0000, global $9.2965
+nano__bbc2025__main 1234/55200 30s this=$0.012 global=$9.353
+nano__bbc2025__main 2492/55200 60s this=$0.024 global=$9.408
+nano__bbc2025__main 3763/55200 90s this=$0.035 global=$9.465
+nano__bbc2025__main 5044/55200 120s this=$0.048 global=$9.524
+nano__bbc2025__main 6311/55200 150s this=$0.060 global=$9.580
+nano__bbc2025__main 7587/55200 180s this=$0.071 global=$9.626
+nano__bbc2025__main 8858/55200 210s this=$0.083 global=$9.673
+nano__bbc2025__main 10137/55200 240s this=$0.095 global=$9.718
+nano__bbc2025__main 11425/55200 270s this=$0.108 global=$9.767
+nano__bbc2025__main 12694/55200 300s this=$0.119 global=$9.816
+nano__bbc2025__main 13955/55200 330s this=$0.131 global=$9.864
+nano__bbc2025__main 15206/55200 360s this=$0.143 global=$9.912
+nano__bbc2025__main 16464/55200 390s this=$0.154 global=$9.958
+nano__bbc2025__main 17717/55200 420s this=$0.167 global=$9.993
+nano__bbc2025__main 18981/55200 450s this=$0.178 global=$10.040
+nano__bbc2025__main 20253/55200 480s this=$0.190 global=$10.088
+nano__bbc2025__main 21525/55200 510s this=$0.202 global=$10.137
+nano__bbc2025__main 22810/55200 540s this=$0.215 global=$10.187
+nano__bbc2025__main 24090/55200 570s this=$0.227 global=$10.236
+nano__bbc2025__main 25363/55200 600s this=$0.239 global=$10.282
+nano__bbc2025__main 26637/55200 630s this=$0.251 global=$10.318
+nano__bbc2025__main 27896/55200 660s this=$0.263 global=$10.368
+nano__bbc2025__main 29179/55200 690s this=$0.275 global=$10.419
+nano__bbc2025__main 30458/55200 720s this=$0.287 global=$10.469
+nano__bbc2025__main 31732/55200 750s this=$0.300 global=$10.519
+nano__bbc2025__main 33003/55200 780s this=$0.311 global=$10.569
+nano__bbc2025__main 34285/55200 810s this=$0.323 global=$10.619
+nano__bbc2025__main 35564/55200 841s this=$0.335 global=$10.677
+nano__bbc2025__main 36837/55200 871s this=$0.347 global=$10.728
+nano__bbc2025__main 38121/55200 901s this=$0.359 global=$10.778
+nano__bbc2025__main 39386/55200 931s this=$0.370 global=$10.827
+nano__bbc2025__main 40651/55200 961s this=$0.382 global=$10.876
+nano__bbc2025__main 41924/55200 991s this=$0.394 global=$10.925
+nano__bbc2025__main 43193/55200 1021s this=$0.406 global=$10.962
+nano__bbc2025__main 44472/55200 1051s this=$0.418 global=$11.007
+nano__bbc2025__main 45732/55200 1081s this=$0.430 global=$11.030
+nano__bbc2025__main 46996/55200 1111s this=$0.442 global=$11.052
+nano__bbc2025__main 48256/55200 1141s this=$0.453 global=$11.075
+nano__bbc2025__main 49490/55200 1171s this=$0.465 global=$11.097
+nano__bbc2025__main 50756/55200 1201s this=$0.476 global=$11.119
+nano__bbc2025__main 52030/55200 1231s this=$0.488 global=$11.142
+nano__bbc2025__main 53301/55200 1261s this=$0.500 global=$11.164
+nano__bbc2025__main 54580/55200 1291s this=$0.512 global=$11.187
+DONE nano__bbc2025__main 55200 requests 1306s spend $0.5179 global $11.1927
+nano__agnews__ord1: 0 requests to do (18600 (item,set) pairs cached), cached spend $0.2012, global $11.1927
+DONE nano__agnews__ord1 0 requests 0s spend $0.2012 global $11.1927
+nano__agnews__ord2: 0 requests to do (18600 (item,set) pairs cached), cached spend $0.2012, global $11.1927
+DONE nano__agnews__ord2 0 requests 0s spend $0.2012 global $11.1927
+nano__agnews__rt1: 0 requests to do (6200 (item,set) pairs cached), cached spend $0.0672, global $11.1927
+DONE nano__agnews__rt1 0 requests 0s spend $0.0672 global $11.1927
+NANO_A_DONE

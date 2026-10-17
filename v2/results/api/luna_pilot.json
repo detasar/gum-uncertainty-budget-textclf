@@ -1,0 +1,88 @@
+{
+ "refusals": {
+  "pilot_q1": 2,
+  "pilot_q1b": 2,
+  "pilot_q8": 2,
+  "pilot_q31": 2,
+  "pilot_q31b": 2
+ },
+ "n_pairs": {
+  "pilot_q1": 3098,
+  "pilot_q1b": 3098,
+  "pilot_q8": 3098,
+  "pilot_q31": 3098,
+  "pilot_q31b": 3098
+ },
+ "quantisation": {
+  "n_values": 61960,
+  "share_on_0.01_grid": 1.0,
+  "share_exact_0": 0.6250806972240155,
+  "share_exact_1": 0.17277275661717237,
+  "distinct_values": 101,
+  "sum_to_1_abs_dev_max": 2.220446049250313e-16,
+  "share_rows_sum_ne_1": 0.0
+ },
+ "accuracy_official": {
+  "pilot_q1": 0.89,
+  "pilot_q1b": 0.89,
+  "pilot_q8": 0.89,
+  "pilot_q31": 0.89,
+  "pilot_q31b": 0.89
+ },
+ "pairs": {
+  "pilot_q1_vs_pilot_q1b": {
+   "n_pairs": 3098,
+   "max_abs_dp": 0.0,
+   "mean_abs_dp": 0.0,
+   "share_rows_identical": 1.0,
+   "share_rows_dp_gt_0.05": 0.0,
+   "argmax_flip_rate": 0.0,
+   "mean_abs_dp_true_class": 0.0
+  },
+  "pilot_q31_vs_pilot_q31b": {
+   "n_pairs": 3098,
+   "max_abs_dp": 0.0,
+   "mean_abs_dp": 0.0,
+   "share_rows_identical": 1.0,
+   "share_rows_dp_gt_0.05": 0.0,
+   "argmax_flip_rate": 0.0,
+   "mean_abs_dp_true_class": 0.0
+  },
+  "pilot_q1_vs_pilot_q31": {
+   "n_pairs": 3098,
+   "max_abs_dp": 0.0,
+   "mean_abs_dp": 0.0,
+   "share_rows_identical": 1.0,
+   "share_rows_dp_gt_0.05": 0.0,
+   "argmax_flip_rate": 0.0,
+   "mean_abs_dp_true_class": 0.0
+  },
+  "pilot_q1b_vs_pilot_q31b": {
+   "n_pairs": 3098,
+   "max_abs_dp": 0.0,
+   "mean_abs_dp": 0.0,
+   "share_rows_identical": 1.0,
+   "share_rows_dp_gt_0.05": 0.0,
+   "argmax_flip_rate": 0.0,
+   "mean_abs_dp_true_class": 0.0
+  },
+  "pilot_q1_vs_pilot_q8": {
+   "n_pairs": 3098,
+   "max_abs_dp": 0.0,
+   "mean_abs_dp": 0.0,
+   "share_rows_identical": 1.0,
+   "share_rows_dp_gt_0.05": 0.0,
+   "argmax_flip_rate": 0.0,
+   "mean_abs_dp_true_class": 0.0
+  },
+  "pilot_q8_vs_pilot_q31": {
+   "n_pairs": 3098,
+   "max_abs_dp": 0.0,
+   "mean_abs_dp": 0.0,
+   "share_rows_identical": 1.0,
+   "share_rows_dp_gt_0.05": 0.0,
+   "argmax_flip_rate": 0.0,
+   "mean_abs_dp_true_class": 0.0
+  }
+ }
+}

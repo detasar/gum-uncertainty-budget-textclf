@@ -1,0 +1,57 @@
+nano__dbpedia__main: 47000 requests to do (0 (item,set) pairs cached), cached spend $0.0000, global $5.5418
+nano__dbpedia__main 1241/47000 30s this=$0.022 global=$5.660
+nano__dbpedia__main 2475/47000 60s this=$0.043 global=$6.542
+nano__dbpedia__main 3762/47000 90s this=$0.068 global=$7.070
+nano__dbpedia__main 5046/47000 120s this=$0.090 global=$7.750
+nano__dbpedia__main 6342/47000 150s this=$0.116 global=$7.798
+nano__dbpedia__main 7599/47000 180s this=$0.138 global=$7.841
+nano__dbpedia__main 8885/47000 210s this=$0.159 global=$7.885
+nano__dbpedia__main 10122/47000 240s this=$0.182 global=$7.930
+nano__dbpedia__main 11386/47000 270s this=$0.205 global=$7.975
+nano__dbpedia__main 12656/47000 300s this=$0.228 global=$8.030
+nano__dbpedia__main 13907/47000 330s this=$0.251 global=$8.085
+nano__dbpedia__main 15167/47000 360s this=$0.274 global=$8.141
+nano__dbpedia__main 16415/47000 390s this=$0.296 global=$8.195
+nano__dbpedia__main 17674/47000 421s this=$0.317 global=$8.248
+nano__dbpedia__main 18947/47000 451s this=$0.340 global=$8.304
+nano__dbpedia__main 20227/47000 481s this=$0.362 global=$8.359
+nano__dbpedia__main 21482/47000 511s this=$0.383 global=$8.412
+nano__dbpedia__main 22749/47000 541s this=$0.406 global=$8.467
+nano__dbpedia__main 24014/47000 571s this=$0.428 global=$8.522
+nano__dbpedia__main 25250/47000 601s this=$0.450 global=$8.577
+nano__dbpedia__main 26501/47000 631s this=$0.473 global=$8.633
+nano__dbpedia__main 27787/47000 661s this=$0.498 global=$8.690
+nano__dbpedia__main 29054/47000 691s this=$0.519 global=$8.744
+nano__dbpedia__main 30279/47000 721s this=$0.539 global=$8.796
+nano__dbpedia__main 30696/47000 907s this=$0.547 global=$8.804
+nano__dbpedia__main 31914/47000 937s this=$0.568 global=$8.856
+nano__dbpedia__main 33187/47000 967s this=$0.592 global=$8.928
+nano__dbpedia__main 34446/47000 998s this=$0.614 global=$8.987
+nano__dbpedia__main 35698/47000 1028s this=$0.638 global=$9.046
+nano__dbpedia__main 36959/47000 1058s this=$0.661 global=$9.105
+nano__dbpedia__main 38230/47000 1088s this=$0.685 global=$9.164
+nano__dbpedia__main 39469/47000 1118s this=$0.707 global=$9.223
+nano__dbpedia__main 40753/47000 1148s this=$0.731 global=$9.282
+nano__dbpedia__main 42014/47000 1178s this=$0.753 global=$9.331
+nano__dbpedia__main 43244/47000 1208s this=$0.774 global=$9.386
+nano__dbpedia__main 44493/47000 1238s this=$0.797 global=$9.443
+nano__dbpedia__main 45786/47000 1268s this=$0.820 global=$9.501
+DONE nano__dbpedia__main 47000 requests 1298s spend $0.8410 global $9.5573
+LOCKED nano__bbc2025__ord1: another process is scoring it, skipping
+nano__bbc2025__ord2: 18600 requests to do (0 (item,set) pairs cached), cached spend $0.0000, global $9.5677
+nano__bbc2025__ord2 1229/18600 30s this=$0.012 global=$9.614
+nano__bbc2025__ord2 2491/18600 60s this=$0.024 global=$9.661
+nano__bbc2025__ord2 3754/18600 90s this=$0.036 global=$9.706
+nano__bbc2025__ord2 5029/18600 120s this=$0.048 global=$9.755
+nano__bbc2025__ord2 6316/18600 150s this=$0.060 global=$9.804
+nano__bbc2025__ord2 7569/18600 180s this=$0.073 global=$9.852
+nano__bbc2025__ord2 8833/18600 210s this=$0.085 global=$9.900
+nano__bbc2025__ord2 10081/18600 240s this=$0.096 global=$9.946
+nano__bbc2025__ord2 11352/18600 270s this=$0.109 global=$9.981
+nano__bbc2025__ord2 12609/18600 300s this=$0.121 global=$10.029
+nano__bbc2025__ord2 13889/18600 330s this=$0.133 global=$10.076
+nano__bbc2025__ord2 15159/18600 360s this=$0.146 global=$10.125
+nano__bbc2025__ord2 16432/18600 390s this=$0.158 global=$10.174
+nano__bbc2025__ord2 17709/18600 420s this=$0.170 global=$10.224
+DONE nano__bbc2025__ord2 18600 requests 441s spend $0.1789 global $10.2582
+NANO_C_DONE

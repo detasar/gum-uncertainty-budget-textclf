@@ -50,7 +50,27 @@ for inst in ["nli", "bienc", "llm"]:
                           "share_test_sets_changed": float((s0 != s1).any(1).mean()), "kappa_vs_rep0": float(cohen_kappa_score(P0.argmax(1), P1.argmax(1)))}
         row["meta"] = {k: m1.get(k) for k in ("dtype", "bs", "chunk", "threads")}; conds[c] = row
     r["conditions_vs_rep0"] = conds; r["rep0_meta"] = probs(base, V1["official"])[1]; out[inst] = r
+# ---- T5 API LLMs (exploratory): API test-retest. Runs = main run (items 0..199) + two later reruns rt1, rt2; official + 30 VALID sets, canonical order.
+from core import Scorer
+for short, tag in [("luna", "gpt-6-luna"), ("nano", "gpt-4.1-nano")]:
+    runs = [f"{ROOT}/raw/agnews__api__{tag}.npz"] + sorted(glob.glob(f"{ROOT}/raw/repeat/agnews__api__{tag}__rt*.npz"))
+    if len(runs) < 2 or not all(os.path.exists(p) for p in runs): continue
+    scs = [Scorer(p) for p in runs]; N = min(min(s.N for s in scs), 200); y = y_all[:N]
+    names = [s for s in load_sets("agnews") if s["pop"] in ("official", "valid")]; r = {"runs": len(runs), "items": N, "files": [os.path.basename(p) for p in runs],
+         "request_windows_utc": [[sc.meta.get("first_request_utc"), sc.meta.get("last_request_utc")] for sc in scs], "model_ids_returned": [sc.meta.get("model_ids_returned") for sc in scs],
+         "system_fingerprints": [sc.meta.get("system_fingerprints") for sc in scs]}
+    per = []
+    for st in names:
+        A = np.stack([sc.probs(st["labels"])[:N] for sc in scs]); pt = A[:, np.arange(N), y].T; Lb = A.argmax(2).T; S_ = np.stack([sets_of(P, y) for P in A])
+        per.append({"set": st["name"], "max_abs_dp": float(np.abs(A[:, None] - A[None]).max()), "mean_abs_dp": float(np.abs(A[:, None] - A[None]).mean() * len(A) / max(len(A) - 1, 1)),
+                    "icc21": icc(pt)[0], "fleiss_kappa": fleiss(Lb, A.shape[2]), "share_items_same_label_all_runs": float((Lb == Lb[:, :1]).all(1).mean()),
+                    "share_items_any_dp_gt_0": float((np.abs(A - A[:1]).max((0, 2)) > 0).mean()), "share_test_sets_changed": float((S_ != S_[:1]).any(0).any(1).mean())})
+    r["per_set"] = per
+    r["summary"] = {k: {"mean": float(np.nanmean([x[k] for x in per if x[k] is not None])), "max": float(np.nanmax([x[k] for x in per if x[k] is not None])),
+                        "min": float(np.nanmin([x[k] for x in per if x[k] is not None]))} for k in per[0] if k != "set"}
+    out[f"api-{short}"] = r
 json.dump(out, open(f"{ROOT}/results/repeatability.json", "w"), indent=1, default=float)
 for inst, r in out.items():
+    if inst.startswith("api-"): print(inst, r["summary"]); continue
     print(inst, "identical runs:", {w: (v["max_abs_dp"], v["share_test_sets_changed"]) for w, v in r.items() if isinstance(v, dict) and "max_abs_dp" in v})
     for c, row in r["conditions_vs_rep0"].items(): print("  ", c, {w: (round(v["max_abs_dp"], 6), round(v["share_test_sets_changed"], 3), round(v["argmax_flips"], 3)) for w, v in row.items() if w != "meta"})

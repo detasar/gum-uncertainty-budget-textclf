@@ -1,0 +1,30 @@
+luna__agnews__main: 2400 requests to do (0 (item,set) pairs cached), cached spend $0.0000, global $0.3086
+luna__agnews__main 1341/2400 30s this=$0.986 global=$1.316
+DONE luna__agnews__main 2400 requests 54s spend $1.7636 global $2.0938
+luna__bbc2025__main: 2400 requests to do (0 (item,set) pairs cached), cached spend $0.0000, global $2.0938
+luna__bbc2025__main 850/2400 30s this=$0.620 global=$2.736
+luna__bbc2025__main 1536/2400 60s this=$1.120 global=$3.258
+luna__bbc2025__main 2216/2400 90s this=$1.615 global=$3.776
+DONE luna__bbc2025__main 2400 requests 110s spend $1.7495 global $3.9313
+luna__sst2__main: 1200 requests to do (0 (item,set) pairs cached), cached spend $0.0000, global $3.9313
+DONE luna__sst2__main 1200 requests 21s spend $0.5320 global $4.4849
+luna__massive__main: 1200 requests to do (0 (item,set) pairs cached), cached spend $0.0000, global $4.4849
+luna__massive__main 573/1200 30s this=$0.519 global=$5.025
+luna__massive__main 1118/1200 60s this=$1.014 global=$5.542
+DONE luna__massive__main 1200 requests 72s spend $1.0877 global $5.6160
+luna__dbpedia__main: 1000 requests to do (0 (item,set) pairs cached), cached spend $0.0000, global $5.6160
+luna__dbpedia__main 749/1000 30s this=$0.628 global=$6.288
+DONE luna__dbpedia__main 1000 requests 44s spend $0.8385 global $6.5202
+luna__agnews__ord1: 600 requests to do (0 (item,set) pairs cached), cached spend $0.0000, global $6.5202
+DONE luna__agnews__ord1 600 requests 15s spend $0.2407 global $6.7823
+luna__agnews__ord2: 600 requests to do (0 (item,set) pairs cached), cached spend $0.0000, global $6.7823
+DONE luna__agnews__ord2 600 requests 13s spend $0.2408 global $7.0453
+luna__bbc2025__ord1: 600 requests to do (0 (item,set) pairs cached), cached spend $0.0000, global $7.0453
+DONE luna__bbc2025__ord1 600 requests 23s spend $0.2380 global $7.3077
+luna__bbc2025__ord2: 600 requests to do (0 (item,set) pairs cached), cached spend $0.0000, global $7.3077
+DONE luna__bbc2025__ord2 600 requests 9s spend $0.2376 global $7.5675
+luna__agnews__rt1: 200 requests to do (0 (item,set) pairs cached), cached spend $0.0000, global $7.5675
+DONE luna__agnews__rt1 200 requests 3s spend $0.0802 global $7.6477
+luna__agnews__rt2: 200 requests to do (0 (item,set) pairs cached), cached spend $0.0000, global $7.6477
+DONE luna__agnews__rt2 200 requests 3s spend $0.0802 global $7.7280
+LUNA_DONE

@@ -1,0 +1,24 @@
+nano__agnews__ord1: 18600 requests to do (0 (item,set) pairs cached), cached spend $0.0000, global $9.9580
+nano__agnews__ord1 1240/18600 30s this=$0.014 global=$10.006
+nano__agnews__ord1 2498/18600 60s this=$0.027 global=$10.054
+nano__agnews__ord1 3764/18600 90s this=$0.041 global=$10.102
+nano__agnews__ord1 5050/18600 120s this=$0.055 global=$10.152
+nano__agnews__ord1 6333/18600 150s this=$0.069 global=$10.201
+nano__agnews__ord1 7627/18600 180s this=$0.082 global=$10.250
+nano__agnews__ord1 8902/18600 210s this=$0.096 global=$10.296
+nano__agnews__ord1 10166/18600 240s this=$0.110 global=$10.332
+nano__agnews__ord1 11448/18600 270s this=$0.125 global=$10.383
+nano__agnews__ord1 12721/18600 300s this=$0.138 global=$10.433
+nano__agnews__ord1 14008/18600 330s this=$0.152 global=$10.482
+nano__agnews__ord1 15272/18600 360s this=$0.165 global=$10.533
+nano__agnews__ord1 16547/18600 390s this=$0.179 global=$10.582
+nano__agnews__ord1 17810/18600 420s this=$0.192 global=$10.632
+DONE nano__agnews__ord1 18600 requests 439s spend $0.2012 global $10.6547
+nano__agnews__rt1: 6200 requests to do (0 (item,set) pairs cached), cached spend $0.0000, global $10.6655
+nano__agnews__rt1 1253/6200 30s this=$0.014 global=$10.716
+nano__agnews__rt1 2537/6200 60s this=$0.027 global=$10.766
+nano__agnews__rt1 3779/6200 90s this=$0.041 global=$10.816
+nano__agnews__rt1 5054/6200 120s this=$0.055 global=$10.854
+DONE nano__agnews__rt1 6200 requests 147s spend $0.0672 global $10.9025
+LOCKED nano__agnews__ord2: another process is scoring it, skipping
+NANO_F_DONE

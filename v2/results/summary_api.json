@@ -1,0 +1,1332 @@
+{
+ "group": "api",
+ "kinds": [
+  "api"
+ ],
+ "n_cells_zero_shot": 10,
+ "n_cells_supervised": 15,
+ "cells": [
+  "agnews__api__gpt-4.1-nano",
+  "agnews__api__gpt-6-luna",
+  "bbc2025__api__gpt-4.1-nano",
+  "bbc2025__api__gpt-6-luna",
+  "dbpedia__api__gpt-4.1-nano",
+  "dbpedia__api__gpt-6-luna",
+  "massive__api__gpt-4.1-nano",
+  "massive__api__gpt-6-luna",
+  "sst2__api__gpt-4.1-nano",
+  "sst2__api__gpt-6-luna"
+ ],
+ "verdicts": {
+  "RQ1": {
+   "cells": [
+    {
+     "cell": "agnews__api__gpt-4.1-nano",
+     "kind": "api",
+     "dataset": "agnews",
+     "model": "gpt-4.1-nano",
+     "n": 250,
+     "sd_w": 0.42035227104404504,
+     "ci_sd_w": [
+      0.2740365119482783,
+      0.5311115298025512
+     ],
+     "sd_s": 0.06611239430563909,
+     "ratio": 6.358146236555085,
+     "ci_ratio": [
+      3.8395769227668786,
+      8.410559319482159
+     ],
+     "share_w": 0.9131889952385027,
+     "ci_share_w": [
+      0.8330437777902291,
+      0.947761294708697
+     ],
+     "F": 2844.856869258505,
+     "p": 0.0,
+     "p_holm": 0.0
+    },
+    {
+     "cell": "agnews__api__gpt-6-luna",
+     "kind": "api",
+     "dataset": "agnews",
+     "model": "gpt-6-luna",
+     "n": 250,
+     "sd_w": 0.726869937495011,
+     "ci_sd_w": [
+      0.23295020986906437,
+      1.0426280350826067
+     ],
+     "sd_s": 0.09908165849874002,
+     "ratio": 7.336069546153735,
+     "ci_ratio": [
+      2.4272654202590154,
+      14.069416006583491
+     ],
+     "share_w": 0.8566050006560145,
+     "ci_share_w": [
+      0.4857569436660048,
+      0.9701119484596056
+     ],
+     "F": 1344.9231245385872,
+     "p": 0.0,
+     "p_holm": 0.0
+    },
+    {
+     "cell": "bbc2025__api__gpt-4.1-nano",
+     "kind": "api",
+     "dataset": "bbc2025",
+     "model": "gpt-4.1-nano",
+     "n": 250,
+     "sd_w": 0.6172508788976746,
+     "ci_sd_w": [
+      0.46316453758767623,
+      0.7341303464015366
+     ],
+     "sd_s": 0.06416861954474348,
+     "ratio": 9.619201461351027,
+     "ci_ratio": [
+      5.979077297319322,
+      12.17527537449588
+     ],
+     "share_w": 0.9422378342396027,
+     "ci_share_w": [
+      0.8973056414399737,
+      0.9619186449310341
+     ],
+     "F": 3961.7292616522327,
+     "p": 0.0,
+     "p_holm": 0.0
+    },
+    {
+     "cell": "bbc2025__api__gpt-6-luna",
+     "kind": "api",
+     "dataset": "bbc2025",
+     "model": "gpt-6-luna",
+     "n": 250,
+     "sd_w": 0.2553288802649717,
+     "ci_sd_w": [
+      0.16841546437352609,
+      0.3187675904275989
+     ],
+     "sd_s": 0.08049813712069007,
+     "ratio": 3.1718607336485265,
+     "ci_ratio": [
+      2.1005016140634094,
+      4.074210192299332
+     ],
+     "share_w": 0.7468947949093773,
+     "ci_share_w": [
+      0.614572532307194,
+      0.8345225548261109
+     ],
+     "F": 836.142838729864,
+     "p": 0.0,
+     "p_holm": 0.0
+    },
+    {
+     "cell": "dbpedia__api__gpt-4.1-nano",
+     "kind": "api",
+     "dataset": "dbpedia",
+     "model": "gpt-4.1-nano",
+     "n": 250,
+     "sd_w": 0.5838586641494181,
+     "ci_sd_w": [
+      0.21266849557384657,
+      0.8715471617771693
+     ],
+     "sd_s": 0.0924795955816189,
+     "ratio": 6.313378215783039,
+     "ci_ratio": [
+      2.7154813673560594,
+      8.60447456980997
+     ],
+     "share_w": 0.8476968269494579,
+     "ci_share_w": [
+      0.6215215915534478,
+      0.8994975880698697
+     ],
+     "F": 1294.841541026177,
+     "p": 0.0,
+     "p_holm": 0.0
+    },
+    {
+     "cell": "dbpedia__api__gpt-6-luna",
+     "kind": "api",
+     "dataset": "dbpedia",
+     "model": "gpt-6-luna",
+     "n": 250,
+     "sd_w": 0.06612181510827816,
+     "ci_sd_w": [
+      0.023239504057882554,
+      0.10072254340506612
+     ],
+     "sd_s": 0.015589234211069315,
+     "ratio": 4.2415050164123915,
+     "ci_ratio": [
+      1.4476823304099449,
+      5.858059214597715
+     ],
+     "share_w": 0.7979656793687052,
+     "ci_share_w": [
+      0.3915904311083828,
+      0.8783405226637138
+     ],
+     "F": 1013.1384766381798,
+     "p": 0.0,
+     "p_holm": 0.0
+    },
+    {
+     "cell": "massive__api__gpt-4.1-nano",
+     "kind": "api",
+     "dataset": "massive",
+     "model": "gpt-4.1-nano",
+     "n": 250,
+     "sd_w": 2.7361448223431046,
+     "ci_sd_w": [
+      1.9914860095854396,
+      3.2366739336796364
+     ],
+     "sd_s": 0.688601043142213,
+     "ratio": 3.973483411900704,
+     "ci_ratio": [
+      2.572340264990107,
+      5.1021332605674585
+     ],
+     "share_w": 0.8268438072418373,
+     "ci_share_w": [
+      0.7091735702561143,
+      0.8795813587564263
+     ],
+     "F": 1370.1005838806302,
+     "p": 0.0,
+     "p_holm": 0.0
+    },
+    {
+     "cell": "massive__api__gpt-6-luna",
+     "kind": "api",
+     "dataset": "massive",
+     "model": "gpt-6-luna",
+     "n": 250,
+     "sd_w": 1.3066570027146935,
+     "ci_sd_w": [
+      0.808001905860149,
+      1.6323760403929248
+     ],
+     "sd_s": 0.3275591071683258,
+     "ratio": 3.9890724272954796,
+     "ci_ratio": [
+      2.61794418273742,
+      4.995700100138542
+     ],
+     "share_w": 0.7810689701167803,
+     "ci_share_w": [
+      0.6593482889800314,
+      0.8408475907165861
+     ],
+     "F": 920.7356917554816,
+     "p": 0.0,
+     "p_holm": 0.0
+    },
+    {
+     "cell": "sst2__api__gpt-4.1-nano",
+     "kind": "api",
+     "dataset": "sst2",
+     "model": "gpt-4.1-nano",
+     "n": 250,
+     "sd_w": 0.16696281978109395,
+     "ci_sd_w": [
+      0.11044821770531706,
+      0.1996119044324177
+     ],
+     "sd_s": 0.027012204759916263,
+     "ratio": 6.181014147680832,
+     "ci_ratio": [
+      3.9617259340278634,
+      8.471007416561266
+     ],
+     "share_w": 0.9377218177225565,
+     "ci_share_w": [
+      0.8749552144629639,
+      0.9663167044649231
+     ],
+     "F": 4971.213671842626,
+     "p": 0.0,
+     "p_holm": 0.0
+    },
+    {
+     "cell": "sst2__api__gpt-6-luna",
+     "kind": "api",
+     "dataset": "sst2",
+     "model": "gpt-6-luna",
+     "n": 250,
+     "sd_w": 0.14129189170611253,
+     "ci_sd_w": [
+      0.0370034500804138,
+      0.1877551647505552
+     ],
+     "sd_s": 0.02032214323436442,
+     "ratio": 6.952607806994992,
+     "ci_ratio": [
+      1.8088217650813134,
+      9.537009453455408
+     ],
+     "share_w": 0.9621840835266527,
+     "ci_share_w": [
+      0.6596198117238146,
+      0.9789678822905766
+     ],
+     "F": 10745.122143753073,
+     "p": 0.0,
+     "p_holm": 0.0
+    }
+   ],
+   "share_cells_sd_w_ci_excludes_0_and_holm_sig": 1.0,
+   "share_cells_ratio_in_[1/3,3]": 0.0,
+   "share_cells_ratio_lt_1/3": 0.0,
+   "share_cells_ratio_gt_3": 1.0,
+   "H1a": "supported",
+   "H1b": "refuted: sampling negligible (ratio>3 in majority)",
+   "by_type_api": {
+    "median_ratio": 6.247196181731935,
+    "median_share_w": 0.8521509138027362,
+    "share_in_range": 0.0,
+    "n": 10
+   }
+  },
+  "RQ2": {
+   "cells": [
+    {
+     "cell": "agnews__api__gpt-4.1-nano",
+     "kind": "api",
+     "dataset": "agnews",
+     "model": "gpt-4.1-nano",
+     "slope_sd_split_n100": -0.7873589765621707,
+     "ci_slope_split": [
+      -0.8993083317120862,
+      -0.6524035365962271
+     ],
+     "slope_sd_w_n250": -0.008899105891662604,
+     "ci_slope_w": [
+      -0.3140691006044476,
+      0.3851584428679586
+     ],
+     "n_max": 900,
+     "sd_w_nmax": 0.4155841869393276,
+     "ci_sd_w_nmax": [
+      0.2766546463490558,
+      0.5322787865732376
+     ],
+     "sd_s_nmax": 0.02071722960008654,
+     "ratio_W4_over_Wmax": 0.8486294676451978,
+     "n_star_crossing": 2.236597521837963,
+     "sd_w_n_min": 0.44878054487199515,
+     "sd_s_n_min": 0.19623610463306698
+    },
+    {
+     "cell": "agnews__api__gpt-6-luna",
+     "kind": "api",
+     "dataset": "agnews",
+     "model": "gpt-6-luna",
+     "slope_sd_split_n100": -1.2272401458190574,
+     "ci_slope_split": [
+      -1.415443053601472,
+      -0.929550007749689
+     ],
+     "slope_sd_w_n250": 0.012493726806136812,
+     "ci_slope_w": [
+      -1.1562525371737205,
+      0.9999249442120091
+     ],
+     "n_max": 900,
+     "sd_w_nmax": 0.7383444157081068,
+     "ci_sd_w_nmax": [
+      0.16766293618327274,
+      1.0843667223140852
+     ],
+     "sd_s_nmax": 0.01799563316595187,
+     "ratio_W4_over_Wmax": 0.6041463502983871,
+     "n_star_crossing": 0.5346367199262279,
+     "sd_w_n_min": 0.7005694930301498,
+     "sd_s_n_min": 0.5434136394942993
+    },
+    {
+     "cell": "bbc2025__api__gpt-4.1-nano",
+     "kind": "api",
+     "dataset": "bbc2025",
+     "model": "gpt-4.1-nano",
+     "slope_sd_split_n100": -0.7350844100528293,
+     "ci_slope_split": [
+      -0.8267851059955623,
+      -0.5706162148070585
+     ],
+     "slope_sd_w_n250": 0.009332609910231828,
+     "ci_slope_w": [
+      -0.24727559219047401,
+      0.2546891635780203
+     ],
+     "n_max": 900,
+     "sd_w_nmax": 0.6245182310873604,
+     "ci_sd_w_nmax": [
+      0.4567455923938416,
+      0.7421181182890506
+     ],
+     "sd_s_nmax": 0.019613948427671692,
+     "ratio_W4_over_Wmax": 0.9067863342333738,
+     "n_star_crossing": 0.8877329209398298,
+     "sd_w_n_min": 0.6188320061268061,
+     "sd_s_n_min": 0.17846241202224436
+    },
+    {
+     "cell": "bbc2025__api__gpt-6-luna",
+     "kind": "api",
+     "dataset": "bbc2025",
+     "model": "gpt-6-luna",
+     "slope_sd_split_n100": -0.9988513213870713,
+     "ci_slope_split": [
+      -1.1399360561282181,
+      -0.821403701511548
+     ],
+     "slope_sd_w_n250": -0.07465278866347068,
+     "ci_slope_w": [
+      -0.39971021894532877,
+      0.27421998485106713
+     ],
+     "n_max": 900,
+     "sd_w_nmax": 0.23216610764490334,
+     "ci_sd_w_nmax": [
+      0.15444956616173552,
+      0.30118956011138664
+     ],
+     "sd_s_nmax": 0.017520214643408163,
+     "ratio_W4_over_Wmax": 0.8507220211353911,
+     "n_star_crossing": 5.125352194076653,
+     "sd_w_n_min": 0.399138522982557,
+     "sd_s_n_min": 0.38636924902501774
+    },
+    {
+     "cell": "dbpedia__api__gpt-4.1-nano",
+     "kind": "api",
+     "dataset": "dbpedia",
+     "model": "gpt-4.1-nano",
+     "slope_sd_split_n100": -1.3164534793575373,
+     "ci_slope_split": [
+      -1.5438329471476449,
+      -0.941608551548549
+     ],
+     "slope_sd_w_n250": -0.0771268557637917,
+     "ci_slope_w": [
+      -1.1842517536767434,
+      0.9623315240911033
+     ],
+     "n_max": 700,
+     "sd_w_nmax": 0.5414519481119362,
+     "ci_sd_w_nmax": [
+      0.17685066775898414,
+      0.8114702701814369
+     ],
+     "sd_s_nmax": 0.02143417404617649,
+     "ratio_W4_over_Wmax": 0.6685273209364081,
+     "n_star_crossing": 1.0969623059929605,
+     "sd_w_n_min": 0.896936997144838,
+     "sd_s_n_min": 0.6274221784206678
+    },
+    {
+     "cell": "dbpedia__api__gpt-6-luna",
+     "kind": "api",
+     "dataset": "dbpedia",
+     "model": "gpt-6-luna",
+     "slope_sd_split_n100": -0.39912525890963735,
+     "ci_slope_split": [
+      -0.5118017547984219,
+      -0.29763363299702167
+     ],
+     "slope_sd_w_n250": -0.03856653051666847,
+     "ci_slope_w": [
+      -0.8881937378962351,
+      1.1829410008539143
+     ],
+     "n_max": 700,
+     "sd_w_nmax": 0.06361703652760839,
+     "ci_sd_w_nmax": [
+      0.024083588716081523,
+      0.09457353066634908
+     ],
+     "sd_s_nmax": 0.010248556158881164,
+     "ratio_W4_over_Wmax": 0.690749080985153,
+     "n_star_crossing": 18.166720793569596,
+     "sd_w_n_min": 0.09939015626006872,
+     "sd_s_n_min": 0.03845801605921207
+    },
+    {
+     "cell": "massive__api__gpt-4.1-nano",
+     "kind": "api",
+     "dataset": "massive",
+     "model": "gpt-4.1-nano",
+     "slope_sd_split_n100": -0.6568706624750058,
+     "ci_slope_split": [
+      -0.7436266679611329,
+      -0.5606856416461437
+     ],
+     "slope_sd_w_n250": 0.01273223259417517,
+     "ci_slope_w": [
+      -0.23240189051027849,
+      0.3298597482806166
+     ],
+     "n_max": 900,
+     "sd_w_nmax": 2.7807138973880066,
+     "ci_sd_w_nmax": [
+      2.0663750962455225,
+      3.274744702797779
+     ],
+     "sd_s_nmax": 0.2565235038410185,
+     "ratio_W4_over_Wmax": 0.8838409657216602,
+     "n_star_crossing": 7.65921430457944,
+     "sd_w_n_min": 2.499318135211444,
+     "sd_s_n_min": 1.6801221658408552
+    },
+    {
+     "cell": "massive__api__gpt-6-luna",
+     "kind": "api",
+     "dataset": "massive",
+     "model": "gpt-6-luna",
+     "slope_sd_split_n100": -0.9461243978472513,
+     "ci_slope_split": [
+      -1.152260463581572,
+      -0.7182244612781351
+     ],
+     "slope_sd_w_n250": -0.03801704802763706,
+     "ci_slope_w": [
+      -0.5368853500469861,
+      0.3238153255909657
+     ],
+     "n_max": 900,
+     "sd_w_nmax": 1.2451758406883249,
+     "ci_sd_w_nmax": [
+      0.763786969201881,
+      1.5696714002298353
+     ],
+     "sd_s_nmax": 0.08453218208799225,
+     "ratio_W4_over_Wmax": 0.826729875363104,
+     "n_star_crossing": 4.147871538607148,
+     "sd_w_n_min": 2.056696532882862,
+     "sd_s_n_min": 1.3705992952835764
+    },
+    {
+     "cell": "sst2__api__gpt-4.1-nano",
+     "kind": "api",
+     "dataset": "sst2",
+     "model": "gpt-4.1-nano",
+     "slope_sd_split_n100": -0.5548621952822449,
+     "ci_slope_split": [
+      -0.681097622977114,
+      -0.4283301655588594
+     ],
+     "slope_sd_w_n250": -0.008721698154455348,
+     "ci_slope_w": [
+      -0.3449172410284121,
+      0.31154795708391275
+     ],
+     "n_max": 900,
+     "sd_w_nmax": 0.1651159116574158,
+     "ci_sd_w_nmax": [
+      0.10965451825562242,
+      0.1999353481163105
+     ],
+     "sd_s_nmax": 0.012744635323998312,
+     "ratio_W4_over_Wmax": 0.8927993148782501,
+     "n_star_crossing": 5.361909530458734,
+     "sd_w_n_min": 0.17206569901837698,
+     "sd_s_n_min": 0.06593320281239469
+    },
+    {
+     "cell": "sst2__api__gpt-6-luna",
+     "kind": "api",
+     "dataset": "sst2",
+     "model": "gpt-6-luna",
+     "slope_sd_split_n100": -0.36220004190598176,
+     "ci_slope_split": [
+      -0.4304237086832995,
+      -0.28085681752015684
+     ],
+     "slope_sd_w_n250": 0.0015524428254878465,
+     "ci_slope_w": [
+      -1.0734032912194993,
+      1.118461640924256
+     ],
+     "n_max": 900,
+     "sd_w_nmax": 0.14157023863189105,
+     "ci_sd_w_nmax": [
+      0.047372473440888664,
+      0.18807141119380635
+     ],
+     "sd_s_nmax": 0.013969206010771056,
+     "ratio_W4_over_Wmax": 0.7223751181118614,
+     "n_star_crossing": 8.762782364082979,
+     "sd_w_n_min": 0.14368094074331975,
+     "sd_s_n_min": 0.04876668988978669
+    }
+   ],
+   "share_H2a_split_slope_in_range": 0.3,
+   "share_H2b_flat_wording_floor": 1.0,
+   "share_wording_declining": 0.0,
+   "share_wording_ci_includes_0_at_nmax": 0.0,
+   "share_H2c_W4_estimate_within_0.8_1.25": 0.6,
+   "H2a": "not supported",
+   "H2b": "supported",
+   "H2c": "not supported"
+  },
+  "RQ3": {
+   "cells": [
+    {
+     "cell": "agnews__api__gpt-4.1-nano",
+     "kind": "api",
+     "dataset": "agnews",
+     "model": "gpt-4.1-nano",
+     "surface_flip_mean": 0.02148148148148148,
+     "surface_flip_max": 0.03,
+     "surface_flip_max_ci": [
+      0.021098220864371225,
+      0.04129234998469967
+     ],
+     "valid_flip_mean": 0.1551944444444445,
+     "surface_over_valid": 0.1384165622576218
+    },
+    {
+     "cell": "agnews__api__gpt-6-luna",
+     "kind": "api",
+     "dataset": "agnews",
+     "model": "gpt-6-luna",
+     "surface_flip_mean": 0.01675925925925926,
+     "surface_flip_max": 0.023333333333333334,
+     "surface_flip_max_ci": [
+      0.01555952131880761,
+      0.03354760731138503
+     ],
+     "valid_flip_mean": 0.08725000000000001,
+     "surface_over_valid": 0.1920832006791892,
+     "sd_w_valid": 0.726869937495011,
+     "sd_w_all": 0.9348050726116437,
+     "sd_w_strict": 0.47511888603128505
+    },
+    {
+     "cell": "bbc2025__api__gpt-4.1-nano",
+     "kind": "api",
+     "dataset": "bbc2025",
+     "model": "gpt-4.1-nano",
+     "surface_flip_mean": 0.035555555555555556,
+     "surface_flip_max": 0.0475,
+     "surface_flip_max_ci": [
+      0.036171461207449435,
+      0.06110669526122856
+     ],
+     "valid_flip_mean": 0.2355,
+     "surface_over_valid": 0.1509790044821892
+    },
+    {
+     "cell": "bbc2025__api__gpt-6-luna",
+     "kind": "api",
+     "dataset": "bbc2025",
+     "model": "gpt-6-luna",
+     "surface_flip_mean": 0.01870370370370371,
+     "surface_flip_max": 0.023333333333333334,
+     "surface_flip_max_ci": [
+      0.01555952131880761,
+      0.03354760731138503
+     ],
+     "valid_flip_mean": 0.11394444444444442,
+     "surface_over_valid": 0.1641475702909151,
+     "sd_w_valid": 0.2553288802649717,
+     "sd_w_all": 0.4274522444213366,
+     "sd_w_strict": 0.19031946018365395
+    },
+    {
+     "cell": "dbpedia__api__gpt-4.1-nano",
+     "kind": "api",
+     "dataset": "dbpedia",
+     "model": "gpt-4.1-nano",
+     "surface_flip_mean": 0.0075,
+     "surface_flip_max": 0.017,
+     "surface_flip_max_ci": [
+      0.009933512592716534,
+      0.027079496864851366
+     ],
+     "valid_flip_mean": 0.08263333333333332,
+     "surface_over_valid": 0.09076240419524002
+    },
+    {
+     "cell": "dbpedia__api__gpt-6-luna",
+     "kind": "api",
+     "dataset": "dbpedia",
+     "model": "gpt-6-luna",
+     "surface_flip_mean": 0.0066,
+     "surface_flip_max": 0.009,
+     "surface_flip_max_ci": [
+      0.004123395660342472,
+      0.017015783069894586
+     ],
+     "valid_flip_mean": 0.04863333333333334,
+     "surface_over_valid": 0.13570938999314597
+    },
+    {
+     "cell": "massive__api__gpt-4.1-nano",
+     "kind": "api",
+     "dataset": "massive",
+     "model": "gpt-4.1-nano",
+     "surface_flip_mean": 0.05775000000000001,
+     "surface_flip_max": 0.08083333333333333,
+     "surface_flip_max_ci": [
+      0.06603661864935755,
+      0.09772083472609279
+     ],
+     "valid_flip_mean": 0.2406666666666667,
+     "surface_over_valid": 0.23995844875346262
+    },
+    {
+     "cell": "massive__api__gpt-6-luna",
+     "kind": "api",
+     "dataset": "massive",
+     "model": "gpt-6-luna",
+     "surface_flip_mean": 0.06799999999999999,
+     "surface_flip_max": 0.1025,
+     "surface_flip_max_ci": [
+      0.08591296644419218,
+      0.12106302149254217
+     ],
+     "valid_flip_mean": 0.18855555555555556,
+     "surface_over_valid": 0.36063641720683554
+    },
+    {
+     "cell": "sst2__api__gpt-4.1-nano",
+     "kind": "api",
+     "dataset": "sst2",
+     "model": "gpt-4.1-nano",
+     "surface_flip_mean": 0.0044444444444444444,
+     "surface_flip_max": 0.005,
+     "surface_flip_max_ci": [
+      0.0018370555937565793,
+      0.010850910043876468
+     ],
+     "valid_flip_mean": 0.09191666666666666,
+     "surface_over_valid": 0.04835297673012995,
+     "sd_w_valid": 0.16696281978109395,
+     "sd_w_all": 0.15368810910342456,
+     "sd_w_strict": 0.0007471329902987156
+    },
+    {
+     "cell": "sst2__api__gpt-6-luna",
+     "kind": "api",
+     "dataset": "sst2",
+     "model": "gpt-6-luna",
+     "surface_flip_mean": 0.006111111111111111,
+     "surface_flip_max": 0.009166666666666667,
+     "surface_flip_max_ci": [
+      0.004584595241526909,
+      0.01634238265907901
+     ],
+     "valid_flip_mean": 0.05427777777777777,
+     "surface_over_valid": 0.11258955987717505,
+     "sd_w_valid": 0.14129189170611253,
+     "sd_w_all": 0.13360164274203387,
+     "sd_w_strict": 0.0021816046493538075
+    }
+   ],
+   "dose_response": {
+    "api": {
+     "n_variant_model_pairs": 36,
+     "spearman_dist_tv": 0.30147416195994514,
+     "ci": [
+      -0.06563408126903396,
+      0.6220233134323045
+     ],
+     "spearman_dist_flip": 0.2889560859938533,
+     "mean_tv_valid": 0.04925313987468422,
+     "mean_tv_invalid": null,
+     "by_dataset": {
+      "agnews": 0.41194292043554975,
+      "bbc2025": 0.3236694374850748,
+      "sst2": 0.5559822084796427
+     }
+    }
+   },
+   "H3a_by_type": {
+    "api": true
+   },
+   "share_cells_surface_ge_half_valid": 0.0,
+   "share_H3c_valid_lt_all": 0.5,
+   "H3b": {
+    "api": "not supported"
+   },
+   "H3c": "not supported",
+   "definitional_reading_refuted_by_surface_control": false
+  },
+  "RQ4": {
+   "pairs": [
+    {
+     "kind": "api",
+     "model": "gpt-4.1-nano",
+     "acc_official_ag": 0.8766666666666667,
+     "acc_official_bbc": 0.8516666666666667,
+     "acc_valid_mean_ag": 0.7946944444444444,
+     "acc_valid_mean_bbc": 0.7253888888888889,
+     "sd_w_ag": 0.42035227104404504,
+     "ci_sd_w_ag": [
+      0.2740365119482783,
+      0.5311115298025512
+     ],
+     "sd_w_bbc": 0.6172508788976746,
+     "ci_sd_w_bbc": [
+      0.46316453758767623,
+      0.7341303464015366
+     ],
+     "share_maxp_gt_099_ag": 0.9441666666666667,
+     "share_maxp_gt_099_bbc": 0.91
+    },
+    {
+     "kind": "api",
+     "model": "gpt-6-luna",
+     "acc_official_ag": 0.8816666666666667,
+     "acc_official_bbc": 0.8858333333333334,
+     "acc_valid_mean_ag": 0.8434999999999999,
+     "acc_valid_mean_bbc": 0.831972222222222,
+     "sd_w_ag": 0.726869937495011,
+     "ci_sd_w_ag": [
+      0.23295020986906437,
+      1.0426280350826067
+     ],
+     "sd_w_bbc": 0.2553288802649717,
+     "ci_sd_w_bbc": [
+      0.16841546437352609,
+      0.3187675904275989
+     ],
+     "share_maxp_gt_099_ag": 0.7516666666666667,
+     "share_maxp_gt_099_bbc": 0.6841666666666667
+    }
+   ],
+   "minkprob": {},
+   "H4b_acc_lower_on_bbc_share": 1.0,
+   "H4b_sdw_larger_on_bbc_share": 0.5,
+   "H4a": {}
+  }
+ },
+ "supervised": [
+  {
+   "cell": "agnews__sup__all-MiniLM-L6-v2",
+   "dataset": "agnews",
+   "model": "all-MiniLM-L6-v2+LogReg",
+   "trained_on": "agnews",
+   "acc": 0.875,
+   "sd_train_250": 0.009303433644360018,
+   "ci_sd_train_250": [
+    0.006041405604708515,
+    0.012145246443012297
+   ],
+   "sd_split_250": 0.05472352331704974,
+   "share_train_250": 0.021304943624674656,
+   "sd_train_nmax": 0.008286403516296307,
+   "sd_split_nmax": 0.011046239893846796,
+   "n_max": 2300
+  },
+  {
+   "cell": "agnews__sup__bge-small-en-v1.5",
+   "dataset": "agnews",
+   "model": "bge-small-en-v1.5+LogReg",
+   "trained_on": "agnews",
+   "acc": 0.89,
+   "sd_train_250": 0.005784254564751336,
+   "ci_sd_train_250": [
+    0.003861009950032874,
+    0.007851867610778744
+   ],
+   "sd_split_250": 0.04212406803782006,
+   "share_train_250": 0.014724937869482486,
+   "sd_train_nmax": 0.00631324586711061,
+   "sd_split_nmax": 0.010799608972952388,
+   "n_max": 2300
+  },
+  {
+   "cell": "agnews__sup__e5-base-v2",
+   "dataset": "agnews",
+   "model": "e5-base-v2+LogReg",
+   "trained_on": "agnews",
+   "acc": 0.8984615384615384,
+   "sd_train_250": 0.0035003414987699486,
+   "ci_sd_train_250": [
+    0.0024045769306383492,
+    0.004875254679595459
+   ],
+   "sd_split_250": 0.03929487454311261,
+   "share_train_250": 0.006509276094023365,
+   "sd_train_nmax": 0.004758555695003244,
+   "sd_split_nmax": 0.01224738926829043,
+   "n_max": 2300
+  },
+  {
+   "cell": "bbc2025__sup__all-MiniLM-L6-v2",
+   "dataset": "bbc2025",
+   "model": "all-MiniLM-L6-v2+LogReg",
+   "trained_on": "agnews",
+   "acc": 0.8503127792672028,
+   "sd_train_250": 0.01622897276916921,
+   "ci_sd_train_250": [
+    0.010924036291871969,
+    0.020788120978642848
+   ],
+   "sd_split_250": 0.06648170186471876,
+   "share_train_250": 0.04188873814403201,
+   "sd_train_nmax": 0.016110289503908186,
+   "sd_split_nmax": 0.016611108182269244,
+   "n_max": 1938
+  },
+  {
+   "cell": "bbc2025__sup__bge-small-en-v1.5",
+   "dataset": "bbc2025",
+   "model": "bge-small-en-v1.5+LogReg",
+   "trained_on": "agnews",
+   "acc": 0.8623771224307417,
+   "sd_train_250": 0.015186774426718286,
+   "ci_sd_train_250": [
+    0.0112324208176606,
+    0.018354017075164746
+   ],
+   "sd_split_250": 0.055442955840899345,
+   "share_train_250": 0.05452385556282072,
+   "sd_train_nmax": 0.015548101822259608,
+   "sd_split_nmax": 0.013552237680178747,
+   "n_max": 1938
+  },
+  {
+   "cell": "bbc2025__sup__e5-base-v2",
+   "dataset": "bbc2025",
+   "model": "e5-base-v2+LogReg",
+   "trained_on": "agnews",
+   "acc": 0.8632707774798928,
+   "sd_train_250": 0.014325951458320841,
+   "ci_sd_train_250": [
+    0.009828298464609963,
+    0.01784184298950824
+   ],
+   "sd_split_250": 0.06054064304145158,
+   "share_train_250": 0.044295944786455675,
+   "sd_train_nmax": 0.013239937708040736,
+   "sd_split_nmax": 0.016320595079180635,
+   "n_max": 1938
+  },
+  {
+   "cell": "dbpedia__sup__all-MiniLM-L6-v2",
+   "dataset": "dbpedia",
+   "model": "all-MiniLM-L6-v2+LogReg",
+   "trained_on": "dbpedia",
+   "acc": 0.9435714285714286,
+   "sd_train_250": 0.004264900723045843,
+   "ci_sd_train_250": [
+    0.0030758030916666714,
+    0.005593920737304499
+   ],
+   "sd_split_250": 0.027957511512456602,
+   "share_train_250": 0.017319844601795836,
+   "sd_train_nmax": 0.004190533250852916,
+   "sd_split_nmax": 0.015912020678368395,
+   "n_max": 1100
+  },
+  {
+   "cell": "dbpedia__sup__bge-small-en-v1.5",
+   "dataset": "dbpedia",
+   "model": "bge-small-en-v1.5+LogReg",
+   "trained_on": "dbpedia",
+   "acc": 0.9421428571428572,
+   "sd_train_250": 0.005350679551734007,
+   "ci_sd_train_250": [
+    0.003687099184268086,
+    0.006927394468849601
+   ],
+   "sd_split_250": 0.0340294442621011,
+   "share_train_250": 0.018862253927152586,
+   "sd_train_nmax": 0.005068399586258214,
+   "sd_split_nmax": 0.018453162962200537,
+   "n_max": 1100
+  },
+  {
+   "cell": "dbpedia__sup__e5-base-v2",
+   "dataset": "dbpedia",
+   "model": "e5-base-v2+LogReg",
+   "trained_on": "dbpedia",
+   "acc": 0.97,
+   "sd_train_250": 0.0026810092124075614,
+   "ci_sd_train_250": [
+    0.0013277762896396809,
+    0.003938084928410877
+   ],
+   "sd_split_250": 0.023880598200371642,
+   "share_train_250": 0.009861009730241179,
+   "sd_train_nmax": 0.0026714566210993274,
+   "sd_split_nmax": 0.016574128226504104,
+   "n_max": 1100
+  },
+  {
+   "cell": "massive__sup__all-MiniLM-L6-v2",
+   "dataset": "massive",
+   "model": "all-MiniLM-L6-v2+LogReg",
+   "trained_on": "massive",
+   "acc": 0.8673076923076923,
+   "sd_train_250": 0.011665051587808756,
+   "ci_sd_train_250": [
+    0.008327476699973224,
+    0.014948200766597728
+   ],
+   "sd_split_250": 0.0814417768431488,
+   "share_train_250": 0.015616796461470347,
+   "sd_train_nmax": 0.012264211665337263,
+   "sd_split_nmax": 0.019114865392972247,
+   "n_max": 2300
+  },
+  {
+   "cell": "massive__sup__bge-small-en-v1.5",
+   "dataset": "massive",
+   "model": "bge-small-en-v1.5+LogReg",
+   "trained_on": "massive",
+   "acc": 0.8715384615384615,
+   "sd_train_250": 0.014105880552910219,
+   "ci_sd_train_250": [
+    0.010154847639992722,
+    0.017765629514467616
+   ],
+   "sd_split_250": 0.0728347083354594,
+   "share_train_250": 0.02961547662110472,
+   "sd_train_nmax": 0.013564305102629388,
+   "sd_split_nmax": 0.01784734215585811,
+   "n_max": 2300
+  },
+  {
+   "cell": "massive__sup__e5-base-v2",
+   "dataset": "massive",
+   "model": "e5-base-v2+LogReg",
+   "trained_on": "massive",
+   "acc": 0.8438461538461538,
+   "sd_train_250": 0.049859931360732454,
+   "ci_sd_train_250": [
+    0.030500258416613274,
+    0.0643826040811199
+   ],
+   "sd_split_250": 0.09996856910028232,
+   "share_train_250": 0.15635544998364956,
+   "sd_train_nmax": 0.04630158340827035,
+   "sd_split_nmax": 0.02641603103722244,
+   "n_max": 2300
+  },
+  {
+   "cell": "sst2__sup__all-MiniLM-L6-v2",
+   "dataset": "sst2",
+   "model": "all-MiniLM-L6-v2+LogReg",
+   "trained_on": "sst2",
+   "acc": 0.8123076923076923,
+   "sd_train_250": 0.010057162506199218,
+   "ci_sd_train_250": [
+    0.006646735129764161,
+    0.012964918810664385
+   ],
+   "sd_split_250": 0.04837631394635067,
+   "share_train_250": 0.026749969676999184,
+   "sd_train_nmax": 0.012583911950956298,
+   "sd_split_nmax": 0.017574200656800824,
+   "n_max": 2300
+  },
+  {
+   "cell": "sst2__sup__bge-small-en-v1.5",
+   "dataset": "sst2",
+   "model": "bge-small-en-v1.5+LogReg",
+   "trained_on": "sst2",
+   "acc": 0.8788461538461538,
+   "sd_train_250": 0.003797854900143785,
+   "ci_sd_train_250": [
+    0.0024847159426471246,
+    0.005200765519887899
+   ],
+   "sd_split_250": 0.03848028437651538,
+   "share_train_250": 0.007836738074211279,
+   "sd_train_nmax": 0.0038027553188350813,
+   "sd_split_nmax": 0.007897624267493245,
+   "n_max": 2300
+  },
+  {
+   "cell": "sst2__sup__e5-base-v2",
+   "dataset": "sst2",
+   "model": "e5-base-v2+LogReg",
+   "trained_on": "sst2",
+   "acc": 0.9080769230769231,
+   "sd_train_250": 0.0033040016896280612,
+   "ci_sd_train_250": [
+    0.002199573319652533,
+    0.004569089672295898
+   ],
+   "sd_split_250": 0.03161232769189851,
+   "share_train_250": 0.00921021179487793,
+   "sd_train_nmax": 0.0031777246757734626,
+   "sd_split_nmax": 0.004641584779536654,
+   "n_max": 2300
+  }
+ ],
+ "coverage_check": {
+  "max_abs_mean_coverage_minus_target": 0.03176888888888896,
+  "by_method": {
+   "count": {
+    "aps": 70.0,
+    "lac": 70.0,
+    "raps": 70.0
+   },
+   "mean": {
+    "aps": 0.0035910476190476144,
+    "lac": 0.00617794444444444,
+    "raps": 0.003505595238095246
+   },
+   "std": {
+    "aps": 0.002988260283470083,
+    "lac": 0.006092477889529585,
+    "raps": 0.002968035034740794
+   },
+   "min": {
+    "aps": -0.0020616666666667394,
+    "lac": 0.0006394444444443037,
+    "raps": -0.0020872222222223513
+   },
+   "25%": {
+    "aps": 0.0012105555555556313,
+    "lac": 0.0019395833333333279,
+    "raps": 0.0011044444444444912
+   },
+   "50%": {
+    "aps": 0.002430277777777823,
+    "lac": 0.004669166666666724,
+    "raps": 0.0022936111111110935
+   },
+   "75%": {
+    "aps": 0.00657861111111116,
+    "lac": 0.007404999999999967,
+    "raps": 0.006421944444444494
+   },
+   "max": {
+    "aps": 0.009256111111111132,
+    "lac": 0.03176888888888896,
+    "raps": 0.00940277777777776
+   }
+  }
+ },
+ "share_w_by_method_alpha_n250": [
+  {
+   "kind": "api",
+   "method": "aps",
+   "alpha": 0.05,
+   "set_size_share_w": 0.8290710647032824
+  },
+  {
+   "kind": "api",
+   "method": "aps",
+   "alpha": 0.1,
+   "set_size_share_w": 0.8428850451840573
+  },
+  {
+   "kind": "api",
+   "method": "aps",
+   "alpha": 0.2,
+   "set_size_share_w": 0.7977880129610627
+  },
+  {
+   "kind": "api",
+   "method": "lac",
+   "alpha": 0.05,
+   "set_size_share_w": 0.7807332745955915
+  },
+  {
+   "kind": "api",
+   "method": "lac",
+   "alpha": 0.1,
+   "set_size_share_w": 0.8521509138027362
+  },
+  {
+   "kind": "api",
+   "method": "lac",
+   "alpha": 0.2,
+   "set_size_share_w": 0.7492021032811775
+  },
+  {
+   "kind": "api",
+   "method": "raps",
+   "alpha": 0.05,
+   "set_size_share_w": 0.7916832861887007
+  },
+  {
+   "kind": "api",
+   "method": "raps",
+   "alpha": 0.1,
+   "set_size_share_w": 0.894056952877631
+  },
+  {
+   "kind": "api",
+   "method": "raps",
+   "alpha": 0.2,
+   "set_size_share_w": 0.7723699782358443
+  }
+ ],
+ "point": [
+  {
+   "cell": "agnews__api__gpt-4.1-nano",
+   "kind": "api",
+   "dataset": "agnews",
+   "model": "gpt-4.1-nano",
+   "N": 1200,
+   "acc_official": 0.8766666666666667,
+   "acc_valid_mean": 0.7946944444444444,
+   "acc_valid_min": 0.6141666666666666,
+   "acc_valid_max": 0.8791666666666667,
+   "ece_official": 0.11749134999294832,
+   "maxp_gt_099_official": 0.9441666666666667,
+   "acc_nonsense": 0.23791666666666667,
+   "acc_shuffled": 0.047499999999999994,
+   "identity_flip": 0.0
+  },
+  {
+   "cell": "agnews__api__gpt-6-luna",
+   "kind": "api",
+   "dataset": "agnews",
+   "model": "gpt-6-luna",
+   "N": 1200,
+   "acc_official": 0.8816666666666667,
+   "acc_valid_mean": 0.8434999999999999,
+   "acc_valid_min": 0.685,
+   "acc_valid_max": 0.8916666666666667,
+   "ece_official": 0.08837276440178707,
+   "maxp_gt_099_official": 0.7516666666666667,
+   "acc_nonsense": 0.24541666666666667,
+   "acc_shuffled": 0.03416666666666667,
+   "identity_flip": 0.0
+  },
+  {
+   "cell": "bbc2025__api__gpt-4.1-nano",
+   "kind": "api",
+   "dataset": "bbc2025",
+   "model": "gpt-4.1-nano",
+   "N": 1200,
+   "acc_official": 0.8516666666666667,
+   "acc_valid_mean": 0.7253888888888889,
+   "acc_valid_min": 0.5066666666666667,
+   "acc_valid_max": 0.8583333333333333,
+   "ece_official": 0.13839748749267716,
+   "maxp_gt_099_official": 0.91,
+   "acc_nonsense": 0.2533333333333333,
+   "acc_shuffled": 0.04027777777777778,
+   "identity_flip": 0.0
+  },
+  {
+   "cell": "bbc2025__api__gpt-6-luna",
+   "kind": "api",
+   "dataset": "bbc2025",
+   "model": "gpt-6-luna",
+   "N": 1200,
+   "acc_official": 0.8858333333333334,
+   "acc_valid_mean": 0.831972222222222,
+   "acc_valid_min": 0.7341666666666666,
+   "acc_valid_max": 0.89,
+   "ece_official": 0.07795829333179635,
+   "maxp_gt_099_official": 0.6841666666666667,
+   "acc_nonsense": 0.23041666666666666,
+   "acc_shuffled": 0.031111111111111114,
+   "identity_flip": 0.0
+  },
+  {
+   "cell": "dbpedia__api__gpt-4.1-nano",
+   "kind": "api",
+   "dataset": "dbpedia",
+   "model": "gpt-4.1-nano",
+   "N": 1000,
+   "acc_official": 0.959,
+   "acc_valid_mean": 0.8956000000000001,
+   "acc_valid_min": 0.814,
+   "acc_valid_max": 0.954,
+   "ece_official": 0.04110197678017868,
+   "maxp_gt_099_official": 0.984,
+   "acc_nonsense": 0.05,
+   "acc_shuffled": 0.0023333333333333335,
+   "identity_flip": 0.0
+  },
+  {
+   "cell": "dbpedia__api__gpt-6-luna",
+   "kind": "api",
+   "dataset": "dbpedia",
+   "model": "gpt-6-luna",
+   "N": 1000,
+   "acc_official": 0.988,
+   "acc_valid_mean": 0.9497666666666666,
+   "acc_valid_min": 0.858,
+   "acc_valid_max": 0.986,
+   "ece_official": 0.006562148167197729,
+   "maxp_gt_099_official": 0.876,
+   "acc_nonsense": 0.055,
+   "acc_shuffled": 0.0013333333333333333,
+   "identity_flip": 0.0
+  },
+  {
+   "cell": "massive__api__gpt-4.1-nano",
+   "kind": "api",
+   "dataset": "massive",
+   "model": "gpt-4.1-nano",
+   "N": 1200,
+   "acc_official": 0.645,
+   "acc_valid_mean": 0.6176111111111111,
+   "acc_valid_min": 0.53,
+   "acc_valid_max": 0.6925,
+   "ece_official": 0.3300853181753586,
+   "maxp_gt_099_official": 0.8508333333333333,
+   "acc_nonsense": 0.06416666666666666,
+   "acc_shuffled": 0.008611111111111113,
+   "identity_flip": 0.0
+  },
+  {
+   "cell": "massive__api__gpt-6-luna",
+   "kind": "api",
+   "dataset": "massive",
+   "model": "gpt-6-luna",
+   "N": 1200,
+   "acc_official": 0.7575,
+   "acc_valid_mean": 0.7380833333333334,
+   "acc_valid_min": 0.6525,
+   "acc_valid_max": 0.805,
+   "ece_official": 0.08071137650149979,
+   "maxp_gt_099_official": 0.18583333333333332,
+   "acc_nonsense": 0.0475,
+   "acc_shuffled": 0.014444444444444446,
+   "identity_flip": 0.0
+  },
+  {
+   "cell": "sst2__api__gpt-4.1-nano",
+   "kind": "api",
+   "dataset": "sst2",
+   "model": "gpt-4.1-nano",
+   "N": 1200,
+   "acc_official": 0.9441666666666667,
+   "acc_valid_mean": 0.8759722222222223,
+   "acc_valid_min": 0.5466666666666666,
+   "acc_valid_max": 0.9558333333333333,
+   "ece_official": 0.05427884309174517,
+   "maxp_gt_099_official": 0.9716666666666667,
+   "acc_nonsense": 0.6591666666666667,
+   "acc_shuffled": 0.050833333333333335,
+   "identity_flip": 0.0
+  },
+  {
+   "cell": "sst2__api__gpt-6-luna",
+   "kind": "api",
+   "dataset": "sst2",
+   "model": "gpt-6-luna",
+   "N": 1200,
+   "acc_official": 0.9558333333333333,
+   "acc_valid_mean": 0.9191111111111111,
+   "acc_valid_min": 0.605,
+   "acc_valid_max": 0.9658333333333333,
+   "ece_official": 0.03122317523021216,
+   "maxp_gt_099_official": 0.9,
+   "acc_nonsense": 0.8933333333333333,
+   "acc_shuffled": 0.03916666666666667,
+   "identity_flip": 0.0
+  }
+ ]
+}

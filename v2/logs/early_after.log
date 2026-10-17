@@ -4,3 +4,17 @@ DONE raw/repeat/llm_rep0.npz 559s
 DONE raw/repeat/nli_rep1.npz 275s
 DONE raw/repeat/bienc_rep1.npz 7s
 DONE raw/repeat/llm_rep1.npz 341s
+DONE raw/repeat/nli_rep2.npz 282s
+DONE raw/repeat/bienc_rep2.npz 8s
+DONE raw/repeat/llm_rep2.npz 2161s
+DONE raw/repeat/nli_rep3.npz 281s
+DONE raw/repeat/bienc_rep3.npz 8s
+DONE raw/repeat/llm_rep3.npz 444s
+DONE raw/repeat/nli_fp32_bs1.npz 1422s
+DONE raw/repeat/nli_fp32_t1.npz 261s
+DONE raw/repeat/nli_bf16_bs64.npz 128s
+DONE raw/repeat/nli_bf16_bs1.npz 791s
+DONE raw/repeat/bienc_fp32_bs1.npz 32s
+DONE raw/repeat/bienc_fp32_t1.npz 7s
+DONE raw/repeat/bienc_bf16_bs64.npz 5s
+DONE raw/repeat/bienc_bf16_bs1.npz 26s

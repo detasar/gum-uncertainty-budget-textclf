@@ -1,4 +1,10 @@
 {
+ "group": "prereg",
+ "kinds": [
+  "nli",
+  "bienc",
+  "llm"
+ ],
  "n_cells_zero_shot": 17,
  "n_cells_supervised": 15,
  "cells": [

@@ -3,7 +3,9 @@
 set -e
 SRC=/workspace/x-master/uq-budget/v2; DST=/workspace/x-master/uq-budget/repo/v2
 mkdir -p $DST
-rm -rf $DST && mkdir -p $DST && (cd $SRC && tar --exclude='data/bbc2025.json' --exclude='__pycache__' --exclude='refs/*.html' --exclude='refs/gum.pdf' --exclude='refs/gum.txt' -cf - .) | (cd $DST && tar -xf -)
+rm -rf $DST && mkdir -p $DST && (cd $SRC && tar --exclude='data/bbc2025.json' --exclude='__pycache__' --exclude='refs/*.html' --exclude='refs/gum.pdf' --exclude='refs/gum.txt' --exclude='raw/api_cache' -cf - .) | (cd $DST && tar -xf -)
+# API response caches (JSONL, ~260 MB) are shipped compressed; unpack with: tar -xzf raw/api_cache.tar.gz -C raw
+(cd $SRC/raw && tar -czf $DST/raw/api_cache.tar.gz api_cache)
 /workspace/.venv-uq2/bin/python - <<'PY'
 import json, hashlib
 d = json.load(open("/workspace/x-master/uq-budget/v2/data/bbc2025.json"))

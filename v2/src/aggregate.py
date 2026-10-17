@@ -1,4 +1,7 @@
-"""Aggregate all per-cell results into results/summary.json + CSV tables + preregistered RQ verdicts."""
+"""Aggregate all per-cell results into results/summary.json + CSV tables + preregistered RQ verdicts.
+Groups (exploratory extension, 2026-10-17): default = preregistered instruments only (T1-T3, outputs unchanged: summary.json, *.csv);
+--with-api = T1-T3 plus the T5 API-LLM cells (suffix _with_api); --api-only = T5 API-LLM cells only (suffix _api). Shares are counted
+over cells; types are never ranked against each other."""
 import json, os, sys, glob, math
 import numpy as np, pandas as pd
 from scipy.stats import spearmanr, f as fdist, beta
@@ -16,7 +19,9 @@ for f in sorted(glob.glob(f"{C}/*.json")):
     if b.count("__") != 2: continue
     cells[b] = json.load(open(f))
 main = {k: v for k, v in cells.items() if not any(t in k for t in ("_tau", "_rawll", "_sub"))}
-zs = {k: v for k, v in main.items() if v["kind"] in ("nli", "bienc", "llm")}
+GROUP = "with_api" if "--with-api" in sys.argv else ("api" if "--api-only" in sys.argv else "prereg")
+KINDS = {"prereg": ["nli", "bienc", "llm"], "with_api": ["nli", "bienc", "llm", "api"], "api": ["api"]}[GROUP]; SUF = "" if GROUP == "prereg" else f"_{GROUP}"
+zs = {k: v for k, v in main.items() if v["kind"] in KINDS}
 sup = {k: v for k, v in main.items() if v["kind"] == "sup"}
 def Yof(k, key):
     p = f"{C}/{k}_Y.npz"
@@ -37,8 +42,8 @@ for k, v in zs.items():
             rows.append({"cell": k, "dataset": v["dataset"], "kind": v["kind"], "model": v["model"], "metric": met, "n": n, "mean": s["mean"], "sd_w": s["sd_w"], "ci_sd_w_lo": s["ci_sd_w"][0],
                          "ci_sd_w_hi": s["ci_sd_w"][1], "sd_s": s["sd_s"], "ci_sd_s_lo": s["ci_sd_s"][0], "ci_sd_s_hi": s["ci_sd_s"][1], "sd_e": s["sd_e"], "share_w": s["share_w"],
                          "ci_share_w_lo": s["ci_share_w"][0], "ci_share_w_hi": s["ci_share_w"][1], "share_s": s["share_s"], "share_e": s["share_e"], "ratio_w_s": s["ratio_w_s"]})
-VC = pd.DataFrame(rows); VC.to_csv(f"{OUT}/variance_components_valid_lac_a010.csv", index=False)
-summary = {"n_cells_zero_shot": len(zs), "n_cells_supervised": len(sup), "cells": sorted(zs), "verdicts": {}}
+VC = pd.DataFrame(rows); VC.to_csv(f"{OUT}/variance_components_valid_lac_a010{SUF}.csv", index=False)
+summary = {"group": GROUP, "kinds": KINDS, "n_cells_zero_shot": len(zs), "n_cells_supervised": len(sup), "cells": sorted(zs), "verdicts": {}}
 # ---------------- RQ1
 r1 = []
 for k, v in zs.items():
@@ -55,7 +60,7 @@ if r1:
         "share_cells_ratio_lt_1/3": float(lt), "share_cells_ratio_gt_3": float(gt),
         "H1a": "supported" if h1a >= 0.8 else ("refuted" if h1a <= 0.5 else "not supported (between thresholds)"),
         "H1b": "supported" if h1b >= 0.5 else ("refuted: sampling negligible (ratio>3 in majority)" if gt > 0.5 else ("refuted: wording negligible" if lt > 0.5 else "not supported"))}
-    for kind in ["nli", "bienc", "llm"]:
+    for kind in KINDS:
         sub = [x for x in r1 if x["kind"] == kind]
         if sub: summary["verdicts"]["RQ1"][f"by_type_{kind}"] = {"median_ratio": float(np.median([x["ratio"] for x in sub])), "median_share_w": float(np.median([x["share_w"] for x in sub])),
                                                                  "share_in_range": float(np.mean([1 / 3 <= x["ratio"] <= 3 for x in sub])), "n": len(sub)}
@@ -100,7 +105,7 @@ for k, v in zs.items():
         row["sd_w_strict"] = v["floor"][f"A|lac|strict|{n}"]["set_size"]["sd_w"] if f"A|lac|strict|{n}" in v["floor"] else np.nan
     r3.append(row)
 dose = {}
-for kind in ["nli", "bienc", "llm"]:
+for kind in KINDS:
     pts = [(x["distance"], x["tv"], x["flip"], x["valid"], v["dataset"]) for k, v in zs.items() if v["kind"] == kind for x in v.get("dose_response", [])]
     if len(pts) < 10: continue
     d_ = np.array([p[0] for p in pts]); tv = np.array([p[1] for p in pts]); fl = np.array([p[2] for p in pts]); rng = np.random.default_rng(0)
@@ -110,7 +115,7 @@ for kind in ["nli", "bienc", "llm"]:
                   "spearman_dist_flip": float(spearmanr(d_, fl)[0]), "mean_tv_valid": float(tv[vm].mean()), "mean_tv_invalid": float(tv[~vm].mean()) if (~vm).any() else None,
                   "by_dataset": {ds: float(spearmanr(d_[[p[4] == ds for p in pts]], tv[[p[4] == ds for p in pts]])[0]) for ds in DATASETS if sum(p[4] == ds for p in pts) > 5}}
 if r3:
-    h3a = {kind: any((x["surface_flip_max_ci"] or [0])[0] > 0 for x in r3 if x["kind"] == kind) for kind in ["nli", "bienc", "llm"]}
+    h3a = {kind: any((x["surface_flip_max_ci"] or [0])[0] > 0 for x in r3 if x["kind"] == kind) for kind in KINDS}
     ratio_major = np.nanmean([x["surface_over_valid"] >= 0.5 for x in r3 if np.isfinite(x["surface_over_valid"])])
     both = [x for x in r3 if "sd_w_all" in x]; h3c = np.mean([x["sd_w_valid"] < x["sd_w_all"] for x in both]) if both else np.nan
     summary["verdicts"]["RQ3"] = {"cells": r3, "dose_response": dose, "H3a_by_type": h3a, "share_cells_surface_ge_half_valid": float(ratio_major), "share_H3c_valid_lt_all": float(h3c),
@@ -153,7 +158,7 @@ for k, v in zs.items():
         m, a, n = key.split("|"); g.append({"cell": k, "kind": v["kind"], "dataset": v["dataset"], "model": v["model"], "method": m, "alpha": float(a), "n": int(n),
                **{f"{met}_mean": blk[met]["mean"] for met in blk}, **{f"{met}_share_w": blk[met]["share_w"] for met in blk}, **{f"{met}_sd_w": blk[met]["sd_w"] for met in blk},
                **{f"{met}_sd_s": blk[met]["sd_s"] for met in blk}})
-G = pd.DataFrame(g); G.to_csv(f"{OUT}/grid_methods_alpha.csv", index=False)
+G = pd.DataFrame(g); G.to_csv(f"{OUT}/grid_methods_alpha{SUF}.csv", index=False)
 if len(G):
     summary["coverage_check"] = {"max_abs_mean_coverage_minus_target": float((G["coverage_mean"] - (1 - G["alpha"])).abs().max()),
                                  "by_method": G.assign(dev=G["coverage_mean"] - (1 - G["alpha"])).groupby("method")["dev"].describe().to_dict()}
@@ -168,6 +173,6 @@ for k, v in zs.items():
                 "acc_nonsense": float(np.mean([v["point"][s]["accuracy"] for s in v["point"] if s.startswith("N")])) if any(s.startswith("N") for s in v["point"]) else np.nan,
                 "acc_shuffled": float(np.mean([v["point"][s]["accuracy"] for s in v["point"] if s.startswith("shuffled")])) if any(s.startswith("shuffled") for s in v["point"]) else np.nan,
                 "identity_flip": v["flip_vs_official"].get("identity", np.nan)})
-pd.DataFrame(pts).to_csv(f"{OUT}/point_metrics.csv", index=False); summary["point"] = pts
-json.dump(summary, open(f"{OUT}/summary.json", "w"), indent=1, default=lambda o: float(o) if isinstance(o, (np.floating, np.integer)) else (bool(o) if isinstance(o, np.bool_) else str(o)))
+pd.DataFrame(pts).to_csv(f"{OUT}/point_metrics{SUF}.csv", index=False); summary["point"] = pts
+json.dump(summary, open(f"{OUT}/summary{SUF}.json", "w"), indent=1, default=lambda o: float(o) if isinstance(o, (np.floating, np.integer)) else (bool(o) if isinstance(o, np.bool_) else str(o)))
 print(json.dumps({k: {kk: vv for kk, vv in v.items() if kk not in ("cells", "pairs")} for k, v in summary["verdicts"].items()}, indent=1, default=str)[:6000])

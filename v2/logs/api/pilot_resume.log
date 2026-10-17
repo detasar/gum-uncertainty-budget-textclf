@@ -1,0 +1,11 @@
+luna__agnews__pilot_q1: 2 requests to do (3098 (item,set) pairs cached), cached spend $0.0597, global $0.2861
+DONE luna__agnews__pilot_q1 2 requests 0s spend $0.0598 global $0.2861
+luna__agnews__pilot_q31: 2 requests to do (3038 (item,set) pairs cached), cached spend $0.0394, global $0.2861
+DONE luna__agnews__pilot_q31 2 requests 0s spend $0.0401 global $0.2869
+luna__agnews__pilot_q1b: 2 requests to do (3098 (item,set) pairs cached), cached spend $0.0597, global $0.2869
+DONE luna__agnews__pilot_q1b 2 requests 0s spend $0.0598 global $0.2869
+luna__agnews__pilot_q31b: 0 requests to do (3100 (item,set) pairs cached), cached spend $0.0401, global $0.2869
+DONE luna__agnews__pilot_q31b 0 requests 0s spend $0.0401 global $0.2869
+luna__agnews__pilot_q8: 0 requests to do (3100 (item,set) pairs cached), cached spend $0.0421, global $0.2869
+DONE luna__agnews__pilot_q8 0 requests 0s spend $0.0421 global $0.2869
+PILOT_DONE

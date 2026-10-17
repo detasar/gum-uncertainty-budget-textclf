@@ -113,6 +113,7 @@ if os.path.exists(p):
     RP = json.load(open(p)); P("\n## Table 10. RQ5 — repeatability (identical fresh-process runs) and intermediate-precision conditions (AG News)\n")
     P("| type | condition | wording | max abs Δp | argmax flips | share of conformal test sets changed | ICC(2,1) | Fleiss κ |\n|---|---|---|---|---|---|---|---|")
     for inst, r in RP.items():
+        if inst.startswith("api-"): continue  # API test-retest: results/api/api_tables.md Table A6
         for w, v in r.items():
             if isinstance(v, dict) and "max_abs_dp" in v: P(f"| {TN[inst]} | {r['runs']} identical runs | {w} | {v['max_abs_dp']:.2e} | – | {f3(v['share_test_sets_changed'])} | {f3(v['icc21'])} | {f3(v['fleiss_kappa'])} |")
         for c, row in r["conditions_vs_rep0"].items():

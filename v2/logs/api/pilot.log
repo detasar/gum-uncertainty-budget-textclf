@@ -1,0 +1,17 @@
+luna__agnews__pilot_q1: 3100 requests to do (0 (item,set) pairs cached), cached spend $0.0000, global $0.0012
+ERR KeyError('probabilities')
+ERR KeyError('probabilities')
+DONE luna__agnews__pilot_q1 3098 requests 28s spend $0.0597 global $0.0609
+luna__agnews__pilot_q31: 100 requests to do (0 (item,set) pairs cached), cached spend $0.0000, global $0.0609
+ERR KeyError('probabilities')
+ERR KeyError('probabilities')
+DONE luna__agnews__pilot_q31 98 requests 2s spend $0.0394 global $0.1003
+luna__agnews__pilot_q1b: 3100 requests to do (0 (item,set) pairs cached), cached spend $0.0000, global $0.1003
+ERR KeyError('probabilities')
+ERR KeyError('probabilities')
+DONE luna__agnews__pilot_q1b 3098 requests 27s spend $0.0597 global $0.1811
+luna__agnews__pilot_q31b: 100 requests to do (0 (item,set) pairs cached), cached spend $0.0000, global $0.1811
+DONE luna__agnews__pilot_q31b 100 requests 2s spend $0.0401 global $0.2212
+luna__agnews__pilot_q8: 400 requests to do (0 (item,set) pairs cached), cached spend $0.0000, global $0.2212
+DONE luna__agnews__pilot_q8 400 requests 5s spend $0.0421 global $0.2633
+PILOT_DONE

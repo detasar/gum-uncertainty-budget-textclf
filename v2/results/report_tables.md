@@ -336,21 +336,37 @@ Share of pairs with lower valid-set accuracy on BBC: 1.00; share with larger σ_
 
 | type | condition | wording | max abs Δp | argmax flips | share of conformal test sets changed | ICC(2,1) | Fleiss κ |
 |---|---|---|---|---|---|---|---|
-| T1 NLI | 2 identical runs | official | 0.00e+00 | – | 0.000 | 1.000 | 1.000 |
-| T1 NLI | 2 identical runs | v1_w0 | 0.00e+00 | – | 0.000 | 1.000 | 1.000 |
-| T1 NLI | 2 identical runs | v1_w1 | 0.00e+00 | – | 0.000 | 1.000 | 1.000 |
-| T1 NLI | 2 identical runs | v1_w2 | 0.00e+00 | – | 0.000 | 1.000 | 1.000 |
-| T1 NLI | 2 identical runs | v1_w3 | 0.00e+00 | – | 0.000 | 1.000 | 1.000 |
-| T2 bi-enc | 2 identical runs | official | 0.00e+00 | – | 0.000 | 1.000 | 1.000 |
-| T2 bi-enc | 2 identical runs | v1_w0 | 0.00e+00 | – | 0.000 | 1.000 | 1.000 |
-| T2 bi-enc | 2 identical runs | v1_w1 | 0.00e+00 | – | 0.000 | 1.000 | 1.000 |
-| T2 bi-enc | 2 identical runs | v1_w2 | 0.00e+00 | – | 0.000 | 1.000 | 1.000 |
-| T2 bi-enc | 2 identical runs | v1_w3 | 0.00e+00 | – | 0.000 | 1.000 | 1.000 |
-| T3 LLM | 2 identical runs | official | 0.00e+00 | – | 0.000 | 1.000 | 1.000 |
-| T3 LLM | 2 identical runs | v1_w0 | 0.00e+00 | – | 0.000 | 1.000 | 1.000 |
-| T3 LLM | 2 identical runs | v1_w1 | 0.00e+00 | – | 0.000 | 1.000 | 1.000 |
-| T3 LLM | 2 identical runs | v1_w2 | 0.00e+00 | – | 0.000 | 1.000 | 1.000 |
-| T3 LLM | 2 identical runs | v1_w3 | 0.00e+00 | – | 0.000 | 1.000 | 1.000 |
+| T1 NLI | 4 identical runs | official | 0.00e+00 | – | 0.000 | 1.000 | 1.000 |
+| T1 NLI | 4 identical runs | v1_w0 | 0.00e+00 | – | 0.000 | 1.000 | 1.000 |
+| T1 NLI | 4 identical runs | v1_w1 | 0.00e+00 | – | 0.000 | 1.000 | 1.000 |
+| T1 NLI | 4 identical runs | v1_w2 | 0.00e+00 | – | 0.000 | 1.000 | 1.000 |
+| T1 NLI | 4 identical runs | v1_w3 | 0.00e+00 | – | 0.000 | 1.000 | 1.000 |
+| T1 NLI | bf16_bs1 vs rep0 | official | 1.07e-01 | 0.020 | 0.110 | – | – |
+| T1 NLI | bf16_bs1 vs rep0 | v1_w1 | 1.34e-01 | 0.015 | 0.080 | – | – |
+| T1 NLI | bf16_bs64 vs rep0 | official | 7.35e-02 | 0.015 | 0.070 | – | – |
+| T1 NLI | bf16_bs64 vs rep0 | v1_w1 | 1.74e-01 | 0.020 | 0.070 | – | – |
+| T1 NLI | fp32_bs1 vs rep0 | official | 9.95e-07 | 0.000 | 0.000 | – | – |
+| T1 NLI | fp32_bs1 vs rep0 | v1_w1 | 1.49e-06 | 0.000 | 0.000 | – | – |
+| T1 NLI | fp32_t1 vs rep0 | official | 0.00e+00 | 0.000 | 0.000 | – | – |
+| T1 NLI | fp32_t1 vs rep0 | v1_w1 | 0.00e+00 | 0.000 | 0.000 | – | – |
+| T2 bi-enc | 4 identical runs | official | 0.00e+00 | – | 0.000 | 1.000 | 1.000 |
+| T2 bi-enc | 4 identical runs | v1_w0 | 0.00e+00 | – | 0.000 | 1.000 | 1.000 |
+| T2 bi-enc | 4 identical runs | v1_w1 | 0.00e+00 | – | 0.000 | 1.000 | 1.000 |
+| T2 bi-enc | 4 identical runs | v1_w2 | 0.00e+00 | – | 0.000 | 1.000 | 1.000 |
+| T2 bi-enc | 4 identical runs | v1_w3 | 0.00e+00 | – | 0.000 | 1.000 | 1.000 |
+| T2 bi-enc | bf16_bs1 vs rep0 | official | 2.10e-02 | 0.015 | 0.040 | – | – |
+| T2 bi-enc | bf16_bs1 vs rep0 | v1_w1 | 1.72e-02 | 0.005 | 0.040 | – | – |
+| T2 bi-enc | bf16_bs64 vs rep0 | official | 2.11e-02 | 0.015 | 0.040 | – | – |
+| T2 bi-enc | bf16_bs64 vs rep0 | v1_w1 | 1.43e-02 | 0.005 | 0.050 | – | – |
+| T2 bi-enc | fp32_bs1 vs rep0 | official | 2.52e-06 | 0.000 | 0.000 | – | – |
+| T2 bi-enc | fp32_bs1 vs rep0 | v1_w1 | 1.91e-06 | 0.000 | 0.000 | – | – |
+| T2 bi-enc | fp32_t1 vs rep0 | official | 0.00e+00 | 0.000 | 0.000 | – | – |
+| T2 bi-enc | fp32_t1 vs rep0 | v1_w1 | 0.00e+00 | 0.000 | 0.000 | – | – |
+| T3 LLM | 4 identical runs | official | 0.00e+00 | – | 0.000 | 1.000 | 1.000 |
+| T3 LLM | 4 identical runs | v1_w0 | 0.00e+00 | – | 0.000 | 1.000 | 1.000 |
+| T3 LLM | 4 identical runs | v1_w1 | 0.00e+00 | – | 0.000 | 1.000 | 1.000 |
+| T3 LLM | 4 identical runs | v1_w2 | 0.00e+00 | – | 0.000 | 1.000 | 1.000 |
+| T3 LLM | 4 identical runs | v1_w3 | 0.00e+00 | – | 0.000 | 1.000 | 1.000 |
 
 ## Table 11. Exploratory template factor (T2 bi-encoders; 3 templates × W valid sets × 200 splits; n = 250, LAC)
 

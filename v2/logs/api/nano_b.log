@@ -1,0 +1,64 @@
+nano__sst2__main: 45600 requests to do (0 (item,set) pairs cached), cached spend $0.0000, global $0.0012
+nano__sst2__main 1200/45600 30s this=$0.008 global=$0.121
+nano__sst2__main 2459/45600 60s this=$0.017 global=$0.286
+nano__sst2__main 3688/45600 90s this=$0.026 global=$0.309
+nano__sst2__main 4933/45600 120s this=$0.035 global=$0.330
+nano__sst2__main 6186/45600 150s this=$0.043 global=$2.116
+nano__sst2__main 7436/45600 180s this=$0.052 global=$2.758
+nano__sst2__main 8695/45600 210s this=$0.061 global=$3.280
+nano__sst2__main 9953/45600 240s this=$0.069 global=$3.797
+nano__sst2__main 11230/45600 270s this=$0.078 global=$3.953
+nano__sst2__main 12462/45600 300s this=$0.086 global=$4.506
+nano__sst2__main 13691/45600 330s this=$0.095 global=$5.047
+nano__sst2__main 14927/45600 360s this=$0.103 global=$5.638
+nano__sst2__main 16151/45600 390s this=$0.111 global=$6.310
+nano__sst2__main 17404/45600 420s this=$0.120 global=$6.805
+nano__sst2__main 18676/45600 450s this=$0.129 global=$7.316
+nano__sst2__main 19947/45600 480s this=$0.137 global=$7.759
+nano__sst2__main 21201/45600 510s this=$0.146 global=$7.806
+nano__sst2__main 22471/45600 541s this=$0.155 global=$7.863
+nano__sst2__main 23747/45600 571s this=$0.163 global=$7.907
+nano__sst2__main 25004/45600 601s this=$0.172 global=$7.938
+nano__sst2__main 26242/45600 631s this=$0.181 global=$7.994
+nano__sst2__main 27497/45600 661s this=$0.190 global=$8.049
+nano__sst2__main 28761/45600 691s this=$0.199 global=$8.105
+nano__sst2__main 30010/45600 721s this=$0.207 global=$8.173
+nano__sst2__main 31277/45600 751s this=$0.215 global=$8.227
+nano__sst2__main 32522/45600 781s this=$0.224 global=$8.282
+nano__sst2__main 33789/45600 811s this=$0.232 global=$8.336
+nano__sst2__main 35069/45600 841s this=$0.242 global=$8.391
+nano__sst2__main 36335/45600 871s this=$0.250 global=$8.445
+nano__sst2__main 37597/45600 901s this=$0.259 global=$8.500
+nano__sst2__main 38857/45600 931s this=$0.268 global=$8.555
+nano__sst2__main 40136/45600 961s this=$0.277 global=$8.610
+nano__sst2__main 41408/45600 991s this=$0.286 global=$8.665
+nano__sst2__main 42683/45600 1021s this=$0.295 global=$8.723
+nano__sst2__main 43916/45600 1051s this=$0.303 global=$8.776
+nano__sst2__main 44847/45600 1250s this=$0.309 global=$8.663
+DONE nano__sst2__main 45600 requests 1269s spend $0.3145 global $8.8342
+LOCKED nano__massive__main: another process is scoring it, skipping
+LOCKED nano__dbpedia__main: another process is scoring it, skipping
+nano__bbc2025__ord1: 18600 requests to do (0 (item,set) pairs cached), cached spend $0.0000, global $8.8342
+nano__bbc2025__ord1 1234/18600 30s this=$0.012 global=$8.891
+nano__bbc2025__ord1 2481/18600 60s this=$0.024 global=$8.950
+nano__bbc2025__ord1 3715/18600 90s this=$0.036 global=$9.009
+nano__bbc2025__ord1 4982/18600 120s this=$0.048 global=$9.069
+nano__bbc2025__ord1 6241/18600 150s this=$0.060 global=$9.128
+nano__bbc2025__ord1 7503/18600 180s this=$0.072 global=$9.187
+nano__bbc2025__ord1 8765/18600 210s this=$0.084 global=$9.245
+nano__bbc2025__ord1 9998/18600 240s this=$0.096 global=$9.308
+nano__bbc2025__ord1 11256/18600 270s this=$0.108 global=$9.365
+nano__bbc2025__ord1 12489/18600 300s this=$0.119 global=$9.420
+nano__bbc2025__ord1 13765/18600 330s this=$0.132 global=$9.477
+nano__bbc2025__ord1 15039/18600 360s this=$0.144 global=$9.536
+nano__bbc2025__ord1 16291/18600 390s this=$0.156 global=$9.592
+nano__bbc2025__ord1 17547/18600 420s this=$0.169 global=$9.639
+DONE nano__bbc2025__ord1 18600 requests 445s spend $0.1789 global $9.6833
+LOCKED nano__bbc2025__ord2: another process is scoring it, skipping
+nano__agnews__rt2: 6200 requests to do (0 (item,set) pairs cached), cached spend $0.0000, global $9.6833
+nano__agnews__rt2 1263/6200 30s this=$0.014 global=$9.732
+nano__agnews__rt2 2540/6200 60s this=$0.027 global=$9.781
+nano__agnews__rt2 3804/6200 90s this=$0.041 global=$9.829
+nano__agnews__rt2 5068/6200 120s this=$0.055 global=$9.878
+DONE nano__agnews__rt2 6200 requests 147s spend $0.0672 global $9.9238
+NANO_B_DONE
