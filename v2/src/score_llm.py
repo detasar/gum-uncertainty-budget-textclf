@@ -11,7 +11,7 @@ ap = argparse.ArgumentParser(); ap.add_argument("model"); ap.add_argument("ds");
 ap.add_argument("--threads", type=int, default=8); ap.add_argument("--dtype", default="bf16"); ap.add_argument("--out", default=None)
 ap.add_argument("--strings", default="all"); ap.add_argument("--chunk", type=int, default=64); ap.add_argument("--check", action="store_true")
 a = ap.parse_args(); torch.set_num_threads(a.threads)
-d = load_ds(a.ds); S, L = label_strings(a.ds, "valid" if a.strings == "valid" else "all")
+d = load_ds(a.ds); S, L = label_strings(a.ds, a.strings if a.strings in ("valid", "v1") else "all")
 if a.strings == "official": S = [r["text"] for v in L["variants"] for r in v if "G0_official" in r["generators"]]
 texts = d["pool_text"][: a.items or None]
 tok = AutoTokenizer.from_pretrained(a.model); dt = torch.bfloat16 if a.dtype == "bf16" else torch.float32

@@ -1,0 +1,21 @@
+DONE agnews__bienc__e5-base-v2 26s
+DONE agnews__bienc__e5-base-v2_tau0.02 15s
+DONE agnews__bienc__e5-base-v2_tau0.1 15s
+DONE bbc2025__bienc__e5-base-v2 22s
+DONE bbc2025__bienc__e5-base-v2_tau0.02 13s
+DONE bbc2025__bienc__e5-base-v2_tau0.1 12s
+DONE dbpedia__bienc__e5-base-v2 22s
+DONE dbpedia__bienc__e5-base-v2_tau0.02 12s
+DONE dbpedia__bienc__e5-base-v2_tau0.1 13s
+DONE massive__bienc__e5-base-v2 28s
+DONE massive__bienc__e5-base-v2_tau0.02 18s
+DONE massive__bienc__e5-base-v2_tau0.1 18s
+DONE sst2__bienc__e5-base-v2 22s
+DONE sst2__bienc__e5-base-v2_tau0.02 13s
+DONE sst2__bienc__e5-base-v2_tau0.1 12s
+DONE agnews e5-base-v2 acc=0.898 8s
+DONE bbc2025 e5-base-v2 acc=0.863 7s
+DONE sst2 e5-base-v2 acc=0.908 6s
+DONE dbpedia e5-base-v2 acc=0.970 8s
+DONE massive e5-base-v2 acc=0.844 12s
+E5_DONE

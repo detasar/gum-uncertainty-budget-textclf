@@ -1,0 +1,16 @@
+DONE /workspace/x-master/uq-budget/v2/src/../raw/agnews__bienc__all-MiniLM-L6-v2.npz 23s
+DONE /workspace/x-master/uq-budget/v2/src/../raw/bbc2025__bienc__all-MiniLM-L6-v2.npz 7s
+DONE /workspace/x-master/uq-budget/v2/src/../raw/sst2__bienc__all-MiniLM-L6-v2.npz 9s
+DONE /workspace/x-master/uq-budget/v2/src/../raw/dbpedia__bienc__all-MiniLM-L6-v2.npz 24s
+DONE /workspace/x-master/uq-budget/v2/src/../raw/massive__bienc__all-MiniLM-L6-v2.npz 5s
+DONE /workspace/x-master/uq-budget/v2/src/../raw/agnews__bienc__bge-small-en-v1.5.npz 40s
+DONE /workspace/x-master/uq-budget/v2/src/../raw/bbc2025__bienc__bge-small-en-v1.5.npz 19s
+DONE /workspace/x-master/uq-budget/v2/src/../raw/sst2__bienc__bge-small-en-v1.5.npz 18s
+DONE /workspace/x-master/uq-budget/v2/src/../raw/dbpedia__bienc__bge-small-en-v1.5.npz 48s
+DONE /workspace/x-master/uq-budget/v2/src/../raw/massive__bienc__bge-small-en-v1.5.npz 8s
+DONE /workspace/x-master/uq-budget/v2/src/../raw/agnews__bienc__e5-base-v2.npz 210s
+DONE /workspace/x-master/uq-budget/v2/src/../raw/bbc2025__bienc__e5-base-v2.npz 83s
+DONE /workspace/x-master/uq-budget/v2/src/../raw/sst2__bienc__e5-base-v2.npz 125s
+DONE /workspace/x-master/uq-budget/v2/src/../raw/dbpedia__bienc__e5-base-v2.npz 238s
+DONE /workspace/x-master/uq-budget/v2/src/../raw/massive__bienc__e5-base-v2.npz 33s
+DONE /workspace/x-master/uq-budget/v2/src/../raw/agnews__nli__nli-deberta-v3-small.npz 6348s

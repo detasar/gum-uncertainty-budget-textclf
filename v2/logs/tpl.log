@@ -1,0 +1,47 @@
+DONE raw/templates/agnews__bienc__all-MiniLM-L6-v2__tpl1.npz 60s
+DONE raw/templates/agnews__bienc__all-MiniLM-L6-v2__tpl2.npz 32s
+DONE raw/templates/bbc2025__bienc__all-MiniLM-L6-v2__tpl1.npz 20s
+DONE raw/templates/bbc2025__bienc__all-MiniLM-L6-v2__tpl2.npz 20s
+DONE raw/templates/sst2__bienc__all-MiniLM-L6-v2__tpl1.npz 14s
+DONE raw/templates/sst2__bienc__all-MiniLM-L6-v2__tpl2.npz 15s
+DONE raw/templates/dbpedia__bienc__all-MiniLM-L6-v2__tpl1.npz 27s
+DONE raw/templates/dbpedia__bienc__all-MiniLM-L6-v2__tpl2.npz 27s
+DONE raw/templates/massive__bienc__all-MiniLM-L6-v2__tpl1.npz 7s
+DONE raw/templates/massive__bienc__all-MiniLM-L6-v2__tpl2.npz 7s
+DONE raw/templates/agnews__bienc__bge-small-en-v1.5__tpl1.npz 69s
+DONE raw/templates/agnews__bienc__bge-small-en-v1.5__tpl2.npz 480s
+DONE raw/templates/bbc2025__bienc__bge-small-en-v1.5__tpl1.npz 39s
+DONE raw/templates/bbc2025__bienc__bge-small-en-v1.5__tpl2.npz 39s
+DONE raw/templates/sst2__bienc__bge-small-en-v1.5__tpl1.npz 26s
+DONE raw/templates/sst2__bienc__bge-small-en-v1.5__tpl2.npz 27s
+DONE raw/templates/dbpedia__bienc__bge-small-en-v1.5__tpl1.npz 63s
+DONE raw/templates/dbpedia__bienc__bge-small-en-v1.5__tpl2.npz 63s
+DONE raw/templates/massive__bienc__bge-small-en-v1.5__tpl1.npz 12s
+DONE raw/templates/massive__bienc__bge-small-en-v1.5__tpl2.npz 11s
+DONE raw/templates/agnews__bienc__e5-base-v2__tpl1.npz 457s
+DONE raw/templates/agnews__bienc__e5-base-v2__tpl2.npz 949s
+DONE raw/templates/bbc2025__bienc__e5-base-v2__tpl1.npz 170s
+DONE raw/templates/bbc2025__bienc__e5-base-v2__tpl2.npz 154s
+DONE raw/templates/sst2__bienc__e5-base-v2__tpl1.npz 128s
+DONE raw/templates/sst2__bienc__e5-base-v2__tpl2.npz 114s
+DONE raw/templates/dbpedia__bienc__e5-base-v2__tpl1.npz 239s
+DONE raw/templates/dbpedia__bienc__e5-base-v2__tpl2.npz 236s
+DONE raw/templates/massive__bienc__e5-base-v2__tpl1.npz 53s
+DONE raw/templates/massive__bienc__e5-base-v2__tpl2.npz 52s
+agnews all-MiniLM-L6-v2 {"t": 0.12659714058799748, "w": 0.3241699941265699, "s": 0.09625219560546273, "tw": 0.08914705877508701, "ts": 0.021850763460876138, "ws": 0.11285049185378317, "e": 0.07745400574427254} {'tpl0': 0.6803846153846154, 'tpl1': 0.6353846153846154, 'tpl2': 0.6480769230769231}
+agnews bge-small-en-v1.5 {"t": 0.14443875123368585, "w": 0.21520421635921885, "s": 0.07956973475625179, "tw": 0.17557331896765627, "ts": 0.036557325282270126, "ws": 0.09288776310201807, "e": 0.09064987732160912} {'tpl0': 0.708076923076923, 'tpl1': 0.691923076923077, 'tpl2': 0.7330769230769231}
+agnews e5-base-v2 {"t": 0.1727120561816963, "w": 0.26667175320089326, "s": 0.07858950676943721, "tw": 0.2628343312133706, "ts": 0.02601006437043107, "ws": 0.09220390883381269, "e": 0.08787022975557461} {'tpl0': 0.7680769230769231, 'tpl1': 0.6876923076923077, 'tpl2': 0.7519230769230769}
+bbc2025 all-MiniLM-L6-v2 {"t": 0.12264457366721503, "w": 0.21748116540299242, "s": 0.08334515088877725, "tw": 0.09637543135079962, "ts": 0.025948230740310625, "ws": 0.10729644591238235, "e": 0.08339060642053436} {'tpl0': 0.6733690795352993, 'tpl1': 0.6090259159964254, 'tpl2': 0.6268990169794459}
+bbc2025 bge-small-en-v1.5 {"t": 0.19319194468430304, "w": 0.13291299315877728, "s": 0.07110257611916179, "tw": 0.1720551315165213, "ts": 0.033055354156760176, "ws": 0.09638768535305077, "e": 0.09375586703943244} {'tpl0': 0.7381590705987489, 'tpl1': 0.7202859696157283, 'tpl2': 0.7359249329758714}
+bbc2025 e5-base-v2 {"t": 0.243974989814199, "w": 0.19770493081224144, "s": 0.07528376447060241, "tw": 0.3128152121869994, "ts": 0.02633060760570183, "ws": 0.0937075955380237, "e": 0.09125745457708344} {'tpl0': 0.7546916890080428, 'tpl1': 0.7167113494191242, 'tpl2': 0.7189454870420018}
+dbpedia all-MiniLM-L6-v2 {"t": 0.24140763901984377, "w": 0.9720265045472558, "s": 0.2751659524902751, "tw": 0.31666182710876317, "ts": 0.09407135103489167, "ws": 0.34497302490220405, "e": 0.25366512310688843} {'tpl0': 0.6264285714285714, 'tpl1': 0.6242857142857143, 'tpl2': 0.6271428571428571}
+dbpedia bge-small-en-v1.5 {"t": 0.0, "w": 1.0958289264168468, "s": 0.30963548923887957, "tw": 0.31954732756757503, "ts": 0.11431091911085431, "ws": 0.4410121170426763, "e": 0.2864241032409599} {'tpl0': 0.5857142857142857, 'tpl1': 0.6671428571428571, 'tpl2': 0.66}
+dbpedia e5-base-v2 {"t": 0.36898201543178527, "w": 0.5532004708271595, "s": 0.13167514560568033, "tw": 0.273729211572282, "ts": 0.061769370152928965, "ws": 0.17625465359043388, "e": 0.15677168900676788} {'tpl0': 0.8464285714285714, 'tpl1': 0.915, 'tpl2': 0.8828571428571429}
+massive all-MiniLM-L6-v2 {"t": 0.4629592674208697, "w": 0.6606427505577355, "s": 0.5129141526964406, "tw": 0.20683255396790137, "ts": 0.2153520084600692, "ws": 0.339569431223827, "e": 0.31321975633055155} {'tpl0': 0.5173076923076924, 'tpl1': 0.5138461538461538, 'tpl2': 0.5261538461538462}
+massive bge-small-en-v1.5 {"t": 0.35283397565464947, "w": 0.881711121839481, "s": 0.5343059246174932, "tw": 0.45715862220296966, "ts": 0.2767215423814057, "ws": 0.31967791010161994, "e": 0.3546063316796833} {'tpl0': 0.5103846153846154, 'tpl1': 0.58, 'tpl2': 0.54}
+massive e5-base-v2 {"t": 1.3485072307676602, "w": 0.6567910945290966, "s": 0.5223233787241278, "tw": 0.38187217455100697, "ts": 0.36462937701426446, "ws": 0.303622616319808, "e": 0.3897810357368292} {'tpl0': 0.535, 'tpl1': 0.5246153846153846, 'tpl2': 0.551923076923077}
+sst2 all-MiniLM-L6-v2 {"t": 0.023051835375028612, "w": 0.09475831513329401, "s": 0.019773055577525355, "tw": 0.032067836269634754, "ts": 0.009562566902115665, "ws": 0.03614645287400478, "e": 0.034099464215513596} {'tpl0': 0.6846153846153846, 'tpl1': 0.6503846153846153, 'tpl2': 0.65}
+sst2 bge-small-en-v1.5 {"t": 0.019000265477701894, "w": 0.13411317477931786, "s": 0.038031791180618356, "tw": 0.03728942190038362, "ts": 0.008840325981456596, "ws": 0.03372825359400437, "e": 0.02916570211631399} {'tpl0': 0.8284615384615385, 'tpl1': 0.8307692307692308, 'tpl2': 0.8288461538461539}
+sst2 e5-base-v2 {"t": 0.016871755507502462, "w": 0.12717547771227902, "s": 0.03576639198052755, "tw": 0.0445719450659811, "ts": 0.007998977996056086, "ws": 0.03344855178675855, "e": 0.030741365613428436} {'tpl0': 0.86, 'tpl1': 0.8723076923076923, 'tpl2': 0.8642307692307692}
+DONE template_factor 15
+TPL_DONE
