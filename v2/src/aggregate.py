@@ -1,6 +1,6 @@
 """Aggregate all per-cell results into results/summary.json + CSV tables + preregistered RQ verdicts.
 Groups (exploratory extension, 2026-10-17): default = preregistered instruments only (T1-T3, outputs unchanged: summary.json, *.csv);
---with-api = T1-T3 plus the T5 API-LLM cells (suffix _with_api); --api-only = T5 API-LLM cells only (suffix _api). Shares are counted
+--with-api = T1-T3 plus the T5 API-LLM cells (suffix _with_api); --api-only = T5 API-LLM cells only (suffix _api); --det = deterministic classifiers T1+T2+T6 (suffix _det); --schema-only = T6 only (suffix _schema). Shares are counted
 over cells; types are never ranked against each other."""
 import json, os, sys, glob, math
 import numpy as np, pandas as pd
@@ -19,8 +19,9 @@ for f in sorted(glob.glob(f"{C}/*.json")):
     if b.count("__") != 2: continue
     cells[b] = json.load(open(f))
 main = {k: v for k, v in cells.items() if not any(t in k for t in ("_tau", "_rawll", "_sub"))}
-GROUP = "with_api" if "--with-api" in sys.argv else ("api" if "--api-only" in sys.argv else "prereg")
-KINDS = {"prereg": ["nli", "bienc", "llm"], "with_api": ["nli", "bienc", "llm", "api"], "api": ["api"]}[GROUP]; SUF = "" if GROUP == "prereg" else f"_{GROUP}"
+GROUP = "with_api" if "--with-api" in sys.argv else ("api" if "--api-only" in sys.argv else ("det" if "--det" in sys.argv else ("schema" if "--schema-only" in sys.argv else "prereg")))
+# --det = deterministic-classifier group (T1 NLI, T2 bi-encoder, exploratory T6 schema classifiers); LLMs (T3/T5) are never in this group.
+KINDS = {"prereg": ["nli", "bienc", "llm"], "with_api": ["nli", "bienc", "llm", "api"], "api": ["api"], "det": ["nli", "bienc", "schema"], "schema": ["schema"]}[GROUP]; SUF = "" if GROUP == "prereg" else f"_{GROUP}"
 zs = {k: v for k, v in main.items() if v["kind"] in KINDS}
 sup = {k: v for k, v in main.items() if v["kind"] == "sup"}
 def Yof(k, key):

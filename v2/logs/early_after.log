@@ -18,3 +18,15 @@ DONE raw/repeat/bienc_fp32_bs1.npz 32s
 DONE raw/repeat/bienc_fp32_t1.npz 7s
 DONE raw/repeat/bienc_bf16_bs64.npz 5s
 DONE raw/repeat/bienc_bf16_bs1.npz 26s
+DONE raw/repeat/llm_fp32_bs1.npz 916s
+DONE raw/repeat/llm_fp32_t1.npz 201s
+DONE raw/repeat/llm_bf16_bs64.npz 31s
+DONE raw/repeat/llm_bf16_bs1.npz 112s
+REPEAT_DONE
+Qwen/Qwen2.5-0.5B-Instruct agnews -9.317 -3.65 87s
+Qwen/Qwen2.5-0.5B-Instruct bbc2025 -9.175 -3.886 78s
+DONE Qwen/Qwen2.5-0.5B-Instruct
+HuggingFaceTB/SmolLM2-360M-Instruct agnews -9.941 -3.89 104s
+HuggingFaceTB/SmolLM2-360M-Instruct bbc2025 -9.971 -4.116 62s
+DONE HuggingFaceTB/SmolLM2-360M-Instruct
+EARLY_AFTER_DONE

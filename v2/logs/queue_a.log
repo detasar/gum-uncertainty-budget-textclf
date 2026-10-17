@@ -14,3 +14,5 @@ DONE /workspace/x-master/uq-budget/v2/src/../raw/sst2__bienc__e5-base-v2.npz 125
 DONE /workspace/x-master/uq-budget/v2/src/../raw/dbpedia__bienc__e5-base-v2.npz 238s
 DONE /workspace/x-master/uq-budget/v2/src/../raw/massive__bienc__e5-base-v2.npz 33s
 DONE /workspace/x-master/uq-budget/v2/src/../raw/agnews__nli__nli-deberta-v3-small.npz 6348s
+DONE /workspace/x-master/uq-budget/v2/src/../raw/bbc2025__nli__nli-deberta-v3-small.npz 6467s
+DONE /workspace/x-master/uq-budget/v2/src/../raw/sst2__nli__nli-deberta-v3-small.npz 547s

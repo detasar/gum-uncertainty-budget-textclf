@@ -3,9 +3,12 @@ variance components (two-way crossed random effects, method of moments) and boot
 import json, os, math, glob
 import numpy as np
 HERE = os.path.dirname(os.path.abspath(__file__)); ROOT = os.path.join(HERE, ".."); D = os.path.join(ROOT, "data"); RAW = os.path.join(ROOT, "raw")
-TEST_SIZE = 300; N_SPLITS = 200; TAU = 0.05; RAPS_LAMBDA = 0.01; RAPS_KREG = 1
+TEST_SIZE = int(os.environ.get('UQ_TEST_SIZE', 300));   # env override only for the reduced-design exploratory cells (Clef, 200 items)
+N_SPLITS = 200; TAU = 0.05; RAPS_LAMBDA = 0.01; RAPS_KREG = 1
 TYPES = {"nli": "T1 zero-shot NLI cross-encoder", "bienc": "T2 zero-shot bi-encoder", "llm": "T3 small LLM (label log-likelihood, PMI)", "sup": "T4 supervised probe (LogReg)",
-         "api": "T5 closed API LLM (exploratory, not preregistered)"}
+         "api": "T5 closed API LLM (exploratory, not preregistered)",
+         "schema": "T6 encoder schema classifier (exploratory, not preregistered; GLiNER2.5-Decide, DeBERTa-v3-large backbone)",
+         "decision": "T7 decision model (exploratory, not preregistered; Clef-flash 9B; compared only with the gpt-6-luna Decisions cells)"}
 API_EPS = 1e-4   # probability floor for API cells whose probabilities are quantised (gpt-6-luna: 0.01 grid, many exact zeros)
 DATASETS = ["agnews", "bbc2025", "sst2", "dbpedia", "massive"]
 
@@ -26,18 +29,18 @@ class Scorer:
         if self.kind == "nli": self.S = z["logits"][:, :, int(z["entail_index"])].astype(np.float64)
         elif self.kind == "bienc": self.S = z["cos"].astype(np.float64) / tau; self.emb_pool = z["emb_pool"]; self.emb_train = z["emb_train"]
         elif self.kind == "llm": self.S = (z["raw"] - z["null"][None, :]).astype(np.float64) if llm_mode == "pmi" else z["raw"].astype(np.float64)
-        elif self.kind == "api":   # per-wording-set probabilities (N x n_sets x K, canonical class order); NaN rows = refusal/missing -> uniform
+        elif self.kind in ("api", "schema", "decision"):   # T6 schema classifiers use the same per-set layout; per-wording-set probabilities (N x n_sets x K, canonical class order); NaN rows = refusal/missing -> uniform
             self.P = z["P"].astype(np.float64); self.eps = float(self.meta.get("eps", 0.0))
             self.setidx = {}
             for j, lab in enumerate(json.loads(str(z["set_labels"]))): self.setidx.setdefault(tuple(lab), j)
             self.S = self.P[:, 0, :]
         self.N = self.S.shape[0]
     def has(self, labels):
-        if self.kind == "api": return tuple(labels) in self.setidx
+        if self.kind in ("api", "schema", "decision"): return tuple(labels) in self.setidx
         return all(l in self.idx for l in labels)
     def probs(self, labels):
         if not self.has(labels): return None
-        if self.kind == "api":
+        if self.kind in ("api", "schema", "decision"):
             P = self.P[:, self.setidx[tuple(labels)], :len(labels)].copy(); bad = ~np.isfinite(P).all(1); P[bad] = 1.0 / len(labels)
             P = np.maximum(P, self.eps); return P / P.sum(1, keepdims=True)
         return softmax(self.S[:, [self.idx[l] for l in labels]])

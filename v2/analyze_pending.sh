@@ -2,8 +2,9 @@
 # Analyse every raw score file that has no result yet (main analysis + sensitivity variants for bi-encoders/LLMs).
 source /workspace/.venv-uq2/bin/activate; cd /workspace/x-master/uq-budget/v2
 python src/api_build.py --cond main 2>&1 | grep -E "BUILT|rror"   # T5 API cells (exploratory): assemble finished JSONL caches
+[ -d raw/schema_cache ] && python src/schema_build.py 2>&1 | grep -E "BUILT|rror|skipped"   # T6 schema classifiers (exploratory, Mac)
 export OMP_NUM_THREADS=${T:-2} OPENBLAS_NUM_THREADS=${T:-2}
-for f in raw/*__nli__*.npz raw/*__bienc__*.npz raw/*__llm__*.npz raw/*__api__*.npz; do
+for f in raw/*__nli__*.npz raw/*__bienc__*.npz raw/*__llm__*.npz raw/*__api__*.npz raw/*__schema__*.npz; do   # T7 decision (Clef, 200 items) analysed separately with UQ_TEST_SIZE=100
   [ -f "$f" ] || continue
   b=$(basename $f .npz); [ -f results/cells/$b.json ] || python src/analyze.py $f 2>&1 | grep -E "DONE|Error|rror"
   case $b in *__bienc__*) for tau in 0.02 0.1; do [ -f results/cells/${b}_tau$tau.json ] || python src/analyze.py $f --tau $tau --tag _tau$tau --quick 2>&1 | grep -E "DONE|rror"; done;; esac

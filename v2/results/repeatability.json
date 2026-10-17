@@ -530,7 +530,180 @@
    "share_test_sets_changed": 0.0,
    "saturation_maxp_gt_099": 0.37
   },
-  "conditions_vs_rep0": {},
+  "conditions_vs_rep0": {
+   "bf16_bs1": {
+    "official": {
+     "max_abs_dp": 0.841047259967308,
+     "mean_abs_dp": 0.01608618115660364,
+     "argmax_flips": 0.04,
+     "share_test_sets_changed": 0.06,
+     "kappa_vs_rep0": 0.9422799422799423
+    },
+    "v1_w0": {
+     "max_abs_dp": 0.3186095119917951,
+     "mean_abs_dp": 0.011045046703633866,
+     "argmax_flips": 0.01,
+     "share_test_sets_changed": 0.14,
+     "kappa_vs_rep0": 0.9849147684416956
+    },
+    "v1_w1": {
+     "max_abs_dp": 0.2552467920468179,
+     "mean_abs_dp": 0.013874366182874862,
+     "argmax_flips": 0.02,
+     "share_test_sets_changed": 0.2,
+     "kappa_vs_rep0": 0.9546279491833031
+    },
+    "v1_w2": {
+     "max_abs_dp": 0.4090318106510745,
+     "mean_abs_dp": 0.01846216127608117,
+     "argmax_flips": 0.05,
+     "share_test_sets_changed": 0.1,
+     "kappa_vs_rep0": 0.9190152251376741
+    },
+    "v1_w3": {
+     "max_abs_dp": 0.24681991600687725,
+     "mean_abs_dp": 0.010592291991657492,
+     "argmax_flips": 0.0,
+     "share_test_sets_changed": 0.04,
+     "kappa_vs_rep0": 1.0
+    },
+    "meta": {
+     "dtype": "bf16",
+     "bs": null,
+     "chunk": 1,
+     "threads": 4
+    }
+   },
+   "bf16_bs64": {
+    "official": {
+     "max_abs_dp": 0.4600619017839834,
+     "mean_abs_dp": 0.01342980588311065,
+     "argmax_flips": 0.02,
+     "share_test_sets_changed": 0.06,
+     "kappa_vs_rep0": 0.971069000433965
+    },
+    "v1_w0": {
+     "max_abs_dp": 0.796747042503569,
+     "mean_abs_dp": 0.013192790879870851,
+     "argmax_flips": 0.02,
+     "share_test_sets_changed": 0.14,
+     "kappa_vs_rep0": 0.9698931205780521
+    },
+    "v1_w1": {
+     "max_abs_dp": 0.1701839411245324,
+     "mean_abs_dp": 0.008987169686345482,
+     "argmax_flips": 0.03,
+     "share_test_sets_changed": 0.06,
+     "kappa_vs_rep0": 0.9356499356499357
+    },
+    "v1_w2": {
+     "max_abs_dp": 0.9825085108227499,
+     "mean_abs_dp": 0.015290507420186396,
+     "argmax_flips": 0.02,
+     "share_test_sets_changed": 0.08,
+     "kappa_vs_rep0": 0.9676689298415777
+    },
+    "v1_w3": {
+     "max_abs_dp": 0.646667776640728,
+     "mean_abs_dp": 0.012086634660045057,
+     "argmax_flips": 0.03,
+     "share_test_sets_changed": 0.02,
+     "kappa_vs_rep0": 0.9578651685393258
+    },
+    "meta": {
+     "dtype": "bf16",
+     "bs": null,
+     "chunk": 64,
+     "threads": 4
+    }
+   },
+   "fp32_bs1": {
+    "official": {
+     "max_abs_dp": 6.981498228308958e-06,
+     "mean_abs_dp": 6.80236622494981e-07,
+     "argmax_flips": 0.0,
+     "share_test_sets_changed": 0.0,
+     "kappa_vs_rep0": 1.0
+    },
+    "v1_w0": {
+     "max_abs_dp": 7.701407937044102e-06,
+     "mean_abs_dp": 3.9366596019906657e-07,
+     "argmax_flips": 0.0,
+     "share_test_sets_changed": 0.0,
+     "kappa_vs_rep0": 1.0
+    },
+    "v1_w1": {
+     "max_abs_dp": 7.261038653227914e-06,
+     "mean_abs_dp": 5.271577494999676e-07,
+     "argmax_flips": 0.0,
+     "share_test_sets_changed": 0.0,
+     "kappa_vs_rep0": 1.0
+    },
+    "v1_w2": {
+     "max_abs_dp": 1.8960326363948177e-05,
+     "mean_abs_dp": 1.3997098906183235e-06,
+     "argmax_flips": 0.0,
+     "share_test_sets_changed": 0.0,
+     "kappa_vs_rep0": 1.0
+    },
+    "v1_w3": {
+     "max_abs_dp": 5.716800057120608e-06,
+     "mean_abs_dp": 3.2787056438386217e-07,
+     "argmax_flips": 0.0,
+     "share_test_sets_changed": 0.0,
+     "kappa_vs_rep0": 1.0
+    },
+    "meta": {
+     "dtype": "fp32",
+     "bs": null,
+     "chunk": 1,
+     "threads": 4
+    }
+   },
+   "fp32_t1": {
+    "official": {
+     "max_abs_dp": 1.4066339327711841e-05,
+     "mean_abs_dp": 1.1029067813763638e-06,
+     "argmax_flips": 0.0,
+     "share_test_sets_changed": 0.0,
+     "kappa_vs_rep0": 1.0
+    },
+    "v1_w0": {
+     "max_abs_dp": 1.71026498693716e-05,
+     "mean_abs_dp": 9.002307317267326e-07,
+     "argmax_flips": 0.0,
+     "share_test_sets_changed": 0.0,
+     "kappa_vs_rep0": 1.0
+    },
+    "v1_w1": {
+     "max_abs_dp": 1.134755990872538e-05,
+     "mean_abs_dp": 7.045621705940066e-07,
+     "argmax_flips": 0.0,
+     "share_test_sets_changed": 0.0,
+     "kappa_vs_rep0": 1.0
+    },
+    "v1_w2": {
+     "max_abs_dp": 1.602857764099186e-05,
+     "mean_abs_dp": 1.3144059741236223e-06,
+     "argmax_flips": 0.0,
+     "share_test_sets_changed": 0.0,
+     "kappa_vs_rep0": 1.0
+    },
+    "v1_w3": {
+     "max_abs_dp": 2.001021449971052e-05,
+     "mean_abs_dp": 9.573563744603407e-07,
+     "argmax_flips": 0.0,
+     "share_test_sets_changed": 0.0,
+     "kappa_vs_rep0": 1.0
+    },
+    "meta": {
+     "dtype": "fp32",
+     "bs": null,
+     "chunk": 64,
+     "threads": 1
+    }
+   }
+  },
   "rep0_meta": {
    "model": "Qwen/Qwen2.5-0.5B-Instruct",
    "prompt": "Read the following {genre} and state its {facet}.\n\nText: {text}\n\nAnswer with the {facet} only.",

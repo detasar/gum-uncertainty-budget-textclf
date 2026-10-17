@@ -85,7 +85,7 @@ r4 = V["RQ4"]
 P("\n## Table 7. RQ4 — AG News (2004-05) vs BBC (2024-10…2025-06), same 4 classes, same wording sets\n\n| type | model | acc official AG | acc official BBC | acc valid mean AG | acc valid mean BBC | σ_w AG [CI] | σ_w BBC [CI] | share max p > 0.99 AG / BBC |\n|---|---|---|---|---|---|---|---|---|")
 for x in sorted(r4["pairs"], key=lambda r: (["nli", "bienc", "llm"].index(r["kind"]), r["model"])):
     P(f"| {TN[x['kind']]} | {x['model']} | {f3(x['acc_official_ag'])} | {f3(x['acc_official_bbc'])} | {f3(x['acc_valid_mean_ag'])} | {f3(x['acc_valid_mean_bbc'])} | {f3(x['sd_w_ag'])} {ci(x['ci_sd_w_ag'])} | {f3(x['sd_w_bbc'])} {ci(x['ci_sd_w_bbc'])} | {f3(x['share_maxp_gt_099_ag'])} / {f3(x['share_maxp_gt_099_bbc'])} |")
-sub = sorted(k for k in cells if "_sub" in k)
+sub = sorted(k for k in cells if "_sub" in k and "_sub200" not in k)   # _sub200 = decision-model matched cells (src/mac_tables.py)
 if sub:
     P("\nSubset cells (deviation; first 600 pool items, VALID strings only, NLI):\n\n| cell | N | acc official | acc valid mean | σ_w (n=250) [CI] | σ_split | share max p > 0.99 |\n|---|---|---|---|---|---|---|")
     for k in sub:

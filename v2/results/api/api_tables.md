@@ -11,6 +11,7 @@ Generative LLMs are compared only with other LLMs (T3 local small LLMs, T5 close
 | T3 local | AG News | Qwen2.5-0.5B-Instruct | 1200 | – | – | – | – | local CPU | Qwen/Qwen2.5-0.5B-Instruct |
 | T5 API | BBC 2024-25 | gpt-4.1-nano | 1200 | 46 | 0 | 0.177 | 0.52 | 17:35–17:56 | gpt-4.1-nano-2025-04-14 |
 | T5 API | BBC 2024-25 | gpt-6-luna | 1200 | 117 | 826 | – | 1.75 | 17:12–17:14 | gpt-6-luna |
+| T3 local | BBC 2024-25 | Qwen2.5-0.5B-Instruct | 1200 | – | – | – | – | local CPU | Qwen/Qwen2.5-0.5B-Instruct |
 | T5 API | SST-2 | gpt-4.1-nano | 1200 | 38 | 0 | 0.077 | 0.31 | 17:10–17:31 | gpt-4.1-nano-2025-04-14 |
 | T5 API | SST-2 | gpt-6-luna | 1200 | 38 | 0 | – | 0.53 | 17:14–17:14 | gpt-6-luna |
 | T5 API | DBpedia-14 | gpt-4.1-nano | 1000 | 47 | 0 | 0.649 | 0.84 | 17:15–17:37 | gpt-4.1-nano-2025-04-14 |
@@ -31,6 +32,7 @@ Total spend from the usage fields (ledger logs/api/spend/*.json; list prices, ca
 | T3 local | AG News | Qwen2.5-0.5B-Instruct | 0.654 | 0.540 [0.367, 0.736] | 2.588 | 0.453 [0.344, 0.537] | 0.071 | 6.38 [4.43, 7.51] | 0.92 [0.87, 0.94] |
 | T5 API | BBC 2024-25 | gpt-4.1-nano | 0.852 | 0.725 [0.507, 0.858] | 1.835 | 0.617 [0.463, 0.734] | 0.064 | 9.62 [5.98, 12.18] | 0.94 [0.90, 0.96] |
 | T5 API | BBC 2024-25 | gpt-6-luna | 0.886 | 0.832 [0.734, 0.890] | 1.333 | 0.255 [0.168, 0.319] | 0.080 | 3.17 [2.10, 4.07] | 0.75 [0.61, 0.83] |
+| T3 local | BBC 2024-25 | Qwen2.5-0.5B-Instruct | 0.645 | 0.553 [0.384, 0.737] | 2.547 | 0.428 [0.315, 0.512] | 0.076 | 5.61 [3.76, 6.92] | 0.89 [0.81, 0.93] |
 | T5 API | SST-2 | gpt-4.1-nano | 0.944 | 0.876 [0.547, 0.956] | 1.053 | 0.167 [0.110, 0.200] | 0.027 | 6.18 [3.96, 8.47] | 0.94 [0.87, 0.97] |
 | T5 API | SST-2 | gpt-6-luna | 0.956 | 0.919 [0.605, 0.966] | 0.984 | 0.141 [0.037, 0.188] | 0.020 | 6.95 [1.81, 9.54] | 0.96 [0.66, 0.98] |
 | T5 API | DBpedia-14 | gpt-4.1-nano | 0.959 | 0.896 [0.814, 0.954] | 1.240 | 0.584 [0.213, 0.872] | 0.092 | 6.31 [2.72, 8.60] | 0.85 [0.62, 0.90] |
@@ -47,6 +49,7 @@ Total spend from the usage fields (ledger logs/api/spend/*.json; list prices, ca
 | T3 local | AG News | Qwen2.5-0.5B-Instruct | 0.92 [0.87, 0.94] | 0.462 [0.340, 0.546] | 0.028 | 900 | 0.02 | -0.64 |
 | T5 API | BBC 2024-25 | gpt-4.1-nano | 0.94 [0.89, 0.96] | 0.625 [0.457, 0.742] | 0.020 | 900 | 0.01 | -0.74 |
 | T5 API | BBC 2024-25 | gpt-6-luna | 0.63 [0.50, 0.80] | 0.232 [0.154, 0.301] | 0.018 | 900 | -0.07 | -1.00 |
+| T3 local | BBC 2024-25 | Qwen2.5-0.5B-Instruct | 0.89 [0.81, 0.92] | 0.431 [0.301, 0.518] | 0.025 | 900 | 0.01 | -0.67 |
 | T5 API | SST-2 | gpt-4.1-nano | 0.94 [0.88, 0.97] | 0.165 [0.110, 0.200] | 0.013 | 900 | -0.01 | -0.55 |
 | T5 API | SST-2 | gpt-6-luna | 0.94 [0.71, 0.96] | 0.142 [0.047, 0.188] | 0.014 | 900 | 0.00 | -0.36 |
 | T5 API | DBpedia-14 | gpt-4.1-nano | 0.83 [0.60, 0.90] | 0.541 [0.177, 0.811] | 0.021 | 700 | -0.08 | -1.32 |
@@ -63,6 +66,7 @@ Total spend from the usage fields (ledger logs/api/spend/*.json; list prices, ca
 | T3 local | AG News | Qwen2.5-0.5B-Instruct | 0.151 | 0.429 | 0.35 | 0.770 [0.514] | 0.70 | 0.278 | 0.107 | 0.000 |
 | T5 API | BBC 2024-25 | gpt-4.1-nano | 0.036 | 0.235 | 0.15 | 0.814 [0.601] | 0.47 | 0.253 | 0.040 | 0.000 |
 | T5 API | BBC 2024-25 | gpt-6-luna | 0.019 | 0.114 | 0.16 | 0.866 [0.782] | 0.33 | 0.230 | 0.031 | 0.000 |
+| T3 local | BBC 2024-25 | Qwen2.5-0.5B-Instruct | 0.163 | 0.412 | 0.40 | 0.781 [0.601] | 0.63 | 0.261 | 0.094 | 0.000 |
 | T5 API | SST-2 | gpt-4.1-nano | 0.004 | 0.092 | 0.05 | 0.755 [0.491] | 0.63 | 0.659 | 0.051 | 0.000 |
 | T5 API | SST-2 | gpt-6-luna | 0.006 | 0.054 | 0.11 | 0.791 [0.496] | 0.47 | 0.893 | 0.039 | 0.000 |
 | T5 API | DBpedia-14 | gpt-4.1-nano | 0.007 | 0.083 | 0.09 | 0.822 [0.713] | 0.67 | 0.050 | 0.002 | 0.000 |
@@ -105,11 +109,11 @@ Accuracy by order (canonical, perm1, perm2), mean over 30 VALID sets: AG News gp
 
 Quantisation: 100.0% of 61960 returned probabilities lie on the 0.01 grid; 101 distinct values; 62.5% exactly 0 and 17.3% exactly 1; every answer sums to 1 (max deviation 2.2e-16). Refusals per run: 2 of 3,100.
 
-## A8. Preregistered criteria re-evaluated on prereg + API (T1–T3 + T5) (27 cells; exploratory)
+## A8. Preregistered criteria re-evaluated on prereg + API (T1–T3 + T5) (32 cells; exploratory)
 
-- RQ1: H1a supported (share 1.00); H1b refuted: sampling negligible (ratio>3 in majority) (in range 0.30, >3 0.70, <1/3 0.00)
-- RQ2: H2a not supported (0.44); H2b supported (1.00); H2c supported (0.85)
-- RQ3: H3a by type {'nli': True, 'bienc': False, 'llm': True, 'api': True}; share of cells surface ≥ 0.5 valid: 0.04; H3c supported (0.81); dose-response {'nli': 'supported', 'bienc': 'supported', 'llm': 'not supported', 'api': 'not supported'}
+- RQ1: H1a supported (share 1.00); H1b refuted: sampling negligible (ratio>3 in majority) (in range 0.28, >3 0.72, <1/3 0.00)
+- RQ2: H2a not supported (0.47); H2b supported (1.00); H2c supported (0.88)
+- RQ3: H3a by type {'nli': True, 'bienc': False, 'llm': True, 'api': True}; share of cells surface ≥ 0.5 valid: 0.09; H3c supported (0.71); dose-response {'nli': 'supported', 'bienc': 'supported', 'llm': 'supported', 'api': 'not supported'}
 
 ## A9. Preregistered criteria re-evaluated on API only (T5) (10 cells; exploratory)
 
