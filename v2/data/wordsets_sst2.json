@@ -1,0 +1,643 @@
+{
+ "dataset": "sst2",
+ "W": 30,
+ "population_sizes": {
+  "valid": 30,
+  "strict": 4,
+  "all": 56
+ },
+ "sets": [
+  {
+   "name": "official",
+   "pop": "official",
+   "labels": [
+    "negative",
+    "positive"
+   ]
+  },
+  {
+   "name": "valid_00",
+   "pop": "valid",
+   "labels": [
+    "negative",
+    "positive"
+   ]
+  },
+  {
+   "name": "valid_01",
+   "pop": "valid",
+   "labels": [
+    "negative",
+    "Positive"
+   ]
+  },
+  {
+   "name": "valid_02",
+   "pop": "valid",
+   "labels": [
+    "negative",
+    "best, heart, keep"
+   ]
+  },
+  {
+   "name": "valid_03",
+   "pop": "valid",
+   "labels": [
+    "negative",
+    "the reviewer expresses a positive opinion of the film"
+   ]
+  },
+  {
+   "name": "valid_04",
+   "pop": "valid",
+   "labels": [
+    "negative",
+    "Great"
+   ]
+  },
+  {
+   "name": "valid_05",
+   "pop": "valid",
+   "labels": [
+    "negative",
+    "Excellent"
+   ]
+  },
+  {
+   "name": "valid_06",
+   "pop": "valid",
+   "labels": [
+    "Negative",
+    "positive"
+   ]
+  },
+  {
+   "name": "valid_07",
+   "pop": "valid",
+   "labels": [
+    "Negative",
+    "Positive"
+   ]
+  },
+  {
+   "name": "valid_08",
+   "pop": "valid",
+   "labels": [
+    "Negative",
+    "best, heart, keep"
+   ]
+  },
+  {
+   "name": "valid_09",
+   "pop": "valid",
+   "labels": [
+    "Negative",
+    "the reviewer expresses a positive opinion of the film"
+   ]
+  },
+  {
+   "name": "valid_10",
+   "pop": "valid",
+   "labels": [
+    "Negative",
+    "Great"
+   ]
+  },
+  {
+   "name": "valid_11",
+   "pop": "valid",
+   "labels": [
+    "Negative",
+    "Excellent"
+   ]
+  },
+  {
+   "name": "valid_12",
+   "pop": "valid",
+   "labels": [
+    "bad, movie, seem",
+    "positive"
+   ]
+  },
+  {
+   "name": "valid_13",
+   "pop": "valid",
+   "labels": [
+    "bad, movie, seem",
+    "Positive"
+   ]
+  },
+  {
+   "name": "valid_14",
+   "pop": "valid",
+   "labels": [
+    "bad, movie, seem",
+    "best, heart, keep"
+   ]
+  },
+  {
+   "name": "valid_15",
+   "pop": "valid",
+   "labels": [
+    "bad, movie, seem",
+    "the reviewer expresses a positive opinion of the film"
+   ]
+  },
+  {
+   "name": "valid_16",
+   "pop": "valid",
+   "labels": [
+    "bad, movie, seem",
+    "Great"
+   ]
+  },
+  {
+   "name": "valid_17",
+   "pop": "valid",
+   "labels": [
+    "bad, movie, seem",
+    "Excellent"
+   ]
+  },
+  {
+   "name": "valid_18",
+   "pop": "valid",
+   "labels": [
+    "the reviewer expresses a negative opinion of the film",
+    "positive"
+   ]
+  },
+  {
+   "name": "valid_19",
+   "pop": "valid",
+   "labels": [
+    "the reviewer expresses a negative opinion of the film",
+    "Positive"
+   ]
+  },
+  {
+   "name": "valid_20",
+   "pop": "valid",
+   "labels": [
+    "the reviewer expresses a negative opinion of the film",
+    "best, heart, keep"
+   ]
+  },
+  {
+   "name": "valid_21",
+   "pop": "valid",
+   "labels": [
+    "the reviewer expresses a negative opinion of the film",
+    "the reviewer expresses a positive opinion of the film"
+   ]
+  },
+  {
+   "name": "valid_22",
+   "pop": "valid",
+   "labels": [
+    "the reviewer expresses a negative opinion of the film",
+    "Great"
+   ]
+  },
+  {
+   "name": "valid_23",
+   "pop": "valid",
+   "labels": [
+    "the reviewer expresses a negative opinion of the film",
+    "Excellent"
+   ]
+  },
+  {
+   "name": "valid_24",
+   "pop": "valid",
+   "labels": [
+    "Bad",
+    "positive"
+   ]
+  },
+  {
+   "name": "valid_25",
+   "pop": "valid",
+   "labels": [
+    "Bad",
+    "Positive"
+   ]
+  },
+  {
+   "name": "valid_26",
+   "pop": "valid",
+   "labels": [
+    "Bad",
+    "best, heart, keep"
+   ]
+  },
+  {
+   "name": "valid_27",
+   "pop": "valid",
+   "labels": [
+    "Bad",
+    "the reviewer expresses a positive opinion of the film"
+   ]
+  },
+  {
+   "name": "valid_28",
+   "pop": "valid",
+   "labels": [
+    "Bad",
+    "Great"
+   ]
+  },
+  {
+   "name": "valid_29",
+   "pop": "valid",
+   "labels": [
+    "Bad",
+    "Excellent"
+   ]
+  },
+  {
+   "name": "strict_00",
+   "pop": "strict",
+   "labels": [
+    "negative",
+    "positive"
+   ]
+  },
+  {
+   "name": "strict_01",
+   "pop": "strict",
+   "labels": [
+    "negative",
+    "Positive"
+   ]
+  },
+  {
+   "name": "strict_02",
+   "pop": "strict",
+   "labels": [
+    "Negative",
+    "positive"
+   ]
+  },
+  {
+   "name": "strict_03",
+   "pop": "strict",
+   "labels": [
+    "Negative",
+    "Positive"
+   ]
+  },
+  {
+   "name": "all_00",
+   "pop": "all",
+   "labels": [
+    "Sad",
+    "Positive"
+   ]
+  },
+  {
+   "name": "all_01",
+   "pop": "all",
+   "labels": [
+    "negative",
+    "the reviewer expresses a positive opinion of the film"
+   ]
+  },
+  {
+   "name": "all_02",
+   "pop": "all",
+   "labels": [
+    "denial",
+    "adverb"
+   ]
+  },
+  {
+   "name": "all_03",
+   "pop": "all",
+   "labels": [
+    "negative",
+    "positive degree"
+   ]
+  },
+  {
+   "name": "all_04",
+   "pop": "all",
+   "labels": [
+    "the reviewer expresses a negative opinion of the film",
+    "positive degree"
+   ]
+  },
+  {
+   "name": "all_05",
+   "pop": "all",
+   "labels": [
+    "Sad",
+    "Great"
+   ]
+  },
+  {
+   "name": "all_06",
+   "pop": "all",
+   "labels": [
+    "the reviewer expresses a negative opinion of the film",
+    "Excellent"
+   ]
+  },
+  {
+   "name": "all_07",
+   "pop": "all",
+   "labels": [
+    "Bad",
+    "the reviewer expresses a positive opinion of the film"
+   ]
+  },
+  {
+   "name": "all_08",
+   "pop": "all",
+   "labels": [
+    "Negative",
+    "Excellent"
+   ]
+  },
+  {
+   "name": "all_09",
+   "pop": "all",
+   "labels": [
+    "Sad",
+    "Excellent"
+   ]
+  },
+  {
+   "name": "all_10",
+   "pop": "all",
+   "labels": [
+    "Negative",
+    "the reviewer expresses a positive opinion of the film"
+   ]
+  },
+  {
+   "name": "all_11",
+   "pop": "all",
+   "labels": [
+    "the reviewer expresses a negative opinion of the film",
+    "Great"
+   ]
+  },
+  {
+   "name": "all_12",
+   "pop": "all",
+   "labels": [
+    "negative",
+    "best, heart, keep"
+   ]
+  },
+  {
+   "name": "all_13",
+   "pop": "all",
+   "labels": [
+    "the reviewer expresses a negative opinion of the film",
+    "adverb"
+   ]
+  },
+  {
+   "name": "all_14",
+   "pop": "all",
+   "labels": [
+    "bad, movie, seem",
+    "positive degree"
+   ]
+  },
+  {
+   "name": "all_15",
+   "pop": "all",
+   "labels": [
+    "Negative",
+    "positive degree"
+   ]
+  },
+  {
+   "name": "all_16",
+   "pop": "all",
+   "labels": [
+    "Negative",
+    "Positive"
+   ]
+  },
+  {
+   "name": "all_17",
+   "pop": "all",
+   "labels": [
+    "Sad",
+    "best, heart, keep"
+   ]
+  },
+  {
+   "name": "all_18",
+   "pop": "all",
+   "labels": [
+    "negative",
+    "adverb"
+   ]
+  },
+  {
+   "name": "all_19",
+   "pop": "all",
+   "labels": [
+    "Sad",
+    "positive"
+   ]
+  },
+  {
+   "name": "all_20",
+   "pop": "all",
+   "labels": [
+    "bad, movie, seem",
+    "adverb"
+   ]
+  },
+  {
+   "name": "all_21",
+   "pop": "all",
+   "labels": [
+    "Bad",
+    "positive degree"
+   ]
+  },
+  {
+   "name": "all_22",
+   "pop": "all",
+   "labels": [
+    "bad, movie, seem",
+    "best, heart, keep"
+   ]
+  },
+  {
+   "name": "all_23",
+   "pop": "all",
+   "labels": [
+    "Bad",
+    "Positive"
+   ]
+  },
+  {
+   "name": "all_24",
+   "pop": "all",
+   "labels": [
+    "Bad",
+    "Great"
+   ]
+  },
+  {
+   "name": "all_25",
+   "pop": "all",
+   "labels": [
+    "bad, movie, seem",
+    "Excellent"
+   ]
+  },
+  {
+   "name": "all_26",
+   "pop": "all",
+   "labels": [
+    "denial",
+    "Excellent"
+   ]
+  },
+  {
+   "name": "all_27",
+   "pop": "all",
+   "labels": [
+    "denial",
+    "the reviewer expresses a positive opinion of the film"
+   ]
+  },
+  {
+   "name": "all_28",
+   "pop": "all",
+   "labels": [
+    "denial",
+    "positive degree"
+   ]
+  },
+  {
+   "name": "all_29",
+   "pop": "all",
+   "labels": [
+    "denial",
+    "Positive"
+   ]
+  },
+  {
+   "name": "homog_G1_surface",
+   "pop": "homog",
+   "labels": [
+    "Negative",
+    "Positive"
+   ]
+  },
+  {
+   "name": "homog_G2_wn_syn",
+   "pop": "homog",
+   "labels": [
+    "negative",
+    "positive degree"
+   ]
+  },
+  {
+   "name": "homog_G3_wn_hyper",
+   "pop": "homog",
+   "labels": [
+    "denial",
+    "adverb"
+   ]
+  },
+  {
+   "name": "homog_G4_keywords",
+   "pop": "homog",
+   "labels": [
+    "bad, movie, seem",
+    "best, heart, keep"
+   ]
+  },
+  {
+   "name": "homog_G5_definition",
+   "pop": "homog",
+   "labels": [
+    "the reviewer expresses a negative opinion of the film",
+    "the reviewer expresses a positive opinion of the film"
+   ]
+  },
+  {
+   "name": "homog_G6_llm1",
+   "pop": "homog",
+   "labels": [
+    "Sad",
+    "Great"
+   ]
+  },
+  {
+   "name": "homog_G7_llm2",
+   "pop": "homog",
+   "labels": [
+    "Bad",
+    "Excellent"
+   ]
+  },
+  {
+   "name": "surface_00",
+   "pop": "surface",
+   "labels": [
+    "Negative",
+    "positive"
+   ]
+  },
+  {
+   "name": "surface_01",
+   "pop": "surface",
+   "labels": [
+    "negative",
+    "Positive"
+   ]
+  },
+  {
+   "name": "surface_02",
+   "pop": "surface",
+   "labels": [
+    "Negative",
+    "Positive"
+   ]
+  },
+  {
+   "name": "identity",
+   "pop": "identity",
+   "labels": [
+    "negative",
+    "positive"
+   ]
+  },
+  {
+   "name": "N1_nonsense",
+   "pop": "nonsense",
+   "labels": [
+    "nuzonu",
+    "zugevu"
+   ]
+  },
+  {
+   "name": "N2_nonsense",
+   "pop": "nonsense",
+   "labels": [
+    "febune",
+    "tativa"
+   ]
+  },
+  {
+   "name": "shuffled_0",
+   "pop": "shuffled",
+   "labels": [
+    "positive",
+    "negative"
+   ]
+  }
+ ]
+}

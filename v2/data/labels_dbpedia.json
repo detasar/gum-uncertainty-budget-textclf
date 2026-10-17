@@ -1,0 +1,1871 @@
+{
+ "dataset": "dbpedia",
+ "classes_official": [
+  "Company",
+  "EducationalInstitution",
+  "Artist",
+  "Athlete",
+  "OfficeHolder",
+  "MeanOfTransportation",
+  "Building",
+  "NaturalPlace",
+  "Village",
+  "Animal",
+  "Plant",
+  "Album",
+  "Film",
+  "WrittenWork"
+ ],
+ "generators": {
+  "G0_official": [
+   "Company",
+   "Educational Institution",
+   "Artist",
+   "Athlete",
+   "Office Holder",
+   "Mean Of Transportation",
+   "Building",
+   "Natural Place",
+   "Village",
+   "Animal",
+   "Plant",
+   "Album",
+   "Film",
+   "Written Work"
+  ],
+  "G1_surface": [
+   "company",
+   "educational institution",
+   "artist",
+   "athlete",
+   "office holder",
+   "mean of transportation",
+   "building",
+   "natural place",
+   "village",
+   "animal",
+   "plant",
+   "album",
+   "film",
+   "written work"
+  ],
+  "G2_wn_syn": [
+   "companionship",
+   "establishment",
+   "creative person",
+   "jock",
+   "bearer",
+   "transportation system",
+   "edifice",
+   "topographic point",
+   "small town",
+   "animate being",
+   "works",
+   "record album",
+   "movie",
+   "piece of work"
+  ],
+  "G3_wn_hyper": [
+   "institution",
+   "organization",
+   "creator",
+   "contestant",
+   "holding device",
+   "facility",
+   "structure",
+   "point",
+   "community",
+   "organism",
+   "building complex",
+   "medium",
+   "product",
+   "activity"
+  ],
+  "G4_keywords": [
+   "company, based, headquartered",
+   "school, high, students",
+   "born, artist, singer",
+   "played, league, born",
+   "politician, member, elected",
+   "navy, ship, class",
+   "historic, register, building",
+   "river, tributary, romania",
+   "village, population, district",
+   "family, found, moth",
+   "species, plant, genus",
+   "album, released, band",
+   "film, directed, starring",
+   "published, book, novel"
+  ],
+  "G5_definition": [
+   "a business organization or firm",
+   "a school, college or university",
+   "a musician, painter, actor or other creative artist",
+   "a person who competes in sports",
+   "a politician or person holding public office",
+   "a vehicle, ship, aircraft or train",
+   "a building or architectural structure",
+   "a natural feature such as a mountain, river or lake",
+   "a village or small rural settlement",
+   "an animal species",
+   "a plant species",
+   "a music album",
+   "a movie",
+   "a book, novel, journal or other written work"
+  ],
+  "G6_llm1": [
+   "Enterprise",
+   "School",
+   "Person",
+   "Sportsperson",
+   "Person in Office",
+   "Vehicle",
+   "Structure",
+   "Geographic Feature",
+   "Hamlet",
+   "Beast",
+   "Flora",
+   "Record",
+   "Movie",
+   "Book"
+  ],
+  "G7_llm2": [
+   "Business",
+   "University",
+   "Musician",
+   "Player",
+   "Political Figure",
+   "Transport",
+   "Structure Building",
+   "Mountain Range",
+   "Settlement",
+   "Creature",
+   "Vegetation",
+   "Compilation",
+   "Picture",
+   "Script"
+  ]
+ },
+ "variants": [
+  [
+   {
+    "text": "Company",
+    "cos_official": 1.0,
+    "max_cos_other_class": 0.3998725712299347,
+    "discriminable": true,
+    "entail_min": 0.9905350804328918,
+    "distance": 0.0,
+    "generators": [
+     "G0_official"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "company",
+    "cos_official": 1.0,
+    "max_cos_other_class": 0.3998725712299347,
+    "discriminable": true,
+    "entail_min": 0.9863522052764893,
+    "distance": 0.0,
+    "generators": [
+     "G1_surface"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "companionship",
+    "cos_official": 0.2787158489227295,
+    "max_cos_other_class": 0.27921062707901,
+    "discriminable": false,
+    "entail_min": 0.9325174689292908,
+    "distance": 0.7212841510772705,
+    "generators": [
+     "G2_wn_syn"
+    ],
+    "audit_reject": true,
+    "valid": false,
+    "strict": false
+   },
+   {
+    "text": "institution",
+    "cos_official": 0.4885168969631195,
+    "max_cos_other_class": 0.6887946128845215,
+    "discriminable": false,
+    "entail_min": 0.5888034701347351,
+    "distance": 0.5114831030368805,
+    "generators": [
+     "G3_wn_hyper"
+    ],
+    "audit_reject": true,
+    "valid": false,
+    "strict": false
+   },
+   {
+    "text": "company, based, headquartered",
+    "cos_official": 0.609517514705658,
+    "max_cos_other_class": 0.4089914560317993,
+    "discriminable": true,
+    "entail_min": 0.002639324637129903,
+    "distance": 0.39048248529434204,
+    "generators": [
+     "G4_keywords"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "a business organization or firm",
+    "cos_official": 0.5706143379211426,
+    "max_cos_other_class": 0.4939492344856262,
+    "discriminable": true,
+    "entail_min": 0.6768994927406311,
+    "distance": 0.4293856620788574,
+    "generators": [
+     "G5_definition"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "Enterprise",
+    "cos_official": 0.36408039927482605,
+    "max_cos_other_class": 0.3337633013725281,
+    "discriminable": true,
+    "entail_min": 0.09393750876188278,
+    "distance": 0.635919600725174,
+    "generators": [
+     "G6_llm1"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": false
+   },
+   {
+    "text": "Business",
+    "cos_official": 0.5991238355636597,
+    "max_cos_other_class": 0.40082883834838867,
+    "discriminable": true,
+    "entail_min": 0.9302916526794434,
+    "distance": 0.40087616443634033,
+    "generators": [
+     "G7_llm2"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   }
+  ],
+  [
+   {
+    "text": "Educational Institution",
+    "cos_official": 1.0,
+    "max_cos_other_class": 0.399872750043869,
+    "discriminable": true,
+    "entail_min": 0.9812721610069275,
+    "distance": 0.0,
+    "generators": [
+     "G0_official"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "educational institution",
+    "cos_official": 1.0,
+    "max_cos_other_class": 0.399872750043869,
+    "discriminable": true,
+    "entail_min": 0.9714174270629883,
+    "distance": 0.0,
+    "generators": [
+     "G1_surface"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "establishment",
+    "cos_official": 0.5537065267562866,
+    "max_cos_other_class": 0.5730271339416504,
+    "discriminable": false,
+    "entail_min": 0.02613179013133049,
+    "distance": 0.4462934732437134,
+    "generators": [
+     "G2_wn_syn"
+    ],
+    "audit_reject": true,
+    "valid": false,
+    "strict": false
+   },
+   {
+    "text": "organization",
+    "cos_official": 0.41522836685180664,
+    "max_cos_other_class": 0.5124756097793579,
+    "discriminable": false,
+    "entail_min": 0.012580769136548042,
+    "distance": 0.5847716331481934,
+    "generators": [
+     "G3_wn_hyper"
+    ],
+    "audit_reject": true,
+    "valid": false,
+    "strict": false
+   },
+   {
+    "text": "school, high, students",
+    "cos_official": 0.5032811164855957,
+    "max_cos_other_class": 0.30659860372543335,
+    "discriminable": true,
+    "entail_min": 0.2325369268655777,
+    "distance": 0.4967188835144043,
+    "generators": [
+     "G4_keywords"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "a school, college or university",
+    "cos_official": 0.6937329769134521,
+    "max_cos_other_class": 0.3347533941268921,
+    "discriminable": true,
+    "entail_min": 0.16594253480434418,
+    "distance": 0.30626702308654785,
+    "generators": [
+     "G5_definition"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "School",
+    "cos_official": 0.5120220184326172,
+    "max_cos_other_class": 0.360287070274353,
+    "discriminable": true,
+    "entail_min": 0.7286837100982666,
+    "distance": 0.4879779815673828,
+    "generators": [
+     "G6_llm1"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "University",
+    "cos_official": 0.620755136013031,
+    "max_cos_other_class": 0.3222839832305908,
+    "discriminable": true,
+    "entail_min": 0.2523972988128662,
+    "distance": 0.379244863986969,
+    "generators": [
+     "G7_llm2"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   }
+  ],
+  [
+   {
+    "text": "Artist",
+    "cos_official": 1.0,
+    "max_cos_other_class": 0.5438165068626404,
+    "discriminable": true,
+    "entail_min": 0.9866845011711121,
+    "distance": 0.0,
+    "generators": [
+     "G0_official"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "artist",
+    "cos_official": 1.0,
+    "max_cos_other_class": 0.5438165068626404,
+    "discriminable": true,
+    "entail_min": 0.9820256233215332,
+    "distance": 0.0,
+    "generators": [
+     "G1_surface"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "creative person",
+    "cos_official": 0.5922861099243164,
+    "max_cos_other_class": 0.3679313659667969,
+    "discriminable": true,
+    "entail_min": 0.3782348334789276,
+    "distance": 0.4077138900756836,
+    "generators": [
+     "G2_wn_syn"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "creator",
+    "cos_official": 0.6101463437080383,
+    "max_cos_other_class": 0.35238146781921387,
+    "discriminable": true,
+    "entail_min": 0.03845846280455589,
+    "distance": 0.38985365629196167,
+    "generators": [
+     "G3_wn_hyper"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "born, artist, singer",
+    "cos_official": 0.5014582872390747,
+    "max_cos_other_class": 0.3524191975593567,
+    "discriminable": true,
+    "entail_min": 0.010009584948420525,
+    "distance": 0.4985417127609253,
+    "generators": [
+     "G4_keywords"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "a musician, painter, actor or other creative artist",
+    "cos_official": 0.6640398502349854,
+    "max_cos_other_class": 0.36583849787712097,
+    "discriminable": true,
+    "entail_min": 0.10261200368404388,
+    "distance": 0.33596014976501465,
+    "generators": [
+     "G5_definition"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "Person",
+    "cos_official": 0.43552276492118835,
+    "max_cos_other_class": 0.4813518226146698,
+    "discriminable": false,
+    "entail_min": 0.0018770265160128474,
+    "distance": 0.5644772350788116,
+    "generators": [
+     "G6_llm1"
+    ],
+    "audit_reject": true,
+    "valid": false,
+    "strict": false
+   },
+   {
+    "text": "Musician",
+    "cos_official": 0.6429767608642578,
+    "max_cos_other_class": 0.552864670753479,
+    "discriminable": true,
+    "entail_min": 0.09399181604385376,
+    "distance": 0.3570232391357422,
+    "generators": [
+     "G7_llm2"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   }
+  ],
+  [
+   {
+    "text": "Athlete",
+    "cos_official": 0.9999998807907104,
+    "max_cos_other_class": 0.41652530431747437,
+    "discriminable": true,
+    "entail_min": 0.9849053025245667,
+    "distance": 1.1920928955078125e-07,
+    "generators": [
+     "G0_official"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "athlete",
+    "cos_official": 0.9999998807907104,
+    "max_cos_other_class": 0.41652530431747437,
+    "discriminable": true,
+    "entail_min": 0.9471924304962158,
+    "distance": 1.1920928955078125e-07,
+    "generators": [
+     "G1_surface"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "jock",
+    "cos_official": 0.5149869322776794,
+    "max_cos_other_class": 0.35314643383026123,
+    "discriminable": true,
+    "entail_min": 0.40745142102241516,
+    "distance": 0.48501306772232056,
+    "generators": [
+     "G2_wn_syn"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "contestant",
+    "cos_official": 0.497758150100708,
+    "max_cos_other_class": 0.462689071893692,
+    "discriminable": true,
+    "entail_min": 0.10344293713569641,
+    "distance": 0.502241849899292,
+    "generators": [
+     "G3_wn_hyper"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": false
+   },
+   {
+    "text": "played, league, born",
+    "cos_official": 0.44347235560417175,
+    "max_cos_other_class": 0.27405598759651184,
+    "discriminable": true,
+    "entail_min": 0.2027406394481659,
+    "distance": 0.5565276443958282,
+    "generators": [
+     "G4_keywords"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": false
+   },
+   {
+    "text": "a person who competes in sports",
+    "cos_official": 0.7209179401397705,
+    "max_cos_other_class": 0.29481929540634155,
+    "discriminable": true,
+    "entail_min": 0.3516380190849304,
+    "distance": 0.2790820598602295,
+    "generators": [
+     "G5_definition"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "Sportsperson",
+    "cos_official": 0.8552892208099365,
+    "max_cos_other_class": 0.403189480304718,
+    "discriminable": true,
+    "entail_min": 0.8678208589553833,
+    "distance": 0.14471077919006348,
+    "generators": [
+     "G6_llm1"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "Player",
+    "cos_official": 0.6496631503105164,
+    "max_cos_other_class": 0.40835118293762207,
+    "discriminable": true,
+    "entail_min": 0.9012947678565979,
+    "distance": 0.35033684968948364,
+    "generators": [
+     "G7_llm2"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   }
+  ],
+  [
+   {
+    "text": "Office Holder",
+    "cos_official": 1.0,
+    "max_cos_other_class": 0.38792282342910767,
+    "discriminable": true,
+    "entail_min": 0.9866205453872681,
+    "distance": 0.0,
+    "generators": [
+     "G0_official"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "office holder",
+    "cos_official": 1.0,
+    "max_cos_other_class": 0.38792282342910767,
+    "discriminable": true,
+    "entail_min": 0.9778257608413696,
+    "distance": 0.0,
+    "generators": [
+     "G1_surface"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "bearer",
+    "cos_official": 0.32174599170684814,
+    "max_cos_other_class": 0.3897136449813843,
+    "discriminable": false,
+    "entail_min": 0.6668449640274048,
+    "distance": 0.6782540082931519,
+    "generators": [
+     "G2_wn_syn"
+    ],
+    "audit_reject": true,
+    "valid": false,
+    "strict": false
+   },
+   {
+    "text": "holding device",
+    "cos_official": 0.2876354455947876,
+    "max_cos_other_class": 0.26319488883018494,
+    "discriminable": true,
+    "entail_min": 0.21219220757484436,
+    "distance": 0.7123645544052124,
+    "generators": [
+     "G3_wn_hyper"
+    ],
+    "audit_reject": true,
+    "valid": false,
+    "strict": false
+   },
+   {
+    "text": "politician, member, elected",
+    "cos_official": 0.5731700658798218,
+    "max_cos_other_class": 0.3295661211013794,
+    "discriminable": true,
+    "entail_min": 0.5169818997383118,
+    "distance": 0.4268299341201782,
+    "generators": [
+     "G4_keywords"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "a politician or person holding public office",
+    "cos_official": 0.6655194163322449,
+    "max_cos_other_class": 0.30882272124290466,
+    "discriminable": true,
+    "entail_min": 0.8496938943862915,
+    "distance": 0.3344805836677551,
+    "generators": [
+     "G5_definition"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "Person in Office",
+    "cos_official": 0.844836413860321,
+    "max_cos_other_class": 0.3279955983161926,
+    "discriminable": true,
+    "entail_min": 0.9264122247695923,
+    "distance": 0.15516358613967896,
+    "generators": [
+     "G6_llm1"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "Political Figure",
+    "cos_official": 0.5404130220413208,
+    "max_cos_other_class": 0.40663373470306396,
+    "discriminable": true,
+    "entail_min": 0.764786422252655,
+    "distance": 0.4595869779586792,
+    "generators": [
+     "G7_llm2"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   }
+  ],
+  [
+   {
+    "text": "Mean Of Transportation",
+    "cos_official": 1.0,
+    "max_cos_other_class": 0.17559361457824707,
+    "discriminable": true,
+    "entail_min": 0.9735952615737915,
+    "distance": 0.0,
+    "generators": [
+     "G0_official"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "mean of transportation",
+    "cos_official": 1.0,
+    "max_cos_other_class": 0.17559361457824707,
+    "discriminable": true,
+    "entail_min": 0.9628756046295166,
+    "distance": 0.0,
+    "generators": [
+     "G1_surface"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "transportation system",
+    "cos_official": 0.6903449296951294,
+    "max_cos_other_class": 0.32228681445121765,
+    "discriminable": true,
+    "entail_min": 0.767716646194458,
+    "distance": 0.3096550703048706,
+    "generators": [
+     "G2_wn_syn"
+    ],
+    "audit_reject": true,
+    "valid": false,
+    "strict": false
+   },
+   {
+    "text": "facility",
+    "cos_official": 0.23091673851013184,
+    "max_cos_other_class": 0.4459517300128937,
+    "discriminable": false,
+    "entail_min": 0.20474325120449066,
+    "distance": 0.7690832614898682,
+    "generators": [
+     "G3_wn_hyper"
+    ],
+    "audit_reject": true,
+    "valid": false,
+    "strict": false
+   },
+   {
+    "text": "navy, ship, class",
+    "cos_official": 0.13905084133148193,
+    "max_cos_other_class": 0.3142145276069641,
+    "discriminable": false,
+    "entail_min": 0.013918240554630756,
+    "distance": 0.8609491586685181,
+    "generators": [
+     "G4_keywords"
+    ],
+    "audit_reject": false,
+    "valid": false,
+    "strict": false
+   },
+   {
+    "text": "a vehicle, ship, aircraft or train",
+    "cos_official": 0.4756285548210144,
+    "max_cos_other_class": 0.25873899459838867,
+    "discriminable": true,
+    "entail_min": 0.12872236967086792,
+    "distance": 0.5243714451789856,
+    "generators": [
+     "G5_definition"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": false
+   },
+   {
+    "text": "Vehicle",
+    "cos_official": 0.4238462448120117,
+    "max_cos_other_class": 0.4296458065509796,
+    "discriminable": false,
+    "entail_min": 0.87336665391922,
+    "distance": 0.5761537551879883,
+    "generators": [
+     "G6_llm1"
+    ],
+    "audit_reject": false,
+    "valid": false,
+    "strict": false
+   },
+   {
+    "text": "Transport",
+    "cos_official": 0.6786826848983765,
+    "max_cos_other_class": 0.34496575593948364,
+    "discriminable": true,
+    "entail_min": 0.7773475050926208,
+    "distance": 0.32131731510162354,
+    "generators": [
+     "G7_llm2"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   }
+  ],
+  [
+   {
+    "text": "Building",
+    "cos_official": 1.0000001192092896,
+    "max_cos_other_class": 0.3312149941921234,
+    "discriminable": true,
+    "entail_min": 0.9892781972885132,
+    "distance": -1.1920928955078125e-07,
+    "generators": [
+     "G0_official"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "building",
+    "cos_official": 1.0000001192092896,
+    "max_cos_other_class": 0.3312149941921234,
+    "discriminable": true,
+    "entail_min": 0.9853184223175049,
+    "distance": -1.1920928955078125e-07,
+    "generators": [
+     "G1_surface"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "edifice",
+    "cos_official": 0.3610052466392517,
+    "max_cos_other_class": 0.3898007273674011,
+    "discriminable": false,
+    "entail_min": 0.9333762526512146,
+    "distance": 0.6389947533607483,
+    "generators": [
+     "G2_wn_syn"
+    ],
+    "audit_reject": true,
+    "valid": false,
+    "strict": false
+   },
+   {
+    "text": "structure",
+    "cos_official": 0.42243391275405884,
+    "max_cos_other_class": 0.3310306668281555,
+    "discriminable": true,
+    "entail_min": 0.8048574328422546,
+    "distance": 0.5775660872459412,
+    "generators": [
+     "G3_wn_hyper"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": false
+   },
+   {
+    "text": "historic, register, building",
+    "cos_official": 0.4837890565395355,
+    "max_cos_other_class": 0.3355553150177002,
+    "discriminable": true,
+    "entail_min": 0.005046645645052195,
+    "distance": 0.5162109434604645,
+    "generators": [
+     "G4_keywords"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": false
+   },
+   {
+    "text": "a building or architectural structure",
+    "cos_official": 0.6081522107124329,
+    "max_cos_other_class": 0.4069415330886841,
+    "discriminable": true,
+    "entail_min": 0.699073314666748,
+    "distance": 0.39184778928756714,
+    "generators": [
+     "G5_definition"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "Structure",
+    "cos_official": 0.42243391275405884,
+    "max_cos_other_class": 0.3310306668281555,
+    "discriminable": true,
+    "entail_min": 0.8843795657157898,
+    "distance": 0.5775660872459412,
+    "generators": [
+     "G6_llm1"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": false
+   },
+   {
+    "text": "Structure Building",
+    "cos_official": 0.7594959735870361,
+    "max_cos_other_class": 0.31067174673080444,
+    "discriminable": true,
+    "entail_min": 0.34867769479751587,
+    "distance": 0.24050402641296387,
+    "generators": [
+     "G7_llm2"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   }
+  ],
+  [
+   {
+    "text": "Natural Place",
+    "cos_official": 0.9999999403953552,
+    "max_cos_other_class": 0.42991265654563904,
+    "discriminable": true,
+    "entail_min": 0.986815869808197,
+    "distance": 5.960464477539063e-08,
+    "generators": [
+     "G0_official"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "natural place",
+    "cos_official": 0.9999999403953552,
+    "max_cos_other_class": 0.42991265654563904,
+    "discriminable": true,
+    "entail_min": 0.9845116138458252,
+    "distance": 5.960464477539063e-08,
+    "generators": [
+     "G1_surface"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "topographic point",
+    "cos_official": 0.32180196046829224,
+    "max_cos_other_class": 0.19693201780319214,
+    "discriminable": true,
+    "entail_min": 0.02771640382707119,
+    "distance": 0.6781980395317078,
+    "generators": [
+     "G2_wn_syn"
+    ],
+    "audit_reject": true,
+    "valid": false,
+    "strict": false
+   },
+   {
+    "text": "point",
+    "cos_official": 0.12676990032196045,
+    "max_cos_other_class": 0.23167970776557922,
+    "discriminable": false,
+    "entail_min": 0.035457197576761246,
+    "distance": 0.8732300996780396,
+    "generators": [
+     "G3_wn_hyper"
+    ],
+    "audit_reject": true,
+    "valid": false,
+    "strict": false
+   },
+   {
+    "text": "river, tributary, romania",
+    "cos_official": 0.2325270026922226,
+    "max_cos_other_class": 0.24314254522323608,
+    "discriminable": false,
+    "entail_min": 0.006603188347071409,
+    "distance": 0.7674729973077774,
+    "generators": [
+     "G4_keywords"
+    ],
+    "audit_reject": false,
+    "valid": false,
+    "strict": false
+   },
+   {
+    "text": "a natural feature such as a mountain, river or lake",
+    "cos_official": 0.5398671627044678,
+    "max_cos_other_class": 0.21122121810913086,
+    "discriminable": true,
+    "entail_min": 0.024761799722909927,
+    "distance": 0.4601328372955322,
+    "generators": [
+     "G5_definition"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "Geographic Feature",
+    "cos_official": 0.4188089072704315,
+    "max_cos_other_class": 0.3298962712287903,
+    "discriminable": true,
+    "entail_min": 0.47823870182037354,
+    "distance": 0.5811910927295685,
+    "generators": [
+     "G6_llm1"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": false
+   },
+   {
+    "text": "Mountain Range",
+    "cos_official": 0.4777756929397583,
+    "max_cos_other_class": 0.40346601605415344,
+    "discriminable": true,
+    "entail_min": 0.010987645946443081,
+    "distance": 0.5222243070602417,
+    "generators": [
+     "G7_llm2"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": false
+   }
+  ],
+  [
+   {
+    "text": "Village",
+    "cos_official": 1.0000001192092896,
+    "max_cos_other_class": 0.4299125671386719,
+    "discriminable": true,
+    "entail_min": 0.9904149770736694,
+    "distance": -1.1920928955078125e-07,
+    "generators": [
+     "G0_official"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "village",
+    "cos_official": 1.0000001192092896,
+    "max_cos_other_class": 0.4299125671386719,
+    "discriminable": true,
+    "entail_min": 0.9860973358154297,
+    "distance": -1.1920928955078125e-07,
+    "generators": [
+     "G1_surface"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "small town",
+    "cos_official": 0.6559098362922668,
+    "max_cos_other_class": 0.37450265884399414,
+    "discriminable": true,
+    "entail_min": 0.3135291635990143,
+    "distance": 0.34409016370773315,
+    "generators": [
+     "G2_wn_syn"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "community",
+    "cos_official": 0.5468020439147949,
+    "max_cos_other_class": 0.35217881202697754,
+    "discriminable": true,
+    "entail_min": 0.5312599539756775,
+    "distance": 0.4531979560852051,
+    "generators": [
+     "G3_wn_hyper"
+    ],
+    "audit_reject": true,
+    "valid": false,
+    "strict": false
+   },
+   {
+    "text": "village, population, district",
+    "cos_official": 0.6235337257385254,
+    "max_cos_other_class": 0.27763956785202026,
+    "discriminable": true,
+    "entail_min": 0.0016385844210162759,
+    "distance": 0.3764662742614746,
+    "generators": [
+     "G4_keywords"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "a village or small rural settlement",
+    "cos_official": 0.7177327871322632,
+    "max_cos_other_class": 0.39515072107315063,
+    "discriminable": true,
+    "entail_min": 0.01890079490840435,
+    "distance": 0.2822672128677368,
+    "generators": [
+     "G5_definition"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "Hamlet",
+    "cos_official": 0.3818238079547882,
+    "max_cos_other_class": 0.29560863971710205,
+    "discriminable": true,
+    "entail_min": 0.0020551513880491257,
+    "distance": 0.6181761920452118,
+    "generators": [
+     "G6_llm1"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": false
+   },
+   {
+    "text": "Settlement",
+    "cos_official": 0.43524378538131714,
+    "max_cos_other_class": 0.3574031889438629,
+    "discriminable": true,
+    "entail_min": 0.6399692296981812,
+    "distance": 0.5647562146186829,
+    "generators": [
+     "G7_llm2"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": false
+   }
+  ],
+  [
+   {
+    "text": "Animal",
+    "cos_official": 1.0000001192092896,
+    "max_cos_other_class": 0.41447922587394714,
+    "discriminable": true,
+    "entail_min": 0.9902468919754028,
+    "distance": -1.1920928955078125e-07,
+    "generators": [
+     "G0_official"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "animal",
+    "cos_official": 1.0000001192092896,
+    "max_cos_other_class": 0.41447922587394714,
+    "discriminable": true,
+    "entail_min": 0.9870525002479553,
+    "distance": -1.1920928955078125e-07,
+    "generators": [
+     "G1_surface"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "animate being",
+    "cos_official": 0.28560030460357666,
+    "max_cos_other_class": 0.24217095971107483,
+    "discriminable": true,
+    "entail_min": 0.3848888576030731,
+    "distance": 0.7143996953964233,
+    "generators": [
+     "G2_wn_syn"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": false
+   },
+   {
+    "text": "organism",
+    "cos_official": 0.598475456237793,
+    "max_cos_other_class": 0.5248446464538574,
+    "discriminable": true,
+    "entail_min": 0.906785786151886,
+    "distance": 0.40152454376220703,
+    "generators": [
+     "G3_wn_hyper"
+    ],
+    "audit_reject": true,
+    "valid": false,
+    "strict": false
+   },
+   {
+    "text": "family, found, moth",
+    "cos_official": 0.24297095835208893,
+    "max_cos_other_class": 0.23516632616519928,
+    "discriminable": true,
+    "entail_min": 0.005899468436837196,
+    "distance": 0.7570290416479111,
+    "generators": [
+     "G4_keywords"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": false
+   },
+   {
+    "text": "an animal species",
+    "cos_official": 0.6831274032592773,
+    "max_cos_other_class": 0.30697324872016907,
+    "discriminable": true,
+    "entail_min": 0.7557554841041565,
+    "distance": 0.31687259674072266,
+    "generators": [
+     "G5_definition"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "Beast",
+    "cos_official": 0.5785032510757446,
+    "max_cos_other_class": 0.30656522512435913,
+    "discriminable": true,
+    "entail_min": 0.6976856589317322,
+    "distance": 0.42149674892425537,
+    "generators": [
+     "G6_llm1"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "Creature",
+    "cos_official": 0.6992349028587341,
+    "max_cos_other_class": 0.34916001558303833,
+    "discriminable": true,
+    "entail_min": 0.8801352977752686,
+    "distance": 0.30076509714126587,
+    "generators": [
+     "G7_llm2"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   }
+  ],
+  [
+   {
+    "text": "Plant",
+    "cos_official": 1.0000001192092896,
+    "max_cos_other_class": 0.41447949409484863,
+    "discriminable": true,
+    "entail_min": 0.9900683760643005,
+    "distance": -1.1920928955078125e-07,
+    "generators": [
+     "G0_official"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "plant",
+    "cos_official": 1.0000001192092896,
+    "max_cos_other_class": 0.41447949409484863,
+    "discriminable": true,
+    "entail_min": 0.9834306240081787,
+    "distance": -1.1920928955078125e-07,
+    "generators": [
+     "G1_surface"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "works",
+    "cos_official": 0.183258056640625,
+    "max_cos_other_class": 0.24137739837169647,
+    "discriminable": false,
+    "entail_min": 0.006361350417137146,
+    "distance": 0.816741943359375,
+    "generators": [
+     "G2_wn_syn"
+    ],
+    "audit_reject": true,
+    "valid": false,
+    "strict": false
+   },
+   {
+    "text": "building complex",
+    "cos_official": 0.2166205495595932,
+    "max_cos_other_class": 0.7165834903717041,
+    "discriminable": false,
+    "entail_min": 0.0010021972702816129,
+    "distance": 0.7833794504404068,
+    "generators": [
+     "G3_wn_hyper"
+    ],
+    "audit_reject": true,
+    "valid": false,
+    "strict": false
+   },
+   {
+    "text": "species, plant, genus",
+    "cos_official": 0.5547902584075928,
+    "max_cos_other_class": 0.3098209798336029,
+    "discriminable": true,
+    "entail_min": 0.01975858584046364,
+    "distance": 0.4452097415924072,
+    "generators": [
+     "G4_keywords"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "a plant species",
+    "cos_official": 0.6440955400466919,
+    "max_cos_other_class": 0.3820670247077942,
+    "discriminable": true,
+    "entail_min": 0.8618791103363037,
+    "distance": 0.3559044599533081,
+    "generators": [
+     "G5_definition"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "Flora",
+    "cos_official": 0.616696834564209,
+    "max_cos_other_class": 0.32052797079086304,
+    "discriminable": true,
+    "entail_min": 0.5729026794433594,
+    "distance": 0.383303165435791,
+    "generators": [
+     "G6_llm1"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "Vegetation",
+    "cos_official": 0.6143860816955566,
+    "max_cos_other_class": 0.430622935295105,
+    "discriminable": true,
+    "entail_min": 0.9385083317756653,
+    "distance": 0.38561391830444336,
+    "generators": [
+     "G7_llm2"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   }
+  ],
+  [
+   {
+    "text": "Album",
+    "cos_official": 0.9999998807907104,
+    "max_cos_other_class": 0.5438162684440613,
+    "discriminable": true,
+    "entail_min": 0.9867926836013794,
+    "distance": 1.1920928955078125e-07,
+    "generators": [
+     "G0_official"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "album",
+    "cos_official": 0.9999998807907104,
+    "max_cos_other_class": 0.5438162684440613,
+    "discriminable": true,
+    "entail_min": 0.9704009890556335,
+    "distance": 1.1920928955078125e-07,
+    "generators": [
+     "G1_surface"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "record album",
+    "cos_official": 0.7355544567108154,
+    "max_cos_other_class": 0.3917403519153595,
+    "discriminable": true,
+    "entail_min": 0.4495106637477875,
+    "distance": 0.26444554328918457,
+    "generators": [
+     "G2_wn_syn"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "medium",
+    "cos_official": 0.2579982876777649,
+    "max_cos_other_class": 0.301885187625885,
+    "discriminable": false,
+    "entail_min": 0.009602093137800694,
+    "distance": 0.7420017123222351,
+    "generators": [
+     "G3_wn_hyper"
+    ],
+    "audit_reject": true,
+    "valid": false,
+    "strict": false
+   },
+   {
+    "text": "album, released, band",
+    "cos_official": 0.6836283206939697,
+    "max_cos_other_class": 0.39075639843940735,
+    "discriminable": true,
+    "entail_min": 0.0017100332770496607,
+    "distance": 0.3163716793060303,
+    "generators": [
+     "G4_keywords"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "a music album",
+    "cos_official": 0.785485565662384,
+    "max_cos_other_class": 0.41660192608833313,
+    "discriminable": true,
+    "entail_min": 0.5125678777694702,
+    "distance": 0.21451443433761597,
+    "generators": [
+     "G5_definition"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "Record",
+    "cos_official": 0.4905376434326172,
+    "max_cos_other_class": 0.3017205595970154,
+    "discriminable": true,
+    "entail_min": 0.05461132898926735,
+    "distance": 0.5094623565673828,
+    "generators": [
+     "G6_llm1"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": false
+   },
+   {
+    "text": "Compilation",
+    "cos_official": 0.33617955446243286,
+    "max_cos_other_class": 0.3847005367279053,
+    "discriminable": false,
+    "entail_min": 0.14643888175487518,
+    "distance": 0.6638204455375671,
+    "generators": [
+     "G7_llm2"
+    ],
+    "audit_reject": false,
+    "valid": false,
+    "strict": false
+   }
+  ],
+  [
+   {
+    "text": "Film",
+    "cos_official": 1.0000001192092896,
+    "max_cos_other_class": 0.3603993058204651,
+    "discriminable": true,
+    "entail_min": 0.9915791749954224,
+    "distance": -1.1920928955078125e-07,
+    "generators": [
+     "G0_official"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "film",
+    "cos_official": 1.0000001192092896,
+    "max_cos_other_class": 0.3603993058204651,
+    "discriminable": true,
+    "entail_min": 0.9899427890777588,
+    "distance": -1.1920928955078125e-07,
+    "generators": [
+     "G1_surface"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "movie",
+    "cos_official": 0.7261801958084106,
+    "max_cos_other_class": 0.42621150612831116,
+    "discriminable": true,
+    "entail_min": 0.8706914782524109,
+    "distance": 0.27381980419158936,
+    "generators": [
+     "G2_wn_syn"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "product",
+    "cos_official": 0.23569288849830627,
+    "max_cos_other_class": 0.4175736904144287,
+    "discriminable": false,
+    "entail_min": 0.018042515963315964,
+    "distance": 0.7643071115016937,
+    "generators": [
+     "G3_wn_hyper"
+    ],
+    "audit_reject": true,
+    "valid": false,
+    "strict": false
+   },
+   {
+    "text": "film, directed, starring",
+    "cos_official": 0.5038342475891113,
+    "max_cos_other_class": 0.28659647703170776,
+    "discriminable": true,
+    "entail_min": 0.0020197120029479265,
+    "distance": 0.49616575241088867,
+    "generators": [
+     "G4_keywords"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "a movie",
+    "cos_official": 0.6530651450157166,
+    "max_cos_other_class": 0.43287187814712524,
+    "discriminable": true,
+    "entail_min": 0.7980507016181946,
+    "distance": 0.34693485498428345,
+    "generators": [
+     "G5_definition"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "Movie",
+    "cos_official": 0.7261801958084106,
+    "max_cos_other_class": 0.42621150612831116,
+    "discriminable": true,
+    "entail_min": 0.9165570735931396,
+    "distance": 0.27381980419158936,
+    "generators": [
+     "G6_llm1"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "Picture",
+    "cos_official": 0.2927243113517761,
+    "max_cos_other_class": 0.3855864107608795,
+    "discriminable": false,
+    "entail_min": 0.3956122100353241,
+    "distance": 0.7072756886482239,
+    "generators": [
+     "G7_llm2"
+    ],
+    "audit_reject": true,
+    "valid": false,
+    "strict": false
+   }
+  ],
+  [
+   {
+    "text": "Written Work",
+    "cos_official": 1.0,
+    "max_cos_other_class": 0.3470664620399475,
+    "discriminable": true,
+    "entail_min": 0.9839659929275513,
+    "distance": 0.0,
+    "generators": [
+     "G0_official"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "written work",
+    "cos_official": 1.0,
+    "max_cos_other_class": 0.3470664620399475,
+    "discriminable": true,
+    "entail_min": 0.9862861037254333,
+    "distance": 0.0,
+    "generators": [
+     "G1_surface"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "piece of work",
+    "cos_official": 0.3691384196281433,
+    "max_cos_other_class": 0.3370296061038971,
+    "discriminable": true,
+    "entail_min": 0.3095904290676117,
+    "distance": 0.6308615803718567,
+    "generators": [
+     "G2_wn_syn"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": false
+   },
+   {
+    "text": "activity",
+    "cos_official": 0.3235641121864319,
+    "max_cos_other_class": 0.38858985900878906,
+    "discriminable": false,
+    "entail_min": 0.0033517165575176477,
+    "distance": 0.6764358878135681,
+    "generators": [
+     "G3_wn_hyper"
+    ],
+    "audit_reject": true,
+    "valid": false,
+    "strict": false
+   },
+   {
+    "text": "published, book, novel",
+    "cos_official": 0.45157182216644287,
+    "max_cos_other_class": 0.38553112745285034,
+    "discriminable": true,
+    "entail_min": 0.1823016256093979,
+    "distance": 0.5484281778335571,
+    "generators": [
+     "G4_keywords"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": false
+   },
+   {
+    "text": "a book, novel, journal or other written work",
+    "cos_official": 0.5363197326660156,
+    "max_cos_other_class": 0.37643706798553467,
+    "discriminable": true,
+    "entail_min": 0.20781201124191284,
+    "distance": 0.4636802673339844,
+    "generators": [
+     "G5_definition"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "Book",
+    "cos_official": 0.2949093282222748,
+    "max_cos_other_class": 0.450589120388031,
+    "discriminable": false,
+    "entail_min": 0.817929744720459,
+    "distance": 0.7050906717777252,
+    "generators": [
+     "G6_llm1"
+    ],
+    "audit_reject": false,
+    "valid": false,
+    "strict": false
+   },
+   {
+    "text": "Script",
+    "cos_official": 0.30056604743003845,
+    "max_cos_other_class": 0.4239561855792999,
+    "discriminable": false,
+    "entail_min": 0.6397216320037842,
+    "distance": 0.6994339525699615,
+    "generators": [
+     "G7_llm2"
+    ],
+    "audit_reject": false,
+    "valid": false,
+    "strict": false
+   }
+  ]
+ ],
+ "controls": {
+  "N1_nonsense": [
+   "nuzonu",
+   "zugevu",
+   "nuvedo",
+   "keduva",
+   "ronuse",
+   "razuda",
+   "begubo",
+   "lorepe",
+   "sinasa",
+   "nimuza",
+   "tilepi",
+   "barama",
+   "zimaba",
+   "gebomo"
+  ],
+  "N2_nonsense": [
+   "febune",
+   "tativa",
+   "gibire",
+   "potara",
+   "rikoge",
+   "zarutu",
+   "birike",
+   "mivufi",
+   "zisema",
+   "luboku",
+   "kumose",
+   "kulora",
+   "kurupu",
+   "mumado"
+  ]
+ },
+ "shuffle_perms": [
+  [
+   3,
+   12,
+   8,
+   6,
+   7,
+   0,
+   4,
+   1,
+   13,
+   10,
+   2,
+   5,
+   9,
+   11
+  ],
+  [
+   8,
+   6,
+   10,
+   4,
+   13,
+   7,
+   11,
+   3,
+   9,
+   1,
+   12,
+   0,
+   2,
+   5
+  ],
+  [
+   7,
+   3,
+   12,
+   9,
+   0,
+   4,
+   1,
+   10,
+   6,
+   8,
+   2,
+   13,
+   11,
+   5
+  ]
+ ],
+ "llm_raw": [
+  "Enterprise\nBusiness\nCorporation\nInstitution\nEnterprise Entity",
+  "School\nUniversity\nCollege\nInstitute\nFacility",
+  "Person\nMusician\nSinger\nDancer\nActor",
+  "Sportsperson\nPlayer\nGamer\nAthleteman",
+  "Person in Office\nPolitical Figure\nPublic Servant\nGovernment Official",
+  "Vehicle\nTransport\nMachine\nCraft\nDevice",
+  "Structure\nStructure Building\nMonument\nEdifice\nConstruct",
+  "Geographic Feature\nMountain Range\nRiver Basin\nNational Park\nIsland Territory",
+  "Hamlet\nSettlement\nHamlet\nHamlet\nSettlement",
+  "Beast\nCreature\nFoe\nSpecies",
+  "Flora\nVegetation\nSpecies\nBiota\nNature",
+  "Record\nCompilation\nCollection\nSoundtrack\nRelease",
+  "Movie\nPicture\nProduction\nShow\nCinematic",
+  "Book\nScript\nPublication\nWork\nDocument"
+ ],
+ "llm_prompt": "A dataset of {genre}s is labelled by {facet} with these categories: {allc}. Give 5 alternative names for the category \"{name}\" that a person could use instead. Each alternative must be 1 to 4 words long and mean the same category. Output one per line, with no numbering and no explanations.",
+ "rule": "valid iff discriminable AND not audit-rejected; strict iff valid AND cos>=0.5; G0 valid+strict by definition",
+ "audit_reject": [
+  "companionship",
+  "institution",
+  "establishment",
+  "organization",
+  "transportation system",
+  "facility",
+  "community",
+  "organism",
+  "works",
+  "building complex",
+  "medium",
+  "product",
+  "activity",
+  "point",
+  "topographic point",
+  "bearer",
+  "holding device",
+  "Person",
+  "edifice",
+  "Picture"
+ ]
+}

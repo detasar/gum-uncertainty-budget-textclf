@@ -1,0 +1,37 @@
+2610.11392 | 2026/10/08 | TypedBench: A Benchmark for Calibration, Framing Sensitivity, and Cost in System One Decision Models | Sharma, Rahul;Duncan, Andrew B.;Caron, Gaétan Marceau
+2610.18066 | 2026/10/13 | Uncertainty Evaluation: Bridging Machine Learning and Measurement Science | Petri, Dario;Mari, Luca
+2602.04297 | 2026/02/04 | Revisiting Prompt Sensitivity in Large Language Models for Text Classification: The Role of Prompt Underspecification | Pecher, Branislav;Spiegel, Michal;Belanec, Robert
+2609.35824 | 2026/09/22 | Reliable but Design-Sensitive: Instrument Uncertainty in LLM Annotation | Reiter, Thomas;Kern, Christoph;Miasnikov, Fedor
+2609.26758 | 2026/09/22 | Type-Safe Is Not Error-Free: Typed Decision Models Follow the Option Name, Not the Definition Bound to It | Sun, Yu;Xu, Junhao;Shi, Jiajia
+2608.01460 | 2026/08/02 | Conformalized Large Language Models under Configuration Shift | Zhu, Yuqicheng;Yu, Jialin;Li, Lin
+2610.04239 | 2026/10/03 | Conformal Prediction with Paraphrase-Aware Scoring for LLM Uncertainty Quantification | Xin, Jiayi;Qiang, Evan;Zhu, Zihan
+2610.13823 | 2026/10/09 | Same Query, Different Answer: Run-to-Run Variance in Semantic Query Processing | Hassanzadeh, Oktie;Subramanian, Dharmashankar
+2609.38981 | 2026/09/30 | Vosti: Specifying, Implementing, and Verifying Deterministic LLM Inference | Qin, Jianxing;Du, Alexander;Zhang, Danfeng
+2310.11324 | 2023/10/17 | Quantifying Language Models&#39; Sensitivity to Spurious Features in Prompt Design or: How I learned to start worrying about prompt formatting | Sclar, Melanie;Choi, Yejin;Tsvetkov, Yulia
+2401.00595 | 2023/12/31 | State of What Art? A Call for Multi-Prompt LLM Evaluation | Mizrahi, Moran;Kaplan, Guy;Malkin, Dan
+2410.12405 | 2024/10/16 | ProSA: Assessing and Understanding the Prompt Sensitivity of LLMs | Zhuo, Jingming;Zhang, Songyang;Fang, Xinyu
+2305.18404 | 2023/05/28 | Conformal Prediction with Large Language Models for Multi-Choice Question Answering | Kumar, Bhawesh;Lu, Charlie;Gupta, Gauri
+2306.10193 | 2023/06/16 | Conformal Language Modeling | Quach, Victor;Fisch, Adam;Schuster, Tal
+2104.08315 | 2021/04/16 | Surface Form Competition: Why the Highest Probability Answer Isn&#39;t Always Right | Holtzman, Ari;West, Peter;Shwartz, Vered
+2102.09690 | 2021/02/19 | Calibrate Before Use: Improving Few-Shot Performance of Language Models | Zhao, Tony Z.;Wallace, Eric;Feng, Shi
+2309.03882 | 2023/09/07 | Large Language Models Are Not Robust Multiple Choice Selectors | Zheng, Chujie;Zhou, Hao;Meng, Fandong
+2107.07511 | 2021/07/15 | A Gentle Introduction to Conformal Prediction and Distribution-Free Uncertainty Quantification | Angelopoulos, Anastasios N.;Bates, Stephen
+2006.02544 | 2020/06/03 | Classification with Valid and Adaptive Coverage | Romano, Yaniv;Sesia, Matteo;Candès, Emmanuel J.
+2009.14193 | 2020/09/29 | Uncertainty Sets for Image Classifiers using Conformal Prediction | Angelopoulos, Anastasios;Bates, Stephen;Malik, Jitendra
+1609.00451 | 2016/09/02 | Least Ambiguous Set-Valued Classifiers with Bounded Error Levels | Sadinle, Mauricio;Lei, Jing;Wasserman, Larry
+2310.16789 | 2023/10/25 | Detecting Pretraining Data from Large Language Models | Shi, Weijia;Ajith, Anirudh;Xia, Mengzhou
+2310.18018 | 2023/10/27 | NLP Evaluation in trouble: On the Need to Measure LLM Data Contamination for each Benchmark | Sainz, Oscar;Campos, Jon Ander;García-Ferrero, Iker
+1909.00161 | 2019/08/31 | Benchmarking Zero-shot Text Classification: Datasets, Evaluation and Entailment Approach | Yin, Wenpeng;Hay, Jamaal;Roth, Dan
+2312.17543 | 2023/12/29 | Building Efficient Universal Classifiers with Natural Language Inference | Laurer, Moritz;van Atteveldt, Wouter;Casas, Andreu
+2103.03098 | 2021/03/01 | Accounting for Variance in Machine Learning Benchmarks | Bouthillier, Xavier;Delaunay, Pierre;Bronzi, Mirko
+2310.13486 | 2023/10/20 | Mind the instructions: a holistic evaluation of consistency and interactions in prompt-based learning | Weber, Lucas;Bruni, Elia;Hupkes, Dieuwke
+2211.02570 | 2022/11/04 | The &#39;Problem&#39; of Human Label Variation: On Ground Truth in Data, Modeling and Evaluation | Plank, Barbara
+2307.09302 | 2023/07/18 | Conformal prediction under ambiguous ground truth | Stutz, David;Roy, Abhijit Guha;Matejovicova, Tatiana
+2410.02185 | 2024/10/03 | POSIX: A Prompt Sensitivity Index For Large Language Models | Chatterjee, Anwoy;Renduchintala, H S V N S Kowndinya;Bhatia, Sumit
+2405.17202 | 2024/05/27 | Efficient multi-prompt evaluation of LLMs | Polo, Felipe Maia;Xu, Ronald;Weber, Lucas
+2401.12794 | 2024/01/23 | Benchmarking LLMs via Uncertainty Quantification | Ye, Fanghua;Yang, Mingming;Pang, Jianhui
+2403.01216 | 2024/03/02 | API Is Enough: Conformal Prediction for Large Language Models Without Logit-Access | Su, Jiayuan;Luo, Jing;Wang, Hongwei
+2212.04037 | 2022/12/08 | Demystifying Prompts in Language Models via Perplexity Estimation | Gonen, Hila;Iyer, Srini;Blevins, Terra
+2404.02060 | 2024/04/02 | Long-context LLMs Struggle with Long In-context Learning | Li, Tianle;Zhang, Ge;Do, Quy Duc
+2402.09369 | 2024/02/14 | Massively Multi-Cultural Knowledge Acquisition &amp; LM Benchmarking | Fung, Yi;Zhao, Ruining;Doo, Jae
+2204.04991 | 2022/04/11 | TRUE: Re-evaluating Factual Consistency Evaluation | Honovich, Or;Aharoni, Roee;Herzig, Jonathan

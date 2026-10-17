@@ -1,0 +1,779 @@
+{
+ "dataset": "agnews",
+ "classes_official": [
+  "World",
+  "Sports",
+  "Business",
+  "Sci/Tech"
+ ],
+ "generators": {
+  "G0_official": [
+   "World",
+   "Sports",
+   "Business",
+   "Sci/Tech"
+  ],
+  "G1_surface": [
+   "world",
+   "sports",
+   "business",
+   "sci/tech"
+  ],
+  "G2_wn_syn": [
+   "universe",
+   "athletics",
+   "concern",
+   "technical school"
+  ],
+  "G3_wn_hyper": [
+   "natural object",
+   "diversion",
+   "enterprise",
+   "school"
+  ],
+  "G4_keywords": [
+   "iraq, minister, killed",
+   "game, win, victory",
+   "stocks, oil, profit",
+   "microsoft, software, internet"
+  ],
+  "G5_definition": [
+   "news about international affairs, politics and conflicts",
+   "news about athletes, teams, matches and competitions",
+   "news about companies, markets and the economy",
+   "news about science, technology, computing and the internet"
+  ],
+  "G6_llm1": [
+   "Global",
+   "Athletics",
+   "Finance",
+   "Science"
+  ],
+  "G7_llm2": [
+   "International",
+   "Recreation",
+   "Economy",
+   "Tech"
+  ],
+  "v1_w0": [
+   "World",
+   "Sports",
+   "Business",
+   "Science/Technology"
+  ],
+  "v1_w1": [
+   "world news",
+   "sports news",
+   "business news",
+   "science and technology news"
+  ],
+  "v1_w2": [
+   "international politics and conflicts",
+   "athletes, teams and games",
+   "companies, markets and the economy",
+   "computers, the internet and scientific research"
+  ],
+  "v1_w3": [
+   "politics",
+   "sport",
+   "money",
+   "tech"
+  ]
+ },
+ "variants": [
+  [
+   {
+    "text": "World",
+    "cos_official": 1.0,
+    "max_cos_other_class": 0.27189797163009644,
+    "discriminable": true,
+    "entail_min": 0.9911808371543884,
+    "distance": 0.0,
+    "generators": [
+     "G0_official",
+     "v1_w0"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "world",
+    "cos_official": 1.0,
+    "max_cos_other_class": 0.27189797163009644,
+    "discriminable": true,
+    "entail_min": 0.9899762272834778,
+    "distance": 0.0,
+    "generators": [
+     "G1_surface"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "universe",
+    "cos_official": 0.5178124904632568,
+    "max_cos_other_class": 0.26254764199256897,
+    "discriminable": true,
+    "entail_min": 0.2262153923511505,
+    "distance": 0.48218750953674316,
+    "generators": [
+     "G2_wn_syn"
+    ],
+    "audit_reject": true,
+    "valid": false,
+    "strict": false
+   },
+   {
+    "text": "natural object",
+    "cos_official": 0.18120910227298737,
+    "max_cos_other_class": 0.18632036447525024,
+    "discriminable": false,
+    "entail_min": 0.2451627552509308,
+    "distance": 0.8187908977270126,
+    "generators": [
+     "G3_wn_hyper"
+    ],
+    "audit_reject": true,
+    "valid": false,
+    "strict": false
+   },
+   {
+    "text": "iraq, minister, killed",
+    "cos_official": 0.17652937769889832,
+    "max_cos_other_class": 0.12573134899139404,
+    "discriminable": true,
+    "entail_min": 0.0023499480448663235,
+    "distance": 0.8234706223011017,
+    "generators": [
+     "G4_keywords"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": false
+   },
+   {
+    "text": "news about international affairs, politics and conflicts",
+    "cos_official": 0.2504028379917145,
+    "max_cos_other_class": 0.319475919008255,
+    "discriminable": false,
+    "entail_min": 0.004655166063457727,
+    "distance": 0.7495971620082855,
+    "generators": [
+     "G5_definition"
+    ],
+    "audit_reject": false,
+    "valid": false,
+    "strict": false
+   },
+   {
+    "text": "Global",
+    "cos_official": 0.5102663040161133,
+    "max_cos_other_class": 0.21518060564994812,
+    "discriminable": true,
+    "entail_min": 0.8813421130180359,
+    "distance": 0.4897336959838867,
+    "generators": [
+     "G6_llm1"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "International",
+    "cos_official": 0.372814804315567,
+    "max_cos_other_class": 0.29078587889671326,
+    "discriminable": true,
+    "entail_min": 0.8836070895195007,
+    "distance": 0.627185195684433,
+    "generators": [
+     "G7_llm2"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": false
+   },
+   {
+    "text": "world news",
+    "cos_official": 0.5401523113250732,
+    "max_cos_other_class": 0.3583887219429016,
+    "discriminable": true,
+    "entail_min": 0.0065106917172670364,
+    "distance": 0.45984768867492676,
+    "generators": [
+     "v1_w1"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "international politics and conflicts",
+    "cos_official": 0.22341513633728027,
+    "max_cos_other_class": 0.20462742447853088,
+    "discriminable": true,
+    "entail_min": 0.004538865759968758,
+    "distance": 0.7765848636627197,
+    "generators": [
+     "v1_w2"
+    ],
+    "audit_reject": true,
+    "valid": false,
+    "strict": false
+   },
+   {
+    "text": "politics",
+    "cos_official": 0.2514527440071106,
+    "max_cos_other_class": 0.47450852394104004,
+    "discriminable": false,
+    "entail_min": 0.011258475482463837,
+    "distance": 0.7485472559928894,
+    "generators": [
+     "v1_w3"
+    ],
+    "audit_reject": true,
+    "valid": false,
+    "strict": false
+   }
+  ],
+  [
+   {
+    "text": "Sports",
+    "cos_official": 1.0000001192092896,
+    "max_cos_other_class": 0.41971516609191895,
+    "discriminable": true,
+    "entail_min": 0.9922012090682983,
+    "distance": -1.1920928955078125e-07,
+    "generators": [
+     "G0_official",
+     "v1_w0"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "sports",
+    "cos_official": 1.0000001192092896,
+    "max_cos_other_class": 0.41971516609191895,
+    "discriminable": true,
+    "entail_min": 0.9899237751960754,
+    "distance": -1.1920928955078125e-07,
+    "generators": [
+     "G1_surface"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "athletics",
+    "cos_official": 0.8474267721176147,
+    "max_cos_other_class": 0.3412524461746216,
+    "discriminable": true,
+    "entail_min": 0.4854332208633423,
+    "distance": 0.15257322788238525,
+    "generators": [
+     "G2_wn_syn"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "diversion",
+    "cos_official": 0.3107055425643921,
+    "max_cos_other_class": 0.34476253390312195,
+    "discriminable": false,
+    "entail_min": 0.015275528654456139,
+    "distance": 0.6892944574356079,
+    "generators": [
+     "G3_wn_hyper"
+    ],
+    "audit_reject": true,
+    "valid": false,
+    "strict": false
+   },
+   {
+    "text": "game, win, victory",
+    "cos_official": 0.47561943531036377,
+    "max_cos_other_class": 0.286958247423172,
+    "discriminable": true,
+    "entail_min": 0.09899357706308365,
+    "distance": 0.5243805646896362,
+    "generators": [
+     "G4_keywords"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": false
+   },
+   {
+    "text": "news about athletes, teams, matches and competitions",
+    "cos_official": 0.5960893630981445,
+    "max_cos_other_class": 0.23389872908592224,
+    "discriminable": true,
+    "entail_min": 0.023496288806200027,
+    "distance": 0.40391063690185547,
+    "generators": [
+     "G5_definition"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "Athletics",
+    "cos_official": 0.8474267721176147,
+    "max_cos_other_class": 0.3412524461746216,
+    "discriminable": true,
+    "entail_min": 0.10976120829582214,
+    "distance": 0.15257322788238525,
+    "generators": [
+     "G6_llm1"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "Recreation",
+    "cos_official": 0.543332040309906,
+    "max_cos_other_class": 0.41663962602615356,
+    "discriminable": true,
+    "entail_min": 0.07012152671813965,
+    "distance": 0.456667959690094,
+    "generators": [
+     "G7_llm2"
+    ],
+    "audit_reject": true,
+    "valid": false,
+    "strict": false
+   },
+   {
+    "text": "sports news",
+    "cos_official": 0.6748019456863403,
+    "max_cos_other_class": 0.28748130798339844,
+    "discriminable": true,
+    "entail_min": 0.04256736859679222,
+    "distance": 0.32519805431365967,
+    "generators": [
+     "v1_w1"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "athletes, teams and games",
+    "cos_official": 0.7420738935470581,
+    "max_cos_other_class": 0.25049668550491333,
+    "discriminable": true,
+    "entail_min": 0.06574422121047974,
+    "distance": 0.2579261064529419,
+    "generators": [
+     "v1_w2"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "sport",
+    "cos_official": 0.9028710126876831,
+    "max_cos_other_class": 0.4081142544746399,
+    "discriminable": true,
+    "entail_min": 0.9566856026649475,
+    "distance": 0.0971289873123169,
+    "generators": [
+     "v1_w3"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   }
+  ],
+  [
+   {
+    "text": "Business",
+    "cos_official": 1.0000001192092896,
+    "max_cos_other_class": 0.41971510648727417,
+    "discriminable": true,
+    "entail_min": 0.9915969967842102,
+    "distance": -1.1920928955078125e-07,
+    "generators": [
+     "G0_official",
+     "v1_w0"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "business",
+    "cos_official": 1.0000001192092896,
+    "max_cos_other_class": 0.41971510648727417,
+    "discriminable": true,
+    "entail_min": 0.9896684885025024,
+    "distance": -1.1920928955078125e-07,
+    "generators": [
+     "G1_surface"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "concern",
+    "cos_official": 0.3481879234313965,
+    "max_cos_other_class": 0.20927998423576355,
+    "discriminable": true,
+    "entail_min": 0.005646497942507267,
+    "distance": 0.6518120765686035,
+    "generators": [
+     "G2_wn_syn"
+    ],
+    "audit_reject": true,
+    "valid": false,
+    "strict": false
+   },
+   {
+    "text": "enterprise",
+    "cos_official": 0.38090574741363525,
+    "max_cos_other_class": 0.2919836640357971,
+    "discriminable": true,
+    "entail_min": 0.9249204993247986,
+    "distance": 0.6190942525863647,
+    "generators": [
+     "G3_wn_hyper"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": false
+   },
+   {
+    "text": "stocks, oil, profit",
+    "cos_official": 0.3607819080352783,
+    "max_cos_other_class": 0.18569964170455933,
+    "discriminable": true,
+    "entail_min": 0.0011539440602064133,
+    "distance": 0.6392180919647217,
+    "generators": [
+     "G4_keywords"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": false
+   },
+   {
+    "text": "news about companies, markets and the economy",
+    "cos_official": 0.3841465711593628,
+    "max_cos_other_class": 0.28099632263183594,
+    "discriminable": true,
+    "entail_min": 0.0028940930496901274,
+    "distance": 0.6158534288406372,
+    "generators": [
+     "G5_definition"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": false
+   },
+   {
+    "text": "Finance",
+    "cos_official": 0.6109253168106079,
+    "max_cos_other_class": 0.41198283433914185,
+    "discriminable": true,
+    "entail_min": 0.805801272392273,
+    "distance": 0.3890746831893921,
+    "generators": [
+     "G6_llm1"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "Economy",
+    "cos_official": 0.6039983034133911,
+    "max_cos_other_class": 0.38505926728248596,
+    "discriminable": true,
+    "entail_min": 0.8036899566650391,
+    "distance": 0.3960016965866089,
+    "generators": [
+     "G7_llm2"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "business news",
+    "cos_official": 0.6516913771629333,
+    "max_cos_other_class": 0.38982123136520386,
+    "discriminable": true,
+    "entail_min": 0.004131152294576168,
+    "distance": 0.34830862283706665,
+    "generators": [
+     "v1_w1"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "companies, markets and the economy",
+    "cos_official": 0.4322524964809418,
+    "max_cos_other_class": 0.24334728717803955,
+    "discriminable": true,
+    "entail_min": 0.0056564658880233765,
+    "distance": 0.5677475035190582,
+    "generators": [
+     "v1_w2"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": false
+   },
+   {
+    "text": "money",
+    "cos_official": 0.53510582447052,
+    "max_cos_other_class": 0.3725776672363281,
+    "discriminable": true,
+    "entail_min": 0.7760205268859863,
+    "distance": 0.46489417552948,
+    "generators": [
+     "v1_w3"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   }
+  ],
+  [
+   {
+    "text": "Sci/Tech",
+    "cos_official": 0.9999999403953552,
+    "max_cos_other_class": 0.36875975131988525,
+    "discriminable": true,
+    "entail_min": 0.9891133308410645,
+    "distance": 5.960464477539063e-08,
+    "generators": [
+     "G0_official"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "sci/tech",
+    "cos_official": 0.9999999403953552,
+    "max_cos_other_class": 0.36875975131988525,
+    "discriminable": true,
+    "entail_min": 0.988745391368866,
+    "distance": 5.960464477539063e-08,
+    "generators": [
+     "G1_surface"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "technical school",
+    "cos_official": 0.6153744459152222,
+    "max_cos_other_class": 0.3142243027687073,
+    "discriminable": true,
+    "entail_min": 0.4636933207511902,
+    "distance": 0.38462555408477783,
+    "generators": [
+     "G2_wn_syn"
+    ],
+    "audit_reject": true,
+    "valid": false,
+    "strict": false
+   },
+   {
+    "text": "school",
+    "cos_official": 0.36957329511642456,
+    "max_cos_other_class": 0.4385039508342743,
+    "discriminable": false,
+    "entail_min": 0.04693048447370529,
+    "distance": 0.6304267048835754,
+    "generators": [
+     "G3_wn_hyper"
+    ],
+    "audit_reject": true,
+    "valid": false,
+    "strict": false
+   },
+   {
+    "text": "microsoft, software, internet",
+    "cos_official": 0.37381511926651,
+    "max_cos_other_class": 0.36807021498680115,
+    "discriminable": true,
+    "entail_min": 0.0029298728331923485,
+    "distance": 0.62618488073349,
+    "generators": [
+     "G4_keywords"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": false
+   },
+   {
+    "text": "news about science, technology, computing and the internet",
+    "cos_official": 0.53630131483078,
+    "max_cos_other_class": 0.2750217020511627,
+    "discriminable": true,
+    "entail_min": 0.001290573040023446,
+    "distance": 0.46369868516921997,
+    "generators": [
+     "G5_definition"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "Science",
+    "cos_official": 0.5809586644172668,
+    "max_cos_other_class": 0.43414050340652466,
+    "discriminable": true,
+    "entail_min": 0.07439948618412018,
+    "distance": 0.41904133558273315,
+    "generators": [
+     "G6_llm1"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "Tech",
+    "cos_official": 0.7554007768630981,
+    "max_cos_other_class": 0.4228193759918213,
+    "discriminable": true,
+    "entail_min": 0.06287796050310135,
+    "distance": 0.24459922313690186,
+    "generators": [
+     "G7_llm2"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "Science/Technology",
+    "cos_official": 0.8832393884658813,
+    "max_cos_other_class": 0.38268572092056274,
+    "discriminable": true,
+    "entail_min": 0.9841386675834656,
+    "distance": 0.11676061153411865,
+    "generators": [
+     "v1_w0"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "science and technology news",
+    "cos_official": 0.6378483772277832,
+    "max_cos_other_class": 0.282195508480072,
+    "discriminable": true,
+    "entail_min": 0.02823435328900814,
+    "distance": 0.3621516227722168,
+    "generators": [
+     "v1_w1"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "computers, the internet and scientific research",
+    "cos_official": 0.3469710648059845,
+    "max_cos_other_class": 0.11474354565143585,
+    "discriminable": true,
+    "entail_min": 0.006502658594399691,
+    "distance": 0.6530289351940155,
+    "generators": [
+     "v1_w2"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": false
+   },
+   {
+    "text": "tech",
+    "cos_official": 0.7554007768630981,
+    "max_cos_other_class": 0.4228193759918213,
+    "discriminable": true,
+    "entail_min": 0.17289085686206818,
+    "distance": 0.24459922313690186,
+    "generators": [
+     "v1_w3"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   }
+  ]
+ ],
+ "controls": {
+  "N1_nonsense": [
+   "nuzonu",
+   "zugevu",
+   "nuvedo",
+   "keduva"
+  ],
+  "N2_nonsense": [
+   "febune",
+   "tativa",
+   "gibire",
+   "potara"
+  ]
+ },
+ "shuffle_perms": [
+  [
+   3,
+   2,
+   1,
+   0
+  ],
+  [
+   2,
+   3,
+   1,
+   0
+  ],
+  [
+   3,
+   0,
+   1,
+   2
+  ]
+ ],
+ "llm_raw": [
+  "Global\nInternational\nNews\nGlobal Affairs\nWorld News",
+  "Athletics\nRecreation\nGames\nFitness\nExercise",
+  "Finance\nEconomy\nCommerce\nMarket\nTrade",
+  "Science\nTech\nInnovation\nEngineering\nResearch"
+ ],
+ "llm_prompt": "A dataset of {genre}s is labelled by {facet} with these categories: {allc}. Give 5 alternative names for the category \"{name}\" that a person could use instead. Each alternative must be 1 to 4 words long and mean the same category. Output one per line, with no numbering and no explanations.",
+ "rule": "valid iff discriminable AND not audit-rejected; strict iff valid AND cos>=0.5; G0 valid+strict by definition",
+ "audit_reject": [
+  "universe",
+  "natural object",
+  "concern",
+  "technical school",
+  "school",
+  "Recreation",
+  "diversion",
+  "politics",
+  "international politics and conflicts"
+ ]
+}

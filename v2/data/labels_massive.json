@@ -1,0 +1,2295 @@
+{
+ "dataset": "massive",
+ "classes_official": [
+  "alarm",
+  "audio",
+  "calendar",
+  "cooking",
+  "datetime",
+  "email",
+  "general",
+  "iot",
+  "lists",
+  "music",
+  "news",
+  "play",
+  "qa",
+  "recommendation",
+  "social",
+  "takeaway",
+  "transport",
+  "weather"
+ ],
+ "generators": {
+  "G0_official": [
+   "alarm",
+   "audio",
+   "calendar",
+   "cooking",
+   "datetime",
+   "email",
+   "general",
+   "iot",
+   "lists",
+   "music",
+   "news",
+   "play",
+   "qa",
+   "recommendation",
+   "social",
+   "takeaway",
+   "transport",
+   "weather"
+  ],
+  "G1_surface": [
+   "Alarm",
+   "Audio",
+   "Calendar",
+   "Cooking",
+   "Datetime",
+   "Email",
+   "General",
+   "Iot",
+   "Lists",
+   "Music",
+   "News",
+   "Play",
+   "Qa",
+   "Recommendation",
+   "Social",
+   "Takeaway",
+   "Transport",
+   "Weather"
+  ],
+  "G2_wn_syn": [
+   "dismay",
+   "sound",
+   null,
+   "cookery",
+   null,
+   "electronic mail",
+   "full general",
+   null,
+   "listing",
+   "euphony",
+   "intelligence",
+   "drama",
+   null,
+   "testimonial",
+   "sociable",
+   "takeout",
+   "conveyance",
+   "weather condition"
+  ],
+  "G3_wn_hyper": [
+   "fear",
+   "auditory communication",
+   "arrangement",
+   "change of state",
+   null,
+   "electronic communication",
+   "general officer",
+   null,
+   "database",
+   "auditory communication",
+   "information",
+   "dramatic composition",
+   null,
+   "advice",
+   "party",
+   "convenience food",
+   "instrumentality",
+   "atmospheric phenomenon"
+  ],
+  "G4_keywords": [
+   "alarm, alarms, set",
+   "volume, mute, speakers",
+   "calendar, event, meeting",
+   "cook, recipe, spaghetti",
+   "time, date, central",
+   "email, emails, send",
+   "joke, feel, day",
+   "lights, coffee, turn",
+   "list, lists, grocery",
+   "song, music, name",
+   "news, latest, world",
+   "play, radio, podcast",
+   "stock, rate, dollar",
+   "area, local, events",
+   "tweet, complaint, post",
+   "order, takeaway, pizza",
+   "train, ticket, traffic",
+   "weather, wear, outside"
+  ],
+  "G5_definition": [
+   "setting or managing alarms",
+   "controlling volume or sound settings",
+   "calendar events, meetings and reminders",
+   "recipes and cooking",
+   "the current date or time",
+   "reading or sending email",
+   "chit-chat, jokes and general commands to the assistant",
+   "controlling smart home devices such as lights",
+   "creating or managing lists",
+   "music preferences and information about songs",
+   "news headlines and current events",
+   "playing music, podcasts, radio, audiobooks or games",
+   "general knowledge questions and facts",
+   "recommendations for places, events or movies",
+   "social media posts and messages",
+   "ordering takeaway food",
+   "trains, taxis, tickets and traffic",
+   "weather forecasts"
+  ],
+  "G6_llm1": [
+   "Reminder",
+   "Sound",
+   "schedule",
+   "Food prep",
+   "Date time",
+   "Message",
+   "Common",
+   "Internet Of Things",
+   "To-do",
+   "Chill",
+   "Current Affairs",
+   "Listen",
+   "Knowledge",
+   "Suggestion",
+   "Chat",
+   "Delivery",
+   "Travel",
+   "Forecast"
+  ],
+  "G7_llm2": [
+   "Clock",
+   "Voice",
+   "appointments",
+   "Kitchen tasks",
+   "Time date",
+   "Inbox",
+   "Everyday",
+   "Smart Home Devices",
+   "Notes",
+   "Sound",
+   "Bulletin",
+   "Musician",
+   "Info",
+   "Suggestions",
+   "Talk",
+   "Food pick-up",
+   "Commute",
+   "Conditions"
+  ]
+ },
+ "variants": [
+  [
+   {
+    "text": "alarm",
+    "cos_official": 1.0,
+    "max_cos_other_class": 0.38956961035728455,
+    "discriminable": true,
+    "entail_min": 0.9843182563781738,
+    "distance": 0.0,
+    "generators": [
+     "G0_official"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "Alarm",
+    "cos_official": 1.0,
+    "max_cos_other_class": 0.38956961035728455,
+    "discriminable": true,
+    "entail_min": 0.9659159183502197,
+    "distance": 0.0,
+    "generators": [
+     "G1_surface"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "dismay",
+    "cos_official": 0.35405999422073364,
+    "max_cos_other_class": 0.3055286407470703,
+    "discriminable": true,
+    "entail_min": 0.6630639433860779,
+    "distance": 0.6459400057792664,
+    "generators": [
+     "G2_wn_syn"
+    ],
+    "audit_reject": true,
+    "valid": false,
+    "strict": false
+   },
+   {
+    "text": "fear",
+    "cos_official": 0.34965264797210693,
+    "max_cos_other_class": 0.3285231292247772,
+    "discriminable": true,
+    "entail_min": 0.8280609250068665,
+    "distance": 0.6503473520278931,
+    "generators": [
+     "G3_wn_hyper"
+    ],
+    "audit_reject": true,
+    "valid": false,
+    "strict": false
+   },
+   {
+    "text": "alarm, alarms, set",
+    "cos_official": 0.7918776273727417,
+    "max_cos_other_class": 0.2902619242668152,
+    "discriminable": true,
+    "entail_min": 0.0030476090032607317,
+    "distance": 0.2081223726272583,
+    "generators": [
+     "G4_keywords"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "setting or managing alarms",
+    "cos_official": 0.5805789232254028,
+    "max_cos_other_class": 0.24430209398269653,
+    "discriminable": true,
+    "entail_min": 0.7050408124923706,
+    "distance": 0.41942107677459717,
+    "generators": [
+     "G5_definition"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "Reminder",
+    "cos_official": 0.36772483587265015,
+    "max_cos_other_class": 0.32859373092651367,
+    "discriminable": true,
+    "entail_min": 0.0037106249947100878,
+    "distance": 0.6322751641273499,
+    "generators": [
+     "G6_llm1"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": false
+   },
+   {
+    "text": "Clock",
+    "cos_official": 0.4610496759414673,
+    "max_cos_other_class": 0.6090418100357056,
+    "discriminable": false,
+    "entail_min": 0.15049612522125244,
+    "distance": 0.5389503240585327,
+    "generators": [
+     "G7_llm2"
+    ],
+    "audit_reject": false,
+    "valid": false,
+    "strict": false
+   }
+  ],
+  [
+   {
+    "text": "audio",
+    "cos_official": 1.0000001192092896,
+    "max_cos_other_class": 0.5982820987701416,
+    "discriminable": true,
+    "entail_min": 0.988932728767395,
+    "distance": -1.1920928955078125e-07,
+    "generators": [
+     "G0_official"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "Audio",
+    "cos_official": 1.0000001192092896,
+    "max_cos_other_class": 0.5982820987701416,
+    "discriminable": true,
+    "entail_min": 0.985436737537384,
+    "distance": -1.1920928955078125e-07,
+    "generators": [
+     "G1_surface"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "sound",
+    "cos_official": 0.7528416514396667,
+    "max_cos_other_class": 0.6039062738418579,
+    "discriminable": true,
+    "entail_min": 0.9747865796089172,
+    "distance": 0.24715834856033325,
+    "generators": [
+     "G2_wn_syn"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "auditory communication",
+    "cos_official": 0.5422027111053467,
+    "max_cos_other_class": 0.3609201908111572,
+    "discriminable": true,
+    "entail_min": 0.9548977017402649,
+    "distance": 0.4577972888946533,
+    "generators": [
+     "G3_wn_hyper"
+    ],
+    "audit_reject": true,
+    "valid": false,
+    "strict": false
+   },
+   {
+    "text": "volume, mute, speakers",
+    "cos_official": 0.4707522988319397,
+    "max_cos_other_class": 0.257159948348999,
+    "discriminable": true,
+    "entail_min": 0.013980746269226074,
+    "distance": 0.5292477011680603,
+    "generators": [
+     "G4_keywords"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": false
+   },
+   {
+    "text": "controlling volume or sound settings",
+    "cos_official": 0.39636969566345215,
+    "max_cos_other_class": 0.21815010905265808,
+    "discriminable": true,
+    "entail_min": 0.04074371978640556,
+    "distance": 0.6036303043365479,
+    "generators": [
+     "G5_definition"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": false
+   },
+   {
+    "text": "Sound",
+    "cos_official": 0.7528416514396667,
+    "max_cos_other_class": 0.6039062738418579,
+    "discriminable": true,
+    "entail_min": 0.8806242346763611,
+    "distance": 0.24715834856033325,
+    "generators": [
+     "G6_llm1"
+    ],
+    "audit_reject": true,
+    "valid": false,
+    "strict": false
+   },
+   {
+    "text": "Voice",
+    "cos_official": 0.5891886949539185,
+    "max_cos_other_class": 0.49276021122932434,
+    "discriminable": true,
+    "entail_min": 0.6611703634262085,
+    "distance": 0.41081130504608154,
+    "generators": [
+     "G7_llm2"
+    ],
+    "audit_reject": true,
+    "valid": false,
+    "strict": false
+   }
+  ],
+  [
+   {
+    "text": "calendar",
+    "cos_official": 1.0,
+    "max_cos_other_class": 0.47258108854293823,
+    "discriminable": true,
+    "entail_min": 0.9877963066101074,
+    "distance": 0.0,
+    "generators": [
+     "G0_official"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "Calendar",
+    "cos_official": 1.0,
+    "max_cos_other_class": 0.47258108854293823,
+    "discriminable": true,
+    "entail_min": 0.984624981880188,
+    "distance": 0.0,
+    "generators": [
+     "G1_surface"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "arrangement",
+    "cos_official": 0.28300464153289795,
+    "max_cos_other_class": 0.33682000637054443,
+    "discriminable": false,
+    "entail_min": 0.13261428475379944,
+    "distance": 0.716995358467102,
+    "generators": [
+     "G3_wn_hyper"
+    ],
+    "audit_reject": true,
+    "valid": false,
+    "strict": false
+   },
+   {
+    "text": "calendar, event, meeting",
+    "cos_official": 0.7399400472640991,
+    "max_cos_other_class": 0.32515209913253784,
+    "discriminable": true,
+    "entail_min": 0.0018137546721845865,
+    "distance": 0.2600599527359009,
+    "generators": [
+     "G4_keywords"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "calendar events, meetings and reminders",
+    "cos_official": 0.6102789640426636,
+    "max_cos_other_class": 0.23885951936244965,
+    "discriminable": true,
+    "entail_min": 0.0020147948525846004,
+    "distance": 0.3897210359573364,
+    "generators": [
+     "G5_definition"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "schedule",
+    "cos_official": 0.6060827970504761,
+    "max_cos_other_class": 0.39024633169174194,
+    "discriminable": true,
+    "entail_min": 0.906927227973938,
+    "distance": 0.3939172029495239,
+    "generators": [
+     "G6_llm1"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "appointments",
+    "cos_official": 0.5199308395385742,
+    "max_cos_other_class": 0.35645198822021484,
+    "discriminable": true,
+    "entail_min": 0.7475922107696533,
+    "distance": 0.4800691604614258,
+    "generators": [
+     "G7_llm2"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   }
+  ],
+  [
+   {
+    "text": "cooking",
+    "cos_official": 1.0,
+    "max_cos_other_class": 0.40361565351486206,
+    "discriminable": true,
+    "entail_min": 0.9926146268844604,
+    "distance": 0.0,
+    "generators": [
+     "G0_official"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "Cooking",
+    "cos_official": 1.0,
+    "max_cos_other_class": 0.40361565351486206,
+    "discriminable": true,
+    "entail_min": 0.9915109276771545,
+    "distance": 0.0,
+    "generators": [
+     "G1_surface"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "cookery",
+    "cos_official": 0.7977385520935059,
+    "max_cos_other_class": 0.3910391628742218,
+    "discriminable": true,
+    "entail_min": 0.9838722348213196,
+    "distance": 0.20226144790649414,
+    "generators": [
+     "G2_wn_syn"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "change of state",
+    "cos_official": 0.1438535898923874,
+    "max_cos_other_class": 0.24720266461372375,
+    "discriminable": false,
+    "entail_min": 0.0007321099983528256,
+    "distance": 0.8561464101076126,
+    "generators": [
+     "G3_wn_hyper"
+    ],
+    "audit_reject": true,
+    "valid": false,
+    "strict": false
+   },
+   {
+    "text": "cook, recipe, spaghetti",
+    "cos_official": 0.5586525201797485,
+    "max_cos_other_class": 0.23202958703041077,
+    "discriminable": true,
+    "entail_min": 0.0010277732508257031,
+    "distance": 0.44134747982025146,
+    "generators": [
+     "G4_keywords"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "recipes and cooking",
+    "cos_official": 0.7385097742080688,
+    "max_cos_other_class": 0.3687339127063751,
+    "discriminable": true,
+    "entail_min": 0.15260550379753113,
+    "distance": 0.26149022579193115,
+    "generators": [
+     "G5_definition"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "Food prep",
+    "cos_official": 0.6393551826477051,
+    "max_cos_other_class": 0.30813419818878174,
+    "discriminable": true,
+    "entail_min": 0.9629725813865662,
+    "distance": 0.3606448173522949,
+    "generators": [
+     "G6_llm1"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "Kitchen tasks",
+    "cos_official": 0.5504387617111206,
+    "max_cos_other_class": 0.28878921270370483,
+    "discriminable": true,
+    "entail_min": 0.8446014523506165,
+    "distance": 0.4495612382888794,
+    "generators": [
+     "G7_llm2"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   }
+  ],
+  [
+   {
+    "text": "datetime",
+    "cos_official": 1.0,
+    "max_cos_other_class": 0.47258085012435913,
+    "discriminable": true,
+    "entail_min": 0.9861224293708801,
+    "distance": 0.0,
+    "generators": [
+     "G0_official"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "Datetime",
+    "cos_official": 1.0,
+    "max_cos_other_class": 0.47258085012435913,
+    "discriminable": true,
+    "entail_min": 0.9710913896560669,
+    "distance": 0.0,
+    "generators": [
+     "G1_surface"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "time, date, central",
+    "cos_official": 0.638031542301178,
+    "max_cos_other_class": 0.4185487926006317,
+    "discriminable": true,
+    "entail_min": 0.34329792857170105,
+    "distance": 0.361968457698822,
+    "generators": [
+     "G4_keywords"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "the current date or time",
+    "cos_official": 0.7191207408905029,
+    "max_cos_other_class": 0.49627378582954407,
+    "discriminable": true,
+    "entail_min": 0.9219383001327515,
+    "distance": 0.28087925910949707,
+    "generators": [
+     "G5_definition"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "Date time",
+    "cos_official": 0.9028213620185852,
+    "max_cos_other_class": 0.49405282735824585,
+    "discriminable": true,
+    "entail_min": 0.9365718364715576,
+    "distance": 0.0971786379814148,
+    "generators": [
+     "G6_llm1"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "Time date",
+    "cos_official": 0.8545936346054077,
+    "max_cos_other_class": 0.4755624234676361,
+    "discriminable": true,
+    "entail_min": 0.8786904215812683,
+    "distance": 0.14540636539459229,
+    "generators": [
+     "G7_llm2"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   }
+  ],
+  [
+   {
+    "text": "email",
+    "cos_official": 1.0,
+    "max_cos_other_class": 0.34420743584632874,
+    "discriminable": true,
+    "entail_min": 0.9902979731559753,
+    "distance": 0.0,
+    "generators": [
+     "G0_official"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "Email",
+    "cos_official": 1.0,
+    "max_cos_other_class": 0.34420743584632874,
+    "discriminable": true,
+    "entail_min": 0.9735683798789978,
+    "distance": 0.0,
+    "generators": [
+     "G1_surface"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "electronic mail",
+    "cos_official": 0.643518328666687,
+    "max_cos_other_class": 0.3414948582649231,
+    "discriminable": true,
+    "entail_min": 0.7362673878669739,
+    "distance": 0.356481671333313,
+    "generators": [
+     "G2_wn_syn"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "electronic communication",
+    "cos_official": 0.36997219920158386,
+    "max_cos_other_class": 0.452125608921051,
+    "discriminable": false,
+    "entail_min": 0.02398027665913105,
+    "distance": 0.6300278007984161,
+    "generators": [
+     "G3_wn_hyper"
+    ],
+    "audit_reject": true,
+    "valid": false,
+    "strict": false
+   },
+   {
+    "text": "email, emails, send",
+    "cos_official": 0.7027943134307861,
+    "max_cos_other_class": 0.34127557277679443,
+    "discriminable": true,
+    "entail_min": 0.03511230647563934,
+    "distance": 0.29720568656921387,
+    "generators": [
+     "G4_keywords"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "reading or sending email",
+    "cos_official": 0.584041953086853,
+    "max_cos_other_class": 0.1881827712059021,
+    "discriminable": true,
+    "entail_min": 0.4960716664791107,
+    "distance": 0.415958046913147,
+    "generators": [
+     "G5_definition"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "Message",
+    "cos_official": 0.5882729291915894,
+    "max_cos_other_class": 0.35801583528518677,
+    "discriminable": true,
+    "entail_min": 0.15290401875972748,
+    "distance": 0.41172707080841064,
+    "generators": [
+     "G6_llm1"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "Inbox",
+    "cos_official": 0.6663006544113159,
+    "max_cos_other_class": 0.29329565167427063,
+    "discriminable": true,
+    "entail_min": 0.23995867371559143,
+    "distance": 0.3336993455886841,
+    "generators": [
+     "G7_llm2"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   }
+  ],
+  [
+   {
+    "text": "general",
+    "cos_official": 1.0,
+    "max_cos_other_class": 0.3267636001110077,
+    "discriminable": true,
+    "entail_min": 0.9899041056632996,
+    "distance": 0.0,
+    "generators": [
+     "G0_official"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "General",
+    "cos_official": 1.0,
+    "max_cos_other_class": 0.3267636001110077,
+    "discriminable": true,
+    "entail_min": 0.989247739315033,
+    "distance": 0.0,
+    "generators": [
+     "G1_surface"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "full general",
+    "cos_official": 0.7763077020645142,
+    "max_cos_other_class": 0.179083913564682,
+    "discriminable": true,
+    "entail_min": 0.20756353437900543,
+    "distance": 0.22369229793548584,
+    "generators": [
+     "G2_wn_syn"
+    ],
+    "audit_reject": true,
+    "valid": false,
+    "strict": false
+   },
+   {
+    "text": "general officer",
+    "cos_official": 0.7107976078987122,
+    "max_cos_other_class": 0.2471710741519928,
+    "discriminable": true,
+    "entail_min": 0.0013625725405290723,
+    "distance": 0.28920239210128784,
+    "generators": [
+     "G3_wn_hyper"
+    ],
+    "audit_reject": true,
+    "valid": false,
+    "strict": false
+   },
+   {
+    "text": "joke, feel, day",
+    "cos_official": 0.17674221098423004,
+    "max_cos_other_class": 0.35458824038505554,
+    "discriminable": false,
+    "entail_min": 0.007062138523906469,
+    "distance": 0.82325778901577,
+    "generators": [
+     "G4_keywords"
+    ],
+    "audit_reject": false,
+    "valid": false,
+    "strict": false
+   },
+   {
+    "text": "chit-chat, jokes and general commands to the assistant",
+    "cos_official": 0.20618358254432678,
+    "max_cos_other_class": 0.34543469548225403,
+    "discriminable": false,
+    "entail_min": 0.0010430642869323492,
+    "distance": 0.7938164174556732,
+    "generators": [
+     "G5_definition"
+    ],
+    "audit_reject": false,
+    "valid": false,
+    "strict": false
+   },
+   {
+    "text": "Common",
+    "cos_official": 0.4825479984283447,
+    "max_cos_other_class": 0.4311518967151642,
+    "discriminable": true,
+    "entail_min": 0.7126442193984985,
+    "distance": 0.5174520015716553,
+    "generators": [
+     "G6_llm1"
+    ],
+    "audit_reject": true,
+    "valid": false,
+    "strict": false
+   },
+   {
+    "text": "Everyday",
+    "cos_official": 0.1659885048866272,
+    "max_cos_other_class": 0.320840060710907,
+    "discriminable": false,
+    "entail_min": 0.08901603519916534,
+    "distance": 0.8340114951133728,
+    "generators": [
+     "G7_llm2"
+    ],
+    "audit_reject": true,
+    "valid": false,
+    "strict": false
+   }
+  ],
+  [
+   {
+    "text": "iot",
+    "cos_official": 1.0,
+    "max_cos_other_class": 0.3895696699619293,
+    "discriminable": true,
+    "entail_min": 0.9882083535194397,
+    "distance": 0.0,
+    "generators": [
+     "G0_official"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "Iot",
+    "cos_official": 1.0,
+    "max_cos_other_class": 0.3895696699619293,
+    "discriminable": true,
+    "entail_min": 0.987658679485321,
+    "distance": 0.0,
+    "generators": [
+     "G1_surface"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "lights, coffee, turn",
+    "cos_official": 0.2278488576412201,
+    "max_cos_other_class": 0.3318696916103363,
+    "discriminable": false,
+    "entail_min": 0.0022460962645709515,
+    "distance": 0.7721511423587799,
+    "generators": [
+     "G4_keywords"
+    ],
+    "audit_reject": false,
+    "valid": false,
+    "strict": false
+   },
+   {
+    "text": "controlling smart home devices such as lights",
+    "cos_official": 0.32484132051467896,
+    "max_cos_other_class": 0.1612473577260971,
+    "discriminable": true,
+    "entail_min": 0.012846261262893677,
+    "distance": 0.675158679485321,
+    "generators": [
+     "G5_definition"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": false
+   },
+   {
+    "text": "Internet Of Things",
+    "cos_official": 0.7325866222381592,
+    "max_cos_other_class": 0.26455339789390564,
+    "discriminable": true,
+    "entail_min": 0.7362290620803833,
+    "distance": 0.2674133777618408,
+    "generators": [
+     "G6_llm1"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "Smart Home Devices",
+    "cos_official": 0.5442611575126648,
+    "max_cos_other_class": 0.2908262312412262,
+    "discriminable": true,
+    "entail_min": 0.009207305498421192,
+    "distance": 0.4557388424873352,
+    "generators": [
+     "G7_llm2"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   }
+  ],
+  [
+   {
+    "text": "lists",
+    "cos_official": 1.0,
+    "max_cos_other_class": 0.36251047253608704,
+    "discriminable": true,
+    "entail_min": 0.9902482628822327,
+    "distance": 0.0,
+    "generators": [
+     "G0_official"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "Lists",
+    "cos_official": 1.0,
+    "max_cos_other_class": 0.36251047253608704,
+    "discriminable": true,
+    "entail_min": 0.9902594685554504,
+    "distance": 0.0,
+    "generators": [
+     "G1_surface"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "listing",
+    "cos_official": 0.520764946937561,
+    "max_cos_other_class": 0.3548297882080078,
+    "discriminable": true,
+    "entail_min": 0.9829635620117188,
+    "distance": 0.47923505306243896,
+    "generators": [
+     "G2_wn_syn"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "database",
+    "cos_official": 0.3532431125640869,
+    "max_cos_other_class": 0.3736555874347687,
+    "discriminable": false,
+    "entail_min": 0.007016640156507492,
+    "distance": 0.6467568874359131,
+    "generators": [
+     "G3_wn_hyper"
+    ],
+    "audit_reject": true,
+    "valid": false,
+    "strict": false
+   },
+   {
+    "text": "list, lists, grocery",
+    "cos_official": 0.730976939201355,
+    "max_cos_other_class": 0.3921113610267639,
+    "discriminable": true,
+    "entail_min": 0.0012428825721144676,
+    "distance": 0.269023060798645,
+    "generators": [
+     "G4_keywords"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "creating or managing lists",
+    "cos_official": 0.6434340476989746,
+    "max_cos_other_class": 0.23083330690860748,
+    "discriminable": true,
+    "entail_min": 0.6328681111335754,
+    "distance": 0.3565659523010254,
+    "generators": [
+     "G5_definition"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "To-do",
+    "cos_official": 0.391273558139801,
+    "max_cos_other_class": 0.3411217927932739,
+    "discriminable": true,
+    "entail_min": 0.9420154690742493,
+    "distance": 0.608726441860199,
+    "generators": [
+     "G6_llm1"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": false
+   },
+   {
+    "text": "Notes",
+    "cos_official": 0.3940907120704651,
+    "max_cos_other_class": 0.400909423828125,
+    "discriminable": false,
+    "entail_min": 0.023475075140595436,
+    "distance": 0.6059092879295349,
+    "generators": [
+     "G7_llm2"
+    ],
+    "audit_reject": true,
+    "valid": false,
+    "strict": false
+   }
+  ],
+  [
+   {
+    "text": "music",
+    "cos_official": 1.0,
+    "max_cos_other_class": 0.5982822775840759,
+    "discriminable": true,
+    "entail_min": 0.9916698932647705,
+    "distance": 0.0,
+    "generators": [
+     "G0_official"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "Music",
+    "cos_official": 1.0,
+    "max_cos_other_class": 0.5982822775840759,
+    "discriminable": true,
+    "entail_min": 0.9894116520881653,
+    "distance": 0.0,
+    "generators": [
+     "G1_surface"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "euphony",
+    "cos_official": 0.4256722331047058,
+    "max_cos_other_class": 0.36420685052871704,
+    "discriminable": true,
+    "entail_min": 0.014800054021179676,
+    "distance": 0.5743277668952942,
+    "generators": [
+     "G2_wn_syn"
+    ],
+    "audit_reject": true,
+    "valid": false,
+    "strict": false
+   },
+   {
+    "text": "auditory communication",
+    "cos_official": 0.3609201908111572,
+    "max_cos_other_class": 0.5422027111053467,
+    "discriminable": false,
+    "entail_min": 0.15242204070091248,
+    "distance": 0.6390798091888428,
+    "generators": [
+     "G3_wn_hyper"
+    ],
+    "audit_reject": true,
+    "valid": false,
+    "strict": false
+   },
+   {
+    "text": "song, music, name",
+    "cos_official": 0.47095704078674316,
+    "max_cos_other_class": 0.3071548640727997,
+    "discriminable": true,
+    "entail_min": 0.019580509513616562,
+    "distance": 0.5290429592132568,
+    "generators": [
+     "G4_keywords"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": false
+   },
+   {
+    "text": "music preferences and information about songs",
+    "cos_official": 0.5128476619720459,
+    "max_cos_other_class": 0.3196697235107422,
+    "discriminable": true,
+    "entail_min": 0.004676174838095903,
+    "distance": 0.4871523380279541,
+    "generators": [
+     "G5_definition"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "Chill",
+    "cos_official": 0.13972699642181396,
+    "max_cos_other_class": 0.2915406823158264,
+    "discriminable": false,
+    "entail_min": 0.03283277899026871,
+    "distance": 0.860273003578186,
+    "generators": [
+     "G6_llm1"
+    ],
+    "audit_reject": true,
+    "valid": false,
+    "strict": false
+   },
+   {
+    "text": "Sound",
+    "cos_official": 0.6039062738418579,
+    "max_cos_other_class": 0.7528416514396667,
+    "discriminable": false,
+    "entail_min": 0.8052477240562439,
+    "distance": 0.3960937261581421,
+    "generators": [
+     "G7_llm2"
+    ],
+    "audit_reject": true,
+    "valid": false,
+    "strict": false
+   }
+  ],
+  [
+   {
+    "text": "news",
+    "cos_official": 1.0,
+    "max_cos_other_class": 0.3463905453681946,
+    "discriminable": true,
+    "entail_min": 0.9922589659690857,
+    "distance": 0.0,
+    "generators": [
+     "G0_official"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "News",
+    "cos_official": 1.0,
+    "max_cos_other_class": 0.3463905453681946,
+    "discriminable": true,
+    "entail_min": 0.9891065955162048,
+    "distance": 0.0,
+    "generators": [
+     "G1_surface"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "intelligence",
+    "cos_official": 0.27881187200546265,
+    "max_cos_other_class": 0.43927451968193054,
+    "discriminable": false,
+    "entail_min": 0.000548887939658016,
+    "distance": 0.7211881279945374,
+    "generators": [
+     "G2_wn_syn"
+    ],
+    "audit_reject": true,
+    "valid": false,
+    "strict": false
+   },
+   {
+    "text": "information",
+    "cos_official": 0.48460084199905396,
+    "max_cos_other_class": 0.393378347158432,
+    "discriminable": true,
+    "entail_min": 0.1461125612258911,
+    "distance": 0.515399158000946,
+    "generators": [
+     "G3_wn_hyper"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": false
+   },
+   {
+    "text": "news, latest, world",
+    "cos_official": 0.6967396140098572,
+    "max_cos_other_class": 0.35470619797706604,
+    "discriminable": true,
+    "entail_min": 0.0030424229335039854,
+    "distance": 0.3032603859901428,
+    "generators": [
+     "G4_keywords"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "news headlines and current events",
+    "cos_official": 0.6066882610321045,
+    "max_cos_other_class": 0.3875889182090759,
+    "discriminable": true,
+    "entail_min": 0.0038998594973236322,
+    "distance": 0.3933117389678955,
+    "generators": [
+     "G5_definition"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "Current Affairs",
+    "cos_official": 0.4516105055809021,
+    "max_cos_other_class": 0.4820702075958252,
+    "discriminable": false,
+    "entail_min": 0.7404155731201172,
+    "distance": 0.5483894944190979,
+    "generators": [
+     "G6_llm1"
+    ],
+    "audit_reject": false,
+    "valid": false,
+    "strict": false
+   },
+   {
+    "text": "Bulletin",
+    "cos_official": 0.4910971522331238,
+    "max_cos_other_class": 0.3983980715274811,
+    "discriminable": true,
+    "entail_min": 0.17592871189117432,
+    "distance": 0.5089028477668762,
+    "generators": [
+     "G7_llm2"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": false
+   }
+  ],
+  [
+   {
+    "text": "play",
+    "cos_official": 1.0,
+    "max_cos_other_class": 0.32782378792762756,
+    "discriminable": true,
+    "entail_min": 0.991289496421814,
+    "distance": 0.0,
+    "generators": [
+     "G0_official"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "Play",
+    "cos_official": 1.0,
+    "max_cos_other_class": 0.32782378792762756,
+    "discriminable": true,
+    "entail_min": 0.977360725402832,
+    "distance": 0.0,
+    "generators": [
+     "G1_surface"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "drama",
+    "cos_official": 0.3497806787490845,
+    "max_cos_other_class": 0.37564998865127563,
+    "discriminable": false,
+    "entail_min": 0.3710046410560608,
+    "distance": 0.6502193212509155,
+    "generators": [
+     "G2_wn_syn"
+    ],
+    "audit_reject": true,
+    "valid": false,
+    "strict": false
+   },
+   {
+    "text": "dramatic composition",
+    "cos_official": 0.25778108835220337,
+    "max_cos_other_class": 0.4480159282684326,
+    "discriminable": false,
+    "entail_min": 0.35643652081489563,
+    "distance": 0.7422189116477966,
+    "generators": [
+     "G3_wn_hyper"
+    ],
+    "audit_reject": true,
+    "valid": false,
+    "strict": false
+   },
+   {
+    "text": "play, radio, podcast",
+    "cos_official": 0.48682740330696106,
+    "max_cos_other_class": 0.4800559878349304,
+    "discriminable": true,
+    "entail_min": 0.001330863917246461,
+    "distance": 0.5131725966930389,
+    "generators": [
+     "G4_keywords"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": false
+   },
+   {
+    "text": "playing music, podcasts, radio, audiobooks or games",
+    "cos_official": 0.3447093665599823,
+    "max_cos_other_class": 0.4446573853492737,
+    "discriminable": false,
+    "entail_min": 0.09957773983478546,
+    "distance": 0.6552906334400177,
+    "generators": [
+     "G5_definition"
+    ],
+    "audit_reject": false,
+    "valid": false,
+    "strict": false
+   },
+   {
+    "text": "Listen",
+    "cos_official": 0.2506147623062134,
+    "max_cos_other_class": 0.43820831179618835,
+    "discriminable": false,
+    "entail_min": 0.003821577411144972,
+    "distance": 0.7493852376937866,
+    "generators": [
+     "G6_llm1"
+    ],
+    "audit_reject": true,
+    "valid": false,
+    "strict": false
+   },
+   {
+    "text": "Musician",
+    "cos_official": 0.37586015462875366,
+    "max_cos_other_class": 0.5889438390731812,
+    "discriminable": false,
+    "entail_min": 0.6759360432624817,
+    "distance": 0.6241398453712463,
+    "generators": [
+     "G7_llm2"
+    ],
+    "audit_reject": true,
+    "valid": false,
+    "strict": false
+   }
+  ],
+  [
+   {
+    "text": "qa",
+    "cos_official": 1.0,
+    "max_cos_other_class": 0.4036153554916382,
+    "discriminable": true,
+    "entail_min": 0.9894431829452515,
+    "distance": 0.0,
+    "generators": [
+     "G0_official"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "Qa",
+    "cos_official": 1.0,
+    "max_cos_other_class": 0.4036153554916382,
+    "discriminable": true,
+    "entail_min": 0.9885954260826111,
+    "distance": 0.0,
+    "generators": [
+     "G1_surface"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "stock, rate, dollar",
+    "cos_official": 0.19210098683834076,
+    "max_cos_other_class": 0.2307891845703125,
+    "discriminable": false,
+    "entail_min": 0.006897184066474438,
+    "distance": 0.8078990131616592,
+    "generators": [
+     "G4_keywords"
+    ],
+    "audit_reject": false,
+    "valid": false,
+    "strict": false
+   },
+   {
+    "text": "general knowledge questions and facts",
+    "cos_official": 0.2718459367752075,
+    "max_cos_other_class": 0.34779343008995056,
+    "discriminable": false,
+    "entail_min": 0.07379156351089478,
+    "distance": 0.7281540632247925,
+    "generators": [
+     "G5_definition"
+    ],
+    "audit_reject": false,
+    "valid": false,
+    "strict": false
+   },
+   {
+    "text": "Knowledge",
+    "cos_official": 0.3875780701637268,
+    "max_cos_other_class": 0.3890262544155121,
+    "discriminable": false,
+    "entail_min": 0.36267369985580444,
+    "distance": 0.6124219298362732,
+    "generators": [
+     "G6_llm1"
+    ],
+    "audit_reject": false,
+    "valid": false,
+    "strict": false
+   },
+   {
+    "text": "Info",
+    "cos_official": 0.280083566904068,
+    "max_cos_other_class": 0.44706302881240845,
+    "discriminable": false,
+    "entail_min": 0.00842868909239769,
+    "distance": 0.719916433095932,
+    "generators": [
+     "G7_llm2"
+    ],
+    "audit_reject": false,
+    "valid": false,
+    "strict": false
+   }
+  ],
+  [
+   {
+    "text": "recommendation",
+    "cos_official": 1.0,
+    "max_cos_other_class": 0.3381417393684387,
+    "discriminable": true,
+    "entail_min": 0.9884589314460754,
+    "distance": 0.0,
+    "generators": [
+     "G0_official"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "Recommendation",
+    "cos_official": 1.0,
+    "max_cos_other_class": 0.3381417393684387,
+    "discriminable": true,
+    "entail_min": 0.9709272980690002,
+    "distance": 0.0,
+    "generators": [
+     "G1_surface"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "testimonial",
+    "cos_official": 0.27216172218322754,
+    "max_cos_other_class": 0.3022984266281128,
+    "discriminable": false,
+    "entail_min": 0.24803373217582703,
+    "distance": 0.7278382778167725,
+    "generators": [
+     "G2_wn_syn"
+    ],
+    "audit_reject": true,
+    "valid": false,
+    "strict": false
+   },
+   {
+    "text": "advice",
+    "cos_official": 0.5341873168945312,
+    "max_cos_other_class": 0.2569888234138489,
+    "discriminable": true,
+    "entail_min": 0.9585965275764465,
+    "distance": 0.46581268310546875,
+    "generators": [
+     "G3_wn_hyper"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "area, local, events",
+    "cos_official": 0.23318710923194885,
+    "max_cos_other_class": 0.41057756543159485,
+    "discriminable": false,
+    "entail_min": 0.006423130165785551,
+    "distance": 0.7668128907680511,
+    "generators": [
+     "G4_keywords"
+    ],
+    "audit_reject": false,
+    "valid": false,
+    "strict": false
+   },
+   {
+    "text": "recommendations for places, events or movies",
+    "cos_official": 0.6294435262680054,
+    "max_cos_other_class": 0.32159286737442017,
+    "discriminable": true,
+    "entail_min": 0.003552691312506795,
+    "distance": 0.37055647373199463,
+    "generators": [
+     "G5_definition"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "Suggestion",
+    "cos_official": 0.5899292826652527,
+    "max_cos_other_class": 0.3133348822593689,
+    "discriminable": true,
+    "entail_min": 0.9156142473220825,
+    "distance": 0.4100707173347473,
+    "generators": [
+     "G6_llm1"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "Suggestions",
+    "cos_official": 0.6749691963195801,
+    "max_cos_other_class": 0.325417160987854,
+    "discriminable": true,
+    "entail_min": 0.8952715992927551,
+    "distance": 0.3250308036804199,
+    "generators": [
+     "G7_llm2"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   }
+  ],
+  [
+   {
+    "text": "social",
+    "cos_official": 1.0,
+    "max_cos_other_class": 0.3610323965549469,
+    "discriminable": true,
+    "entail_min": 0.9879926443099976,
+    "distance": 0.0,
+    "generators": [
+     "G0_official"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "Social",
+    "cos_official": 1.0,
+    "max_cos_other_class": 0.3610323965549469,
+    "discriminable": true,
+    "entail_min": 0.9818376898765564,
+    "distance": 0.0,
+    "generators": [
+     "G1_surface"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "sociable",
+    "cos_official": 0.6195704340934753,
+    "max_cos_other_class": 0.2799341678619385,
+    "discriminable": true,
+    "entail_min": 0.9363836646080017,
+    "distance": 0.38042956590652466,
+    "generators": [
+     "G2_wn_syn"
+    ],
+    "audit_reject": true,
+    "valid": false,
+    "strict": false
+   },
+   {
+    "text": "party",
+    "cos_official": 0.4512232840061188,
+    "max_cos_other_class": 0.35442328453063965,
+    "discriminable": true,
+    "entail_min": 0.2926746904850006,
+    "distance": 0.5487767159938812,
+    "generators": [
+     "G3_wn_hyper"
+    ],
+    "audit_reject": true,
+    "valid": false,
+    "strict": false
+   },
+   {
+    "text": "tweet, complaint, post",
+    "cos_official": 0.2756480574607849,
+    "max_cos_other_class": 0.36296677589416504,
+    "discriminable": false,
+    "entail_min": 0.03728489577770233,
+    "distance": 0.7243519425392151,
+    "generators": [
+     "G4_keywords"
+    ],
+    "audit_reject": false,
+    "valid": false,
+    "strict": false
+   },
+   {
+    "text": "social media posts and messages",
+    "cos_official": 0.41603776812553406,
+    "max_cos_other_class": 0.4140918552875519,
+    "discriminable": true,
+    "entail_min": 0.020348072052001953,
+    "distance": 0.5839622318744659,
+    "generators": [
+     "G5_definition"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": false
+   },
+   {
+    "text": "Chat",
+    "cos_official": 0.4881945252418518,
+    "max_cos_other_class": 0.44880133867263794,
+    "discriminable": true,
+    "entail_min": 0.06640142947435379,
+    "distance": 0.5118054747581482,
+    "generators": [
+     "G6_llm1"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": false
+   },
+   {
+    "text": "Talk",
+    "cos_official": 0.3896205425262451,
+    "max_cos_other_class": 0.3698606789112091,
+    "discriminable": true,
+    "entail_min": 0.022691447287797928,
+    "distance": 0.6103794574737549,
+    "generators": [
+     "G7_llm2"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": false
+   }
+  ],
+  [
+   {
+    "text": "takeaway",
+    "cos_official": 1.0,
+    "max_cos_other_class": 0.28698569536209106,
+    "discriminable": true,
+    "entail_min": 0.9754496216773987,
+    "distance": 0.0,
+    "generators": [
+     "G0_official"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "Takeaway",
+    "cos_official": 1.0,
+    "max_cos_other_class": 0.28698569536209106,
+    "discriminable": true,
+    "entail_min": 0.9725183844566345,
+    "distance": 0.0,
+    "generators": [
+     "G1_surface"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "takeout",
+    "cos_official": 0.7411248683929443,
+    "max_cos_other_class": 0.41611748933792114,
+    "discriminable": true,
+    "entail_min": 0.9813925623893738,
+    "distance": 0.25887513160705566,
+    "generators": [
+     "G2_wn_syn"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "convenience food",
+    "cos_official": 0.3371652662754059,
+    "max_cos_other_class": 0.4012192487716675,
+    "discriminable": false,
+    "entail_min": 0.49538594484329224,
+    "distance": 0.6628347337245941,
+    "generators": [
+     "G3_wn_hyper"
+    ],
+    "audit_reject": false,
+    "valid": false,
+    "strict": false
+   },
+   {
+    "text": "order, takeaway, pizza",
+    "cos_official": 0.5444493889808655,
+    "max_cos_other_class": 0.4223160147666931,
+    "discriminable": true,
+    "entail_min": 0.008071115240454674,
+    "distance": 0.4555506110191345,
+    "generators": [
+     "G4_keywords"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "ordering takeaway food",
+    "cos_official": 0.5620089769363403,
+    "max_cos_other_class": 0.35189270973205566,
+    "discriminable": true,
+    "entail_min": 0.9231952428817749,
+    "distance": 0.43799102306365967,
+    "generators": [
+     "G5_definition"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "Delivery",
+    "cos_official": 0.36271828413009644,
+    "max_cos_other_class": 0.5598152279853821,
+    "discriminable": false,
+    "entail_min": 0.11844372004270554,
+    "distance": 0.6372817158699036,
+    "generators": [
+     "G6_llm1"
+    ],
+    "audit_reject": false,
+    "valid": false,
+    "strict": false
+   },
+   {
+    "text": "Food pick-up",
+    "cos_official": 0.37239623069763184,
+    "max_cos_other_class": 0.3507358431816101,
+    "discriminable": true,
+    "entail_min": 0.7072679996490479,
+    "distance": 0.6276037693023682,
+    "generators": [
+     "G7_llm2"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": false
+   }
+  ],
+  [
+   {
+    "text": "transport",
+    "cos_official": 1.0,
+    "max_cos_other_class": 0.32964664697647095,
+    "discriminable": true,
+    "entail_min": 0.9882456064224243,
+    "distance": 0.0,
+    "generators": [
+     "G0_official"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "Transport",
+    "cos_official": 1.0,
+    "max_cos_other_class": 0.32964664697647095,
+    "discriminable": true,
+    "entail_min": 0.9851498603820801,
+    "distance": 0.0,
+    "generators": [
+     "G1_surface"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "conveyance",
+    "cos_official": 0.6343497037887573,
+    "max_cos_other_class": 0.30894148349761963,
+    "discriminable": true,
+    "entail_min": 0.9712561368942261,
+    "distance": 0.3656502962112427,
+    "generators": [
+     "G2_wn_syn"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "instrumentality",
+    "cos_official": 0.33512383699417114,
+    "max_cos_other_class": 0.467304527759552,
+    "discriminable": false,
+    "entail_min": 0.015599598176777363,
+    "distance": 0.6648761630058289,
+    "generators": [
+     "G3_wn_hyper"
+    ],
+    "audit_reject": true,
+    "valid": false,
+    "strict": false
+   },
+   {
+    "text": "train, ticket, traffic",
+    "cos_official": 0.5479231476783752,
+    "max_cos_other_class": 0.32712286710739136,
+    "discriminable": true,
+    "entail_min": 0.04227574169635773,
+    "distance": 0.45207685232162476,
+    "generators": [
+     "G4_keywords"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "trains, taxis, tickets and traffic",
+    "cos_official": 0.5743553638458252,
+    "max_cos_other_class": 0.24620109796524048,
+    "discriminable": true,
+    "entail_min": 0.004100334364920855,
+    "distance": 0.4256446361541748,
+    "generators": [
+     "G5_definition"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "Travel",
+    "cos_official": 0.6632261276245117,
+    "max_cos_other_class": 0.3882557153701782,
+    "discriminable": true,
+    "entail_min": 0.8964164853096008,
+    "distance": 0.3367738723754883,
+    "generators": [
+     "G6_llm1"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "Commute",
+    "cos_official": 0.5023708939552307,
+    "max_cos_other_class": 0.2808915972709656,
+    "discriminable": true,
+    "entail_min": 0.8751329779624939,
+    "distance": 0.4976291060447693,
+    "generators": [
+     "G7_llm2"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   }
+  ],
+  [
+   {
+    "text": "weather",
+    "cos_official": 1.0,
+    "max_cos_other_class": 0.3469353914260864,
+    "discriminable": true,
+    "entail_min": 0.9902312159538269,
+    "distance": 0.0,
+    "generators": [
+     "G0_official"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "Weather",
+    "cos_official": 1.0,
+    "max_cos_other_class": 0.3469353914260864,
+    "discriminable": true,
+    "entail_min": 0.986060619354248,
+    "distance": 0.0,
+    "generators": [
+     "G1_surface"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "weather condition",
+    "cos_official": 0.8009061813354492,
+    "max_cos_other_class": 0.2823840379714966,
+    "discriminable": true,
+    "entail_min": 0.9471113681793213,
+    "distance": 0.19909381866455078,
+    "generators": [
+     "G2_wn_syn"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "atmospheric phenomenon",
+    "cos_official": 0.4285184442996979,
+    "max_cos_other_class": 0.17476963996887207,
+    "discriminable": true,
+    "entail_min": 0.9321625232696533,
+    "distance": 0.5714815557003021,
+    "generators": [
+     "G3_wn_hyper"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": false
+   },
+   {
+    "text": "weather, wear, outside",
+    "cos_official": 0.5843795537948608,
+    "max_cos_other_class": 0.26870661973953247,
+    "discriminable": true,
+    "entail_min": 0.002936225850135088,
+    "distance": 0.41562044620513916,
+    "generators": [
+     "G4_keywords"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "weather forecasts",
+    "cos_official": 0.7439121603965759,
+    "max_cos_other_class": 0.32392221689224243,
+    "discriminable": true,
+    "entail_min": 0.01772371307015419,
+    "distance": 0.2560878396034241,
+    "generators": [
+     "G5_definition"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "Forecast",
+    "cos_official": 0.6428419351577759,
+    "max_cos_other_class": 0.3836478292942047,
+    "discriminable": true,
+    "entail_min": 0.9350103735923767,
+    "distance": 0.3571580648422241,
+    "generators": [
+     "G6_llm1"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "Conditions",
+    "cos_official": 0.3387288451194763,
+    "max_cos_other_class": 0.3030819892883301,
+    "discriminable": true,
+    "entail_min": 0.42719945311546326,
+    "distance": 0.6612711548805237,
+    "generators": [
+     "G7_llm2"
+    ],
+    "audit_reject": true,
+    "valid": false,
+    "strict": false
+   }
+  ]
+ ],
+ "controls": {
+  "N1_nonsense": [
+   "nuzonu",
+   "zugevu",
+   "nuvedo",
+   "keduva",
+   "ronuse",
+   "razuda",
+   "begubo",
+   "lorepe",
+   "sinasa",
+   "nimuza",
+   "tilepi",
+   "barama",
+   "zimaba",
+   "gebomo",
+   "marevi",
+   "lakibo",
+   "vafeta",
+   "banofu"
+  ],
+  "N2_nonsense": [
+   "febune",
+   "tativa",
+   "gibire",
+   "potara",
+   "rikoge",
+   "zarutu",
+   "birike",
+   "mivufi",
+   "zisema",
+   "luboku",
+   "kumose",
+   "kulora",
+   "kurupu",
+   "mumado",
+   "lamobe",
+   "pemado",
+   "gebumi",
+   "filena"
+  ]
+ },
+ "shuffle_perms": [
+  [
+   15,
+   14,
+   16,
+   9,
+   11,
+   3,
+   12,
+   0,
+   5,
+   7,
+   4,
+   17,
+   8,
+   6,
+   2,
+   13,
+   10,
+   1
+  ],
+  [
+   2,
+   6,
+   11,
+   17,
+   1,
+   12,
+   13,
+   15,
+   10,
+   8,
+   3,
+   4,
+   14,
+   7,
+   9,
+   5,
+   0,
+   16
+  ],
+  [
+   1,
+   0,
+   16,
+   14,
+   12,
+   2,
+   9,
+   4,
+   13,
+   15,
+   7,
+   8,
+   17,
+   3,
+   5,
+   10,
+   6,
+   11
+  ]
+ ],
+ "llm_raw": [
+  "Reminder\nClock\nWakeup\nTimer",
+  "Sound\nVoice\nCommunications\nMedia",
+  "schedule\nappointments\nreminder\ntimetable\nevents",
+  "Food prep\nKitchen tasks\nDining recipes\nMeal time",
+  "Date time\nTime date\nEvent date\nScheduled time\nDateTime",
+  "Message\nInbox\nCommunication\nEmails",
+  "Common\nEveryday\nNormal\nRoutine\nStandard",
+  "Internet Of Things\nSmart Home Devices\nIoT Devices\nHome Automation Tech",
+  "To-do\nNotes\nTasks\nLists\nCheckpoints",
+  "Chill\nSound\nPlaylist\nTracks",
+  "Current Affairs\nBulletin\nHeadlines\nUpdates",
+  "Listen\nMusician\nEntertain\nRadio\nSound",
+  "Knowledge\nInfo\nHelp\nAnswering\nQuerying",
+  "Suggestion\nSuggestions\nPick\nRecommend\nAdvise",
+  "Chat\nTalk\nComm\nInteract\nDiscuss",
+  "Delivery\nFood pick-up\nOrder takeout\nPickup meals",
+  "Travel\nCommute\nRide\nDelivery\nRoute",
+  "Forecast\nConditions\nClimate\nOutlook"
+ ],
+ "llm_prompt": "A dataset of {genre}s is labelled by {facet} with these categories: {allc}. Give 5 alternative names for the category \"{name}\" that a person could use instead. Each alternative must be 1 to 4 words long and mean the same category. Output one per line, with no numbering and no explanations.",
+ "rule": "valid iff discriminable AND not audit-rejected; strict iff valid AND cos>=0.5; G0 valid+strict by definition",
+ "audit_reject": [
+  "dismay",
+  "fear",
+  "auditory communication",
+  "arrangement",
+  "full general",
+  "general officer",
+  "Common",
+  "Everyday",
+  "sociable",
+  "party",
+  "Voice",
+  "change of state",
+  "electronic communication",
+  "database",
+  "Notes",
+  "euphony",
+  "Chill",
+  "Sound",
+  "intelligence",
+  "drama",
+  "dramatic composition",
+  "Listen",
+  "Musician",
+  "testimonial",
+  "instrumentality",
+  "Conditions"
+ ]
+}

@@ -1,0 +1,1181 @@
+{
+ "dataset": "bbc2025",
+ "W": 30,
+ "population_sizes": {
+  "valid": 6000,
+  "strict": 1728,
+  "all": 15972
+ },
+ "sets": [
+  {
+   "name": "official",
+   "pop": "official",
+   "labels": [
+    "World",
+    "Sports",
+    "Business",
+    "Sci/Tech"
+   ]
+  },
+  {
+   "name": "valid_00",
+   "pop": "valid",
+   "labels": [
+    "world news",
+    "sports",
+    "Business",
+    "Science/Technology"
+   ]
+  },
+  {
+   "name": "valid_01",
+   "pop": "valid",
+   "labels": [
+    "iraq, minister, killed",
+    "news about athletes, teams, matches and competitions",
+    "Business",
+    "news about science, technology, computing and the internet"
+   ]
+  },
+  {
+   "name": "valid_02",
+   "pop": "valid",
+   "labels": [
+    "Global",
+    "game, win, victory",
+    "companies, markets and the economy",
+    "science and technology news"
+   ]
+  },
+  {
+   "name": "valid_03",
+   "pop": "valid",
+   "labels": [
+    "International",
+    "sport",
+    "business news",
+    "sci/tech"
+   ]
+  },
+  {
+   "name": "valid_04",
+   "pop": "valid",
+   "labels": [
+    "world news",
+    "Games",
+    "Business",
+    "microsoft, software, internet"
+   ]
+  },
+  {
+   "name": "valid_05",
+   "pop": "valid",
+   "labels": [
+    "World",
+    "sport",
+    "business news",
+    "tech"
+   ]
+  },
+  {
+   "name": "valid_06",
+   "pop": "valid",
+   "labels": [
+    "world",
+    "Games",
+    "Economy",
+    "science and technology news"
+   ]
+  },
+  {
+   "name": "valid_07",
+   "pop": "valid",
+   "labels": [
+    "World",
+    "Athletics",
+    "Economy",
+    "computers, the internet and scientific research"
+   ]
+  },
+  {
+   "name": "valid_08",
+   "pop": "valid",
+   "labels": [
+    "Global",
+    "news about athletes, teams, matches and competitions",
+    "news about companies, markets and the economy",
+    "news about science, technology, computing and the internet"
+   ]
+  },
+  {
+   "name": "valid_09",
+   "pop": "valid",
+   "labels": [
+    "World",
+    "athletics",
+    "business",
+    "microsoft, software, internet"
+   ]
+  },
+  {
+   "name": "valid_10",
+   "pop": "valid",
+   "labels": [
+    "world news",
+    "Athletics",
+    "Business",
+    "Science"
+   ]
+  },
+  {
+   "name": "valid_11",
+   "pop": "valid",
+   "labels": [
+    "world",
+    "Games",
+    "companies, markets and the economy",
+    "Sci/Tech"
+   ]
+  },
+  {
+   "name": "valid_12",
+   "pop": "valid",
+   "labels": [
+    "iraq, minister, killed",
+    "news about athletes, teams, matches and competitions",
+    "money",
+    "news about science, technology, computing and the internet"
+   ]
+  },
+  {
+   "name": "valid_13",
+   "pop": "valid",
+   "labels": [
+    "World",
+    "sports",
+    "news about companies, markets and the economy",
+    "Tech"
+   ]
+  },
+  {
+   "name": "valid_14",
+   "pop": "valid",
+   "labels": [
+    "world",
+    "news about athletes, teams, matches and competitions",
+    "Economy",
+    "microsoft, software, internet"
+   ]
+  },
+  {
+   "name": "valid_15",
+   "pop": "valid",
+   "labels": [
+    "world news",
+    "athletics",
+    "money",
+    "computers, the internet and scientific research"
+   ]
+  },
+  {
+   "name": "valid_16",
+   "pop": "valid",
+   "labels": [
+    "world news",
+    "sports news",
+    "Finance",
+    "Science/Technology"
+   ]
+  },
+  {
+   "name": "valid_17",
+   "pop": "valid",
+   "labels": [
+    "world",
+    "game, win, victory",
+    "news about companies, markets and the economy",
+    "tech"
+   ]
+  },
+  {
+   "name": "valid_18",
+   "pop": "valid",
+   "labels": [
+    "International",
+    "Athletics",
+    "Finance",
+    "Science"
+   ]
+  },
+  {
+   "name": "valid_19",
+   "pop": "valid",
+   "labels": [
+    "iraq, minister, killed",
+    "sport",
+    "Business",
+    "news about science, technology, computing and the internet"
+   ]
+  },
+  {
+   "name": "valid_20",
+   "pop": "valid",
+   "labels": [
+    "iraq, minister, killed",
+    "Games",
+    "news about companies, markets and the economy",
+    "news about science, technology, computing and the internet"
+   ]
+  },
+  {
+   "name": "valid_21",
+   "pop": "valid",
+   "labels": [
+    "World",
+    "athletics",
+    "business",
+    "science and technology news"
+   ]
+  },
+  {
+   "name": "valid_22",
+   "pop": "valid",
+   "labels": [
+    "iraq, minister, killed",
+    "athletics",
+    "Finance",
+    "Science"
+   ]
+  },
+  {
+   "name": "valid_23",
+   "pop": "valid",
+   "labels": [
+    "iraq, minister, killed",
+    "Athletics",
+    "Economy",
+    "sci/tech"
+   ]
+  },
+  {
+   "name": "valid_24",
+   "pop": "valid",
+   "labels": [
+    "World",
+    "sports news",
+    "money",
+    "Tech"
+   ]
+  },
+  {
+   "name": "valid_25",
+   "pop": "valid",
+   "labels": [
+    "iraq, minister, killed",
+    "Games",
+    "Business",
+    "news about science, technology, computing and the internet"
+   ]
+  },
+  {
+   "name": "valid_26",
+   "pop": "valid",
+   "labels": [
+    "iraq, minister, killed",
+    "news about athletes, teams, matches and competitions",
+    "business news",
+    "Science"
+   ]
+  },
+  {
+   "name": "valid_27",
+   "pop": "valid",
+   "labels": [
+    "world news",
+    "news about athletes, teams, matches and competitions",
+    "Business",
+    "Science/Technology"
+   ]
+  },
+  {
+   "name": "valid_28",
+   "pop": "valid",
+   "labels": [
+    "International",
+    "Athletics",
+    "money",
+    "Science"
+   ]
+  },
+  {
+   "name": "valid_29",
+   "pop": "valid",
+   "labels": [
+    "International",
+    "Sports",
+    "Business",
+    "science and technology news"
+   ]
+  },
+  {
+   "name": "strict_00",
+   "pop": "strict",
+   "labels": [
+    "world news",
+    "Athletics",
+    "business news",
+    "news about science, technology, computing and the internet"
+   ]
+  },
+  {
+   "name": "strict_01",
+   "pop": "strict",
+   "labels": [
+    "Global",
+    "Athletics",
+    "business",
+    "Sci/Tech"
+   ]
+  },
+  {
+   "name": "strict_02",
+   "pop": "strict",
+   "labels": [
+    "World",
+    "sport",
+    "Finance",
+    "tech"
+   ]
+  },
+  {
+   "name": "strict_03",
+   "pop": "strict",
+   "labels": [
+    "world",
+    "Sports",
+    "business",
+    "news about science, technology, computing and the internet"
+   ]
+  },
+  {
+   "name": "strict_04",
+   "pop": "strict",
+   "labels": [
+    "Global",
+    "sports news",
+    "business news",
+    "news about science, technology, computing and the internet"
+   ]
+  },
+  {
+   "name": "strict_05",
+   "pop": "strict",
+   "labels": [
+    "world",
+    "Games",
+    "Economy",
+    "Science"
+   ]
+  },
+  {
+   "name": "strict_06",
+   "pop": "strict",
+   "labels": [
+    "World",
+    "sports news",
+    "Economy",
+    "tech"
+   ]
+  },
+  {
+   "name": "strict_07",
+   "pop": "strict",
+   "labels": [
+    "world news",
+    "athletes, teams and games",
+    "money",
+    "Tech"
+   ]
+  },
+  {
+   "name": "strict_08",
+   "pop": "strict",
+   "labels": [
+    "world",
+    "sports",
+    "Business",
+    "tech"
+   ]
+  },
+  {
+   "name": "strict_09",
+   "pop": "strict",
+   "labels": [
+    "world",
+    "Sports",
+    "Business",
+    "news about science, technology, computing and the internet"
+   ]
+  },
+  {
+   "name": "strict_10",
+   "pop": "strict",
+   "labels": [
+    "world news",
+    "athletics",
+    "Business",
+    "Science/Technology"
+   ]
+  },
+  {
+   "name": "strict_11",
+   "pop": "strict",
+   "labels": [
+    "World",
+    "Athletics",
+    "Business",
+    "Sci/Tech"
+   ]
+  },
+  {
+   "name": "strict_12",
+   "pop": "strict",
+   "labels": [
+    "world",
+    "Sports",
+    "money",
+    "Tech"
+   ]
+  },
+  {
+   "name": "strict_13",
+   "pop": "strict",
+   "labels": [
+    "world news",
+    "Athletics",
+    "Economy",
+    "Tech"
+   ]
+  },
+  {
+   "name": "strict_14",
+   "pop": "strict",
+   "labels": [
+    "world",
+    "Games",
+    "Economy",
+    "tech"
+   ]
+  },
+  {
+   "name": "strict_15",
+   "pop": "strict",
+   "labels": [
+    "world",
+    "sport",
+    "business",
+    "sci/tech"
+   ]
+  },
+  {
+   "name": "strict_16",
+   "pop": "strict",
+   "labels": [
+    "world",
+    "sport",
+    "business",
+    "science and technology news"
+   ]
+  },
+  {
+   "name": "strict_17",
+   "pop": "strict",
+   "labels": [
+    "Global",
+    "Games",
+    "Business",
+    "Science/Technology"
+   ]
+  },
+  {
+   "name": "strict_18",
+   "pop": "strict",
+   "labels": [
+    "World",
+    "Athletics",
+    "business news",
+    "tech"
+   ]
+  },
+  {
+   "name": "strict_19",
+   "pop": "strict",
+   "labels": [
+    "world news",
+    "athletics",
+    "business news",
+    "Tech"
+   ]
+  },
+  {
+   "name": "strict_20",
+   "pop": "strict",
+   "labels": [
+    "Global",
+    "athletes, teams and games",
+    "Finance",
+    "sci/tech"
+   ]
+  },
+  {
+   "name": "strict_21",
+   "pop": "strict",
+   "labels": [
+    "world news",
+    "Games",
+    "Business",
+    "Science"
+   ]
+  },
+  {
+   "name": "strict_22",
+   "pop": "strict",
+   "labels": [
+    "World",
+    "sports news",
+    "Finance",
+    "Sci/Tech"
+   ]
+  },
+  {
+   "name": "strict_23",
+   "pop": "strict",
+   "labels": [
+    "world",
+    "Games",
+    "Economy",
+    "science and technology news"
+   ]
+  },
+  {
+   "name": "strict_24",
+   "pop": "strict",
+   "labels": [
+    "world",
+    "Games",
+    "money",
+    "news about science, technology, computing and the internet"
+   ]
+  },
+  {
+   "name": "strict_25",
+   "pop": "strict",
+   "labels": [
+    "World",
+    "Games",
+    "Economy",
+    "news about science, technology, computing and the internet"
+   ]
+  },
+  {
+   "name": "strict_26",
+   "pop": "strict",
+   "labels": [
+    "Global",
+    "sports news",
+    "business news",
+    "sci/tech"
+   ]
+  },
+  {
+   "name": "strict_27",
+   "pop": "strict",
+   "labels": [
+    "world",
+    "athletics",
+    "Finance",
+    "Sci/Tech"
+   ]
+  },
+  {
+   "name": "strict_28",
+   "pop": "strict",
+   "labels": [
+    "world",
+    "athletics",
+    "money",
+    "Tech"
+   ]
+  },
+  {
+   "name": "strict_29",
+   "pop": "strict",
+   "labels": [
+    "world news",
+    "Games",
+    "money",
+    "tech"
+   ]
+  },
+  {
+   "name": "all_00",
+   "pop": "all",
+   "labels": [
+    "world news",
+    "diversion",
+    "business news",
+    "school"
+   ]
+  },
+  {
+   "name": "all_01",
+   "pop": "all",
+   "labels": [
+    "international politics and conflicts",
+    "diversion",
+    "Business",
+    "sci/tech"
+   ]
+  },
+  {
+   "name": "all_02",
+   "pop": "all",
+   "labels": [
+    "iraq, minister, killed",
+    "Games",
+    "enterprise",
+    "science and technology news"
+   ]
+  },
+  {
+   "name": "all_03",
+   "pop": "all",
+   "labels": [
+    "universe",
+    "news about athletes, teams, matches and competitions",
+    "enterprise",
+    "Science"
+   ]
+  },
+  {
+   "name": "all_04",
+   "pop": "all",
+   "labels": [
+    "universe",
+    "sport",
+    "money",
+    "Science/Technology"
+   ]
+  },
+  {
+   "name": "all_05",
+   "pop": "all",
+   "labels": [
+    "news about international affairs, politics and conflicts",
+    "sports news",
+    "news about companies, markets and the economy",
+    "computers, the internet and scientific research"
+   ]
+  },
+  {
+   "name": "all_06",
+   "pop": "all",
+   "labels": [
+    "World",
+    "athletics",
+    "news about companies, markets and the economy",
+    "Tech"
+   ]
+  },
+  {
+   "name": "all_07",
+   "pop": "all",
+   "labels": [
+    "International",
+    "Games",
+    "money",
+    "computers, the internet and scientific research"
+   ]
+  },
+  {
+   "name": "all_08",
+   "pop": "all",
+   "labels": [
+    "politics",
+    "diversion",
+    "Economy",
+    "Science/Technology"
+   ]
+  },
+  {
+   "name": "all_09",
+   "pop": "all",
+   "labels": [
+    "Global",
+    "Athletics",
+    "news about companies, markets and the economy",
+    "microsoft, software, internet"
+   ]
+  },
+  {
+   "name": "all_10",
+   "pop": "all",
+   "labels": [
+    "world",
+    "sports",
+    "Business",
+    "microsoft, software, internet"
+   ]
+  },
+  {
+   "name": "all_11",
+   "pop": "all",
+   "labels": [
+    "iraq, minister, killed",
+    "sport",
+    "concern",
+    "technical school"
+   ]
+  },
+  {
+   "name": "all_12",
+   "pop": "all",
+   "labels": [
+    "World",
+    "sports",
+    "Economy",
+    "microsoft, software, internet"
+   ]
+  },
+  {
+   "name": "all_13",
+   "pop": "all",
+   "labels": [
+    "Global",
+    "sports",
+    "business news",
+    "school"
+   ]
+  },
+  {
+   "name": "all_14",
+   "pop": "all",
+   "labels": [
+    "World",
+    "sport",
+    "enterprise",
+    "school"
+   ]
+  },
+  {
+   "name": "all_15",
+   "pop": "all",
+   "labels": [
+    "World",
+    "Athletics",
+    "enterprise",
+    "technical school"
+   ]
+  },
+  {
+   "name": "all_16",
+   "pop": "all",
+   "labels": [
+    "International",
+    "Games",
+    "business",
+    "sci/tech"
+   ]
+  },
+  {
+   "name": "all_17",
+   "pop": "all",
+   "labels": [
+    "universe",
+    "sports news",
+    "concern",
+    "news about science, technology, computing and the internet"
+   ]
+  },
+  {
+   "name": "all_18",
+   "pop": "all",
+   "labels": [
+    "world",
+    "athletics",
+    "Economy",
+    "science and technology news"
+   ]
+  },
+  {
+   "name": "all_19",
+   "pop": "all",
+   "labels": [
+    "international politics and conflicts",
+    "Athletics",
+    "enterprise",
+    "news about science, technology, computing and the internet"
+   ]
+  },
+  {
+   "name": "all_20",
+   "pop": "all",
+   "labels": [
+    "world",
+    "athletics",
+    "news about companies, markets and the economy",
+    "science and technology news"
+   ]
+  },
+  {
+   "name": "all_21",
+   "pop": "all",
+   "labels": [
+    "universe",
+    "game, win, victory",
+    "Business",
+    "Sci/Tech"
+   ]
+  },
+  {
+   "name": "all_22",
+   "pop": "all",
+   "labels": [
+    "Global",
+    "sport",
+    "Finance",
+    "Sci/Tech"
+   ]
+  },
+  {
+   "name": "all_23",
+   "pop": "all",
+   "labels": [
+    "Global",
+    "sports",
+    "Economy",
+    "news about science, technology, computing and the internet"
+   ]
+  },
+  {
+   "name": "all_24",
+   "pop": "all",
+   "labels": [
+    "natural object",
+    "athletics",
+    "business",
+    "microsoft, software, internet"
+   ]
+  },
+  {
+   "name": "all_25",
+   "pop": "all",
+   "labels": [
+    "iraq, minister, killed",
+    "Athletics",
+    "Economy",
+    "tech"
+   ]
+  },
+  {
+   "name": "all_26",
+   "pop": "all",
+   "labels": [
+    "World",
+    "sport",
+    "Finance",
+    "Sci/Tech"
+   ]
+  },
+  {
+   "name": "all_27",
+   "pop": "all",
+   "labels": [
+    "international politics and conflicts",
+    "athletes, teams and games",
+    "enterprise",
+    "technical school"
+   ]
+  },
+  {
+   "name": "all_28",
+   "pop": "all",
+   "labels": [
+    "natural object",
+    "sports news",
+    "money",
+    "school"
+   ]
+  },
+  {
+   "name": "all_29",
+   "pop": "all",
+   "labels": [
+    "news about international affairs, politics and conflicts",
+    "Games",
+    "business",
+    "Science/Technology"
+   ]
+  },
+  {
+   "name": "homog_G1_surface",
+   "pop": "homog",
+   "labels": [
+    "world",
+    "sports",
+    "business",
+    "sci/tech"
+   ]
+  },
+  {
+   "name": "homog_G2_wn_syn",
+   "pop": "homog",
+   "labels": [
+    "universe",
+    "athletics",
+    "concern",
+    "technical school"
+   ]
+  },
+  {
+   "name": "homog_G3_wn_hyper",
+   "pop": "homog",
+   "labels": [
+    "natural object",
+    "diversion",
+    "enterprise",
+    "school"
+   ]
+  },
+  {
+   "name": "homog_G4_keywords",
+   "pop": "homog",
+   "labels": [
+    "iraq, minister, killed",
+    "game, win, victory",
+    "stocks, oil, profit",
+    "microsoft, software, internet"
+   ]
+  },
+  {
+   "name": "homog_G5_definition",
+   "pop": "homog",
+   "labels": [
+    "news about international affairs, politics and conflicts",
+    "news about athletes, teams, matches and competitions",
+    "news about companies, markets and the economy",
+    "news about science, technology, computing and the internet"
+   ]
+  },
+  {
+   "name": "homog_G6_llm1",
+   "pop": "homog",
+   "labels": [
+    "Global",
+    "Athletics",
+    "Finance",
+    "Science"
+   ]
+  },
+  {
+   "name": "homog_G7_llm2",
+   "pop": "homog",
+   "labels": [
+    "International",
+    "Games",
+    "Economy",
+    "Tech"
+   ]
+  },
+  {
+   "name": "homog_v1_w0",
+   "pop": "homog",
+   "labels": [
+    "World",
+    "Sports",
+    "Business",
+    "Science/Technology"
+   ]
+  },
+  {
+   "name": "homog_v1_w1",
+   "pop": "homog",
+   "labels": [
+    "world news",
+    "sports news",
+    "business news",
+    "science and technology news"
+   ]
+  },
+  {
+   "name": "homog_v1_w2",
+   "pop": "homog",
+   "labels": [
+    "international politics and conflicts",
+    "athletes, teams and games",
+    "companies, markets and the economy",
+    "computers, the internet and scientific research"
+   ]
+  },
+  {
+   "name": "homog_v1_w3",
+   "pop": "homog",
+   "labels": [
+    "politics",
+    "sport",
+    "money",
+    "tech"
+   ]
+  },
+  {
+   "name": "surface_00",
+   "pop": "surface",
+   "labels": [
+    "World",
+    "Sports",
+    "Business",
+    "sci/tech"
+   ]
+  },
+  {
+   "name": "surface_01",
+   "pop": "surface",
+   "labels": [
+    "world",
+    "Sports",
+    "business",
+    "sci/tech"
+   ]
+  },
+  {
+   "name": "surface_02",
+   "pop": "surface",
+   "labels": [
+    "World",
+    "Sports",
+    "business",
+    "Sci/Tech"
+   ]
+  },
+  {
+   "name": "surface_03",
+   "pop": "surface",
+   "labels": [
+    "world",
+    "sports",
+    "business",
+    "sci/tech"
+   ]
+  },
+  {
+   "name": "surface_04",
+   "pop": "surface",
+   "labels": [
+    "world",
+    "sports",
+    "business",
+    "Sci/Tech"
+   ]
+  },
+  {
+   "name": "surface_05",
+   "pop": "surface",
+   "labels": [
+    "world",
+    "sports",
+    "Business",
+    "Sci/Tech"
+   ]
+  },
+  {
+   "name": "surface_07",
+   "pop": "surface",
+   "labels": [
+    "World",
+    "Sports",
+    "business",
+    "sci/tech"
+   ]
+  },
+  {
+   "name": "surface_08",
+   "pop": "surface",
+   "labels": [
+    "World",
+    "sports",
+    "business",
+    "Sci/Tech"
+   ]
+  },
+  {
+   "name": "surface_09",
+   "pop": "surface",
+   "labels": [
+    "world",
+    "sports",
+    "Business",
+    "sci/tech"
+   ]
+  },
+  {
+   "name": "identity",
+   "pop": "identity",
+   "labels": [
+    "World",
+    "Sports",
+    "Business",
+    "Sci/Tech"
+   ]
+  },
+  {
+   "name": "N1_nonsense",
+   "pop": "nonsense",
+   "labels": [
+    "nuzonu",
+    "zugevu",
+    "nuvedo",
+    "keduva"
+   ]
+  },
+  {
+   "name": "N2_nonsense",
+   "pop": "nonsense",
+   "labels": [
+    "febune",
+    "tativa",
+    "gibire",
+    "potara"
+   ]
+  },
+  {
+   "name": "shuffled_0",
+   "pop": "shuffled",
+   "labels": [
+    "Sci/Tech",
+    "Business",
+    "Sports",
+    "World"
+   ]
+  },
+  {
+   "name": "shuffled_1",
+   "pop": "shuffled",
+   "labels": [
+    "Business",
+    "Sci/Tech",
+    "Sports",
+    "World"
+   ]
+  },
+  {
+   "name": "shuffled_2",
+   "pop": "shuffled",
+   "labels": [
+    "Sci/Tech",
+    "World",
+    "Sports",
+    "Business"
+   ]
+  }
+ ]
+}

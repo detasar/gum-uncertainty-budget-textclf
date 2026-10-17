@@ -1,0 +1,2291 @@
+{
+ "dataset": "dbpedia",
+ "W": 30,
+ "population_sizes": {
+  "valid": 89616844800,
+  "strict": 3674160000,
+  "all": 4398046511104
+ },
+ "sets": [
+  {
+   "name": "official",
+   "pop": "official",
+   "labels": [
+    "Company",
+    "Educational Institution",
+    "Artist",
+    "Athlete",
+    "Office Holder",
+    "Mean Of Transportation",
+    "Building",
+    "Natural Place",
+    "Village",
+    "Animal",
+    "Plant",
+    "Album",
+    "Film",
+    "Written Work"
+   ]
+  },
+  {
+   "name": "valid_00",
+   "pop": "valid",
+   "labels": [
+    "Business",
+    "educational institution",
+    "Artist",
+    "a person who competes in sports",
+    "politician, member, elected",
+    "mean of transportation",
+    "Building",
+    "natural place",
+    "a village or small rural settlement",
+    "animate being",
+    "Flora",
+    "a music album",
+    "a movie",
+    "a book, novel, journal or other written work"
+   ]
+  },
+  {
+   "name": "valid_01",
+   "pop": "valid",
+   "labels": [
+    "Enterprise",
+    "educational institution",
+    "Musician",
+    "a person who competes in sports",
+    "Office Holder",
+    "mean of transportation",
+    "building",
+    "Mountain Range",
+    "Hamlet",
+    "Creature",
+    "plant",
+    "album, released, band",
+    "film, directed, starring",
+    "published, book, novel"
+   ]
+  },
+  {
+   "name": "valid_02",
+   "pop": "valid",
+   "labels": [
+    "Company",
+    "a school, college or university",
+    "born, artist, singer",
+    "Sportsperson",
+    "a politician or person holding public office",
+    "mean of transportation",
+    "historic, register, building",
+    "natural place",
+    "village",
+    "animal",
+    "Plant",
+    "album",
+    "Movie",
+    "piece of work"
+   ]
+  },
+  {
+   "name": "valid_03",
+   "pop": "valid",
+   "labels": [
+    "Company",
+    "school, high, students",
+    "artist",
+    "a person who competes in sports",
+    "Person in Office",
+    "Mean Of Transportation",
+    "historic, register, building",
+    "a natural feature such as a mountain, river or lake",
+    "Settlement",
+    "animate being",
+    "Plant",
+    "album",
+    "movie",
+    "piece of work"
+   ]
+  },
+  {
+   "name": "valid_04",
+   "pop": "valid",
+   "labels": [
+    "company",
+    "school, high, students",
+    "born, artist, singer",
+    "jock",
+    "Political Figure",
+    "Mean Of Transportation",
+    "Structure Building",
+    "Mountain Range",
+    "Settlement",
+    "Beast",
+    "a plant species",
+    "album, released, band",
+    "film",
+    "written work"
+   ]
+  },
+  {
+   "name": "valid_05",
+   "pop": "valid",
+   "labels": [
+    "company, based, headquartered",
+    "University",
+    "a musician, painter, actor or other creative artist",
+    "played, league, born",
+    "a politician or person holding public office",
+    "mean of transportation",
+    "structure",
+    "Mountain Range",
+    "Village",
+    "animate being",
+    "species, plant, genus",
+    "a music album",
+    "movie",
+    "written work"
+   ]
+  },
+  {
+   "name": "valid_06",
+   "pop": "valid",
+   "labels": [
+    "Company",
+    "educational institution",
+    "Artist",
+    "a person who competes in sports",
+    "politician, member, elected",
+    "Mean Of Transportation",
+    "historic, register, building",
+    "a natural feature such as a mountain, river or lake",
+    "village, population, district",
+    "an animal species",
+    "a plant species",
+    "album",
+    "Film",
+    "published, book, novel"
+   ]
+  },
+  {
+   "name": "valid_07",
+   "pop": "valid",
+   "labels": [
+    "Business",
+    "a school, college or university",
+    "creator",
+    "played, league, born",
+    "Office Holder",
+    "mean of transportation",
+    "structure",
+    "a natural feature such as a mountain, river or lake",
+    "Hamlet",
+    "family, found, moth",
+    "Vegetation",
+    "record album",
+    "Film",
+    "published, book, novel"
+   ]
+  },
+  {
+   "name": "valid_08",
+   "pop": "valid",
+   "labels": [
+    "Enterprise",
+    "a school, college or university",
+    "Musician",
+    "contestant",
+    "Person in Office",
+    "Mean Of Transportation",
+    "Building",
+    "Geographic Feature",
+    "Settlement",
+    "family, found, moth",
+    "Flora",
+    "album",
+    "a movie",
+    "piece of work"
+   ]
+  },
+  {
+   "name": "valid_09",
+   "pop": "valid",
+   "labels": [
+    "company",
+    "Educational Institution",
+    "artist",
+    "Player",
+    "politician, member, elected",
+    "Transport",
+    "structure",
+    "Natural Place",
+    "village",
+    "animate being",
+    "Flora",
+    "a music album",
+    "a movie",
+    "written work"
+   ]
+  },
+  {
+   "name": "valid_10",
+   "pop": "valid",
+   "labels": [
+    "company, based, headquartered",
+    "a school, college or university",
+    "born, artist, singer",
+    "contestant",
+    "office holder",
+    "Transport",
+    "historic, register, building",
+    "Mountain Range",
+    "Settlement",
+    "Creature",
+    "Vegetation",
+    "album, released, band",
+    "film",
+    "Written Work"
+   ]
+  },
+  {
+   "name": "valid_11",
+   "pop": "valid",
+   "labels": [
+    "Company",
+    "University",
+    "artist",
+    "Athlete",
+    "Office Holder",
+    "mean of transportation",
+    "Structure Building",
+    "natural place",
+    "Village",
+    "an animal species",
+    "Plant",
+    "record album",
+    "Film",
+    "Written Work"
+   ]
+  },
+  {
+   "name": "valid_12",
+   "pop": "valid",
+   "labels": [
+    "company, based, headquartered",
+    "Educational Institution",
+    "a musician, painter, actor or other creative artist",
+    "played, league, born",
+    "Political Figure",
+    "mean of transportation",
+    "historic, register, building",
+    "Geographic Feature",
+    "village, population, district",
+    "family, found, moth",
+    "a plant species",
+    "Record",
+    "film",
+    "a book, novel, journal or other written work"
+   ]
+  },
+  {
+   "name": "valid_13",
+   "pop": "valid",
+   "labels": [
+    "company",
+    "educational institution",
+    "artist",
+    "Player",
+    "office holder",
+    "Transport",
+    "a building or architectural structure",
+    "Geographic Feature",
+    "Village",
+    "an animal species",
+    "Plant",
+    "album, released, band",
+    "a movie",
+    "a book, novel, journal or other written work"
+   ]
+  },
+  {
+   "name": "valid_14",
+   "pop": "valid",
+   "labels": [
+    "Business",
+    "educational institution",
+    "a musician, painter, actor or other creative artist",
+    "played, league, born",
+    "Person in Office",
+    "Transport",
+    "historic, register, building",
+    "Natural Place",
+    "Hamlet",
+    "an animal species",
+    "Plant",
+    "record album",
+    "Film",
+    "published, book, novel"
+   ]
+  },
+  {
+   "name": "valid_15",
+   "pop": "valid",
+   "labels": [
+    "company, based, headquartered",
+    "Educational Institution",
+    "artist",
+    "played, league, born",
+    "a politician or person holding public office",
+    "Transport",
+    "structure",
+    "Geographic Feature",
+    "Settlement",
+    "animate being",
+    "Plant",
+    "album, released, band",
+    "film, directed, starring",
+    "written work"
+   ]
+  },
+  {
+   "name": "valid_16",
+   "pop": "valid",
+   "labels": [
+    "a business organization or firm",
+    "School",
+    "a musician, painter, actor or other creative artist",
+    "athlete",
+    "politician, member, elected",
+    "mean of transportation",
+    "structure",
+    "Natural Place",
+    "small town",
+    "Animal",
+    "Vegetation",
+    "album, released, band",
+    "movie",
+    "written work"
+   ]
+  },
+  {
+   "name": "valid_17",
+   "pop": "valid",
+   "labels": [
+    "Business",
+    "a school, college or university",
+    "Musician",
+    "a person who competes in sports",
+    "Political Figure",
+    "Transport",
+    "Structure",
+    "natural place",
+    "Hamlet",
+    "animate being",
+    "Vegetation",
+    "album",
+    "Film",
+    "Written Work"
+   ]
+  },
+  {
+   "name": "valid_18",
+   "pop": "valid",
+   "labels": [
+    "company, based, headquartered",
+    "a school, college or university",
+    "creative person",
+    "Sportsperson",
+    "office holder",
+    "mean of transportation",
+    "structure",
+    "a natural feature such as a mountain, river or lake",
+    "village",
+    "Creature",
+    "Vegetation",
+    "a music album",
+    "film, directed, starring",
+    "published, book, novel"
+   ]
+  },
+  {
+   "name": "valid_19",
+   "pop": "valid",
+   "labels": [
+    "company, based, headquartered",
+    "University",
+    "Artist",
+    "athlete",
+    "politician, member, elected",
+    "a vehicle, ship, aircraft or train",
+    "a building or architectural structure",
+    "Geographic Feature",
+    "Settlement",
+    "Beast",
+    "Vegetation",
+    "record album",
+    "a movie",
+    "published, book, novel"
+   ]
+  },
+  {
+   "name": "valid_20",
+   "pop": "valid",
+   "labels": [
+    "a business organization or firm",
+    "a school, college or university",
+    "creator",
+    "contestant",
+    "Office Holder",
+    "Mean Of Transportation",
+    "Building",
+    "natural place",
+    "small town",
+    "Creature",
+    "plant",
+    "album",
+    "Film",
+    "Written Work"
+   ]
+  },
+  {
+   "name": "valid_21",
+   "pop": "valid",
+   "labels": [
+    "a business organization or firm",
+    "school, high, students",
+    "born, artist, singer",
+    "Athlete",
+    "Person in Office",
+    "mean of transportation",
+    "Building",
+    "Mountain Range",
+    "small town",
+    "animate being",
+    "Plant",
+    "album, released, band",
+    "film",
+    "written work"
+   ]
+  },
+  {
+   "name": "valid_22",
+   "pop": "valid",
+   "labels": [
+    "Enterprise",
+    "School",
+    "artist",
+    "athlete",
+    "office holder",
+    "Transport",
+    "building",
+    "a natural feature such as a mountain, river or lake",
+    "Village",
+    "animal",
+    "a plant species",
+    "a music album",
+    "Movie",
+    "piece of work"
+   ]
+  },
+  {
+   "name": "valid_23",
+   "pop": "valid",
+   "labels": [
+    "company",
+    "school, high, students",
+    "artist",
+    "athlete",
+    "politician, member, elected",
+    "Transport",
+    "building",
+    "natural place",
+    "Village",
+    "Animal",
+    "a plant species",
+    "Record",
+    "film, directed, starring",
+    "Written Work"
+   ]
+  },
+  {
+   "name": "valid_24",
+   "pop": "valid",
+   "labels": [
+    "a business organization or firm",
+    "Educational Institution",
+    "born, artist, singer",
+    "contestant",
+    "politician, member, elected",
+    "Mean Of Transportation",
+    "building",
+    "natural place",
+    "village, population, district",
+    "family, found, moth",
+    "Flora",
+    "Record",
+    "Film",
+    "a book, novel, journal or other written work"
+   ]
+  },
+  {
+   "name": "valid_25",
+   "pop": "valid",
+   "labels": [
+    "a business organization or firm",
+    "Educational Institution",
+    "Musician",
+    "Sportsperson",
+    "office holder",
+    "Mean Of Transportation",
+    "structure",
+    "Mountain Range",
+    "Settlement",
+    "animate being",
+    "species, plant, genus",
+    "a music album",
+    "film",
+    "published, book, novel"
+   ]
+  },
+  {
+   "name": "valid_26",
+   "pop": "valid",
+   "labels": [
+    "company",
+    "University",
+    "Artist",
+    "Player",
+    "Person in Office",
+    "mean of transportation",
+    "Structure",
+    "Geographic Feature",
+    "village, population, district",
+    "Beast",
+    "Flora",
+    "Album",
+    "film",
+    "published, book, novel"
+   ]
+  },
+  {
+   "name": "valid_27",
+   "pop": "valid",
+   "labels": [
+    "company, based, headquartered",
+    "educational institution",
+    "creator",
+    "athlete",
+    "Political Figure",
+    "a vehicle, ship, aircraft or train",
+    "Building",
+    "a natural feature such as a mountain, river or lake",
+    "Hamlet",
+    "an animal species",
+    "a plant species",
+    "album, released, band",
+    "Film",
+    "piece of work"
+   ]
+  },
+  {
+   "name": "valid_28",
+   "pop": "valid",
+   "labels": [
+    "company, based, headquartered",
+    "University",
+    "born, artist, singer",
+    "athlete",
+    "Political Figure",
+    "mean of transportation",
+    "Structure Building",
+    "natural place",
+    "Hamlet",
+    "Beast",
+    "Flora",
+    "album, released, band",
+    "Film",
+    "written work"
+   ]
+  },
+  {
+   "name": "valid_29",
+   "pop": "valid",
+   "labels": [
+    "Business",
+    "School",
+    "creator",
+    "Sportsperson",
+    "a politician or person holding public office",
+    "Transport",
+    "historic, register, building",
+    "Natural Place",
+    "small town",
+    "animal",
+    "Vegetation",
+    "Record",
+    "film",
+    "a book, novel, journal or other written work"
+   ]
+  },
+  {
+   "name": "strict_00",
+   "pop": "strict",
+   "labels": [
+    "company",
+    "educational institution",
+    "artist",
+    "a person who competes in sports",
+    "office holder",
+    "Mean Of Transportation",
+    "a building or architectural structure",
+    "natural place",
+    "village, population, district",
+    "Animal",
+    "Plant",
+    "album",
+    "movie",
+    "Written Work"
+   ]
+  },
+  {
+   "name": "strict_01",
+   "pop": "strict",
+   "labels": [
+    "company",
+    "University",
+    "creator",
+    "a person who competes in sports",
+    "Person in Office",
+    "Mean Of Transportation",
+    "Building",
+    "natural place",
+    "village, population, district",
+    "an animal species",
+    "Plant",
+    "album, released, band",
+    "Movie",
+    "written work"
+   ]
+  },
+  {
+   "name": "strict_02",
+   "pop": "strict",
+   "labels": [
+    "Business",
+    "school, high, students",
+    "creative person",
+    "athlete",
+    "a politician or person holding public office",
+    "mean of transportation",
+    "Building",
+    "a natural feature such as a mountain, river or lake",
+    "Village",
+    "an animal species",
+    "plant",
+    "a music album",
+    "film, directed, starring",
+    "Written Work"
+   ]
+  },
+  {
+   "name": "strict_03",
+   "pop": "strict",
+   "labels": [
+    "Company",
+    "educational institution",
+    "a musician, painter, actor or other creative artist",
+    "Player",
+    "a politician or person holding public office",
+    "mean of transportation",
+    "a building or architectural structure",
+    "natural place",
+    "small town",
+    "animal",
+    "species, plant, genus",
+    "album",
+    "a movie",
+    "a book, novel, journal or other written work"
+   ]
+  },
+  {
+   "name": "strict_04",
+   "pop": "strict",
+   "labels": [
+    "a business organization or firm",
+    "school, high, students",
+    "creative person",
+    "jock",
+    "a politician or person holding public office",
+    "Transport",
+    "Building",
+    "a natural feature such as a mountain, river or lake",
+    "a village or small rural settlement",
+    "Creature",
+    "plant",
+    "record album",
+    "film, directed, starring",
+    "Written Work"
+   ]
+  },
+  {
+   "name": "strict_05",
+   "pop": "strict",
+   "labels": [
+    "company",
+    "Educational Institution",
+    "Artist",
+    "jock",
+    "office holder",
+    "Mean Of Transportation",
+    "Structure Building",
+    "Natural Place",
+    "village",
+    "animal",
+    "a plant species",
+    "a music album",
+    "Film",
+    "Written Work"
+   ]
+  },
+  {
+   "name": "strict_06",
+   "pop": "strict",
+   "labels": [
+    "company",
+    "Educational Institution",
+    "Artist",
+    "Player",
+    "office holder",
+    "mean of transportation",
+    "Structure Building",
+    "a natural feature such as a mountain, river or lake",
+    "Village",
+    "animal",
+    "Plant",
+    "a music album",
+    "movie",
+    "a book, novel, journal or other written work"
+   ]
+  },
+  {
+   "name": "strict_07",
+   "pop": "strict",
+   "labels": [
+    "company, based, headquartered",
+    "a school, college or university",
+    "Artist",
+    "Player",
+    "Political Figure",
+    "mean of transportation",
+    "Building",
+    "natural place",
+    "small town",
+    "Beast",
+    "plant",
+    "album, released, band",
+    "a movie",
+    "Written Work"
+   ]
+  },
+  {
+   "name": "strict_08",
+   "pop": "strict",
+   "labels": [
+    "a business organization or firm",
+    "a school, college or university",
+    "artist",
+    "Athlete",
+    "Political Figure",
+    "Transport",
+    "Building",
+    "natural place",
+    "Village",
+    "Animal",
+    "Plant",
+    "a music album",
+    "film, directed, starring",
+    "a book, novel, journal or other written work"
+   ]
+  },
+  {
+   "name": "strict_09",
+   "pop": "strict",
+   "labels": [
+    "a business organization or firm",
+    "School",
+    "Artist",
+    "jock",
+    "a politician or person holding public office",
+    "mean of transportation",
+    "Building",
+    "Natural Place",
+    "village, population, district",
+    "Animal",
+    "Vegetation",
+    "album",
+    "Movie",
+    "written work"
+   ]
+  },
+  {
+   "name": "strict_10",
+   "pop": "strict",
+   "labels": [
+    "company, based, headquartered",
+    "School",
+    "Musician",
+    "athlete",
+    "politician, member, elected",
+    "Mean Of Transportation",
+    "a building or architectural structure",
+    "a natural feature such as a mountain, river or lake",
+    "Village",
+    "Creature",
+    "Vegetation",
+    "a music album",
+    "a movie",
+    "a book, novel, journal or other written work"
+   ]
+  },
+  {
+   "name": "strict_11",
+   "pop": "strict",
+   "labels": [
+    "company",
+    "University",
+    "creative person",
+    "a person who competes in sports",
+    "Person in Office",
+    "Transport",
+    "building",
+    "natural place",
+    "small town",
+    "animal",
+    "plant",
+    "a music album",
+    "film",
+    "written work"
+   ]
+  },
+  {
+   "name": "strict_12",
+   "pop": "strict",
+   "labels": [
+    "Company",
+    "School",
+    "a musician, painter, actor or other creative artist",
+    "jock",
+    "Office Holder",
+    "Mean Of Transportation",
+    "building",
+    "Natural Place",
+    "village",
+    "an animal species",
+    "a plant species",
+    "album, released, band",
+    "Movie",
+    "a book, novel, journal or other written work"
+   ]
+  },
+  {
+   "name": "strict_13",
+   "pop": "strict",
+   "labels": [
+    "company, based, headquartered",
+    "school, high, students",
+    "Musician",
+    "Athlete",
+    "Person in Office",
+    "mean of transportation",
+    "building",
+    "Natural Place",
+    "village",
+    "animal",
+    "Plant",
+    "record album",
+    "film, directed, starring",
+    "written work"
+   ]
+  },
+  {
+   "name": "strict_14",
+   "pop": "strict",
+   "labels": [
+    "Business",
+    "school, high, students",
+    "Artist",
+    "Athlete",
+    "politician, member, elected",
+    "Mean Of Transportation",
+    "Structure Building",
+    "a natural feature such as a mountain, river or lake",
+    "a village or small rural settlement",
+    "an animal species",
+    "species, plant, genus",
+    "a music album",
+    "film, directed, starring",
+    "a book, novel, journal or other written work"
+   ]
+  },
+  {
+   "name": "strict_15",
+   "pop": "strict",
+   "labels": [
+    "Company",
+    "educational institution",
+    "Artist",
+    "jock",
+    "Person in Office",
+    "mean of transportation",
+    "a building or architectural structure",
+    "Natural Place",
+    "Village",
+    "Animal",
+    "species, plant, genus",
+    "a music album",
+    "a movie",
+    "a book, novel, journal or other written work"
+   ]
+  },
+  {
+   "name": "strict_16",
+   "pop": "strict",
+   "labels": [
+    "company",
+    "school, high, students",
+    "Musician",
+    "Sportsperson",
+    "Person in Office",
+    "mean of transportation",
+    "Building",
+    "a natural feature such as a mountain, river or lake",
+    "village",
+    "animal",
+    "Flora",
+    "record album",
+    "film",
+    "a book, novel, journal or other written work"
+   ]
+  },
+  {
+   "name": "strict_17",
+   "pop": "strict",
+   "labels": [
+    "company",
+    "School",
+    "creative person",
+    "athlete",
+    "Person in Office",
+    "Transport",
+    "building",
+    "natural place",
+    "small town",
+    "Beast",
+    "a plant species",
+    "album, released, band",
+    "a movie",
+    "written work"
+   ]
+  },
+  {
+   "name": "strict_18",
+   "pop": "strict",
+   "labels": [
+    "Business",
+    "School",
+    "Musician",
+    "jock",
+    "Political Figure",
+    "Transport",
+    "Structure Building",
+    "a natural feature such as a mountain, river or lake",
+    "village",
+    "Creature",
+    "species, plant, genus",
+    "a music album",
+    "a movie",
+    "Written Work"
+   ]
+  },
+  {
+   "name": "strict_19",
+   "pop": "strict",
+   "labels": [
+    "Company",
+    "a school, college or university",
+    "artist",
+    "Sportsperson",
+    "Person in Office",
+    "mean of transportation",
+    "Structure Building",
+    "natural place",
+    "small town",
+    "animal",
+    "a plant species",
+    "Album",
+    "film, directed, starring",
+    "a book, novel, journal or other written work"
+   ]
+  },
+  {
+   "name": "strict_20",
+   "pop": "strict",
+   "labels": [
+    "a business organization or firm",
+    "Educational Institution",
+    "a musician, painter, actor or other creative artist",
+    "Sportsperson",
+    "Office Holder",
+    "Mean Of Transportation",
+    "a building or architectural structure",
+    "natural place",
+    "small town",
+    "Animal",
+    "plant",
+    "album, released, band",
+    "film, directed, starring",
+    "Written Work"
+   ]
+  },
+  {
+   "name": "strict_21",
+   "pop": "strict",
+   "labels": [
+    "company",
+    "school, high, students",
+    "creative person",
+    "athlete",
+    "office holder",
+    "mean of transportation",
+    "a building or architectural structure",
+    "natural place",
+    "village",
+    "Animal",
+    "plant",
+    "album, released, band",
+    "Movie",
+    "a book, novel, journal or other written work"
+   ]
+  },
+  {
+   "name": "strict_22",
+   "pop": "strict",
+   "labels": [
+    "company",
+    "University",
+    "creator",
+    "jock",
+    "a politician or person holding public office",
+    "Transport",
+    "building",
+    "Natural Place",
+    "village",
+    "Creature",
+    "species, plant, genus",
+    "album",
+    "Movie",
+    "written work"
+   ]
+  },
+  {
+   "name": "strict_23",
+   "pop": "strict",
+   "labels": [
+    "company",
+    "Educational Institution",
+    "Musician",
+    "Player",
+    "politician, member, elected",
+    "mean of transportation",
+    "building",
+    "a natural feature such as a mountain, river or lake",
+    "a village or small rural settlement",
+    "Animal",
+    "plant",
+    "a music album",
+    "film",
+    "written work"
+   ]
+  },
+  {
+   "name": "strict_24",
+   "pop": "strict",
+   "labels": [
+    "Business",
+    "educational institution",
+    "a musician, painter, actor or other creative artist",
+    "a person who competes in sports",
+    "office holder",
+    "Mean Of Transportation",
+    "Building",
+    "natural place",
+    "a village or small rural settlement",
+    "an animal species",
+    "Plant",
+    "Album",
+    "film",
+    "written work"
+   ]
+  },
+  {
+   "name": "strict_25",
+   "pop": "strict",
+   "labels": [
+    "company, based, headquartered",
+    "educational institution",
+    "born, artist, singer",
+    "athlete",
+    "office holder",
+    "Transport",
+    "a building or architectural structure",
+    "natural place",
+    "small town",
+    "Animal",
+    "a plant species",
+    "album, released, band",
+    "Film",
+    "written work"
+   ]
+  },
+  {
+   "name": "strict_26",
+   "pop": "strict",
+   "labels": [
+    "company",
+    "a school, college or university",
+    "Musician",
+    "jock",
+    "Office Holder",
+    "mean of transportation",
+    "building",
+    "a natural feature such as a mountain, river or lake",
+    "Village",
+    "animal",
+    "species, plant, genus",
+    "a music album",
+    "film, directed, starring",
+    "written work"
+   ]
+  },
+  {
+   "name": "strict_27",
+   "pop": "strict",
+   "labels": [
+    "a business organization or firm",
+    "a school, college or university",
+    "Musician",
+    "athlete",
+    "a politician or person holding public office",
+    "Mean Of Transportation",
+    "a building or architectural structure",
+    "natural place",
+    "a village or small rural settlement",
+    "Animal",
+    "a plant species",
+    "Album",
+    "movie",
+    "written work"
+   ]
+  },
+  {
+   "name": "strict_28",
+   "pop": "strict",
+   "labels": [
+    "company",
+    "educational institution",
+    "born, artist, singer",
+    "Sportsperson",
+    "a politician or person holding public office",
+    "Mean Of Transportation",
+    "building",
+    "a natural feature such as a mountain, river or lake",
+    "a village or small rural settlement",
+    "animal",
+    "species, plant, genus",
+    "a music album",
+    "Film",
+    "a book, novel, journal or other written work"
+   ]
+  },
+  {
+   "name": "strict_29",
+   "pop": "strict",
+   "labels": [
+    "company",
+    "School",
+    "creator",
+    "jock",
+    "politician, member, elected",
+    "Mean Of Transportation",
+    "Structure Building",
+    "a natural feature such as a mountain, river or lake",
+    "a village or small rural settlement",
+    "an animal species",
+    "Vegetation",
+    "Album",
+    "movie",
+    "written work"
+   ]
+  },
+  {
+   "name": "all_00",
+   "pop": "all",
+   "labels": [
+    "institution",
+    "Educational Institution",
+    "Artist",
+    "contestant",
+    "Person in Office",
+    "navy, ship, class",
+    "edifice",
+    "Geographic Feature",
+    "Settlement",
+    "animate being",
+    "Vegetation",
+    "album",
+    "film, directed, starring",
+    "piece of work"
+   ]
+  },
+  {
+   "name": "all_01",
+   "pop": "all",
+   "labels": [
+    "a business organization or firm",
+    "Educational Institution",
+    "Artist",
+    "Player",
+    "office holder",
+    "Transport",
+    "a building or architectural structure",
+    "river, tributary, romania",
+    "a village or small rural settlement",
+    "Animal",
+    "Plant",
+    "Album",
+    "Film",
+    "Script"
+   ]
+  },
+  {
+   "name": "all_02",
+   "pop": "all",
+   "labels": [
+    "institution",
+    "Educational Institution",
+    "creative person",
+    "athlete",
+    "Political Figure",
+    "Vehicle",
+    "Building",
+    "topographic point",
+    "a village or small rural settlement",
+    "organism",
+    "plant",
+    "medium",
+    "product",
+    "a book, novel, journal or other written work"
+   ]
+  },
+  {
+   "name": "all_03",
+   "pop": "all",
+   "labels": [
+    "company, based, headquartered",
+    "organization",
+    "born, artist, singer",
+    "Sportsperson",
+    "Office Holder",
+    "facility",
+    "Structure",
+    "topographic point",
+    "Hamlet",
+    "animal",
+    "Plant",
+    "Record",
+    "Movie",
+    "written work"
+   ]
+  },
+  {
+   "name": "all_04",
+   "pop": "all",
+   "labels": [
+    "Business",
+    "school, high, students",
+    "Artist",
+    "played, league, born",
+    "bearer",
+    "Transport",
+    "edifice",
+    "Natural Place",
+    "Settlement",
+    "animal",
+    "works",
+    "a music album",
+    "movie",
+    "piece of work"
+   ]
+  },
+  {
+   "name": "all_05",
+   "pop": "all",
+   "labels": [
+    "institution",
+    "educational institution",
+    "born, artist, singer",
+    "Player",
+    "Political Figure",
+    "a vehicle, ship, aircraft or train",
+    "historic, register, building",
+    "natural place",
+    "Hamlet",
+    "Animal",
+    "a plant species",
+    "Record",
+    "product",
+    "published, book, novel"
+   ]
+  },
+  {
+   "name": "all_06",
+   "pop": "all",
+   "labels": [
+    "Enterprise",
+    "University",
+    "Artist",
+    "played, league, born",
+    "holding device",
+    "mean of transportation",
+    "Structure",
+    "natural place",
+    "small town",
+    "organism",
+    "plant",
+    "a music album",
+    "a movie",
+    "Written Work"
+   ]
+  },
+  {
+   "name": "all_07",
+   "pop": "all",
+   "labels": [
+    "company",
+    "organization",
+    "Musician",
+    "contestant",
+    "holding device",
+    "a vehicle, ship, aircraft or train",
+    "Structure",
+    "natural place",
+    "a village or small rural settlement",
+    "Creature",
+    "Vegetation",
+    "record album",
+    "Movie",
+    "Book"
+   ]
+  },
+  {
+   "name": "all_08",
+   "pop": "all",
+   "labels": [
+    "company",
+    "School",
+    "Musician",
+    "Player",
+    "Person in Office",
+    "transportation system",
+    "structure",
+    "Geographic Feature",
+    "Village",
+    "animal",
+    "plant",
+    "medium",
+    "Film",
+    "written work"
+   ]
+  },
+  {
+   "name": "all_09",
+   "pop": "all",
+   "labels": [
+    "Business",
+    "organization",
+    "Person",
+    "Athlete",
+    "Office Holder",
+    "Transport",
+    "Structure Building",
+    "Natural Place",
+    "village",
+    "organism",
+    "a plant species",
+    "Record",
+    "Film",
+    "written work"
+   ]
+  },
+  {
+   "name": "all_10",
+   "pop": "all",
+   "labels": [
+    "Company",
+    "school, high, students",
+    "born, artist, singer",
+    "played, league, born",
+    "office holder",
+    "Vehicle",
+    "Structure Building",
+    "a natural feature such as a mountain, river or lake",
+    "Settlement",
+    "Beast",
+    "Plant",
+    "Record",
+    "film, directed, starring",
+    "published, book, novel"
+   ]
+  },
+  {
+   "name": "all_11",
+   "pop": "all",
+   "labels": [
+    "company",
+    "establishment",
+    "creative person",
+    "Athlete",
+    "bearer",
+    "mean of transportation",
+    "structure",
+    "Geographic Feature",
+    "a village or small rural settlement",
+    "animate being",
+    "species, plant, genus",
+    "Compilation",
+    "Picture",
+    "piece of work"
+   ]
+  },
+  {
+   "name": "all_12",
+   "pop": "all",
+   "labels": [
+    "companionship",
+    "Educational Institution",
+    "Person",
+    "jock",
+    "bearer",
+    "facility",
+    "Building",
+    "Natural Place",
+    "village, population, district",
+    "organism",
+    "works",
+    "Record",
+    "film",
+    "activity"
+   ]
+  },
+  {
+   "name": "all_13",
+   "pop": "all",
+   "labels": [
+    "companionship",
+    "organization",
+    "artist",
+    "Player",
+    "bearer",
+    "mean of transportation",
+    "a building or architectural structure",
+    "river, tributary, romania",
+    "a village or small rural settlement",
+    "Creature",
+    "a plant species",
+    "medium",
+    "movie",
+    "published, book, novel"
+   ]
+  },
+  {
+   "name": "all_14",
+   "pop": "all",
+   "labels": [
+    "Business",
+    "school, high, students",
+    "born, artist, singer",
+    "Athlete",
+    "holding device",
+    "a vehicle, ship, aircraft or train",
+    "Structure",
+    "Mountain Range",
+    "a village or small rural settlement",
+    "Creature",
+    "Plant",
+    "album, released, band",
+    "movie",
+    "piece of work"
+   ]
+  },
+  {
+   "name": "all_15",
+   "pop": "all",
+   "labels": [
+    "Business",
+    "a school, college or university",
+    "creator",
+    "Player",
+    "holding device",
+    "Transport",
+    "edifice",
+    "topographic point",
+    "a village or small rural settlement",
+    "Creature",
+    "Plant",
+    "a music album",
+    "product",
+    "Book"
+   ]
+  },
+  {
+   "name": "all_16",
+   "pop": "all",
+   "labels": [
+    "Enterprise",
+    "educational institution",
+    "a musician, painter, actor or other creative artist",
+    "Player",
+    "office holder",
+    "Vehicle",
+    "Building",
+    "natural place",
+    "small town",
+    "family, found, moth",
+    "Flora",
+    "Album",
+    "Film",
+    "a book, novel, journal or other written work"
+   ]
+  },
+  {
+   "name": "all_17",
+   "pop": "all",
+   "labels": [
+    "companionship",
+    "school, high, students",
+    "creator",
+    "played, league, born",
+    "bearer",
+    "Vehicle",
+    "Building",
+    "Geographic Feature",
+    "community",
+    "Animal",
+    "Vegetation",
+    "Record",
+    "film",
+    "published, book, novel"
+   ]
+  },
+  {
+   "name": "all_18",
+   "pop": "all",
+   "labels": [
+    "company",
+    "educational institution",
+    "creative person",
+    "jock",
+    "Political Figure",
+    "navy, ship, class",
+    "structure",
+    "Geographic Feature",
+    "Village",
+    "Creature",
+    "Plant",
+    "Album",
+    "Film",
+    "activity"
+   ]
+  },
+  {
+   "name": "all_19",
+   "pop": "all",
+   "labels": [
+    "Business",
+    "School",
+    "Artist",
+    "played, league, born",
+    "Political Figure",
+    "Vehicle",
+    "edifice",
+    "river, tributary, romania",
+    "small town",
+    "animal",
+    "Vegetation",
+    "album, released, band",
+    "product",
+    "published, book, novel"
+   ]
+  },
+  {
+   "name": "all_20",
+   "pop": "all",
+   "labels": [
+    "company",
+    "University",
+    "born, artist, singer",
+    "jock",
+    "politician, member, elected",
+    "mean of transportation",
+    "structure",
+    "a natural feature such as a mountain, river or lake",
+    "Hamlet",
+    "organism",
+    "a plant species",
+    "medium",
+    "Film",
+    "Script"
+   ]
+  },
+  {
+   "name": "all_21",
+   "pop": "all",
+   "labels": [
+    "Enterprise",
+    "a school, college or university",
+    "Artist",
+    "a person who competes in sports",
+    "office holder",
+    "Transport",
+    "Building",
+    "a natural feature such as a mountain, river or lake",
+    "community",
+    "Creature",
+    "Flora",
+    "a music album",
+    "film, directed, starring",
+    "published, book, novel"
+   ]
+  },
+  {
+   "name": "all_22",
+   "pop": "all",
+   "labels": [
+    "company, based, headquartered",
+    "establishment",
+    "born, artist, singer",
+    "athlete",
+    "bearer",
+    "navy, ship, class",
+    "a building or architectural structure",
+    "Natural Place",
+    "Settlement",
+    "animal",
+    "species, plant, genus",
+    "a music album",
+    "movie",
+    "a book, novel, journal or other written work"
+   ]
+  },
+  {
+   "name": "all_23",
+   "pop": "all",
+   "labels": [
+    "company, based, headquartered",
+    "Educational Institution",
+    "Person",
+    "athlete",
+    "Office Holder",
+    "navy, ship, class",
+    "building",
+    "point",
+    "Village",
+    "family, found, moth",
+    "Vegetation",
+    "album",
+    "film, directed, starring",
+    "Book"
+   ]
+  },
+  {
+   "name": "all_24",
+   "pop": "all",
+   "labels": [
+    "company",
+    "establishment",
+    "creator",
+    "jock",
+    "Office Holder",
+    "facility",
+    "Structure Building",
+    "river, tributary, romania",
+    "small town",
+    "Creature",
+    "Plant",
+    "album",
+    "Picture",
+    "written work"
+   ]
+  },
+  {
+   "name": "all_25",
+   "pop": "all",
+   "labels": [
+    "Enterprise",
+    "educational institution",
+    "artist",
+    "Sportsperson",
+    "a politician or person holding public office",
+    "facility",
+    "edifice",
+    "Mountain Range",
+    "community",
+    "Animal",
+    "Flora",
+    "album, released, band",
+    "film",
+    "Book"
+   ]
+  },
+  {
+   "name": "all_26",
+   "pop": "all",
+   "labels": [
+    "company, based, headquartered",
+    "school, high, students",
+    "Person",
+    "contestant",
+    "Office Holder",
+    "Vehicle",
+    "building",
+    "river, tributary, romania",
+    "community",
+    "Creature",
+    "Plant",
+    "album",
+    "product",
+    "published, book, novel"
+   ]
+  },
+  {
+   "name": "all_27",
+   "pop": "all",
+   "labels": [
+    "company",
+    "a school, college or university",
+    "artist",
+    "Player",
+    "Political Figure",
+    "Mean Of Transportation",
+    "historic, register, building",
+    "Geographic Feature",
+    "small town",
+    "an animal species",
+    "Flora",
+    "Record",
+    "film, directed, starring",
+    "published, book, novel"
+   ]
+  },
+  {
+   "name": "all_28",
+   "pop": "all",
+   "labels": [
+    "company",
+    "organization",
+    "a musician, painter, actor or other creative artist",
+    "Sportsperson",
+    "bearer",
+    "transportation system",
+    "a building or architectural structure",
+    "Natural Place",
+    "village",
+    "an animal species",
+    "a plant species",
+    "Record",
+    "Movie",
+    "Book"
+   ]
+  },
+  {
+   "name": "all_29",
+   "pop": "all",
+   "labels": [
+    "companionship",
+    "organization",
+    "born, artist, singer",
+    "a person who competes in sports",
+    "holding device",
+    "a vehicle, ship, aircraft or train",
+    "building",
+    "topographic point",
+    "a village or small rural settlement",
+    "Beast",
+    "Plant",
+    "Compilation",
+    "Movie",
+    "piece of work"
+   ]
+  },
+  {
+   "name": "homog_G1_surface",
+   "pop": "homog",
+   "labels": [
+    "company",
+    "educational institution",
+    "artist",
+    "athlete",
+    "office holder",
+    "mean of transportation",
+    "building",
+    "natural place",
+    "village",
+    "animal",
+    "plant",
+    "album",
+    "film",
+    "written work"
+   ]
+  },
+  {
+   "name": "homog_G2_wn_syn",
+   "pop": "homog",
+   "labels": [
+    "companionship",
+    "establishment",
+    "creative person",
+    "jock",
+    "bearer",
+    "transportation system",
+    "edifice",
+    "topographic point",
+    "small town",
+    "animate being",
+    "works",
+    "record album",
+    "movie",
+    "piece of work"
+   ]
+  },
+  {
+   "name": "homog_G3_wn_hyper",
+   "pop": "homog",
+   "labels": [
+    "institution",
+    "organization",
+    "creator",
+    "contestant",
+    "holding device",
+    "facility",
+    "structure",
+    "point",
+    "community",
+    "organism",
+    "building complex",
+    "medium",
+    "product",
+    "activity"
+   ]
+  },
+  {
+   "name": "homog_G4_keywords",
+   "pop": "homog",
+   "labels": [
+    "company, based, headquartered",
+    "school, high, students",
+    "born, artist, singer",
+    "played, league, born",
+    "politician, member, elected",
+    "navy, ship, class",
+    "historic, register, building",
+    "river, tributary, romania",
+    "village, population, district",
+    "family, found, moth",
+    "species, plant, genus",
+    "album, released, band",
+    "film, directed, starring",
+    "published, book, novel"
+   ]
+  },
+  {
+   "name": "homog_G5_definition",
+   "pop": "homog",
+   "labels": [
+    "a business organization or firm",
+    "a school, college or university",
+    "a musician, painter, actor or other creative artist",
+    "a person who competes in sports",
+    "a politician or person holding public office",
+    "a vehicle, ship, aircraft or train",
+    "a building or architectural structure",
+    "a natural feature such as a mountain, river or lake",
+    "a village or small rural settlement",
+    "an animal species",
+    "a plant species",
+    "a music album",
+    "a movie",
+    "a book, novel, journal or other written work"
+   ]
+  },
+  {
+   "name": "homog_G6_llm1",
+   "pop": "homog",
+   "labels": [
+    "Enterprise",
+    "School",
+    "Person",
+    "Sportsperson",
+    "Person in Office",
+    "Vehicle",
+    "Structure",
+    "Geographic Feature",
+    "Hamlet",
+    "Beast",
+    "Flora",
+    "Record",
+    "Movie",
+    "Book"
+   ]
+  },
+  {
+   "name": "homog_G7_llm2",
+   "pop": "homog",
+   "labels": [
+    "Business",
+    "University",
+    "Musician",
+    "Player",
+    "Political Figure",
+    "Transport",
+    "Structure Building",
+    "Mountain Range",
+    "Settlement",
+    "Creature",
+    "Vegetation",
+    "Compilation",
+    "Picture",
+    "Script"
+   ]
+  },
+  {
+   "name": "surface_00",
+   "pop": "surface",
+   "labels": [
+    "company",
+    "educational institution",
+    "Artist",
+    "Athlete",
+    "office holder",
+    "mean of transportation",
+    "building",
+    "natural place",
+    "village",
+    "animal",
+    "Plant",
+    "album",
+    "film",
+    "Written Work"
+   ]
+  },
+  {
+   "name": "surface_01",
+   "pop": "surface",
+   "labels": [
+    "Company",
+    "Educational Institution",
+    "Artist",
+    "Athlete",
+    "Office Holder",
+    "Mean Of Transportation",
+    "Building",
+    "Natural Place",
+    "Village",
+    "Animal",
+    "Plant",
+    "album",
+    "Film",
+    "Written Work"
+   ]
+  },
+  {
+   "name": "surface_02",
+   "pop": "surface",
+   "labels": [
+    "company",
+    "educational institution",
+    "artist",
+    "athlete",
+    "Office Holder",
+    "mean of transportation",
+    "building",
+    "natural place",
+    "Village",
+    "Animal",
+    "plant",
+    "album",
+    "film",
+    "Written Work"
+   ]
+  },
+  {
+   "name": "surface_03",
+   "pop": "surface",
+   "labels": [
+    "Company",
+    "Educational Institution",
+    "Artist",
+    "Athlete",
+    "office holder",
+    "mean of transportation",
+    "building",
+    "natural place",
+    "Village",
+    "animal",
+    "Plant",
+    "album",
+    "film",
+    "Written Work"
+   ]
+  },
+  {
+   "name": "surface_04",
+   "pop": "surface",
+   "labels": [
+    "Company",
+    "Educational Institution",
+    "Artist",
+    "Athlete",
+    "Office Holder",
+    "Mean Of Transportation",
+    "Building",
+    "Natural Place",
+    "Village",
+    "Animal",
+    "Plant",
+    "Album",
+    "Film",
+    "written work"
+   ]
+  },
+  {
+   "name": "surface_05",
+   "pop": "surface",
+   "labels": [
+    "Company",
+    "Educational Institution",
+    "Artist",
+    "Athlete",
+    "Office Holder",
+    "Mean Of Transportation",
+    "Building",
+    "natural place",
+    "village",
+    "Animal",
+    "plant",
+    "Album",
+    "Film",
+    "Written Work"
+   ]
+  },
+  {
+   "name": "surface_06",
+   "pop": "surface",
+   "labels": [
+    "company",
+    "educational institution",
+    "artist",
+    "athlete",
+    "Office Holder",
+    "Mean Of Transportation",
+    "building",
+    "natural place",
+    "village",
+    "animal",
+    "plant",
+    "Album",
+    "Film",
+    "written work"
+   ]
+  },
+  {
+   "name": "surface_07",
+   "pop": "surface",
+   "labels": [
+    "Company",
+    "educational institution",
+    "Artist",
+    "athlete",
+    "Office Holder",
+    "mean of transportation",
+    "building",
+    "Natural Place",
+    "village",
+    "Animal",
+    "plant",
+    "Album",
+    "Film",
+    "Written Work"
+   ]
+  },
+  {
+   "name": "surface_08",
+   "pop": "surface",
+   "labels": [
+    "company",
+    "Educational Institution",
+    "artist",
+    "Athlete",
+    "Office Holder",
+    "mean of transportation",
+    "building",
+    "natural place",
+    "village",
+    "animal",
+    "plant",
+    "Album",
+    "film",
+    "written work"
+   ]
+  },
+  {
+   "name": "surface_09",
+   "pop": "surface",
+   "labels": [
+    "company",
+    "Educational Institution",
+    "artist",
+    "athlete",
+    "office holder",
+    "Mean Of Transportation",
+    "building",
+    "Natural Place",
+    "village",
+    "animal",
+    "plant",
+    "album",
+    "film",
+    "Written Work"
+   ]
+  },
+  {
+   "name": "identity",
+   "pop": "identity",
+   "labels": [
+    "Company",
+    "Educational Institution",
+    "Artist",
+    "Athlete",
+    "Office Holder",
+    "Mean Of Transportation",
+    "Building",
+    "Natural Place",
+    "Village",
+    "Animal",
+    "Plant",
+    "Album",
+    "Film",
+    "Written Work"
+   ]
+  },
+  {
+   "name": "N1_nonsense",
+   "pop": "nonsense",
+   "labels": [
+    "nuzonu",
+    "zugevu",
+    "nuvedo",
+    "keduva",
+    "ronuse",
+    "razuda",
+    "begubo",
+    "lorepe",
+    "sinasa",
+    "nimuza",
+    "tilepi",
+    "barama",
+    "zimaba",
+    "gebomo"
+   ]
+  },
+  {
+   "name": "N2_nonsense",
+   "pop": "nonsense",
+   "labels": [
+    "febune",
+    "tativa",
+    "gibire",
+    "potara",
+    "rikoge",
+    "zarutu",
+    "birike",
+    "mivufi",
+    "zisema",
+    "luboku",
+    "kumose",
+    "kulora",
+    "kurupu",
+    "mumado"
+   ]
+  },
+  {
+   "name": "shuffled_0",
+   "pop": "shuffled",
+   "labels": [
+    "Athlete",
+    "Film",
+    "Village",
+    "Building",
+    "Natural Place",
+    "Company",
+    "Office Holder",
+    "Educational Institution",
+    "Written Work",
+    "Plant",
+    "Artist",
+    "Mean Of Transportation",
+    "Animal",
+    "Album"
+   ]
+  },
+  {
+   "name": "shuffled_1",
+   "pop": "shuffled",
+   "labels": [
+    "Village",
+    "Building",
+    "Plant",
+    "Office Holder",
+    "Written Work",
+    "Natural Place",
+    "Album",
+    "Athlete",
+    "Animal",
+    "Educational Institution",
+    "Film",
+    "Company",
+    "Artist",
+    "Mean Of Transportation"
+   ]
+  },
+  {
+   "name": "shuffled_2",
+   "pop": "shuffled",
+   "labels": [
+    "Natural Place",
+    "Athlete",
+    "Film",
+    "Animal",
+    "Company",
+    "Office Holder",
+    "Educational Institution",
+    "Plant",
+    "Building",
+    "Village",
+    "Artist",
+    "Written Work",
+    "Album",
+    "Mean Of Transportation"
+   ]
+  }
+ ]
+}

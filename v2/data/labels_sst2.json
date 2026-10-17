@@ -1,0 +1,285 @@
+{
+ "dataset": "sst2",
+ "classes_official": [
+  "negative",
+  "positive"
+ ],
+ "generators": {
+  "G0_official": [
+   "negative",
+   "positive"
+  ],
+  "G1_surface": [
+   "Negative",
+   "Positive"
+  ],
+  "G2_wn_syn": [
+   null,
+   "positive degree"
+  ],
+  "G3_wn_hyper": [
+   "denial",
+   "adverb"
+  ],
+  "G4_keywords": [
+   "bad, movie, seem",
+   "best, heart, keep"
+  ],
+  "G5_definition": [
+   "the reviewer expresses a negative opinion of the film",
+   "the reviewer expresses a positive opinion of the film"
+  ],
+  "G6_llm1": [
+   "Sad",
+   "Great"
+  ],
+  "G7_llm2": [
+   "Bad",
+   "Excellent"
+  ]
+ },
+ "variants": [
+  [
+   {
+    "text": "negative",
+    "cos_official": 1.0,
+    "max_cos_other_class": 0.6032294034957886,
+    "discriminable": true,
+    "entail_min": 0.9926006197929382,
+    "distance": 0.0,
+    "generators": [
+     "G0_official"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "Negative",
+    "cos_official": 1.0,
+    "max_cos_other_class": 0.6032294034957886,
+    "discriminable": true,
+    "entail_min": 0.990267813205719,
+    "distance": 0.0,
+    "generators": [
+     "G1_surface"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "denial",
+    "cos_official": 0.2734125256538391,
+    "max_cos_other_class": 0.25084298849105835,
+    "discriminable": true,
+    "entail_min": 0.7207186818122864,
+    "distance": 0.7265874743461609,
+    "generators": [
+     "G3_wn_hyper"
+    ],
+    "audit_reject": true,
+    "valid": false,
+    "strict": false
+   },
+   {
+    "text": "bad, movie, seem",
+    "cos_official": 0.27190691232681274,
+    "max_cos_other_class": 0.2424607276916504,
+    "discriminable": true,
+    "entail_min": 0.001088158693164587,
+    "distance": 0.7280930876731873,
+    "generators": [
+     "G4_keywords"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": false
+   },
+   {
+    "text": "the reviewer expresses a negative opinion of the film",
+    "cos_official": 0.2574043273925781,
+    "max_cos_other_class": 0.17589570581912994,
+    "discriminable": true,
+    "entail_min": 0.0020831269212067127,
+    "distance": 0.7425956726074219,
+    "generators": [
+     "G5_definition"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": false
+   },
+   {
+    "text": "Sad",
+    "cos_official": 0.4236113429069519,
+    "max_cos_other_class": 0.33775922656059265,
+    "discriminable": true,
+    "entail_min": 0.8078351020812988,
+    "distance": 0.5763886570930481,
+    "generators": [
+     "G6_llm1"
+    ],
+    "audit_reject": true,
+    "valid": false,
+    "strict": false
+   },
+   {
+    "text": "Bad",
+    "cos_official": 0.40699541568756104,
+    "max_cos_other_class": 0.4011971354484558,
+    "discriminable": true,
+    "entail_min": 0.9870314002037048,
+    "distance": 0.593004584312439,
+    "generators": [
+     "G7_llm2"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": false
+   }
+  ],
+  [
+   {
+    "text": "positive",
+    "cos_official": 1.0,
+    "max_cos_other_class": 0.6032294034957886,
+    "discriminable": true,
+    "entail_min": 0.9910564422607422,
+    "distance": 0.0,
+    "generators": [
+     "G0_official"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "Positive",
+    "cos_official": 1.0,
+    "max_cos_other_class": 0.6032294034957886,
+    "discriminable": true,
+    "entail_min": 0.9873307347297668,
+    "distance": 0.0,
+    "generators": [
+     "G1_surface"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": true
+   },
+   {
+    "text": "positive degree",
+    "cos_official": 0.41612663865089417,
+    "max_cos_other_class": 0.28321266174316406,
+    "discriminable": true,
+    "entail_min": 0.5533945560455322,
+    "distance": 0.5838733613491058,
+    "generators": [
+     "G2_wn_syn"
+    ],
+    "audit_reject": true,
+    "valid": false,
+    "strict": false
+   },
+   {
+    "text": "adverb",
+    "cos_official": 0.24630455672740936,
+    "max_cos_other_class": 0.193380206823349,
+    "discriminable": true,
+    "entail_min": 0.11166144162416458,
+    "distance": 0.7536954432725906,
+    "generators": [
+     "G3_wn_hyper"
+    ],
+    "audit_reject": true,
+    "valid": false,
+    "strict": false
+   },
+   {
+    "text": "best, heart, keep",
+    "cos_official": 0.19906765222549438,
+    "max_cos_other_class": 0.16183149814605713,
+    "discriminable": true,
+    "entail_min": 0.1408037692308426,
+    "distance": 0.8009323477745056,
+    "generators": [
+     "G4_keywords"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": false
+   },
+   {
+    "text": "the reviewer expresses a positive opinion of the film",
+    "cos_official": 0.28430837392807007,
+    "max_cos_other_class": 0.1927206814289093,
+    "discriminable": true,
+    "entail_min": 0.002145651262253523,
+    "distance": 0.7156916260719299,
+    "generators": [
+     "G5_definition"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": false
+   },
+   {
+    "text": "Great",
+    "cos_official": 0.4423733353614807,
+    "max_cos_other_class": 0.28781020641326904,
+    "discriminable": true,
+    "entail_min": 0.8820338845252991,
+    "distance": 0.5576266646385193,
+    "generators": [
+     "G6_llm1"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": false
+   },
+   {
+    "text": "Excellent",
+    "cos_official": 0.45057347416877747,
+    "max_cos_other_class": 0.2879711985588074,
+    "discriminable": true,
+    "entail_min": 0.760413646697998,
+    "distance": 0.5494265258312225,
+    "generators": [
+     "G7_llm2"
+    ],
+    "audit_reject": false,
+    "valid": true,
+    "strict": false
+   }
+  ]
+ ],
+ "controls": {
+  "N1_nonsense": [
+   "nuzonu",
+   "zugevu"
+  ],
+  "N2_nonsense": [
+   "febune",
+   "tativa"
+  ]
+ },
+ "shuffle_perms": [
+  [
+   1,
+   0
+  ]
+ ],
+ "llm_raw": [
+  "Sad\nBad\nPoor\nCritique\nDownsized",
+  "Great\nExcellent\nPositive\nGood\nAwesome"
+ ],
+ "llm_prompt": "A dataset of {genre}s is labelled by {facet} with these categories: {allc}. Give 5 alternative names for the category \"{name}\" that a person could use instead. Each alternative must be 1 to 4 words long and mean the same category. Output one per line, with no numbering and no explanations.",
+ "rule": "valid iff discriminable AND not audit-rejected; strict iff valid AND cos>=0.5; G0 valid+strict by definition",
+ "audit_reject": [
+  "denial",
+  "Sad",
+  "positive degree",
+  "adverb"
+ ]
+}
