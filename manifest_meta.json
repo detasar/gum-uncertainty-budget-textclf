@@ -1,0 +1,210 @@
+{
+ "title": "A GUM-style uncertainty budget for split-conformal text classification (AG News)",
+ "date_run": "2026-10-17",
+ "data": {
+  "dataset": "fancyzhx/ag_news (Hugging Face), parquet files data/train-00000-of-00001.parquet and data/test-00000-of-00001.parquet",
+  "dataset_revision_sha": "eb185aade064a813bc0b7f42de02595523103ca4",
+  "classes": [
+   "World",
+   "Sports",
+   "Business",
+   "Sci/Tech"
+  ],
+  "subsets": "prep_data.py, numpy default_rng(0): 2000 balanced train items; 2000 balanced test items split into a 1000 calibration pool and a 1000 test pool. Shared evaluation subset for every model = first 250 of the calibration pool and first 250 of the test pool (data/zs_set.json). Scaling test uses calibration pool items 0..499 (Clef only).",
+  "shift": "Synthetic covariate shift: each word dropped with p=level/2, remaining words >3 chars get an adjacent swap or deletion with p=level; seed 1000+item index. Levels 0, 0.15, 0.3, 0.45 (supervised); 0.3 for the shared comparison."
+ },
+ "models": {
+  "clef-flash-8bit": {
+   "hf_id": "mlx-community/clef-flash-8bit",
+   "base": "Cloudflare/clef-flash (Qwen3.5-9B backbone + joint schema head)",
+   "quantization": "MLX 8-bit backbone (group size 64), bf16 head",
+   "local_snapshot_folder": "dfa0993decb4f8507a0eae01afd1b2d33a4bb734",
+   "hub_sha_on_2026-10-17": "5a195dc147926b63b1d139691ed4480ca9f92c0e",
+   "loader": "clef_mlx.py shipped with the model repo; raw option logits via ClefMLX.logits()",
+   "sampling": "none (single forward pass, no generation)"
+  },
+  "qwen3.5:9b": {
+   "runtime": "Ollama 0.40.5",
+   "ollama_digest": "6488c96fa5fa",
+   "parameters": "9.7B",
+   "quantization": "Q4_K_M",
+   "model_defaults": {
+    "temperature": 1,
+    "top_k": 20,
+    "top_p": 0.95,
+    "presence_penalty": 1.5
+   }
+  },
+  "qwen38-q5-fast (Qwen3.8 27B)": {
+   "runtime": "Ollama 0.40.5",
+   "ollama_digest": "4f4b3fa5d39c",
+   "weights": "same GGUF blob as hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q5_K_S",
+   "parameters": "27.3B",
+   "quantization": "Q5_K_S (unsloth dynamic)",
+   "model_defaults": {
+    "temperature": 0.7,
+    "top_k": 20,
+    "top_p": 0.8,
+    "presence_penalty": 1.5
+   }
+  },
+  "embeddinggemma": {
+   "runtime": "Ollama 0.40.5 /api/embed",
+   "ollama_digest": "85462619ee72",
+   "reference_hf_id": "google/embeddinggemma-300m",
+   "precision": "BF16"
+  },
+  "all-MiniLM-L6-v2": {
+   "runtime": "fastembed 0.9.0 (ONNX)",
+   "onnx_repo": "Qdrant/all-MiniLM-L6-v2-onnx@d13954661f83248295ba75c1ed411eef3b7b936e",
+   "reference_hf_id": "sentence-transformers/all-MiniLM-L6-v2"
+  },
+  "bge-small-en-v1.5": {
+   "runtime": "fastembed 0.9.0 (ONNX, quantized)",
+   "onnx_repo": "Qdrant/bge-small-en-v1.5-onnx-Q@aa8f8b060edb00e03bfdd08813a2949946c8ba55",
+   "reference_hf_id": "BAAI/bge-small-en-v1.5"
+  },
+  "supervised_head": "sklearn MLPClassifier(hidden_layer_sizes=(64,), alpha=1e-3, max_iter=300) on StandardScaler'd embeddings; reference seed 0; seeds 1..15; 15 training bootstraps (seed 0).",
+  "not_run": {
+   "GLiNER2 (local DeBERTa-v3-large checkpoint, base fastino/gliner2-large-v1)": "package install (gliner2[local], torch) hung for >11 min on the Mac; dropped for time.",
+   "Clef 27B variants": "not available locally / not attempted.",
+   "PA_Score (Xin et al., arXiv:2610.04239)": "needs hidden-state access; the Clef loader and Ollama API expose only logits/logprobs. A paraphrase-ensemble analogue (mean probability over 4 wordings) is reported instead.",
+   "Qwen3.8-27B repeatability, shift and determinism runs": "skipped for runtime (~2.3 s/call)."
+  }
+ },
+ "prompts": {
+  "clef_schema": {
+   "state": "<article text>",
+   "questions": {
+    "topic": {
+     "type": "choice",
+     "instructions": "<question phrasing>",
+     "criteria": {
+      "A": "<wording[0]>",
+      "B": "<wording[1]>",
+      "C": "<wording[2]>",
+      "D": "<wording[3]>"
+     }
+    }
+   }
+  },
+  "clef_question_phrasings": {
+   "q0_topic": "What is the topic of this news article?",
+   "q1_section": "Which section of a newspaper would this article appear in?",
+   "q2_classify": "Classify the text into one category."
+  },
+  "llm_chat_message": "Classify the news article into exactly one topic.\n\nArticle: <text>\n\nTopics:\nA) <wording[0]>\nB) <wording[1]>\nC) <wording[2]>\nD) <wording[3]>\n\nAnswer with a single letter (A, B, C or D) and nothing else.",
+  "llm_request": {
+   "endpoint": "/api/chat",
+   "think": false,
+   "stream": false,
+   "logprobs": true,
+   "top_logprobs": 20,
+   "options_main_runs": {
+    "temperature": 0,
+    "seed": 42,
+    "num_predict": 1
+   },
+   "options_repeatability_default_mode": {
+    "seed": "1000+run",
+    "num_predict": 1,
+    "temperature": "model default"
+   }
+  },
+  "llm_probabilities": "First generated token: sum exp(logprob) of top-20 candidates whose stripped text is exactly A/B/C/D, renormalised over A-D (missing letters get 0; all-missing -> uniform).",
+  "label_wordings": {
+   "w0_official": [
+    "World",
+    "Sports",
+    "Business",
+    "Science/Technology"
+   ],
+   "w1_news": [
+    "world news",
+    "sports news",
+    "business news",
+    "science and technology news"
+   ],
+   "w2_topic": [
+    "international politics and conflicts",
+    "athletes, teams and games",
+    "companies, markets and the economy",
+    "computers, the internet and scientific research"
+   ],
+   "w3_short": [
+    "politics",
+    "sport",
+    "money",
+    "tech"
+   ]
+  },
+  "name_vs_definition_test": {
+   "definitions": "w2_topic texts for the 4 classes",
+   "names": [
+    "World",
+    "Sports",
+    "Business",
+    "Technology"
+   ],
+   "conditions": {
+    "neutral_ids_A-D": "option ids A-D carry definitions (main run w2_topic|q0)",
+    "matched": "option id = class name, criterion = that class's definition",
+    "swapped": "name of class c bound to the definition of class (c+1) mod 4"
+   },
+   "items": "250 test items",
+   "script": "mac/run_nameswap.py"
+  }
+ },
+ "conformal": {
+  "method": "split conformal, LAC score 1 - p(true class), alpha = 0.10, quantile level ceil((n+1)(1-alpha))/n with method='higher'; empty sets allowed"
+ },
+ "seeds": {
+  "data_split": 0,
+  "perturbation": "1000 + item index",
+  "budget_bootstraps": "numpy default_rng(12345)",
+  "mlp": "0 (reference), 1..15 (seed component)",
+  "ollama_main": 42,
+  "ollama_repeatability_default_mode": "1000..1003"
+ },
+ "hardware": {
+  "analysis_and_supervised": "Linux x86_64 VM, 8 vCPU, CPU only",
+  "clef_and_llms": "Apple Silicon M5, 32 GB unified memory, macOS 26"
+ },
+ "packages": {
+  "box": "requirements-box.txt",
+  "mac": "requirements-mac.txt",
+  "ollama": "0.40.5"
+ },
+ "regenerate": [
+  "pip install -r requirements-box.txt",
+  "python prep_data.py            # fixed subsets (seed 0) -> cache/supervised_set.json, cache/zs_set.json",
+  "python embed_box.py            # MiniLM + bge-small embeddings -> cache/emb_*.npz",
+  "cd mac && cp ../cache/zs_set.json ../cache/supervised_set.json . && mkdir -p out",
+  "python3 embed_gemma.py         # embeddinggemma via Ollama -> out/emb_embeddinggemma.npz",
+  "CLEF_DIR=<local snapshot of mlx-community/clef-flash-8bit> $MLX_PY run_clef.py; $MLX_PY run_clef_calx.py; $MLX_PY run_repeat_clef.py; $MLX_PY run_nameswap.py",
+  "python3 run_ollama.py qwen3.5:9b w0_official,w1_news,w2_topic,w3_short 1; python3 run_ollama.py qwen38-q5-fast:latest w0_official 1",
+  "python3 run_repeat_llm.py qwen3.5:9b w0_official 75 t0 4; ... default 4; ... w2_topic 25 t0 4   (see run_queue2.sh)",
+  "cp out/*.jsonl ../cache/mac/ && cp out/emb_embeddinggemma.npz ../cache/ && cd ..",
+  "python repeatability.py && python budget.py && python plots.py && python gen_tables.py > tables.md"
+ ],
+ "repeatability": {
+  "clef": "4 identical runs; w0_official|q0: 100 cal + 100 test items; other wordings: 10 + 10",
+  "qwen3.5_t0": "4 runs, temperature 0, seed 42; w0: 75+75 items, w2_topic: 25+25",
+  "qwen3.5_default": "4 runs, model default sampling (temperature 1, top_k 20, top_p 0.95, presence_penalty 1.5), seeds 1000..1003; w0: 75+75",
+  "ollama_request": "/api/chat, think=false, num_predict=1, logprobs=true, top_logprobs=20; probabilities = renormalised sum of exp(logprob) over tokens equal to A/B/C/D after stripping",
+  "cross_session": "main run (separate process) vs repeatability run 0"
+ },
+ "scaling": {
+  "pool": "500 calibration items (250 shared + 250 extra, Clef only, 4 wordings, q0)",
+  "n_grid": [
+   25,
+   50,
+   100,
+   200,
+   400,
+   500
+  ],
+  "draws": 300,
+  "sampling": "bootstrap with replacement from the pool; same indices for all wordings (paired); fixed 250-item test set"
+ }
+}

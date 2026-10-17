@@ -1,0 +1,21 @@
+Sat Oct 17 08:40:10 +03 2026
+{'train': (2000, 768), 'cal': (1000, 768), 'test_0.0': (1000, 768), 'test_0.15': (1000, 768), 'test_0.3': (1000, 768), 'test_0.45': (1000, 768)}
+GEMMA DONE
+Sat Oct 17 08:43:24 +03 2026
+w0_official|q0_topic 100
+w1_news|q0_topic 284
+w2_topic|q0_topic 485
+w3_short|q0_topic 672
+w0_official|q1_section 868
+w0_official|q2_classify 1062
+shift w0_official 1154
+shift w1_news 1247
+shift w2_topic 1345
+shift w3_short 1437
+CLEF DONE 1437
+Sat Oct 17 09:07:25 +03 2026
+qwen3.5:9b w0_official 166
+qwen3.5:9b w1_news 321
+qwen3.5:9b w2_topic 499
+qwen3.5:9b w3_short 648
+LLM DONE qwen3.5:9b 721

@@ -1,0 +1,416 @@
+{
+  "title": "A GUM-style uncertainty budget for split-conformal text classification (AG News)",
+  "date_run": "2026-10-17",
+  "data": {
+    "dataset": "fancyzhx/ag_news (Hugging Face), parquet files data/train-00000-of-00001.parquet and data/test-00000-of-00001.parquet",
+    "dataset_revision_sha": "eb185aade064a813bc0b7f42de02595523103ca4",
+    "classes": [
+      "World",
+      "Sports",
+      "Business",
+      "Sci/Tech"
+    ],
+    "subsets": "prep_data.py, numpy default_rng(0): 2000 balanced train items; 2000 balanced test items split into a 1000 calibration pool and a 1000 test pool. Shared evaluation subset for every model = first 250 of the calibration pool and first 250 of the test pool (data/zs_set.json). Scaling test uses calibration pool items 0..499 (Clef only).",
+    "shift": "Synthetic covariate shift: each word dropped with p=level/2, remaining words >3 chars get an adjacent swap or deletion with p=level; seed 1000+item index. Levels 0, 0.15, 0.3, 0.45 (supervised); 0.3 for the shared comparison."
+  },
+  "models": {
+    "clef-flash-8bit": {
+      "hf_id": "mlx-community/clef-flash-8bit",
+      "base": "Cloudflare/clef-flash (Qwen3.5-9B backbone + joint schema head)",
+      "quantization": "MLX 8-bit backbone (group size 64), bf16 head",
+      "local_snapshot_folder": "dfa0993decb4f8507a0eae01afd1b2d33a4bb734",
+      "hub_sha_on_2026-10-17": "5a195dc147926b63b1d139691ed4480ca9f92c0e",
+      "loader": "clef_mlx.py shipped with the model repo; raw option logits via ClefMLX.logits()",
+      "sampling": "none (single forward pass, no generation)"
+    },
+    "qwen3.5:9b": {
+      "runtime": "Ollama 0.40.5",
+      "ollama_digest": "6488c96fa5fa",
+      "parameters": "9.7B",
+      "quantization": "Q4_K_M",
+      "model_defaults": {
+        "temperature": 1,
+        "top_k": 20,
+        "top_p": 0.95,
+        "presence_penalty": 1.5
+      }
+    },
+    "qwen38-q5-fast (Qwen3.8 27B)": {
+      "runtime": "Ollama 0.40.5",
+      "ollama_digest": "4f4b3fa5d39c",
+      "weights": "same GGUF blob as hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q5_K_S",
+      "parameters": "27.3B",
+      "quantization": "Q5_K_S (unsloth dynamic)",
+      "model_defaults": {
+        "temperature": 0.7,
+        "top_k": 20,
+        "top_p": 0.8,
+        "presence_penalty": 1.5
+      }
+    },
+    "embeddinggemma": {
+      "runtime": "Ollama 0.40.5 /api/embed",
+      "ollama_digest": "85462619ee72",
+      "reference_hf_id": "google/embeddinggemma-300m",
+      "precision": "BF16"
+    },
+    "all-MiniLM-L6-v2": {
+      "runtime": "fastembed 0.9.0 (ONNX)",
+      "onnx_repo": "Qdrant/all-MiniLM-L6-v2-onnx@d13954661f83248295ba75c1ed411eef3b7b936e",
+      "reference_hf_id": "sentence-transformers/all-MiniLM-L6-v2"
+    },
+    "bge-small-en-v1.5": {
+      "runtime": "fastembed 0.9.0 (ONNX, quantized)",
+      "onnx_repo": "Qdrant/bge-small-en-v1.5-onnx-Q@aa8f8b060edb00e03bfdd08813a2949946c8ba55",
+      "reference_hf_id": "BAAI/bge-small-en-v1.5"
+    },
+    "supervised_head": "sklearn MLPClassifier(hidden_layer_sizes=(64,), alpha=1e-3, max_iter=300) on StandardScaler'd embeddings; reference seed 0; seeds 1..15; 15 training bootstraps (seed 0).",
+    "not_run": {
+      "GLiNER2 (local DeBERTa-v3-large checkpoint, base fastino/gliner2-large-v1)": "package install (gliner2[local], torch) hung for >11 min on the Mac; dropped for time.",
+      "Clef 27B variants": "not available locally / not attempted.",
+      "PA_Score (Xin et al., arXiv:2610.04239)": "needs hidden-state access; the Clef loader and Ollama API expose only logits/logprobs. A paraphrase-ensemble analogue (mean probability over 4 wordings) is reported instead.",
+      "Qwen3.8-27B repeatability, shift and determinism runs": "skipped for runtime (~2.3 s/call)."
+    }
+  },
+  "prompts": {
+    "clef_schema": {
+      "state": "<article text>",
+      "questions": {
+        "topic": {
+          "type": "choice",
+          "instructions": "<question phrasing>",
+          "criteria": {
+            "A": "<wording[0]>",
+            "B": "<wording[1]>",
+            "C": "<wording[2]>",
+            "D": "<wording[3]>"
+          }
+        }
+      }
+    },
+    "clef_question_phrasings": {
+      "q0_topic": "What is the topic of this news article?",
+      "q1_section": "Which section of a newspaper would this article appear in?",
+      "q2_classify": "Classify the text into one category."
+    },
+    "llm_chat_message": "Classify the news article into exactly one topic.\n\nArticle: <text>\n\nTopics:\nA) <wording[0]>\nB) <wording[1]>\nC) <wording[2]>\nD) <wording[3]>\n\nAnswer with a single letter (A, B, C or D) and nothing else.",
+    "llm_request": {
+      "endpoint": "/api/chat",
+      "think": false,
+      "stream": false,
+      "logprobs": true,
+      "top_logprobs": 20,
+      "options_main_runs": {
+        "temperature": 0,
+        "seed": 42,
+        "num_predict": 1
+      },
+      "options_repeatability_default_mode": {
+        "seed": "1000+run",
+        "num_predict": 1,
+        "temperature": "model default"
+      }
+    },
+    "llm_probabilities": "First generated token: sum exp(logprob) of top-20 candidates whose stripped text is exactly A/B/C/D, renormalised over A-D (missing letters get 0; all-missing -> uniform).",
+    "label_wordings": {
+      "w0_official": [
+        "World",
+        "Sports",
+        "Business",
+        "Science/Technology"
+      ],
+      "w1_news": [
+        "world news",
+        "sports news",
+        "business news",
+        "science and technology news"
+      ],
+      "w2_topic": [
+        "international politics and conflicts",
+        "athletes, teams and games",
+        "companies, markets and the economy",
+        "computers, the internet and scientific research"
+      ],
+      "w3_short": [
+        "politics",
+        "sport",
+        "money",
+        "tech"
+      ]
+    },
+    "name_vs_definition_test": {
+      "definitions": "w2_topic texts for the 4 classes",
+      "names": [
+        "World",
+        "Sports",
+        "Business",
+        "Technology"
+      ],
+      "conditions": {
+        "neutral_ids_A-D": "option ids A-D carry definitions (main run w2_topic|q0)",
+        "matched": "option id = class name, criterion = that class's definition",
+        "swapped": "name of class c bound to the definition of class (c+1) mod 4"
+      },
+      "items": "250 test items",
+      "script": "mac/run_nameswap.py"
+    }
+  },
+  "conformal": {
+    "method": "split conformal, LAC score 1 - p(true class), alpha = 0.10, quantile level ceil((n+1)(1-alpha))/n with method='higher'; empty sets allowed"
+  },
+  "seeds": {
+    "data_split": 0,
+    "perturbation": "1000 + item index",
+    "budget_bootstraps": "numpy default_rng(12345)",
+    "mlp": "0 (reference), 1..15 (seed component)",
+    "ollama_main": 42,
+    "ollama_repeatability_default_mode": "1000..1003"
+  },
+  "hardware": {
+    "analysis_and_supervised": "Linux x86_64 VM, 8 vCPU, CPU only",
+    "clef_and_llms": "Apple Silicon M5, 32 GB unified memory, macOS 26"
+  },
+  "packages": {
+    "box": "requirements-box.txt",
+    "mac": "requirements-mac.txt",
+    "ollama": "0.40.5"
+  },
+  "regenerate": [
+    "pip install -r requirements-box.txt",
+    "python prep_data.py            # fixed subsets (seed 0) -> cache/supervised_set.json, cache/zs_set.json",
+    "python embed_box.py            # MiniLM + bge-small embeddings -> cache/emb_*.npz",
+    "cd mac && cp ../cache/zs_set.json ../cache/supervised_set.json . && mkdir -p out",
+    "python3 embed_gemma.py         # embeddinggemma via Ollama -> out/emb_embeddinggemma.npz",
+    "CLEF_DIR=<local snapshot of mlx-community/clef-flash-8bit> $MLX_PY run_clef.py; $MLX_PY run_clef_calx.py; $MLX_PY run_repeat_clef.py; $MLX_PY run_nameswap.py",
+    "python3 run_ollama.py qwen3.5:9b w0_official,w1_news,w2_topic,w3_short 1; python3 run_ollama.py qwen38-q5-fast:latest w0_official 1",
+    "python3 run_repeat_llm.py qwen3.5:9b w0_official 75 t0 4; ... default 4; ... w2_topic 25 t0 4   (see run_queue2.sh)",
+    "cp out/*.jsonl ../cache/mac/ && cp out/emb_embeddinggemma.npz ../cache/ && cd ..",
+    "python repeatability.py && python budget.py && python plots.py && python gen_tables.py > tables.md"
+  ],
+  "repeatability": {
+    "clef": "4 identical runs; w0_official|q0: 100 cal + 100 test items; other wordings: 10 + 10",
+    "qwen3.5_t0": "4 runs, temperature 0, seed 42; w0: 75+75 items, w2_topic: 25+25",
+    "qwen3.5_default": "4 runs, model default sampling (temperature 1, top_k 20, top_p 0.95, presence_penalty 1.5), seeds 1000..1003; w0: 75+75",
+    "ollama_request": "/api/chat, think=false, num_predict=1, logprobs=true, top_logprobs=20; probabilities = renormalised sum of exp(logprob) over tokens equal to A/B/C/D after stripping",
+    "cross_session": "main run (separate process) vs repeatability run 0"
+  },
+  "scaling": {
+    "pool": "500 calibration items (250 shared + 250 extra, Clef only, 4 wordings, q0)",
+    "n_grid": [
+      25,
+      50,
+      100,
+      200,
+      400,
+      500
+    ],
+    "draws": 300,
+    "sampling": "bootstrap with replacement from the pool; same indices for all wordings (paired); fixed 250-item test set"
+  },
+  "files": {
+    ".gitignore": {
+      "bytes": 62,
+      "sha256": "57fc48b7c85b2cae413157aeacd363fd7e22df3b19dd4dc380fa660389df4f6b"
+    },
+    "EXPERIMENT.md": {
+      "bytes": 31563,
+      "sha256": "1a70782d1ee3a041bc52d2b4ebfe241bfadc8355f8e12b0edee3d861a1fe01ce"
+    },
+    "LICENSE": {
+      "bytes": 1087,
+      "sha256": "bb7a48178d4a48bc792cbe1d0fcd5f45a515627cece4786dd7b7fdec3cca13d6"
+    },
+    "README.md": {
+      "bytes": 13677,
+      "sha256": "cc7fd13fe0e48631bbdb5a5a87412922eeb14fd1b8a4af28adb1d69d22ba5dc4"
+    },
+    "budget.py": {
+      "bytes": 28464,
+      "sha256": "95ec321dd34983fb4e026257ef92e2bffe8832bd532042e8614f3fd88822075d"
+    },
+    "budget_bar.png": {
+      "bytes": 239419,
+      "sha256": "657d0a8f27454670c52c6cbefa17b88d0644ba57189f80d479aa9f1434f11f1e"
+    },
+    "cache/mac/clef_logits.jsonl": {
+      "bytes": 563079,
+      "sha256": "68fc74cbdd4c59854e99756513ab941f6cce6ab7fbf3ced425500298dd677046"
+    },
+    "cache/mac/clef_logits_calx.jsonl": {
+      "bytes": 116072,
+      "sha256": "b5f594195071ce51bf9fc29e04e83ea099bef6644ffd3a32c98afc784c3865d2"
+    },
+    "cache/mac/clef_nameswap.jsonl": {
+      "bytes": 89204,
+      "sha256": "f9e3e392e2ffe040439dfe9306afa49305c1258ab6d3084a4d81e9d8513914b6"
+    },
+    "cache/mac/llm_qwen3.5.jsonl": {
+      "bytes": 434183,
+      "sha256": "3e6c17eff9a066ea8deb224af7d764df2a88f672b5f0c611e138672acd342269"
+    },
+    "cache/mac/llm_qwen38-q5-fast.jsonl": {
+      "bytes": 95063,
+      "sha256": "ba97c4300066d57f907d4502e8b2a37e64540fd8b371476ef7685a9beebaa5ac"
+    },
+    "cache/mac/logs/clef_later.log": {
+      "bytes": 484,
+      "sha256": "bb0c1f77c4eb447efc63fd5bbdb48b4849632cd348603a6018771a9a6d660cbe"
+    },
+    "cache/mac/logs/clef_phase2.log": {
+      "bytes": 170,
+      "sha256": "3e27dfa62b5682bb1e7df53d28a69bf5961b900b221f0a3270176c325c4b4a67"
+    },
+    "cache/mac/logs/nameswap.log": {
+      "bytes": 48,
+      "sha256": "8861c1f549a6c51e8a000d2b59ce959b4acf5dfdfb47c065190640c2845cafb3"
+    },
+    "cache/mac/logs/run_after.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "cache/mac/logs/run_all.log": {
+      "bytes": 608,
+      "sha256": "ef241b47bbfae6eee11b4788add33d65111b17af2513ff6360f06031aa4e1a80"
+    },
+    "cache/mac/logs/run_queue2.log": {
+      "bytes": 771,
+      "sha256": "7de950cd75f721724e19831b4c47c19141e2bca17ecc7b9fdb50eea475698780"
+    },
+    "cache/mac/rep_clef.jsonl": {
+      "bytes": 110320,
+      "sha256": "9033889c1c1e800d893a43c4139fdc39eb0211f1533e16423f643cab28b779c2"
+    },
+    "cache/mac/rep_llm_qwen3.5.jsonl": {
+      "bytes": 331812,
+      "sha256": "9b11c390234124c54d85620a9598c34bdc8f92fb19d9569efd2ad1d2cf1741dc"
+    },
+    "cache/supervised_set.json": {
+      "bytes": 1568051,
+      "sha256": "0656d02fc5637d0958e2f3cddb362ee4e16c4930c15ce7b59a9f0fd0b77c995a"
+    },
+    "cache/zs_set.json": {
+      "bytes": 171657,
+      "sha256": "2a8fb83a13b761a969b4eaf5f6f1db745abcfd3658496589246da5351b158357"
+    },
+    "common.py": {
+      "bytes": 1862,
+      "sha256": "8ad1f068ec3652db777b2bc43e3a9299ec22ac8487154a9c1425dcaf44028f59"
+    },
+    "coverage_setsize.png": {
+      "bytes": 103887,
+      "sha256": "ce6e42ea014515dd356505af0dacaa35356902d59c983d01b90299c4a00287c9"
+    },
+    "embed_box.py": {
+      "bytes": 695,
+      "sha256": "e9aed5cf94a828e5c5ee6cf6723fb9e70643b8fcc9619511bc948fcc41cac6b0"
+    },
+    "gen_tables.py": {
+      "bytes": 7268,
+      "sha256": "27e2339a54ebd404e94bc50bbdf24c2f081d9c0706ac04bede7c905dc3acab17"
+    },
+    "lit-review.md": {
+      "bytes": 18433,
+      "sha256": "d9997ca8184186d45e60c899dc91a2682bc81b416072250bc11a4d010ddc171c"
+    },
+    "mac/embed_gemma.py": {
+      "bytes": 847,
+      "sha256": "cc95eefbc728b888f6aa370afdce618e583ff83b0f1dc0ca42d2ae01754fb5d5"
+    },
+    "mac/run_after.sh": {
+      "bytes": 176,
+      "sha256": "9da29e9fddbbe08a5f9a6afb3e777b767db0e8ab20151bafbb4741edce908185"
+    },
+    "mac/run_all.sh": {
+      "bytes": 419,
+      "sha256": "959f15da8f953377ca82a207263017770f02345baeaea525117816ec87821d00"
+    },
+    "mac/run_clef.py": {
+      "bytes": 2332,
+      "sha256": "1daf1a097ea7c9975a7c5e901968782110c2eb61643c805ec42ff9f49928bbea"
+    },
+    "mac/run_clef_calx.py": {
+      "bytes": 1202,
+      "sha256": "0929cf7b9f10d500ac946e06e6f0cc68b7b09623c5b35a6200d439842792f860"
+    },
+    "mac/run_clef_later.sh": {
+      "bytes": 327,
+      "sha256": "ae674294a2b51971cae951586fc8ef960c1e5f9e558f05b5927151548c21fd89"
+    },
+    "mac/run_nameswap.py": {
+      "bytes": 1792,
+      "sha256": "4f4bd0ba2b240f29b672f0762bc241e17b3e6862f11248f39eedb9289f4fa6ed"
+    },
+    "mac/run_nameswap_after.sh": {
+      "bytes": 196,
+      "sha256": "dd1110ba97ef2aac5aaa01714d3ecb104c71655dfded4fdef9f354683092d250"
+    },
+    "mac/run_ollama.py": {
+      "bytes": 2417,
+      "sha256": "95091b45df3cb23e5820c91506fdedcb29f06eddf1836490349ce4f6a25ba0b2"
+    },
+    "mac/run_queue2.sh": {
+      "bytes": 927,
+      "sha256": "73123572534ee0d1400a73d6cea5863e177f357f5acb40ae8d7b709144a8741e"
+    },
+    "mac/run_repeat_clef.py": {
+      "bytes": 1429,
+      "sha256": "921fae0824aae02342d6269ffa4011cf84dcb28902a2bb36ce6acece2531b55b"
+    },
+    "mac/run_repeat_llm.py": {
+      "bytes": 2576,
+      "sha256": "d8a509a0a8311454458a780fe1869220527b22248c9bf632d24252749b1b98be"
+    },
+    "make_repo.py": {
+      "bytes": 1884,
+      "sha256": "e097c9351a65fd59151143be8bf57ff898cb8b9f6ffc8eb3257ae60ba957c1cf"
+    },
+    "manifest_meta.json": {
+      "bytes": 8546,
+      "sha256": "67f2979055dc093b94fc4e4d7b54a6778c425ef7a86fd5999b27299c47416122"
+    },
+    "plots.py": {
+      "bytes": 4487,
+      "sha256": "008d95aa261e30c536eba7eda1219720710b4c7bf6a57175d6e2ba64db9035eb"
+    },
+    "prep_data.py": {
+      "bytes": 1619,
+      "sha256": "77eed54cc0d82ee7db96e8fd23dde43c9a3ae61647ba381ef410a6996fbbba28"
+    },
+    "raw_supervised_probs.npz": {
+      "bytes": 36602,
+      "sha256": "4ec4e0911f6c7f5887acf5a9b880348c9ea1a44cccfc8eb43a2dea6e206ae613"
+    },
+    "repeatability.json": {
+      "bytes": 7820,
+      "sha256": "7c81878bdec5039f117bd0ada44dded1fd74369fc4d77da4daaaf8fa0d87a88d"
+    },
+    "repeatability.py": {
+      "bytes": 9640,
+      "sha256": "8c4fe0eb903d0f6ed15f7af739cc1d6ea4d1a8319e18b6ef747544ba8e596f3e"
+    },
+    "requirements-box.txt": {
+      "bytes": 224,
+      "sha256": "b8ad96a7a1ca72d1d51603e488001c717d1a74612b9ec95aa1c51aa84f316a6e"
+    },
+    "requirements-mac.txt": {
+      "bytes": 274,
+      "sha256": "1a40a37d45cc99df8a665e8d643e6e132a6021428649ee86617ff1c817e65eb5"
+    },
+    "results.json": {
+      "bytes": 29295,
+      "sha256": "0debfea62909242d284320f328a244fb1e2f3cd104ca6bbe66b893c0477bbad2"
+    },
+    "saturation.png": {
+      "bytes": 35553,
+      "sha256": "6ed157742261858ddef71bf4c87a119ad54d197a592ae3665d23128c0aaf43f6"
+    },
+    "scaling.png": {
+      "bytes": 84231,
+      "sha256": "19fd5e105a6e970f34e99247e63475878974d22057beec4431f0f93590875d34"
+    },
+    "tables.md": {
+      "bytes": 11099,
+      "sha256": "3fa64c7a50637ca7f874bd6a63755a93034be2207c4c7afc47513950ea61f774"
+    }
+  }
+}

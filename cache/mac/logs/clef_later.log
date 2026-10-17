@@ -1,0 +1,25 @@
+Sat Oct 17 09:50:01 +03 2026
+clef rep w0_official 0
+clef rep w0_official 1
+clef rep w0_official 2
+clef rep w0_official 3
+clef rep w1_news 0
+clef rep w1_news 1
+clef rep w1_news 2
+clef rep w1_news 3
+clef rep w2_topic 0
+clef rep w2_topic 1
+clef rep w2_topic 2
+clef rep w2_topic 3
+clef rep w3_short 0
+clef rep w3_short 1
+clef rep w3_short 2
+clef rep w3_short 3
+CLEF REP DONE
+calx w0_official
+calx w1_news
+calx w2_topic
+calx w3_short
+CALX DONE
+Sat Oct 17 10:02:07 +03 2026
+CLEF LATER DONE

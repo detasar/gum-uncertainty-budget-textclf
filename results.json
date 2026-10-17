@@ -1,0 +1,912 @@
+{
+  "alpha": 0.1,
+  "n_cal_pool": 250,
+  "n_test": 250,
+  "n_train": 2000,
+  "determinism": {
+    "clef-flash-8bit (logits)": {
+      "n_texts": 50,
+      "n_repeat_pairs": 100,
+      "max_abs_diff": 0.0
+    },
+    "qwen3.5 (A-D probs)": {
+      "n_texts": 30,
+      "n_repeat_pairs": 60,
+      "max_abs_diff": 0.0
+    },
+    "qwen38-q5-fast (A-D probs)": null
+  },
+  "budgets": {
+    "A_supervised_minilm": {
+      "reference": "minilm+MLP",
+      "reference_metrics": {
+        "set_size": 1.132,
+        "coverage": 0.88,
+        "accuracy": 0.832
+      },
+      "components": [
+        {
+          "component": "calibration-set sampling (n=250)",
+          "type": "A (bootstrap)",
+          "u_set_size": 0.14565862067786367,
+          "u_coverage": 0.03398185607853908,
+          "n_levels": 1000,
+          "note": "Bootstrap of the calibration set.",
+          "share_var_set_size": 0.7059682048077183,
+          "share_var_coverage": 0.5237199789692305
+        },
+        {
+          "component": "test-set sampling (n=250)",
+          "type": "A (bootstrap)",
+          "u_set_size": 0.023973633832173127,
+          "u_coverage": 0.02119253235051036,
+          "n_levels": 1000,
+          "note": "Finite evaluation sample.",
+          "share_var_set_size": 0.01912407733242389,
+          "share_var_coverage": 0.20369044590518667
+        },
+        {
+          "component": "random seed (MLP init/order)",
+          "type": "A (repeat)",
+          "u_set_size": 0.05810728992869258,
+          "u_coverage": 0.015358571362132442,
+          "n_levels": 15,
+          "note": "15 refits, same data.",
+          "share_var_set_size": 0.11235023815593949,
+          "share_var_coverage": 0.10698098427137717
+        },
+        {
+          "component": "training-data sampling (bootstrap, n=2000)",
+          "type": "A (bootstrap)",
+          "u_set_size": 0.06209669878504013,
+          "u_coverage": 0.018590320061795618,
+          "n_levels": 15,
+          "note": "15 refits on bootstrap resamples.",
+          "share_var_set_size": 0.12830683168769996,
+          "share_var_coverage": 0.15673958160690138
+        },
+        {
+          "component": "model choice within class (3 embedders)",
+          "type": "B (discrete uniform over alternatives)",
+          "u_set_size": 0.02993325909419146,
+          "u_coverage": 0.0037712361663282566,
+          "n_levels": 3,
+          "note": "minilm / bge-small / embeddinggemma, same head.",
+          "levels": {
+            "minilm": {
+              "set_size": 1.132,
+              "coverage": 0.88,
+              "accuracy": 0.832
+            },
+            "bgesmall": {
+              "set_size": 1.06,
+              "coverage": 0.888,
+              "accuracy": 0.868
+            },
+            "embeddinggemma": {
+              "set_size": 1.084,
+              "coverage": 0.888,
+              "accuracy": 0.852
+            }
+          },
+          "share_var_set_size": 0.029814035578884464,
+          "share_var_coverage": 0.0064501885434938835
+        },
+        {
+          "component": "distribution shift (word drop + typos, level 0.3)",
+          "type": "B (rectangular, half-width = abs(shift effect))",
+          "u_set_size": 0.011547005383792526,
+          "u_coverage": 0.0023094010767585054,
+          "n_levels": 2,
+          "delta_set_size": 0.020000000000000018,
+          "delta_coverage": -0.0040000000000000036,
+          "note": "Uncorrected systematic effect; assumes the actual shift lies anywhere between none and the tested level.",
+          "share_var_set_size": 0.004436612437334027,
+          "share_var_coverage": 0.002418820703810207
+        }
+      ],
+      "u_c_set_size": 0.17335789388743553,
+      "u_c_coverage": 0.0469566953672343
+    },
+    "B_zeroshot_clef": {
+      "reference": "clef-flash-8bit, w0_official|q0_topic",
+      "reference_metrics": {
+        "set_size": 0.984,
+        "coverage": 0.86,
+        "accuracy": 0.868
+      },
+      "components": [
+        {
+          "component": "run-to-run repeatability (identical runs)",
+          "type": "A (repeat, >=4 identical runs)",
+          "u_set_size": 0.0,
+          "u_coverage": 0.0,
+          "n_levels": 4,
+          "in_rss": true,
+          "note": "4 runs x 200 items (half cal / half test); max |dp| = 0; items with changed conformal set = 0.0%",
+          "share_var_set_size": 0.0,
+          "share_var_coverage": 0.0
+        },
+        {
+          "component": "calibration-set sampling (n=250)",
+          "type": "A (bootstrap)",
+          "u_set_size": 0.06558128581424012,
+          "u_coverage": 0.033944369728074755,
+          "n_levels": 1000,
+          "note": "Bootstrap of the calibration set.",
+          "share_var_set_size": 0.6357648620347189,
+          "share_var_coverage": 0.6005120697379712
+        },
+        {
+          "component": "test-set sampling (n=250)",
+          "type": "A (bootstrap)",
+          "u_set_size": 0.007811873101975062,
+          "u_coverage": 0.022349704366843106,
+          "n_levels": 1000,
+          "note": "Finite evaluation sample.",
+          "share_var_set_size": 0.009020840963485858,
+          "share_var_coverage": 0.26033335062733715
+        },
+        {
+          "component": "label/option wording (4 paraphrase sets)",
+          "type": "B (discrete uniform over alternatives)",
+          "u_set_size": 0.046679760067935235,
+          "u_coverage": 0.0076811457478686155,
+          "n_levels": 4,
+          "note": "Same question, 4 verbalizer sets; each recalibrated.",
+          "levels": {
+            "w0_official": {
+              "set_size": 0.984,
+              "coverage": 0.86,
+              "accuracy": 0.868
+            },
+            "w1_news": {
+              "set_size": 0.964,
+              "coverage": 0.852,
+              "accuracy": 0.868
+            },
+            "w2_topic": {
+              "set_size": 0.928,
+              "coverage": 0.844,
+              "accuracy": 0.896
+            },
+            "w3_short": {
+              "set_size": 1.056,
+              "coverage": 0.864,
+              "accuracy": 0.844
+            }
+          },
+          "share_var_set_size": 0.32210235254553116,
+          "share_var_coverage": 0.03074951385186067
+        },
+        {
+          "component": "question phrasing (3 instructions)",
+          "type": "B (discrete uniform over alternatives)",
+          "u_set_size": 0.011775681155103806,
+          "u_coverage": 0.008640987597877155,
+          "n_levels": 3,
+          "note": "Same options, 3 instructions; each recalibrated.",
+          "levels": {
+            "q0_topic": {
+              "set_size": 0.984,
+              "coverage": 0.86,
+              "accuracy": 0.868
+            },
+            "q1_section": {
+              "set_size": 0.992,
+              "coverage": 0.876,
+              "accuracy": 0.88
+            },
+            "q2_classify": {
+              "set_size": 1.012,
+              "coverage": 0.88,
+              "accuracy": 0.876
+            }
+          },
+          "share_var_set_size": 0.02049787037768719,
+          "share_var_coverage": 0.03891463899896492
+        },
+        {
+          "component": "model choice within class (deterministic schema classifiers)",
+          "type": "B",
+          "u_set_size": 0.0,
+          "u_coverage": 0.0,
+          "n_levels": 1,
+          "in_rss": false,
+          "note": "NOT EVALUATED: only one model of this instrument type was run (GLiNER2 install failed). Not zero, unknown.",
+          "share_var_set_size": 0.0,
+          "share_var_coverage": 0.0
+        },
+        {
+          "component": "distribution shift (word drop + typos, level 0.3)",
+          "type": "B (rectangular, half-width = abs(shift effect))",
+          "u_set_size": 0.009237604307034021,
+          "u_coverage": 0.011547005383792526,
+          "n_levels": 2,
+          "delta_set_size": 0.016000000000000014,
+          "delta_coverage": 0.020000000000000018,
+          "note": "Uncorrected systematic effect; assumes the actual shift lies anywhere between none and the tested level.",
+          "share_var_set_size": 0.012614074078576735,
+          "share_var_coverage": 0.06949042678386592
+        }
+      ],
+      "u_c_set_size": 0.08224919701985191,
+      "u_c_coverage": 0.04380330491551436
+    },
+    "C_zeroshot_qwen3.5_9b": {
+      "reference": "qwen3.5, w0_official, temperature 0",
+      "reference_metrics": {
+        "set_size": 1.0,
+        "coverage": 0.892,
+        "accuracy": 0.892
+      },
+      "components": [
+        {
+          "component": "run-to-run repeatability, temperature 0 (operating mode)",
+          "type": "A (repeat, >=4 identical runs)",
+          "u_set_size": 0.0,
+          "u_coverage": 0.0,
+          "n_levels": 4,
+          "in_rss": true,
+          "note": "4 runs x 150 items (half cal / half test); max |dp| = 0; items with changed conformal set = 0.0%",
+          "share_var_set_size": 0.0,
+          "share_var_coverage": 0.0
+        },
+        {
+          "component": "run-to-run repeatability IF run at default temperature (not in RSS)",
+          "type": "A (repeat, >=4 identical runs)",
+          "u_set_size": 0.0,
+          "u_coverage": 0.0,
+          "n_levels": 4,
+          "in_rss": false,
+          "note": "4 runs x 150 items (half cal / half test); max |dp| = 0; items with changed conformal set = 0.0%",
+          "share_var_set_size": 0.0,
+          "share_var_coverage": 0.0
+        },
+        {
+          "component": "calibration-set sampling (n=250)",
+          "type": "A (bootstrap)",
+          "u_set_size": 0.02776255794453429,
+          "u_coverage": 0.01586666717137306,
+          "n_levels": 1000,
+          "note": "Bootstrap of the calibration set.",
+          "share_var_set_size": 0.3903666658629389,
+          "share_var_coverage": 0.3030770326984753
+        },
+        {
+          "component": "test-set sampling (n=250)",
+          "type": "A (bootstrap)",
+          "u_set_size": 0.005946213370999523,
+          "u_coverage": 0.020556414234154916,
+          "n_levels": 1000,
+          "note": "Finite evaluation sample.",
+          "share_var_set_size": 0.017907491252770465,
+          "share_var_coverage": 0.5087170858851439
+        },
+        {
+          "component": "model choice within class (generative LLMs: qwen3.5, qwen38-q5-fast)",
+          "type": "B (discrete uniform over alternatives)",
+          "u_set_size": 0.008000000000000007,
+          "u_coverage": 0.0020000000000000018,
+          "n_levels": 2,
+          "note": "Same prompt and wording w0; each recalibrated.",
+          "levels": {
+            "qwen3.5": {
+              "set_size": 1.0,
+              "coverage": 0.892,
+              "accuracy": 0.892
+            },
+            "qwen38-q5-fast": {
+              "set_size": 1.016,
+              "coverage": 0.896,
+              "accuracy": 0.892
+            }
+          },
+          "share_var_set_size": 0.03241408326213519,
+          "share_var_coverage": 0.004815502296367955
+        },
+        {
+          "component": "label/option wording (4 paraphrase sets)",
+          "type": "B (discrete uniform over alternatives)",
+          "u_set_size": 0.032908965343808695,
+          "u_coverage": 0.011445523142259608,
+          "n_levels": 4,
+          "note": "Same prompt template, different verbalizers; each recalibrated.",
+          "levels": {
+            "w0_official": {
+              "set_size": 1.0,
+              "coverage": 0.892,
+              "accuracy": 0.892
+            },
+            "w1_news": {
+              "set_size": 1.06,
+              "coverage": 0.908,
+              "accuracy": 0.884
+            },
+            "w2_topic": {
+              "set_size": 1.084,
+              "coverage": 0.888,
+              "accuracy": 0.864
+            },
+            "w3_short": {
+              "set_size": 1.076,
+              "coverage": 0.876,
+              "accuracy": 0.836
+            }
+          },
+          "share_var_set_size": 0.5485070652014438,
+          "share_var_coverage": 0.15770770020605052
+        },
+        {
+          "component": "distribution shift (word drop + typos, level 0.3)",
+          "type": "B (rectangular, half-width = abs(shift effect))",
+          "u_set_size": 0.004618802153517011,
+          "u_coverage": 0.004618802153517011,
+          "n_levels": 2,
+          "delta_set_size": 0.008000000000000007,
+          "delta_coverage": -0.008000000000000007,
+          "note": "Uncorrected systematic effect; assumes the actual shift lies anywhere between none and the tested level.",
+          "share_var_set_size": 0.010804694420711731,
+          "share_var_coverage": 0.025682678913962427
+        }
+      ],
+      "u_c_set_size": 0.04443478829037461,
+      "u_c_coverage": 0.028821010159719038
+    }
+  },
+  "models": {
+    "minilm+MLP (supervised)": {
+      "set_size": 1.132,
+      "coverage": 0.88,
+      "accuracy": 0.832,
+      "ci95_set_size": [
+        0.948,
+        1.4761999999999997
+      ],
+      "ci95_coverage": [
+        0.796,
+        0.948
+      ],
+      "ci95_accuracy": [
+        0.7839,
+        0.876
+      ],
+      "shift30": {
+        "set_size": 1.152,
+        "coverage": 0.876,
+        "accuracy": 0.808
+      },
+      "instrument_class": "supervised probe",
+      "output_type": "single-pass class probabilities from an MLP trained on 2,000 labelled items"
+    },
+    "bgesmall+MLP (supervised)": {
+      "set_size": 1.06,
+      "coverage": 0.888,
+      "accuracy": 0.868,
+      "ci95_set_size": [
+        0.968,
+        1.1521
+      ],
+      "ci95_coverage": [
+        0.832,
+        0.94
+      ],
+      "ci95_accuracy": [
+        0.828,
+        0.908
+      ],
+      "shift30": {
+        "set_size": 1.076,
+        "coverage": 0.876,
+        "accuracy": 0.856
+      },
+      "instrument_class": "supervised probe",
+      "output_type": "single-pass class probabilities from an MLP trained on 2,000 labelled items"
+    },
+    "embeddinggemma+MLP (supervised)": {
+      "set_size": 1.084,
+      "coverage": 0.888,
+      "accuracy": 0.852,
+      "ci95_set_size": [
+        0.94,
+        1.216
+      ],
+      "ci95_coverage": [
+        0.8,
+        0.936
+      ],
+      "ci95_accuracy": [
+        0.804,
+        0.892
+      ],
+      "shift30": {
+        "set_size": 1.148,
+        "coverage": 0.892,
+        "accuracy": 0.832
+      },
+      "instrument_class": "supervised probe",
+      "output_type": "single-pass class probabilities from an MLP trained on 2,000 labelled items"
+    },
+    "clef-flash-8bit (zero-shot)": {
+      "set_size": 0.984,
+      "coverage": 0.86,
+      "accuracy": 0.868,
+      "ci95_set_size": [
+        0.8679,
+        1.1
+      ],
+      "ci95_coverage": [
+        0.788,
+        0.94
+      ],
+      "ci95_accuracy": [
+        0.824,
+        0.908
+      ],
+      "shift30": {
+        "set_size": 1.0,
+        "coverage": 0.88,
+        "accuracy": 0.88
+      },
+      "instrument_class": "deterministic schema classifier (zero-shot)",
+      "output_type": "single-pass option probabilities (softmax of head logits), no sampling"
+    },
+    "qwen3.5 (zero-shot)": {
+      "set_size": 1.0,
+      "coverage": 0.892,
+      "accuracy": 0.892,
+      "ci95_set_size": [
+        0.9239,
+        1.048
+      ],
+      "ci95_coverage": [
+        0.8399,
+        0.932
+      ],
+      "ci95_accuracy": [
+        0.852,
+        0.928
+      ],
+      "shift30": {
+        "set_size": 1.008,
+        "coverage": 0.884,
+        "accuracy": 0.88
+      },
+      "instrument_class": "generative chat LLM (zero-shot)",
+      "output_type": "first-token logprobs over letters A-D (renormalised); the sampled answer is a separate output"
+    },
+    "qwen38-q5-fast (zero-shot)": {
+      "set_size": 1.016,
+      "coverage": 0.896,
+      "accuracy": 0.892,
+      "ci95_set_size": [
+        0.92,
+        1.1921
+      ],
+      "ci95_coverage": [
+        0.804,
+        0.944
+      ],
+      "ci95_accuracy": [
+        0.852,
+        0.928
+      ],
+      "instrument_class": "generative chat LLM (zero-shot)",
+      "output_type": "first-token logprobs over letters A-D (renormalised); the sampled answer is a separate output"
+    }
+  },
+  "comparability_note": "The three instrument classes differ in output type (supervised probe vs single-pass deterministic schema scores vs sampled generative LLM with logprob-derived scores) and in information used (2,000 labelled items vs none). Accuracy/coverage/set size are computed identically, but they are NOT a leaderboard: LLM probabilities are heavily saturated, which forces singleton sets, and Clef allows empty sets. Compare budgets (which components dominate), not headline numbers.",
+  "mc_check_clef": {
+    "rss_same_components_set_size": 0.0817288020044163,
+    "rss_same_components_coverage": 0.04225394878810962,
+    "configs_sampled": [
+      "w0_official|q0_topic",
+      "w0_official|q1_section",
+      "w0_official|q2_classify",
+      "w1_news|q0_topic",
+      "w2_topic|q0_topic",
+      "w3_short|q0_topic"
+    ],
+    "n_draws": 2000,
+    "sd_set_size": 0.07271752302627986,
+    "sd_coverage": 0.03779038995282258,
+    "note": "Joint sampling of prompt config (uniform over available wording/question configs) x cal bootstrap x test bootstrap."
+  },
+  "scaling_clef_wording": [
+    {
+      "n_cal": 25,
+      "sd_cal_sampling": 0.9114888717720909,
+      "sd_wording_within_draw": 0.3572221891034624,
+      "sd_wording_systematic": 0.07789390191507639,
+      "ci95_sd_wording_systematic": [
+        0.055721381191601256,
+        0.10721611128134004
+      ],
+      "mean_set_size_per_wording": {
+        "w0_official": 2.0196,
+        "w1_news": 1.8540533333333338,
+        "w2_topic": 1.9057733333333333,
+        "w3_short": 2.041506666666667
+      },
+      "sampling": "bootstrap with replacement from the pool"
+    },
+    {
+      "n_cal": 50,
+      "sd_cal_sampling": 0.23171292421673353,
+      "sd_wording_within_draw": 0.07664288168179027,
+      "sd_wording_systematic": 0.028269211166921465,
+      "ci95_sd_wording_systematic": [
+        0.022396699933455336,
+        0.03508520182996511
+      ],
+      "mean_set_size_per_wording": {
+        "w0_official": 1.0980133333333335,
+        "w1_news": 1.0862133333333335,
+        "w2_topic": 1.1334533333333334,
+        "w3_short": 1.1573733333333334
+      },
+      "sampling": "bootstrap with replacement from the pool"
+    },
+    {
+      "n_cal": 100,
+      "sd_cal_sampling": 0.09557418325044097,
+      "sd_wording_within_draw": 0.04335771816200469,
+      "sd_wording_systematic": 0.02250615125792161,
+      "ci95_sd_wording_systematic": [
+        0.01859663617242281,
+        0.026753984545770042
+      ],
+      "mean_set_size_per_wording": {
+        "w0_official": 1.0499866666666666,
+        "w1_news": 1.0492133333333333,
+        "w2_topic": 1.0601866666666666,
+        "w3_short": 1.1041333333333334
+      },
+      "sampling": "bootstrap with replacement from the pool"
+    },
+    {
+      "n_cal": 200,
+      "sd_cal_sampling": 0.062498076463172396,
+      "sd_wording_within_draw": 0.031297950772687835,
+      "sd_wording_systematic": 0.01968796812494602,
+      "ci95_sd_wording_systematic": [
+        0.017448388017644412,
+        0.022179604466143286
+      ],
+      "mean_set_size_per_wording": {
+        "w0_official": 1.0148533333333334,
+        "w1_news": 1.0159866666666666,
+        "w2_topic": 1.0181200000000001,
+        "w3_short": 1.0617066666666668
+      },
+      "sampling": "bootstrap with replacement from the pool"
+    },
+    {
+      "n_cal": 400,
+      "sd_cal_sampling": 0.04308163571455601,
+      "sd_wording_within_draw": 0.02556021216953615,
+      "sd_wording_systematic": 0.019651999898229217,
+      "ci95_sd_wording_systematic": [
+        0.018102816429712273,
+        0.02146884220594942
+      ],
+      "mean_set_size_per_wording": {
+        "w0_official": 1.0091466666666666,
+        "w1_news": 1.0089066666666668,
+        "w2_topic": 1.0120666666666667,
+        "w3_short": 1.0553333333333335
+      },
+      "sampling": "bootstrap with replacement from the pool"
+    },
+    {
+      "n_cal": 500,
+      "sd_cal_sampling": 0.039187629625366614,
+      "sd_wording_within_draw": 0.023582841641035603,
+      "sd_wording_systematic": 0.019125848419815968,
+      "ci95_sd_wording_systematic": [
+        0.017652668925874918,
+        0.020618506422482426
+      ],
+      "mean_set_size_per_wording": {
+        "w0_official": 1.0086533333333334,
+        "w1_news": 1.0077600000000002,
+        "w2_topic": 1.0090800000000002,
+        "w3_short": 1.0526533333333334
+      },
+      "sampling": "bootstrap with replacement from the pool"
+    }
+  ],
+  "scaling_pool_size": 500,
+  "aleatoric_epistemic": {
+    "decomposition": {
+      "minilm+MLP, ensemble = training bootstraps": {
+        "mean_TU": 0.22493261098861694,
+        "mean_AU": 0.163628950715065,
+        "mean_EU": 0.061303671449422836,
+        "EU_share": 0.27254238724708557,
+        "shift30_EU_share": 0.2730630934238434,
+        "shift30_mean_AU": 0.1805739849805832,
+        "shift30_mean_EU": 0.06782995909452438
+      },
+      "bgesmall+MLP, ensemble = training bootstraps": {
+        "mean_TU": 0.1677524745464325,
+        "mean_AU": 0.12438780069351196,
+        "mean_EU": 0.043364666402339935,
+        "EU_share": 0.25850388407707214,
+        "shift30_EU_share": 0.2511806786060333,
+        "shift30_mean_AU": 0.14738354086875916,
+        "shift30_mean_EU": 0.049437690526247025
+      },
+      "embeddinggemma+MLP, ensemble = training bootstraps": {
+        "mean_TU": 0.16062042117118835,
+        "mean_AU": 0.12473112344741821,
+        "mean_EU": 0.03588930517435074,
+        "EU_share": 0.2234417349100113,
+        "shift30_EU_share": 0.21777808666229248,
+        "shift30_mean_AU": 0.1493217498064041,
+        "shift30_mean_EU": 0.04157261177897453
+      },
+      "clef, single prompt (deterministic => no ensemble)": {
+        "mean_TU": 0.4061613339507036,
+        "mean_AU": 0.4061613339507036,
+        "mean_EU": 0.0,
+        "EU_share": 0.0
+      },
+      "clef, ensemble = 6 prompt configs": {
+        "mean_TU": 0.37968147117290935,
+        "mean_AU": 0.3602412325139708,
+        "mean_EU": 0.01944023865893867,
+        "EU_share": 0.05120144156332943
+      }
+    },
+    "cross_model_agreement_on_EU": {
+      "minilm+MLP, ensemble = training bootstraps  vs  bgesmall+MLP, ensemble = training bootstraps": {
+        "spearman_EU": 0.6979392310276964,
+        "overlap_top10pct_EU": 0.36
+      },
+      "minilm+MLP, ensemble = training bootstraps  vs  embeddinggemma+MLP, ensemble = training bootstraps": {
+        "spearman_EU": 0.6169515672250756,
+        "overlap_top10pct_EU": 0.36
+      },
+      "minilm+MLP, ensemble = training bootstraps  vs  clef, ensemble = 6 prompt configs": {
+        "spearman_EU": 0.42363058608937737,
+        "overlap_top10pct_EU": 0.16
+      },
+      "bgesmall+MLP, ensemble = training bootstraps  vs  embeddinggemma+MLP, ensemble = training bootstraps": {
+        "spearman_EU": 0.6528000768012288,
+        "overlap_top10pct_EU": 0.48
+      },
+      "bgesmall+MLP, ensemble = training bootstraps  vs  clef, ensemble = 6 prompt configs": {
+        "spearman_EU": 0.5306830509288148,
+        "overlap_top10pct_EU": 0.16
+      },
+      "embeddinggemma+MLP, ensemble = training bootstraps  vs  clef, ensemble = 6 prompt configs": {
+        "spearman_EU": 0.49965305044880715,
+        "overlap_top10pct_EU": 0.44
+      }
+    }
+  },
+  "cross_wording": {
+    "clef-flash-8bit": {
+      "matrix": {
+        "cal=w0_official | test=w0_official": {
+          "set_size": 0.984,
+          "coverage": 0.86,
+          "accuracy": 0.868
+        },
+        "cal=w0_official | test=w1_news": {
+          "set_size": 0.992,
+          "coverage": 0.864,
+          "accuracy": 0.868
+        },
+        "cal=w0_official | test=w2_topic": {
+          "set_size": 1.0,
+          "coverage": 0.892,
+          "accuracy": 0.896
+        },
+        "cal=w0_official | test=w3_short": {
+          "set_size": 0.996,
+          "coverage": 0.844,
+          "accuracy": 0.844
+        },
+        "cal=w1_news | test=w0_official": {
+          "set_size": 0.964,
+          "coverage": 0.848,
+          "accuracy": 0.868
+        },
+        "cal=w1_news | test=w1_news": {
+          "set_size": 0.964,
+          "coverage": 0.852,
+          "accuracy": 0.868
+        },
+        "cal=w1_news | test=w2_topic": {
+          "set_size": 0.988,
+          "coverage": 0.888,
+          "accuracy": 0.896
+        },
+        "cal=w1_news | test=w3_short": {
+          "set_size": 0.968,
+          "coverage": 0.832,
+          "accuracy": 0.844
+        },
+        "cal=w2_topic | test=w0_official": {
+          "set_size": 0.912,
+          "coverage": 0.828,
+          "accuracy": 0.868
+        },
+        "cal=w2_topic | test=w1_news": {
+          "set_size": 0.908,
+          "coverage": 0.832,
+          "accuracy": 0.868
+        },
+        "cal=w2_topic | test=w2_topic": {
+          "set_size": 0.928,
+          "coverage": 0.844,
+          "accuracy": 0.896
+        },
+        "cal=w2_topic | test=w3_short": {
+          "set_size": 0.92,
+          "coverage": 0.8,
+          "accuracy": 0.844
+        },
+        "cal=w3_short | test=w0_official": {
+          "set_size": 1.072,
+          "coverage": 0.912,
+          "accuracy": 0.868
+        },
+        "cal=w3_short | test=w1_news": {
+          "set_size": 1.08,
+          "coverage": 0.92,
+          "accuracy": 0.868
+        },
+        "cal=w3_short | test=w2_topic": {
+          "set_size": 1.052,
+          "coverage": 0.9,
+          "accuracy": 0.896
+        },
+        "cal=w3_short | test=w3_short": {
+          "set_size": 1.056,
+          "coverage": 0.864,
+          "accuracy": 0.844
+        }
+      },
+      "coverage_same_wording_mean": 0.855,
+      "coverage_same_wording_range": [
+        0.844,
+        0.864
+      ],
+      "coverage_cross_wording_mean": 0.8633333333333333,
+      "coverage_cross_wording_range": [
+        0.8,
+        0.92
+      ],
+      "wording_ensemble (mean prob over wordings)": {
+        "set_size": 0.94,
+        "coverage": 0.844,
+        "accuracy": 0.86
+      }
+    },
+    "qwen3.5": {
+      "matrix": {
+        "cal=w0_official | test=w0_official": {
+          "set_size": 1.0,
+          "coverage": 0.892,
+          "accuracy": 0.892
+        },
+        "cal=w0_official | test=w1_news": {
+          "set_size": 0.996,
+          "coverage": 0.884,
+          "accuracy": 0.884
+        },
+        "cal=w0_official | test=w2_topic": {
+          "set_size": 1.0,
+          "coverage": 0.864,
+          "accuracy": 0.864
+        },
+        "cal=w0_official | test=w3_short": {
+          "set_size": 0.988,
+          "coverage": 0.832,
+          "accuracy": 0.836
+        },
+        "cal=w1_news | test=w0_official": {
+          "set_size": 1.048,
+          "coverage": 0.916,
+          "accuracy": 0.892
+        },
+        "cal=w1_news | test=w1_news": {
+          "set_size": 1.06,
+          "coverage": 0.908,
+          "accuracy": 0.884
+        },
+        "cal=w1_news | test=w2_topic": {
+          "set_size": 1.052,
+          "coverage": 0.884,
+          "accuracy": 0.864
+        },
+        "cal=w1_news | test=w3_short": {
+          "set_size": 1.052,
+          "coverage": 0.86,
+          "accuracy": 0.836
+        },
+        "cal=w2_topic | test=w0_official": {
+          "set_size": 1.08,
+          "coverage": 0.92,
+          "accuracy": 0.892
+        },
+        "cal=w2_topic | test=w1_news": {
+          "set_size": 1.08,
+          "coverage": 0.916,
+          "accuracy": 0.884
+        },
+        "cal=w2_topic | test=w2_topic": {
+          "set_size": 1.084,
+          "coverage": 0.888,
+          "accuracy": 0.864
+        },
+        "cal=w2_topic | test=w3_short": {
+          "set_size": 1.08,
+          "coverage": 0.88,
+          "accuracy": 0.836
+        },
+        "cal=w3_short | test=w0_official": {
+          "set_size": 1.076,
+          "coverage": 0.92,
+          "accuracy": 0.892
+        },
+        "cal=w3_short | test=w1_news": {
+          "set_size": 1.08,
+          "coverage": 0.916,
+          "accuracy": 0.884
+        },
+        "cal=w3_short | test=w2_topic": {
+          "set_size": 1.076,
+          "coverage": 0.884,
+          "accuracy": 0.864
+        },
+        "cal=w3_short | test=w3_short": {
+          "set_size": 1.076,
+          "coverage": 0.876,
+          "accuracy": 0.836
+        }
+      },
+      "coverage_same_wording_mean": 0.891,
+      "coverage_same_wording_range": [
+        0.876,
+        0.908
+      ],
+      "coverage_cross_wording_mean": 0.8896666666666668,
+      "coverage_cross_wording_range": [
+        0.832,
+        0.92
+      ],
+      "wording_ensemble (mean prob over wordings)": {
+        "set_size": 1.004,
+        "coverage": 0.896,
+        "accuracy": 0.896
+      }
+    }
+  },
+  "name_vs_definition_clef": {
+    "matched": {
+      "follows_definition (accuracy vs true label)": 0.884,
+      "follows_name": 0.884,
+      "ci95_follows_definition": [
+        0.844,
+        0.924
+      ]
+    },
+    "swapped": {
+      "follows_definition (accuracy vs true label)": 0.808,
+      "follows_name": 0.14,
+      "ci95_follows_definition": [
+        0.756,
+        0.856
+      ]
+    },
+    "neutral_ids_A-D": {
+      "follows_definition (accuracy vs true label)": 0.896
+    },
+    "decision_flip_rate_matched_to_swapped": 0.152,
+    "decision_flip_rate_neutral_to_matched": 0.036
+  }
+}

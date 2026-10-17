@@ -1,0 +1,7 @@
+# Clef-flash inference (Apple Silicon, MLX). Versions of the environment actually used:
+mlx==0.32.3
+mlx-vlm==0.7.4
+mlx-lm==0.32.0
+transformers==5.18.0
+numpy==2.5.3
+# LLM + embeddinggemma calls go to a local Ollama server (v0.40.5) via HTTP using only the Python 3.9 stdlib.

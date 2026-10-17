@@ -1,0 +1,3 @@
+CLEF DONE 0
+./run_queue2.sh: line 7: 98811 Terminated: 15          "$PY" run_clef_calx.py
+./run_queue2.sh: line 7: 99111 Terminated: 15          "$PY" run_repeat_clef.py

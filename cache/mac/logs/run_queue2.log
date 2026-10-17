@@ -1,0 +1,22 @@
+Sat Oct 17 09:19:29 +03 2026
+PHASE2
+qwen3.5:9b w0_official t0 run 0 done
+qwen3.5:9b w0_official t0 run 1 done
+qwen3.5:9b w0_official t0 run 2 done
+qwen3.5:9b w0_official t0 run 3 done
+qwen3.5:9b w0_official default run 0 done
+qwen3.5:9b w0_official default run 1 done
+qwen3.5:9b w0_official default run 2 done
+qwen3.5:9b w0_official default run 3 done
+qwen3.5:9b w2_topic t0 run 0 done
+qwen3.5:9b w2_topic t0 run 1 done
+qwen3.5:9b w2_topic t0 run 2 done
+qwen3.5:9b w2_topic t0 run 3 done
+Sat Oct 17 09:29:07 +03 2026
+PHASE3
+qwen38-q5-fast:latest w0_official 1249
+LLM DONE qwen38-q5-fast:latest 1249
+27B repeatability skipped for runtime (~2.3 s/call on this laptop)
+27B repeatability skipped for runtime (~2.3 s/call on this laptop)
+Sat Oct 17 09:49:57 +03 2026
+ALL DONE
