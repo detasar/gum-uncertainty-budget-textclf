@@ -131,5 +131,90 @@
    "threads": 4,
    "seconds": 519.7515585422516
   }
+ },
+ "llm": {
+  "runs": 2,
+  "official": {
+   "items": 100,
+   "max_abs_dp": 0.0,
+   "icc21": 0.9999999999999997,
+   "icc31": 0.9999999999999997,
+   "fleiss_kappa": 1.0,
+   "share_items_same_label_all_runs": 1.0,
+   "share_test_sets_changed": 0.0,
+   "saturation_maxp_gt_099": 0.37
+  },
+  "v1_w0": {
+   "items": 100,
+   "max_abs_dp": 0.0,
+   "icc21": 0.9999999999999997,
+   "icc31": 0.9999999999999997,
+   "fleiss_kappa": 1.0,
+   "share_items_same_label_all_runs": 1.0,
+   "share_test_sets_changed": 0.0,
+   "saturation_maxp_gt_099": 0.45
+  },
+  "v1_w1": {
+   "items": 100,
+   "max_abs_dp": 0.0,
+   "icc21": 0.9999999999999997,
+   "icc31": 0.9999999999999997,
+   "fleiss_kappa": 1.0,
+   "share_items_same_label_all_runs": 1.0,
+   "share_test_sets_changed": 0.0,
+   "saturation_maxp_gt_099": 0.39
+  },
+  "v1_w2": {
+   "items": 100,
+   "max_abs_dp": 0.0,
+   "icc21": 1.0,
+   "icc31": 1.0,
+   "fleiss_kappa": 1.0,
+   "share_items_same_label_all_runs": 1.0,
+   "share_test_sets_changed": 0.0,
+   "saturation_maxp_gt_099": 0.36
+  },
+  "v1_w3": {
+   "items": 100,
+   "max_abs_dp": 0.0,
+   "icc21": 1.0,
+   "icc31": 1.0,
+   "fleiss_kappa": 1.0,
+   "share_items_same_label_all_runs": 1.0,
+   "share_test_sets_changed": 0.0,
+   "saturation_maxp_gt_099": 0.37
+  },
+  "conditions_vs_rep0": {},
+  "rep0_meta": {
+   "model": "Qwen/Qwen2.5-0.5B-Instruct",
+   "prompt": "Read the following {genre} and state its {facet}.\n\nText: {text}\n\nAnswer with the {facet} only.",
+   "dtype": "fp32",
+   "threads": 4,
+   "chunk": 64,
+   "torch": "2.14.1+cpu",
+   "transformers": "5.20.1",
+   "cpu": "",
+   "n_items": 100,
+   "seconds": 558.7115967273712,
+   "n_label_tokens": [
+    2,
+    3,
+    5,
+    3,
+    2,
+    3,
+    7,
+    2,
+    2,
+    3,
+    7,
+    2,
+    4,
+    4,
+    5,
+    9,
+    2
+   ]
+  }
  }
 }

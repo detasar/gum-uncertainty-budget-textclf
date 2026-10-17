@@ -15,3 +15,6 @@
 - run_repeat_resume.sh: llm_rep1 running; reps 2-3; intermediate-precision conditions; Min-K% (Qwen0.5B, SmolLM2).
 - run_after.sh: waits for queues; Min-K%, run_repeat.sh (does NOT skip existing outputs), Qwen2.5-1.5B AG/BBC, Min-K% 1.5B.
 - After they finish: ./analyze_pending.sh; python src/aggregate.py; src/repeat_analysis.py; src/report_tables.py; src/figures.py; update report.md sections 3, 4, 7 and summary_tr.md; sync_repo.sh; commit + push v2-comprehensive.
+- [16:24] NLI deberta agnews finished (queue A moved to bbc2025); llm_rep1 finished. Running analyze_pending.sh + aggregate + repeat_analysis + tables + figures.
+- [16:26] NLI agnews cell analysed (24 s); aggregate/repeat_analysis/report_tables/figures re-run. H1b now REFUTED (ratio>3 in 9/17=0.53). Updating report.md.
+- [16:26] report.md and summary_tr.md updated with the NLI cell; re-syncing and pushing.

@@ -1,11 +1,12 @@
 {
- "n_cells_zero_shot": 16,
+ "n_cells_zero_shot": 17,
  "n_cells_supervised": 15,
  "cells": [
   "agnews__bienc__all-MiniLM-L6-v2",
   "agnews__bienc__bge-small-en-v1.5",
   "agnews__bienc__e5-base-v2",
   "agnews__llm__Qwen2.5-0.5B-Instruct",
+  "agnews__nli__nli-deberta-v3-small",
   "bbc2025__bienc__all-MiniLM-L6-v2",
   "bbc2025__bienc__bge-small-en-v1.5",
   "bbc2025__bienc__e5-base-v2",
@@ -123,6 +124,32 @@
       0.9380233399312028
      ],
      "F": 2987.570954257731,
+     "p": 0.0,
+     "p_holm": 0.0
+    },
+    {
+     "cell": "agnews__nli__nli-deberta-v3-small",
+     "kind": "nli",
+     "dataset": "agnews",
+     "model": "nli-deberta-v3-small",
+     "n": 250,
+     "sd_w": 0.3402354448411942,
+     "ci_sd_w": [
+      0.2514992002561067,
+      0.4130313317783677
+     ],
+     "sd_s": 0.08702255080768523,
+     "ratio": 3.909738816931427,
+     "ci_ratio": [
+      2.5771468985193757,
+      5.055222454340346
+     ],
+     "share_w": 0.8192124656371073,
+     "ci_share_w": [
+      0.7036857201302327,
+      0.8797392570156902
+     ],
+     "F": 1289.1165052820807,
      "p": 0.0,
      "p_holm": 0.0
     },
@@ -440,11 +467,17 @@
     }
    ],
    "share_cells_sd_w_ci_excludes_0_and_holm_sig": 1.0,
-   "share_cells_ratio_in_[1/3,3]": 0.5,
+   "share_cells_ratio_in_[1/3,3]": 0.47058823529411764,
    "share_cells_ratio_lt_1/3": 0.0,
-   "share_cells_ratio_gt_3": 0.5,
+   "share_cells_ratio_gt_3": 0.5294117647058824,
    "H1a": "supported",
-   "H1b": "supported",
+   "H1b": "refuted: sampling negligible (ratio>3 in majority)",
+   "by_type_nli": {
+    "median_ratio": 3.909738816931427,
+    "median_share_w": 0.8192124656371073,
+    "share_in_range": 0.0,
+    "n": 1
+   },
    "by_type_bienc": {
     "median_ratio": 2.9443299871559807,
     "median_share_w": 0.7489197086027168,
@@ -567,6 +600,33 @@
      "n_star_crossing": 3.3388206241740055,
      "sd_w_n_min": 0.42573976506211497,
      "sd_s_n_min": 0.16374437451472124
+    },
+    {
+     "cell": "agnews__nli__nli-deberta-v3-small",
+     "kind": "nli",
+     "dataset": "agnews",
+     "model": "nli-deberta-v3-small",
+     "slope_sd_split_n100": -0.5151848162114034,
+     "ci_slope_split": [
+      -0.6042476889286341,
+      -0.4160300719061444
+     ],
+     "slope_sd_w_n250": 0.016496238474787508,
+     "ci_slope_w": [
+      -0.22519400568310902,
+      0.3212423581964563
+     ],
+     "n_max": 900,
+     "sd_w_nmax": 0.3474359729893875,
+     "ci_sd_w_nmax": [
+      0.2528644092195869,
+      0.417592674954113
+     ],
+     "sd_s_nmax": 0.044736908481085386,
+     "ratio_W4_over_Wmax": 0.9283850240407352,
+     "n_star_crossing": 14.921926017228474,
+     "sd_w_n_min": 0.3191805012269353,
+     "sd_s_n_min": 0.19885620024718773
     },
     {
      "cell": "bbc2025__bienc__all-MiniLM-L6-v2",
@@ -893,7 +953,7 @@
      "sd_s_n_min": 0.08242738607161097
     }
    ],
-   "share_H2a_split_slope_in_range": 0.5,
+   "share_H2a_split_slope_in_range": 0.5294117647058824,
    "share_H2b_flat_wording_floor": 1.0,
    "share_wording_declining": 0.0,
    "share_wording_ci_includes_0_at_nmax": 0.0,
@@ -971,6 +1031,23 @@
      "sd_w_valid": 0.45276153370513267,
      "sd_w_all": 0.41459588090923755,
      "sd_w_strict": 0.3207613993095732
+    },
+    {
+     "cell": "agnews__nli__nli-deberta-v3-small",
+     "kind": "nli",
+     "dataset": "agnews",
+     "model": "nli-deberta-v3-small",
+     "surface_flip_mean": 0.21537037037037038,
+     "surface_flip_max": 0.2916666666666667,
+     "surface_flip_max_ci": [
+      0.2660696180509945,
+      0.3182888605827993
+     ],
+     "valid_flip_mean": 0.358861111111111,
+     "surface_over_valid": 0.600149650385737,
+     "sd_w_valid": 0.3402354448411942,
+     "sd_w_all": 0.37789482764370524,
+     "sd_w_strict": 0.3400213923440459
     },
     {
      "cell": "bbc2025__bienc__all-MiniLM-L6-v2",
@@ -1178,6 +1255,20 @@
     }
    ],
    "dose_response": {
+    "nli": {
+     "n_variant_model_pairs": 41,
+     "spearman_dist_tv": 0.5083416866160408,
+     "ci": [
+      0.22781171170870587,
+      0.7174662601534354
+     ],
+     "spearman_dist_flip": 0.4811538743334264,
+     "mean_tv_valid": 0.12902671757708659,
+     "mean_tv_invalid": 0.2071534610284409,
+     "by_dataset": {
+      "agnews": 0.5083416866160408
+     }
+    },
     "bienc": {
      "n_variant_model_pairs": 936,
      "spearman_dist_tv": 0.5640899182189435,
@@ -1212,13 +1303,14 @@
     }
    },
    "H3a_by_type": {
-    "nli": false,
+    "nli": true,
     "bienc": false,
     "llm": true
    },
-   "share_cells_surface_ge_half_valid": 0.0,
-   "share_H3c_valid_lt_all": 0.875,
+   "share_cells_surface_ge_half_valid": 0.058823529411764705,
+   "share_H3c_valid_lt_all": 0.8823529411764706,
    "H3b": {
+    "nli": "supported",
     "bienc": "supported",
     "llm": "not supported"
    },
@@ -1552,22 +1644,22 @@
   }
  ],
  "coverage_check": {
-  "max_abs_mean_coverage_minus_target": 0.007222222222222352,
+  "max_abs_mean_coverage_minus_target": 0.007388888888889,
   "by_method": {
    "count": {
-    "aps": 112.0,
-    "lac": 112.0,
-    "raps": 112.0
+    "aps": 119.0,
+    "lac": 119.0,
+    "raps": 119.0
    },
    "mean": {
-    "aps": 0.0020750396825396813,
-    "lac": 0.0023762499999999903,
-    "raps": 0.002129583333333305
+    "aps": 0.0021509103641456587,
+    "lac": 0.0024192436974789793,
+    "raps": 0.0021907049486460974
    },
    "std": {
-    "aps": 0.002169085444008496,
-    "lac": 0.0021643326440562477,
-    "raps": 0.0021789154023651477
+    "aps": 0.0022436772298330752,
+    "lac": 0.0022114143459217948,
+    "raps": 0.0022425871910742926
    },
    "min": {
     "aps": -0.0011533333333333395,
@@ -1575,24 +1667,24 @@
     "raps": -0.0011594444444444907
    },
    "25%": {
-    "aps": 0.00047694444444440487,
-    "lac": 0.0005518055555555068,
-    "raps": 0.0005299999999998917
+    "aps": 0.0004933333333332901,
+    "lac": 0.0005619444444444066,
+    "raps": 0.0005413888888888829
    },
    "50%": {
-    "aps": 0.0011402777777776985,
-    "lac": 0.0014958333333333074,
-    "raps": 0.0011950000000000016
+    "aps": 0.001143333333333274,
+    "lac": 0.0014366666666666417,
+    "raps": 0.001188888888888906
    },
    "75%": {
-    "aps": 0.003932222222222198,
-    "lac": 0.004246388888888897,
-    "raps": 0.004024583333333304
+    "aps": 0.004054999999999975,
+    "lac": 0.004395277777777762,
+    "raps": 0.00409222222222233
    },
    "max": {
-    "aps": 0.007222222222222352,
+    "aps": 0.007388888888889,
     "lac": 0.0071266666666667255,
-    "raps": 0.00719611111111107
+    "raps": 0.007287222222222223
    }
   }
  },
@@ -1704,6 +1796,60 @@
    "method": "raps",
    "alpha": 0.2,
    "set_size_share_w": 0.8987414560347695
+  },
+  {
+   "kind": "nli",
+   "method": "aps",
+   "alpha": 0.05,
+   "set_size_share_w": 0.7502683755616737
+  },
+  {
+   "kind": "nli",
+   "method": "aps",
+   "alpha": 0.1,
+   "set_size_share_w": 0.7939028883688006
+  },
+  {
+   "kind": "nli",
+   "method": "aps",
+   "alpha": 0.2,
+   "set_size_share_w": 0.8083687513248865
+  },
+  {
+   "kind": "nli",
+   "method": "lac",
+   "alpha": 0.05,
+   "set_size_share_w": 0.7602869296358397
+  },
+  {
+   "kind": "nli",
+   "method": "lac",
+   "alpha": 0.1,
+   "set_size_share_w": 0.8192124656371073
+  },
+  {
+   "kind": "nli",
+   "method": "lac",
+   "alpha": 0.2,
+   "set_size_share_w": 0.8705281243182844
+  },
+  {
+   "kind": "nli",
+   "method": "raps",
+   "alpha": 0.05,
+   "set_size_share_w": 0.7866325597694267
+  },
+  {
+   "kind": "nli",
+   "method": "raps",
+   "alpha": 0.1,
+   "set_size_share_w": 0.815945159054188
+  },
+  {
+   "kind": "nli",
+   "method": "raps",
+   "alpha": 0.2,
+   "set_size_share_w": 0.8198351077581657
   }
  ],
  "point": [
@@ -1769,6 +1915,22 @@
    "maxp_gt_099_official": 0.2733333333333333,
    "acc_nonsense": 0.2783333333333333,
    "acc_shuffled": 0.1075,
+   "identity_flip": 0.0
+  },
+  {
+   "cell": "agnews__nli__nli-deberta-v3-small",
+   "kind": "nli",
+   "dataset": "agnews",
+   "model": "nli-deberta-v3-small",
+   "N": 1200,
+   "acc_official": 0.6433333333333333,
+   "acc_valid_mean": 0.5819166666666666,
+   "acc_valid_min": 0.375,
+   "acc_valid_max": 0.7233333333333334,
+   "ece_official": 0.07006617695173287,
+   "maxp_gt_099_official": 0.0375,
+   "acc_nonsense": 0.2758333333333333,
+   "acc_shuffled": 0.1252777777777778,
    "identity_flip": 0.0
   },
   {
