@@ -1,0 +1,37 @@
+BUILT /workspace/x-master/uq-budget/v2/src/../raw/agnews__api__gpt-6-luna.npz N=1200 sets=117 refusals=347 usd=1.7636
+BUILT /workspace/x-master/uq-budget/v2/src/../raw/bbc2025__api__gpt-6-luna.npz N=1200 sets=117 refusals=826 usd=1.7495
+BUILT /workspace/x-master/uq-budget/v2/src/../raw/dbpedia__api__gpt-6-luna.npz N=1000 sets=47 refusals=251 usd=0.8385
+BUILT /workspace/x-master/uq-budget/v2/src/../raw/massive__api__gpt-6-luna.npz N=1200 sets=47 refusals=682 usd=1.0877
+BUILT /workspace/x-master/uq-budget/v2/src/../raw/sst2__api__gpt-6-luna.npz N=1200 sets=38 refusals=0 usd=0.5320
+BUILT /workspace/x-master/uq-budget/v2/src/../raw/agnews__api__gpt-4.1-nano.npz N=1200 sets=46 refusals=0 usd=0.5849
+BUILT /workspace/x-master/uq-budget/v2/src/../raw/bbc2025__api__gpt-4.1-nano.npz N=1200 sets=46 refusals=0 usd=0.5179
+BUILT /workspace/x-master/uq-budget/v2/src/../raw/dbpedia__api__gpt-4.1-nano.npz N=1000 sets=47 refusals=0 usd=0.8410
+BUILT /workspace/x-master/uq-budget/v2/src/../raw/massive__api__gpt-4.1-nano.npz N=1200 sets=47 refusals=0 usd=0.7559
+BUILT /workspace/x-master/uq-budget/v2/src/../raw/sst2__api__gpt-4.1-nano.npz N=1200 sets=38 refusals=0 usd=0.3145
+BUILT /workspace/x-master/uq-budget/v2/src/../raw/agnews__decision__clef-flash-8bit.npz N=200 sets=31
+BUILT /workspace/x-master/uq-budget/v2/src/../raw/bbc2025__decision__clef-flash-8bit.npz N=200 sets=31
+BUILT /workspace/x-master/uq-budget/v2/src/../raw/dbpedia__decision__clef-flash-8bit.npz N=200 sets=31
+BUILT /workspace/x-master/uq-budget/v2/src/../raw/massive__decision__clef-flash-8bit.npz N=200 sets=31
+BUILT /workspace/x-master/uq-budget/v2/src/../raw/sst2__decision__clef-flash-8bit.npz N=200 sets=31
+BUILT /workspace/x-master/uq-budget/v2/src/../raw/agnews__schema__GLiNER2.5-Decide.npz N=600 sets=46
+BUILT /workspace/x-master/uq-budget/v2/src/../raw/bbc2025__schema__GLiNER2.5-Decide.npz N=600 sets=46
+BUILT /workspace/x-master/uq-budget/v2/src/../raw/dbpedia__schema__GLiNER2.5-Decide.npz N=600 sets=47
+BUILT /workspace/x-master/uq-budget/v2/src/../raw/massive__schema__GLiNER2.5-Decide.npz N=600 sets=47
+BUILT /workspace/x-master/uq-budget/v2/src/../raw/sst2__schema__GLiNER2.5-Decide.npz N=600 sets=38
+DONE agnews__decision__clef-flash-8bit_sub200 8s
+DONE bbc2025__decision__clef-flash-8bit_sub200 8s
+DONE dbpedia__decision__clef-flash-8bit_sub200 8s
+DONE massive__decision__clef-flash-8bit_sub200 8s
+DONE sst2__decision__clef-flash-8bit_sub200 8s
+AGG_OK
+REP_OK
+TAB_OK
+APITAB_OK
+FIG_OK
+APIFIG_OK
+MACTAB_OK
+POST_DONE
+
+real	1m43.188s
+user	1m54.177s
+sys	0m4.730s

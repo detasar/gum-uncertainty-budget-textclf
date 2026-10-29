@@ -43,4 +43,16 @@ if sub:
         va = [v["point"][q]["accuracy"] for q in v["point"] if q.startswith("valid_")]
         NUM["decision_sub200"][k] = {"n": n, "acc_off": v["point"]["official"]["accuracy"], "acc_valid": float(np.mean(va)), "sd_w": s["sd_w"], "sd_s": s["sd_s"], "ratio": s["ratio_w_s"], "share_w": s["share_w"]}
         P(f"| {DSN[v['dataset']]} | {v['model']} | {f3(v['point']['official']['accuracy'])} | {f3(np.mean(va))} | {f3(s['mean'])} | {f3(s['sd_w'])} {ci(s['ci_sd_w'])} | {f3(s['sd_s'])} | {f2(s['ratio_w_s'])} | {f2(s['share_w'])} {ci(s['ci_share_w'], f2)} |")
+if sub:
+    P("\n## Table M3b. Decision-model group, matched design: further metrics (n_cal = 100, α = 0.10; means over the 30 VALID sets and the Design-A splits; config shift uses n_cal = 50, the smallest grid point, as for every sub200 cell)\n")
+    P("| dataset | model | acc VALID [min, max] | ECE official | valid flip rate (mean) | LAC coverage | LAC singleton | LAC empty | APS mean set size | APS coverage | APS σ_wording [CI] | APS wording share [CI] | config-shift mean coverage (min), n_cal = 50 |\n|---|---|---|---|---|---|---|---|---|---|---|---|---|")
+    NUM["decision_sub200_more"] = {}
+    for k in sorted(sub, key=lambda k: (DS.index(sub[k]["dataset"]), sub[k]["kind"])):
+        v = sub[k]; n = 100 if 100 in v["n_grid"] else v["n_grid"][-1]; g = v["grid"][f"lac|0.1|{n}"]; ga = v["grid"][f"aps|0.1|{n}"]; fa = v["floor"][f"A|aps|valid|{n}"]["set_size"]
+        va = [v["point"][q]["accuracy"] for q in v["point"] if q.startswith("valid_")]; fl = [x for q, x in v["flip_vs_official"].items() if q.startswith("valid_")]
+        cv = [r["coverage_mean"] for r in v.get("config_shift_official_to_valid", [])]
+        d = {"acc_valid_min": min(va), "acc_valid_max": max(va), "ece_off": v["point"]["official"]["ece"], "flip_valid": float(np.mean(fl)), "lac_cov": g["coverage"]["mean"], "lac_singleton": g["singleton"]["mean"],
+             "lac_empty": g["empty"]["mean"], "aps_size": ga["set_size"]["mean"], "aps_cov": ga["coverage"]["mean"], "aps_sd_w": fa["sd_w"], "aps_share_w": fa["share_w"], "cs_mean": float(np.mean(cv)) if cv else None, "cs_min": float(min(cv)) if cv else None}
+        NUM["decision_sub200_more"][k] = d
+        P(f"| {DSN[v['dataset']]} | {v['model']} | {f3(np.mean(va))} [{f3(d['acc_valid_min'])}, {f3(d['acc_valid_max'])}] | {f3(d['ece_off'])} | {f3(d['flip_valid'])} | {f3(d['lac_cov'])} | {f3(d['lac_singleton'])} | {f3(d['lac_empty'])} | {f3(d['aps_size'])} | {f3(d['aps_cov'])} | {f3(fa['sd_w'])} {ci(fa['ci_sd_w'])} | {f2(fa['share_w'])} {ci(fa['ci_share_w'], f2)} | {f3(d['cs_mean']) if cv else '–'} ({f3(d['cs_min']) if cv else '–'}) |")
 open(f"{R}/mac_tables.md", "w").write("\n".join(out) + "\n"); json.dump(NUM, open(f"{R}/mac_numbers.json", "w"), indent=1, default=float); print("WROTE results/mac_tables.md")
