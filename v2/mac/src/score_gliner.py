@@ -21,6 +21,8 @@ if os.path.exists(OUT):
         try: done.add(json.loads(l)["i"])
         except Exception: pass
 clf = Classifier.from_pretrained(a.model_dir, device=a.device, dtype=torch.float32).eval()
+clf.to(device=a.device, dtype=torch.float32)   # 2026-10-29 fix: from_pretrained only records the device; weights stayed on CPU -> "Passed CPU tensor to MPS op" (17 Oct run)
+assert str(next(clf.scorer.model.parameters()).device).startswith(a.device), "model not on requested device"
 schemas = {s["name"]: ClassificationSchema().task("label", s["labels"], min_labels=1, max_labels=1) for s in sets}
 texts = d["pool_text"][: a.items]; f = open(OUT, "a"); t0 = time.time(); n = 0
 todo = [i for i in range(len(texts)) if i not in done]

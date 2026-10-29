@@ -8,9 +8,16 @@ BUILT /workspace/x-master/uq-budget/v2/src/../raw/bbc2025__api__gpt-4.1-nano.npz
 BUILT /workspace/x-master/uq-budget/v2/src/../raw/dbpedia__api__gpt-4.1-nano.npz N=1000 sets=47 refusals=0 usd=0.8410
 BUILT /workspace/x-master/uq-budget/v2/src/../raw/massive__api__gpt-4.1-nano.npz N=1200 sets=47 refusals=0 usd=0.7559
 BUILT /workspace/x-master/uq-budget/v2/src/../raw/sst2__api__gpt-4.1-nano.npz N=1200 sets=38 refusals=0 usd=0.3145
+BUILT /workspace/x-master/uq-budget/v2/src/../raw/agnews__schema__GLiNER2.5-Decide.npz N=600 sets=46
+BUILT /workspace/x-master/uq-budget/v2/src/../raw/bbc2025__schema__GLiNER2.5-Decide.npz N=600 sets=46
+BUILT /workspace/x-master/uq-budget/v2/src/../raw/dbpedia__schema__GLiNER2.5-Decide.npz N=600 sets=47
+BUILT /workspace/x-master/uq-budget/v2/src/../raw/massive__schema__GLiNER2.5-Decide.npz N=600 sets=47
+BUILT /workspace/x-master/uq-budget/v2/src/../raw/sst2__schema__GLiNER2.5-Decide.npz N=600 sets=38
 AGG_OK
 REP_OK
+TAB_OK
 APITAB_OK
 FIG_OK
 APIFIG_OK
+MACTAB_OK
 POST_DONE

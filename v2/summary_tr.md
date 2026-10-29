@@ -1,4 +1,4 @@
-# Özet (v2, ara rapor, 17 Ekim 2026; API-LLM bölümü 18:10 civarında eklendi)
+# Özet (v2, ara rapor, 17 Ekim 2026; API-LLM bölümü 18:10 civarında eklendi; 29 Ekim 2026 güncellemesi)
 
 Bu çalışma, sıfır-atışlı (zero-shot) metin sınıflandırmada konformal tahmin kümelerinin ortalama boyutu için GUM tarzı bir belirsizlik bütçesini yeniden sınıyor. v1'in iddiaları, `fab3c8a` commit'iyle önceden kaydedilen (preregistration) bir tasarımla test edildi. Tasarımın unsurları şunlar:
 - geçerliliği iki bağımsız yargıç modelle denetlenmiş 30 rastgele etiket ifadesi seti,
@@ -15,6 +15,18 @@ Sonuçlar ara niteliktedir. Önceden kayıtlı 17 sıfır-atışlı hücrenin 15
 - **Deterministik sınıflandırıcı grubu (T1 + T2, 20 hücre).** n = 250'de medyan ifade payı 0,76 (aralık 0,31–0,88). Medyan σ_ifade/σ_örnekleme oranı 3,14 (0,79–5,58). İfade bileşeni n ile azalmıyor (eğim −0,04 ile 0,03 arasında), örnekleme bileşeni ise −0,35 ile −0,87 eğimiyle düşüyor. Kalibrasyon resmî adlarla yapılıp başka bir geçerli ifadeyle kullanıldığında ortalama kapsama 0,732–0,919 arasında; en kötü tek ifade setinde 0,554.
 - NLI'de yalnızca büyük/küçük harf değişiklikleri, geçerli parafrazların yol açtığı tahmin değişimlerinin AG'de 0,60'ını, BBC'de 0,59'unu, SST-2'de 0,94'ünü, DBpedia'da 0,38'ini, MASSIVE'de 0,33'ünü üretiyor. Önkayıttaki çoğunluk ölçütü tüm hücrelerde sağlanmıyor (pay 0,14), ama T1 içinde hücrelerin çoğu araç değişmezliğinin bozulduğuna işaret ediyor.
 - **Keşifsel eklemeler (önkayıtta yok).** GLiNER2.5-Decide (DeBERTa-v3-large kodlayıcı, yaklaşık 0,49 milyar parametre) yerel bir sınıflandırma başlığıyla etiket başına skor veriyor. Bu yüzden deterministik sınıflandırıcı grubuna T6 olarak eklendi; veri seti başına ilk 600 öğeyle sınırlı. Clef-flash (9B, Qwen3.5-9B tabanlı, karar modeli) gpt-6-luna ile birlikte ayrı bir "karar modelleri" grubunda (T7) yer alıyor ve veri seti başına 200 öğeyle sınırlı. Eşleştirilmiş karşılaştırma için gpt-6-luna aynı 200 öğe ve aynı setlerle yeniden analiz edildi; ifade payı 0,64–0,92. ModernBERT NLI, GLiNER ve Clef bu özet yazılırken Mac'te sırayla çalışıyordu. Sonuçları bekleniyor.
+
+**Güncelleme (devam oturumu, 29 Ekim 2026, 01:10–03:50, Avrupa/Madrid, UTC+1)**
+- **ModernBERT-base-zeroshot-v2.0 (ikinci NLI modeli, önkayıtlı) beş veri setinde tamamlandı.** Önceden kayıtlı hücre sayısı 27 oldu (15 bi-encoder, 10 NLI, 2 LLM). Hüküm etiketlerinin hiçbiri değişmedi: H1a destekleniyor (27/27), H1b ifade baskınlığı yönünde çürütüldü (oran > 3: 17/27 = 0,63), H2a desteklenmiyor (0,48), H2b ve H2c destekleniyor, H3c destekleniyor (0,78). NLI anlam uzaklığı–tahmin kayması ilişkisi ρ = 0,48 [0,40, 0,56] (480 çift). ModernBERT'te n = 250'de ifade payı 0,70–0,90 (AG 0,90 [0,82, 0,93]; MASSIVE 0,70 [0,58, 0,78]).
+- **GLiNER2.5-Decide (T6, keşifsel, ilk 600 öğe) tamamlandı.** 17 Ekim'deki deneme hiç çıktı üretmemişti: kütüphane `device='mps'` ayarını yalnızca kaydediyor, ağırlıklar CPU'da kalıyordu. Model açıkça MPS'e taşınarak düzeltildi (sapma 14). n = 250, LAC, α = 0,10 sonuçları:
+  - AG: σ_ifade 0,332 [0,181, 0,427], oran 3,69, ifade payı 0,83 [0,62, 0,88]
+  - BBC: 0,297 [0,198, 0,375], oran 3,97, pay 0,83 [0,69, 0,89]
+  - SST-2: 0,026 [0,015, 0,033], oran 0,92, pay 0,33 [0,16, 0,43] (GLiNER'in tahminleri ifadeyle neredeyse hiç değişmiyor)
+  - DBpedia: 0,390 [0,233, 0,508], oran 6,06, pay 0,79 [0,73, 0,86]
+  - MASSIVE: 1,047 [0,879, 1,173], oran 3,95, pay 0,82 [0,76, 0,86]
+  - Aynı ifadeyle kapsama 0,902–0,905. İfade değişince kapsama AG/BBC'de yükseliyor (0,973/0,974), DBpedia ve MASSIVE'de düşüyor (0,854 ve 0,877; en düşük 0,779). Yalnızca büyük/küçük harf değişikliği, geçerli parafraz kaymasının 0,11–0,32'si kadar; NLI modellerinden daha az yüzeye duyarlı.
+- **Deterministik sınıflandırıcı grubu (T1 + T2 + T6, 30 hücre).** Medyan ifade payı 0,79 (0,31–0,90), medyan oran 3,41 (0,79–6,06; 30 hücrenin 19'unda > 3).
+- **Clef-flash (T7, karar modeli) Mac'te çalışıyor; sonuç bekleniyor (başarısız değil).** 29 Ekim 03:19:31'de başladı; 03:41'de AG News'in 200 öğesinin 135'i bitmişti, ETA yaklaşık 07:00–08:00 (UTC+1). gpt-6-luna karşılığı (aynı ilk 200 öğe) hazır; Clef geldiğinde yanına eklenecek.
 
 **Ana bulgular (önceden kayıtlı hücreler)**
 - **Büyüklük.** n = 250'de etiket ifadesi bileşeni 17 hücrenin tamamında sıfırdan farklı. Bi-encoder'larda medyan σ_ifade/σ_örnekleme oranı 2,94, medyan ifade payı 0,75 (aralık 0,31–0,88). Pay, NLI hücresinde 0,82, Qwen hücresinde 0,92.
@@ -43,7 +55,7 @@ Sonuçlar ara niteliktedir. Önceden kayıtlı 17 sıfır-atışlı hücrenin 15
 - "Determinizm belirsizliği yok etmez, soruyu soranın seçimlerine taşır" iddiası **doğrulandı ve genişletildi**: API modellerinde belirsizliğin bir kısmı, kullanıcının seçmediği sunucu yığınında.
 
 **Önceden kayıttan sapmalar ve bekleyen işler**
-- NLI ailesinin sonuçları eksik (deberta BBC çalışıyor; diğer 8 T1 hücresi sırada).
+- NLI ailesi tamamlandı (deberta ve ModernBERT, 10 hücre; 29 Ekim). Bekleyen tek Mac işi Clef-flash (yukarıda).
 - Yerel LLM sonuçları tek hücreden ibaret (Qwen BBC çalışıyor; SmolLM2 ve Qwen2.5-1.5B sırada). API hücreleri bunların yerine keşifsel olarak eklendi.
 - Min-K% kirlenme ölçümü ile bi-encoder ve LLM hassasiyet koşulları henüz tamamlanmadı.
 

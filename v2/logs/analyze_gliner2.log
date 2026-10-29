@@ -1,0 +1,17 @@
+BUILT /workspace/x-master/uq-budget/v2/src/../raw/agnews__api__gpt-6-luna.npz N=1200 sets=117 refusals=347 usd=1.7636
+BUILT /workspace/x-master/uq-budget/v2/src/../raw/bbc2025__api__gpt-6-luna.npz N=1200 sets=117 refusals=826 usd=1.7495
+BUILT /workspace/x-master/uq-budget/v2/src/../raw/dbpedia__api__gpt-6-luna.npz N=1000 sets=47 refusals=251 usd=0.8385
+BUILT /workspace/x-master/uq-budget/v2/src/../raw/massive__api__gpt-6-luna.npz N=1200 sets=47 refusals=682 usd=1.0877
+BUILT /workspace/x-master/uq-budget/v2/src/../raw/sst2__api__gpt-6-luna.npz N=1200 sets=38 refusals=0 usd=0.5320
+BUILT /workspace/x-master/uq-budget/v2/src/../raw/agnews__api__gpt-4.1-nano.npz N=1200 sets=46 refusals=0 usd=0.5849
+BUILT /workspace/x-master/uq-budget/v2/src/../raw/bbc2025__api__gpt-4.1-nano.npz N=1200 sets=46 refusals=0 usd=0.5179
+BUILT /workspace/x-master/uq-budget/v2/src/../raw/dbpedia__api__gpt-4.1-nano.npz N=1000 sets=47 refusals=0 usd=0.8410
+BUILT /workspace/x-master/uq-budget/v2/src/../raw/massive__api__gpt-4.1-nano.npz N=1200 sets=47 refusals=0 usd=0.7559
+BUILT /workspace/x-master/uq-budget/v2/src/../raw/sst2__api__gpt-4.1-nano.npz N=1200 sets=38 refusals=0 usd=0.3145
+BUILT /workspace/x-master/uq-budget/v2/src/../raw/agnews__schema__GLiNER2.5-Decide.npz N=600 sets=46
+BUILT /workspace/x-master/uq-budget/v2/src/../raw/bbc2025__schema__GLiNER2.5-Decide.npz N=600 sets=46
+BUILT /workspace/x-master/uq-budget/v2/src/../raw/dbpedia__schema__GLiNER2.5-Decide.npz N=600 sets=47
+BUILT /workspace/x-master/uq-budget/v2/src/../raw/massive__schema__GLiNER2.5-Decide.npz N=600 sets=47
+BUILT /workspace/x-master/uq-budget/v2/src/../raw/sst2__schema__GLiNER2.5-Decide.npz N=600 sets=38
+DONE dbpedia__schema__GLiNER2.5-Decide 15s
+DONE massive__schema__GLiNER2.5-Decide 14s

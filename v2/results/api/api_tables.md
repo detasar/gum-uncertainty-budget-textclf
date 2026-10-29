@@ -109,11 +109,11 @@ Accuracy by order (canonical, perm1, perm2), mean over 30 VALID sets: AG News gp
 
 Quantisation: 100.0% of 61960 returned probabilities lie on the 0.01 grid; 101 distinct values; 62.5% exactly 0 and 17.3% exactly 1; every answer sums to 1 (max deviation 2.2e-16). Refusals per run: 2 of 3,100.
 
-## A8. Preregistered criteria re-evaluated on prereg + API (T1–T3 + T5) (32 cells; exploratory)
+## A8. Preregistered criteria re-evaluated on prereg + API (T1–T3 + T5) (37 cells; exploratory)
 
-- RQ1: H1a supported (share 1.00); H1b refuted: sampling negligible (ratio>3 in majority) (in range 0.28, >3 0.72, <1/3 0.00)
-- RQ2: H2a not supported (0.47); H2b supported (1.00); H2c supported (0.88)
-- RQ3: H3a by type {'nli': True, 'bienc': False, 'llm': True, 'api': True}; share of cells surface ≥ 0.5 valid: 0.09; H3c supported (0.71); dose-response {'nli': 'supported', 'bienc': 'supported', 'llm': 'supported', 'api': 'not supported'}
+- RQ1: H1a supported (share 1.00); H1b refuted: sampling negligible (ratio>3 in majority) (in range 0.27, >3 0.73, <1/3 0.00)
+- RQ2: H2a not supported (0.43); H2b supported (1.00); H2c supported (0.89)
+- RQ3: H3a by type {'nli': True, 'bienc': False, 'llm': True, 'api': True}; share of cells surface ≥ 0.5 valid: 0.11; H3c supported (0.74); dose-response {'nli': 'supported', 'bienc': 'supported', 'llm': 'supported', 'api': 'not supported'}
 
 ## A9. Preregistered criteria re-evaluated on API only (T5) (10 cells; exploratory)
 

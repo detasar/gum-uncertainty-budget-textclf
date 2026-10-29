@@ -36,6 +36,6 @@ for c0 in range(0, a.items, a.chunk):
                 enc, lg = m.logits(r); ids = enc.questions[0].option_ids
                 v = dict(zip(ids, lg[0].astype(mx.float32).tolist())); rec["lg"][s["name"]] = [v[LET[k]] for k in range(K)]
             F[ds].write(json.dumps(rec) + "\n"); F[ds].flush(); n += 1
-            if n % 20 == 0: print(ds, i, n, f"{time.time()-t0:.0f}s", flush=True)
+            if n % 5 == 0: print(ds, i, n, f"{time.time()-t0:.0f}s", flush=True)
     print("chunk", c0 + a.chunk, f"{time.time()-t0:.0f}s", flush=True)
 print("CLEF DONE", n, f"{time.time()-t0:.0f}s", flush=True)
