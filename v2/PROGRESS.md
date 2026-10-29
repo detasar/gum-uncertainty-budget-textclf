@@ -80,3 +80,4 @@
 - 03:43 Mac checked once at 03:41 (reachable): Clef AG 135/200, other datasets 0; running under caffeinate, ETA ~07:00–08:00. No further Mac calls this session.
 - 03:43 run_post_mac.sh rerun (logs/post_mac_2.log, POST_DONE). All 5 GLiNER + 5 ModernBERT cells analysed.
 - 03:43 report.md updated (abstract update, deviation 14, §3.11.2 ModernBERT + 30-cell det group, §3.11.3 GLiNER table, Clef "running on the Mac, pending", §4 note, §7 pending). summary_tr.md updated. mac_fix.tar removed. Next: sync_repo.sh, commit, push v2-comprehensive.
+- 03:43 Synced and pushed 75fd0fc to origin/v2-comprehensive (no merge/release/posts). v2/review/ (untracked, from 28 Oct, not this session) left out of the commit. Session ended; next session: copy Clef caches (sha256), run_post_mac.sh, fill §3.11.3/M3, sync.
